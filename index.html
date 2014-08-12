@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Ladies Learning Code: CSS Fundamentals</title>
+
+    <!-- Theme-specific styles -->
+    <link href='http://fonts.googleapis.com/css?family=Quicksand|Montserrat:400,700|Pacifico' rel='stylesheet' type='text/css'>
+    
+    <!-- Don't alter slideshow.css, CSSS slide deck needs it to work -->
+    <link rel="stylesheet" href="css/slideshow.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/highlightjs-themes/monokai.css">
+    <link rel="stylesheet" href="css/theme-llc.css">
+    <!-- Workshop-specific styles -->
+    <link rel="stylesheet" href="css/workshop.css">
+
+    <!-- Takes care of CSS3 prefixes! -->
+    <script src="scripts/prefixfree.min.js"></script>
+
+</head>
+
+<!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
+<body data-duration="30">
+
+    <!-- First/Intro slide -->
+    <header class="intro slide">
+        <img class="logo" src="img/logo-llc-white.png">
+        <div class="info">
+            <h1>
+                <span class="title-bg">CSS Fundamentals</span><br>
+                <!-- if needed -->
+                <span class="title-bg">for Beginners</span>
+            </h1>
+            <h2><span>with</span> Christina Truong</h2>
+
+            <img class="instructor-img" src="img/christina-truong.jpg" alt="Christina Truong">
+            <ul>
+                <li><i class="fa fa-envelope"></i><a href="mailto:hello@christinatrong.com">hello@christinatrong.com</li>
+                <li><i class="fa fa-desktop"></i><a href="#" target="_blank">christinatruong.com</a></li>
+                <li><i class="fa fa-twitter"></i><a href="http://twitter.com/christinatruong" target="_blank">@christinatruong</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="slide" data-markdown>
+            ##Today's Project
+
+            ![final project](img/final-project-1.jpg)
+            ![final project](img/final-project-2.jpg)
+
+            Follow [this link](project/final.html) to see the whole project!
+        </section>
+        <section class="slide" data-markdown>
+            ##Setting Up Our Dev Tools
+
+            [Sublime Text](http://www.sublimetext.com/2) - a text editor with colour highlighting and other helpful features. If you are unable to install Sublime Text, try installing: [Notepad++](http://notepad-plus-plus.org/) (Windows) or [Atom](https://atom.io/) (Mac).
+
+            [Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/) - Choose a modern web browser that supports current web standards and has good development tools. To set Chrome as your default browser, follow [these instructions](https://support.google.com/chrome/answer/95417?hl=en).
+            
+            Another good option is Firefox. Visit [browsehappy.com](http://browsehappy.com) for more info about modern browsers.
+        </section>
+        <section class="slide" data-markdown>
+            ##Setting Up Our Work Flow
+
+            Open our project files in the browser and text editor.
+
+            1. Open Sublime Text and go to **File > Open**.
+            1. Navigate to the **Project** folder (in the folder you downloaded with today's slides).
+            1. With the entire folder selected, select **Open**.
+            1. You should see the folder open in Sublime's side bar.
+            1. click on index.html in the sidebar to open it.
+            1. Right click and select **Open in Browser**.
+
+            No CSS has been applied yet so all you will see is the default HTML.  
+            See next slide for example.
+        </section>
+        <section class="slide" data-markdown>
+            ##No CSS Yet!
+
+            You should see something like this:
+
+            ![no css](img/no-css.png)
+        </section>
+        <section class="slide" data-markdown>
+            ##HTML Quick Review
+
+            **Headings**: h1, h2, ... h6
+
+            **Paragraphs**: p
+
+            **Link**
+
+            **Lists**
+
+            **Images**
+
+        </section>
+        <section class="slide" data-markdown>
+            ##Exercise: Personalize the content (15 mins)
+
+            1. Update your name and tagline in the `header` section.
+            2. Update your profile / personal summary.
+            3. Update your profile image (if you have a picture handy).
+
+            Don't forget to save your changes!  
+            Save the file using **File > Save**, or use keyboard shortcuts (**CMD + S** or **CNTL + S**)
+
+            After saving, just refresh the browser to see the changes (rather than opening your file in a new tab every time). Find a work flow that works best for you when making frequent changes. 
+            
+            Don't worry if you don't finish. There's placeholder content already included in the starter template.
+        </section>
+
+        <section class="slide" data-markdown>
+            #Let's dive into CSS
+        </section>
+
+        <section class="slide" data-markdown>
+            ##What is CSS?
+
+            HTML defines *content*, CSS defines the *presentation*.
+        
+            CSS is made up of rules that reference HTML elements (like `p` and `ul`) and define what those elements should look like.
+            A CSS rule is made up of a *selector* and one or more *declarations*.
+
+
+                h2 {
+                    color: red;
+                    font-size: 12px;
+                }
+            
+            In the above example, `h2` is the selector and will apply all the styles in between the *declaration block* to all the `h2` headings.
+        </section>
+
+        <section class="slide" data-markdown>
+            ##CSS Syntax
+
+            A declaration tells the browser what style to apply to the selected element.
+
+            A declaration is always made up of two parts: a property and a value.
+
+            A property tells the browser what we are modifying (ex. font, colour, size). A value tells the browser how to modify the property (ex. Arial, green, small).
+            
+            ```
+            h2 {
+                font-size: 12px;
+            }
+            ```
+
+            In the above example, which is the **selector**, **declaration**, **property** and **value**?
+        </section>
+
+        <section class="slide" data-markdown>
+            ##Comments
+            
+            When, how, why to use them.
+            
+        </section>
+
+        <section class="slide" data-markdown>
+            
+        </section>
+
+        <section class="slide" data-markdown>
+            
+        </section>
+
+        <section class="slide" data-markdown>
+            
+        </section>
+
+        <section class="slide" data-markdown>
+            
+        </section>
+
+        <section class="slide">
+            <h1>Introduction:<br>Title Slide Example</h1>
+        </section>
+
+        <section class="slide">
+            <h2>Just some text and Code</h2>
+            <p>Sample of a slide with basic text and code snippets.</p>
+            <p>For HTML, the <code><</code> needs to be escaped! As long as the code snippet is wrapped in <code>&lt;pre>&lt;code>&lt;/code>&lt;/pre></code>, the syntax highlighting is taken care of!</p>
+            
+            <h3>HTML</h3>
+            <pre><code>&lt;!DOCTYPE html>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html></code></pre>
+
+            <h3>CSS</h3>
+            <pre><code>body {
+    margin: 0;
+    padding: 0;
+}</code></pre>   
+        </section>
+
+        <section class="slide">
+            <h2>JavaScript & jQuery highlight example</h2>
+            <p>Code highlighting is provided by <a href="http://highlightjs.org">highlight.js</a>. Visit the site to see the full list of supported languages.</p>
+            <h3>JavaScript!</h3>
+            <pre><code>// Comment
+document.addEventListener('DOMAttrModified',function(e) {
+    var node = e.target, attr = e.attrName;
+    if(/^input$/i.test(node.nodeName) 
+    &amp;&amp; (attr === 'placeholder' || attr === 'value')
+    || foo > 5)
+        Placeholder.update(node);
+}, false);</code></pre>
+
+            <h3>jQuery!</h3>
+            <pre><code>$(document).ready(function(){
+    $("p").hide("fast");
+});</code></pre>
+        </section>
+
+        <section class="slide">
+            <h2>Incremental display of content</h2>
+            <p>Use the arrow keys to reveal each line.  To use, just add a <code>class="delayed"</code>.</p>
+            <ul>
+                <li class="delayed">Make sure your computer is setup</li>
+                <li class="delayed">Web development breakdown</li>
+                <li class="delayed">Dive into HTML</li>
+                <li class="delayed">CSS fundamentals</li>
+            </ul>
+        </section>
+
+        <section class="slide">
+            <h2>CSS Snippets demo</h2>
+            <p>The whole slide will get the CSS applied to it. Go ahead, add/change/remove some CSS!</p>
+            <textarea class="snippet">background-color: lightblue;
+font-family: "Times New Roman", serif;
+            </textarea>
+        </section>
+
+        <section class="slide">
+            <h2>CSS Snippets demo</h2>
+            <p>You can also target specific elements</p>
+            <textarea class="snippet" data-subject="#test">background-color: lightblue;
+font-family: "Times New Roman", serif;
+padding: 20px;
+            </textarea>
+            <div id="test">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt sint beatae dolor dolorum aliquid quis explicabo vitae numquam, quas illo dolore molestiae ratione, perferendis, deleniti nemo ea voluptatibus! Quibusdam.</p>
+            </div>
+        </section>
+
+        <section class="slide" data-markdown>
+##Markdown example
+
+You can even write in Markdown as long as the `data-markdown` attribute is included. See the [documentation for markdown syntax](http://daringfireball.net/projects/markdown/).  Both text and code blocks are supported at this time.  Code blocks need to be denoted either by three backticks (`) or by tabbing the content in one indent (at least 4 spaces).  Tabbing to create a code block won't work in this slide deck if your content begins tabbed in in your source code.
+
+You can specify the language of the codeblock by following the three backticks immediately by the language name.  View the source to see this in action
+
+#### Javascript Example
+
+```javascript
+var myJSVariable = "Syntax Highting for Javascript";
+```
+
+#### Css Example
+
+```css
+.css-selector{
+    highlight : syntax;
+}
+```
+#### indented example
+
+    code block that has to guess at the language and likely gets it wrong.  it thinks this is applescript.
+
+        </section>
+
+        <!-- Last slide -->
+        <section class="slide">
+            <h2>Thank you!</h2>
+            <p>Closing remarks</p>
+            <p class="attribution">Slidedecks created with <a href="https://github.com/LeaVerou/csss">Lea Verou's CSS-based SlideShow System</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
+        </section>
+
+    </main><!-- cls main section -->
+
+   
+    <footer>
+        <p class="instructions">Use the left <i class="fa fa-arrow-left"></i> and right <i class="fa fa-arrow-right"></i> arrow keys to navigate</p>
+
+        <p class="license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
+    </footer>
+
+
+    <script src="scripts/slideshow.js"></script>
+
+    <!-- Uncomment the plugins you need -->
+    <script src="scripts/plugins/css-edit.js"></script>
+    <script src="scripts/plugins/css-snippets.js"></script>
+    <script src="scripts/plugins/css-controls.js"></script>
+    <!-- <script src="plugins/code-highlight.js"></script>-->
+
+    <script src="scripts/plugins/markdown/marked.js"></script>
+    <script src="scripts/plugins/markdown/markdown.js"></script>
+    <script src="scripts/plugins/highlight/highlight.js"></script>    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- Prettify -->
+    <script src="scripts/plugins/prettify.js"></script>
+    <script src="scripts/plugins/lang-css.js"></script>
+    <script src="scripts/plugins/prism.js"></script>
+
+    <script>
+        var slideshow = new SlideShow();
+
+        // Grabs all the .snippet elements
+        var snippets = document.querySelectorAll('.snippet');
+        for(var i=0; i<snippets.length; i++) {
+            new CSSSnippet(snippets[i]);
+        }
+    </script>
+</body>
+</html>

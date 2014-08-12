@@ -1,0 +1,199 @@
+/*
+	Slideshow theme for Ladies Learning Code
+	Additional customizations
+	@author Christina Truong
+	@version 1.0
+*/
+
+@import "variables";
+
+
+/* Global styles
+-----------------*/
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+/* updated clearfix hack: http://css-tricks.com/snippets/css/clear-fix/ */
+.group:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font: 2.5rem/1.4 $base-font;
+	color: $gray-dark;
+	border-top: 4px solid $llc-pink;
+	-webkit-font-smoothing: antialiased;
+	background: #ecf0f1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $heading-font;
+	line-height: 1.25;
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: -0.05em;
+}
+h1, h2 {
+	margin: 0;
+}
+h2 {
+	font-size: 4rem;
+}
+
+a {
+	// text-decoration: none;
+	color: $llc-pink;
+
+	&:hover {
+		color: $gray-dark;
+	}
+}
+
+code {
+	font-family: Monaco, Andale Mono, monospace;
+	color: #444;
+	padding: 1px 4px;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 100;
+	text-align: center;
+	background: rgba(white, 0.6);
+	font-size: 12px;
+	
+	.instructions {
+		float: right;
+		margin-right: 20px;
+	}
+	.license {
+		float: left;
+		margin-left: 20px;
+
+		img {
+			vertical-align: middle;
+		}
+	}
+}
+
+
+/* Base styles for slides
+--------------------------*/
+.slide {
+	padding: 45px 80px;
+	height: 100%;
+
+	&:target {
+		overflow: scroll;
+	}
+}
+
+
+/* vertical align heading */
+section.slide {
+	transform-style: preserve-3d;
+
+	h1 {
+		position: relative;
+		text-align: center;
+		top: 42%;
+		transform: translateY(-42%);
+		font-size: 8rem;
+	}
+}
+
+// Progress Bar
+#timer {
+	height: 4px;
+	line-height: 4px;
+	background: $black;
+
+	&:before {
+		content: "";
+	}
+	.end {
+
+	}
+}
+
+// Textarea for dynamic CSS demos
+textarea.snippet {
+	width: 100%;
+	border: 1px solid #222;
+	padding: 15px 20px;
+	font-family: Monaco, Andale Mono, monospace;
+}
+
+/* First/Intro slide
+---------------------*/
+.intro {
+	/* background: $gray-dark; */ /*uncomment this if you don't want to use a background image */
+	background: linear-gradient(rgba($black, 0.1),rgba($black, 0.8)), url(../img/banner-home.jpg) no-repeat;
+	background-size: cover;
+	color: $white;
+	position: relative;
+
+	.logo {
+		height: 65px;
+	}
+	h1 {
+		font-size: 7.5rem;
+		margin: 20px 0;
+	}
+	.info {
+		ul {
+			@include list-reset();
+			font-size: 2.2rem;
+		}
+		.fa {
+			padding-right: 10px;
+		}
+		a {
+			color: $white;
+		}
+	}
+	.title-bg {
+		background: rgba($llc-pink, 0.8);
+		border-radius: 5px;
+		padding: 0 10px 0 6px;
+	}
+	.instructor-img {
+		border-radius: 50%;
+		width: 100px;
+		float: left;
+		margin-right: 20px;
+	}
+	h2 {
+		margin-bottom: 20px;
+
+		span {
+			color: $llc-pink;
+			font-family: $cursive;
+			margin-right: 4px;
+			font-size: 3rem;
+			text-transform: lowercase;
+		}
+	}
+}
+
+/* highlight.js customizations
+-------------------------------*/
+.hljs {
+	font-family: Monaco, Andale Mono, monospace;
+	padding: 20px 25px;
+	border-radius: 2px;
+}
+
+

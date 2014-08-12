@@ -1,0 +1,249 @@
+/* GLOBAL STYLES
+-----------------*/
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* Fixes the clearing of floats on child elements - 
+This class should be added to the parent element to 
+force clear the floats of the child elements */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  line-height: 1.5;
+  background: url(../images/background-5.jpg) no-repeat fixed;
+  background-position: 50%;
+  background-size: cover;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 80px;
+  font-weight: 400;
+  margin: 0;
+}
+
+h2, h3, h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+h2, h3 {
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+section h2 {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #16a085;
+}
+
+.content-wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 0;
+  /* and / or */
+  width: 80%;
+}
+
+/* HEADER
+----------*/
+header {
+  text-align: center;
+  padding: 150px 0;
+}
+
+.download {
+  background: #16a085;
+  position: fixed;
+  color: white;
+  top: 0;
+  right: 0;
+  display: block;
+  padding: 18px;
+  text-decoration: none;
+}
+
+/* COMMON SECTION STYLES 
+-------------------------*/
+.work-experience,
+.education {
+  background: #fefefe;
+}
+
+.profile,
+.skills,
+.contact {
+  color: #fff;
+}
+
+/* ABOUT ME / PROFILE
+----------------------*/
+.profile {
+  background: rgba(0, 0, 0, 0.8);
+}
+.profile h2 {
+  background: #16a085;
+  display: inline-block;
+  padding: 10px 20px;
+  transform: rotate(-4deg);
+  margin-bottom: 10px;
+  border: none;
+}
+.profile .summary {
+  float: left;
+  width: 70%;
+}
+
+.profile-image {
+  width: 27%;
+  float: left;
+  padding: 4px;
+  margin-right: 3%;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+
+/* WORK EXPERIENCE & EDUCATION
+-------------------------------*/
+/* job & education entries */
+.item {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding: 20px 0;
+}
+.item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* WORK EXPERIENCE
+-------------------*/
+.work-experience .date {
+  margin: 5px 0 20px 0;
+  font-size: 12px;
+}
+.work-experience h3 {
+  line-height: 1.25;
+  font-size: 16px;
+}
+.work-experience strong {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.work-experience .details {
+  float: left;
+  width: 30%;
+  padding-right: 30px;
+}
+.work-experience .description {
+  font-size: 14px;
+  width: 70%;
+  float: right;
+}
+.work-experience .description p:first-child {
+  margin-top: 8px;
+}
+
+.company {
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  letter-spacing: 0.08em;
+  color: #16a085;
+}
+
+/* SKILLS
+----------*/
+.skills {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/background-1.jpg) no-repeat fixed 50%/cover;
+  text-align: center;
+  font-size: 20px;
+}
+.skills h3 {
+  margin: 20px;
+}
+.skills h4 {
+  margin-bottom: 10px;
+  color: #16a085;
+}
+.skills i {
+  color: #16a085;
+}
+
+.skills-list .columns {
+  width: 33.33%;
+  float: left;
+}
+
+.skills-list ul,
+.skills-circles ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-circles ul li {
+  height: 150px;
+  width: 150px;
+  line-height: 150px;
+  display: inline-block;
+  padding: 0 10px;
+  border: 2px solid #16a085;
+  border-radius: 50%;
+  background: black;
+}
+.skills-circles ul span {
+  line-height: normal;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* EDUCATION
+-------------*/
+.education h4 {
+  color: #16a085;
+}
+
+/* CONTACT & FOOTER 
+--------------------*/
+.contact {
+  background: #111;
+}
+.contact p {
+  margin: 0;
+}
+.contact p:first-of-type {
+  margin-top: 35px;
+}
+
+.social {
+  width: 50%;
+  float: right;
+  text-align: right;
+  font-size: 30px;
+}
+.social a {
+  margin: 0 8px;
+}
+.social a:hover {
+  color: white;
+}
+
+footer {
+  clear: both;
+  font-size: 12px;
+  margin-top: 50px;
+}
