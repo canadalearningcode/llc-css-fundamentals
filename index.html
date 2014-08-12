@@ -74,16 +74,9 @@
             1. click on index.html in the sidebar to open it.
             1. Right click and select **Open in Browser**.
 
-            No CSS has been applied yet so all you will see is the default HTML.  
-            See next slide for example.
+            No CSS has been applied yet so all you will see is the default HTML like in [this example](examples/1-no-css.html).
         </section>
-        <section class="slide" data-markdown>
-            ##No CSS Yet!
 
-            You should see something like this:
-
-            ![no css](img/no-css.png)
-        </section>
         <section class="slide" data-markdown>
             ##HTML Quick Review
 
@@ -160,23 +153,308 @@
         </section>
 
         <section class="slide" data-markdown>
+            ##Classes vs IDs
             
-        </section>
+            When elements selectors are too general, **classes** and **ids** can be used.
 
-        <section class="slide" data-markdown>
-            
-        </section>
-
-        <section class="slide" data-markdown>
-            
-        </section>
-
-        <section class="slide" data-markdown>
-            
+            * The difference between the two.
+            * The syntax.
+            * Naming conventions
         </section>
 
         <section class="slide">
-            <h1>Introduction:<br>Title Slide Example</h1>
+            <h2>Adding Background Colours</h2>
+            <p>Using the <code>background</code> (shorthand) or <code>background-color</code> (longhand) property to add colours to various page sections can be very useful when laying out the CSS for your HTML document. For now, you can use either.  We will be going more in depth with the various background options. Try changing the color below and see what happens!</p>
+
+            <textarea class="snippet" data-subject="#bg-shorthand">background: lightblue;</textarea>
+            <div id="bg-shorthand">
+                <p>Change the background using shorthand!</p>
+            </div>
+            <textarea class="snippet" data-subject="#bg-longhand">background-color: papayawhip;</textarea>
+            <div id="bg-longhand">
+                <p>Change the background using longhand!</p>
+            </div>
+        </section>
+
+        <section class="slide" data-markdown>
+            ##Colour Values: Hex Code, Keywords, RGB
+            
+            **Hex code:**
+
+            **Keywords:**
+
+            **RGB:**
+
+            Colour resources: [http://colours.neilorangepeel.com/](http://colours.neilorangepeel.com/), [http://flatuicolors.com/](http://flatuicolors.com/)
+            
+        </section>
+
+        <section class="slide" data-markdown>
+            ##Exercise: add background colours (15)
+
+            1. Use comments to organize your CSS.
+            
+            1. Using `background` or `background-color`, add a different background colour to each major section of the page.  Use an **element selector** for the header and **class selectors** for the sections since there are multiple section tags, we need to use a more specific selector to give them each a different colour.
+
+                `header { }`  
+                `.profile { }`  
+                `.work-experience { }`  
+                `.skills { }`  
+                `.education { }`  
+                `.contact { }`
+
+            Your page should look something like this: [background colour example](examples/2-bg-colours.html).
+        </section>
+
+        <section class="slide">
+            <h2>Default styles, normalize vs reset stylesheets</h2>
+
+            <p>* normalize vs reset - http://necolas.github.io/normalize.css/<br>
+            * linking to external stylesheets. intro to inheritance & cascading.</p>
+            
+            <p class="presenter-notes">
+                * look at differences after just adding normalize<br>
+                * explain why normalize has to come before custom css
+            </p>
+            
+        </section>
+
+        <section class="slide" data-markdown>
+            ##Font Styles & Typography
+
+            * Web safe fonts
+            * google fonts
+
+        </section>
+
+        <section class="slide" data-markdown>
+            ##Font Styles & Typography
+
+            * Line height
+            * font weight
+            * font size
+            * font family
+            * text transform
+
+            * add in-slide examples
+            <!-- * 62.5% method and rems? (if there is times) -->
+        </section>
+
+        <section class="slide">
+            
+            <h2>Typography & Intro to Refactoring</h2>
+            
+            <p>Let's add some styles together first.</p>
+            * set main font-family & line-height in body<br>
+            * set font-styles for headings<br>
+            * combine selectors for common styles
+
+            <!-- reference 3-typography -->
+
+            <p class="presenter-notes">
+            * Add main font family &amp; line-height to body - explain inheritance <br>
+            * put h2, h3 styles into separate selectors so you can show combining selectors and refactoring after. Use this to also explain specificity. Tell learners to just watch.  They can type along when you refactor with combined selectors.</p>
+            
+        </section>
+        <section class="slide">
+            
+            <h2>Exercise: Typography (20mins)</h2>
+            <ol>
+                <li>
+                    Find and add 2-3 font families<br>
+                    Need help deciding?  Try Open Sans (sans-serif), Merriweather (serif),Pacifico (cursive).
+                </li>
+                <li>Add some more or update the font & typography styles to your liking!</li>
+            </ol>
+
+            Resources:<br>
+            http://reference.sitepoint.com/css/typography
+            
+        </section>
+
+        <section class="slide" data-markdown>
+            ## box model, padding/margin/borders
+
+###What is the box model?
+* show examples
+* examples using inspect element / dev tools
+* box model fix
+        </section>
+
+        <section class="slide" data-markdown>
+            ## width & min/max-width, margin auto
+
+show example of adding padding to a couple sections 
+<!-- - pushing elements with margin inside.  -->
+set widths/padding on **profile section tag** to show why we need to create an inner wrapper.
+
+        </section>
+
+        <section class="slide" data-markdown>
+            ##Exercise
+
+            * show examples of using padding, max-width and width with percentages
+            * create an innner wrapper
+            * add it just to profile section for demostration
+
+            [example 5](project/index-5.html)
+
+            <!-- * padding: 30px 300px; will allow colour to stay but widths give a different kind of control to sizing.
+            * add max width and margin auto to profile to show background color
+            * add content-wrap div to just profile
+            * add padding for less than 1000px and percentage width -->
+            
+        </section>
+        <section class="slide" data-markdown>
+            ## The Dangers of "div-itis"
+            * dont need wrapper for header, just text-align center
+            * The dangers of "divitis" - only add what you need.  you can always add more later.
+            * refer to notes
+        </section>
+        <section class="slide" data-markdown>
+            ##Exercise (15mins)
+
+            * add padding & text-align to header
+            * adjust margins for headings. (inspect to find out if padding or margin)
+            * Add content-wrapper div to each section
+
+            [example 6](project/index-6.html) 
+        </section>
+
+        <section class="slide" data-markdown>
+            ##7. Images & BG  images
+
+###background images
+* add to header
+* shorthand, longhand
+* no repeat
+* show differences for background size, start with 100%, contain, cover
+* background position
+* background fixed
+
+** note for shorthand, background size *has* to come after bg position or it won't work.
+
+**teacher note** show how each sample background looks different with the default bg settings since the images are all different sizes.
+
+[example 7](project/index-7.html) 
+        </section>
+
+        <section class="slide" data-markdown>
+            ##8. Floats
+* talk about stacking order of block and inline elements. (go back this when talking about display property)
+* breaks natural stacking order.  have to break it and put it back together.
+* need to set a width and equals 100%.  percentages will make it scalable. show difference between % and px.
+* go through in slide examples
+* explain child selectors
+* what about the image? show how to make it same size as container but then refactor
+* show the different between clearfix and clear float
+
+            [example 8](project/index-8.html)
+        </section>
+
+        <section class="slide" data-markdown>
+        ##exercise
+* apply floats to profile image
+* make image fluid
+* refactor, put style right on the image itself
+* clearfix vs clear float
+* how to use multiple classes
+* add border to see difference margin vs padding
+* border radius
+
+http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/
+        </section>
+
+        <section class="slide" data-markdown>
+            ##9. inline / block / inline-block
+* examples of display inline & block
+* update h2 to inline-block
+* CSS3 transform 
+* vendor prefixes
+
+http://css3please.com/  
+http://leaverou.github.io/prefixfree/
+
+[example 9](project/index-9.html)
+        </section>
+
+        <section class="slide" data-markdown>
+##10. more bg images and creating a bg overlay
+* linear gradient trick for overlay w/o positioning
+linear-gradient(rgba($black, 0.5),rgba($black, 0.5))
+
+###Exercise
+* add linear gradient and update background images and colours
+
+[example 10](project/index-10.html)
+        </section>
+
+        <section class="slide" data-markdown>
+        ##11. Icon fonts
+
+        * http://fortawesome.github.io/Font-Awesome/
+        * remember to add the http. will only work if you're on a server.
+        * add class of skills-list to reset list styles
+
+        ###Exercise
+        * add checkmarks, reset list styles
+        * style h3 & h4 for skills section
+
+        [no more examples]
+        [final project](project/final.html)
+
+        </section>
+
+        <section class="slide" data-markdown>
+        ##Style skills section
+        
+        ###Exercise
+        * style h3 & h4 for skills section
+        * style the two list options
+
+        </section>
+
+        <section class="slide" data-markdown>
+        ##Exercise - style work experience section
+
+        * floats
+        * heading/font styles
+
+        </section>
+
+        <section class="slide" data-markdown>
+        ##Exercise - style education section
+
+        * heading/font styles
+        </section>
+
+         <section class="slide" data-markdown>
+        ##Exercise - style footer section
+        
+        * floats, font styles
+        </section>
+
+        <section class="slide" data-markdown>
+            ##positioning
+
+            in-slide examples
+        </section>
+
+        <section class="slide" data-markdown>
+            ##Final Exercise!
+
+            position fixed download pdf links
+
+        </section>  
+        <section class="slide" data-markdown>
+            ##Next steps
+
+            list resources
+        </section>
+
+
+        <section class="slide">
+            <h1>Thank you!</h1>
         </section>
 
         <section class="slide">
