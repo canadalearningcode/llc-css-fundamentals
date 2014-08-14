@@ -1182,7 +1182,7 @@ max-width: 1000px;
     <section class="slide" data-markdown>
       ##Exercise 6: Add More Floats and borders (15mins)
 
-      Let's add floats to the **Work Experience** section as well.  Here's a link to the [final project](project/final.html) again for reference. Here's some hints to get you started:
+      Let's add floats to the **Work Experience** section as well.  Here's a link to the [final project](project/final.html) again for reference and some hints to get you started:
 
       * In the HTML, the `.details` element contains the Company and date details and the `.description` element contains the job description. So we want to float `.details` left and `.descriptions` right.
 
@@ -1211,50 +1211,99 @@ max-width: 1000px;
       ```
       
       Your page should look something like this: [Example 6](examples/6-floats.html).
-    <!-- * size the image 
+    </section>
 
-    width: 30%;
 
-    * and work experience section
+    <section class="slide" data-markdown>
+      ##More Background & Font Styles
 
-    * make image fluid
-    * refactor, put style right on the image itself
-    * clearfix vs clear float
-    * how to use multiple classes
+      It's time to get rid of these testing background colours and put in some nicer looking styles.
+
+      * For the **Profile** section, let's add an opaque background style so we can see the header image behind it. We can use the `background` property again but this time with an RGBa value. The 'a' represents the alpha transparency. (There is an `opacity` property too but it makes the text opaque too so we'll use `background` instead).
+
+      ```
+      .profile {
+        background: rgba(0,0,0,0.8);
+      }
+      ```
+
+      Uh oh? Why didn't it work? The **Profile** and **Header** sections are *siblings* as in the elements come one after another.  In order for the image to show through, it has to be declared in an ancestor or parent element.  
+
+      * Let's move the `background` styles from the `header` selector to `body`.
+
+      * Change the font color in `.profile` to white, to see the text more clearly.
+
+      * Pick an accent colour and apply it to all links (`a` tags).
+      
+      **Colour inspiration:**    
+      [http://colours.neilorangepeel.com/](http://colours.neilorangepeel.com/)  
+      [http://flatuicolors.com/](http://flatuicolors.com/)  
+    </section>
+
+    <section class="slide" data-markdown>
+      ##Keep going with Background styles (20mins)
+
+      1. Update the **Work Experience** and **Education** section with the same background colour. The sample project is using a very light gray (#FEFEFC).
+
+      1. Change the font colour of the Profile, Skills & Contact section to white or #ffffff.
+      
+      1. Add another background image to the **Skills** section. Don't worry about the overlay effect right now.  Just add the image.
+
+      1. Add an underline to the `&lt;h2>` headings, #cccccc or a colour of your choosing. 
+
+      1. Update the background colour for the Contact section. Use #111111 or a colour of your choosing.
+
+      If you get stuck, ask a mentor! Don't worry if you don't finish, we'll go through it together as a class.
+
+      Your page should look something like this: [Example 8](/examples/8-bg-part3.html)
+    </section>
+
+    <section class="slide" data-markdown>
+      #CSS3!
+    </section>
+        
+    <section class="slide" data-markdown>
+      ##CSS3 Properties: border-radius
+
+      Let's take a break from tweaking spacing and floats and add some newer CSS3 features. 
+
+      The introduction of CSS3 brought in new ways to do things that previously had to be done in Flash, JavaScript or complicated hacks.
+
+      Let's start with `border-radius`.  Once upon a time, rounded corners required cutting images with transparent backgrounds and blah blah blah...  Now we can do it with one line of CSS!
+
+      Let's add this style to the existing declaration block for the profile image. Percentages or pixel values can be used. The bigger the number, the more rounded the corners will be. To get a perfect circle, set the `border-radius` to 50% and the original image must also be a square (or else it will look oval).
+      ```
+      .profile img {
+        border-radius: 50%;
+      }
+      ```
+
+      Let's add a border and some padding. Remember, padding adds space *inside* of an element.
+      ```
+      .profile img {
+        border-radius: 50%;
+        border: 1px solid #ddd;
+        padding: 4px;
+      }
+      ```
+    </section>
+    <section class="slide"></section>
+
+    <!-- * linear gradient trick for overlay w/o positioning
+      linear-gradient(rgba($black, 0.5),rgba($black, 0.5))
+
+      ###Exercise
+      * add linear gradient and update background images and colours
+
+      [example 10](project/index-10.html) -->
+    <!-- 
     * add border to see difference margin vs padding
     * border radius
 
 http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/
  http://css3please.com/  
-      http://leaverou.github.io/prefixfree/
-
-      [example 9](project/index-9.html) -->
-
-          <!-- * talk about stacking order of block and inline elements. (go back this when talking about display property)
-* breaks natural stacking order.  have to break it and put it back together.
-* need to set a width and equals 100%.  percentages will make it scalable. show difference between % and px.
-* go through in slide examples
-* explain child selectors
-* what about the image? show how to make it same size as container but then refactor
-* show the different between clearfix and clear float
-
-      [example 8](project/index-8.html) -->
-    </section>
-
-
-    <section class="slide" data-markdown>
-##10. more bg images and creating a bg overlay
-* linear gradient trick for overlay w/o positioning
-linear-gradient(rgba($black, 0.5),rgba($black, 0.5))
-
-###Exercise
-* add linear gradient and update background images and colours
-
-[example 10](project/index-10.html)
-    </section>
-
-    <section class="slide" data-markdown>
-    ##11. Icon fonts
+      http://leaverou.github.io/prefixfree/-->
+   <!--  ##11. Icon fonts
 
     * http://fortawesome.github.io/Font-Awesome/
     * remember to add the http. will only work if you're on a server.
@@ -1266,7 +1315,7 @@ linear-gradient(rgba($black, 0.5),rgba($black, 0.5))
 
     [no more examples]
     [final project](project/final.html)
-
+ -->
     </section>
 
     <section class="slide" data-markdown>
