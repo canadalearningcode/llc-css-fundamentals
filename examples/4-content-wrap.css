@@ -22,11 +22,19 @@ h1 {
 h2 {
   font-size: 32px;
 }
+.content-wrap {
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+ 
 
 /* HEADER
 ----------*/
 header {
   background: #2c3e50;
+  padding: 1px;
 }
 
 /* ABOUT ME / PROFILE

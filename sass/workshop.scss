@@ -1,1 +1,9 @@
 @import "variables";
+
+.image-only {
+	text-align: center;
+
+	img {
+		width: 60%;
+	}
+}

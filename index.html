@@ -58,11 +58,15 @@
     <section class="slide" data-markdown>
       ##Setting Up Our Dev Tools
 
-      [Sublime Text](http://www.sublimetext.com/2) - a text editor with colour highlighting and other helpful features. If you are unable to install Sublime Text, try installing: [Notepad++](http://notepad-plus-plus.org/) (Windows) or [Atom](https://atom.io/) (Mac).
+      **[Sublime Text](http://www.sublimetext.com/2)** - a text editor with colour highlighting and other helpful features. If you are unable to install Sublime Text, try installing: [Notepad++](http://notepad-plus-plus.org/) (Windows) or [Atom](https://atom.io/) (Mac).
 
-      [Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/) - Choose a modern web browser that supports current web standards and has good development tools. To set Chrome as your default browser, follow [these instructions](https://support.google.com/chrome/answer/95417?hl=en).
+      **[Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/)** - Choose a modern web browser that supports current web standards and has good development tools. To set Chrome as your default browser, follow [these instructions](https://support.google.com/chrome/answer/95417?hl=en). Another good option is Firefox. Visit [browsehappy.com](http://browsehappy.com) for more info about modern browsers.
+
+      **Developer tools** allow us to *inspect* any web page to see how it's built. These tools also make it easier to test and debug code. The tools can be accessed in 3 ways:
       
-      Another good option is Firefox. Visit [browsehappy.com](http://browsehappy.com) for more info about modern browsers.
+      * right-click / two-finger tap on a web page and select **Inspect Element**
+      * select the menu icon in the top right hand corner of the Chrome browser and select **Tools > Developer Tools**
+      * keyboard shortcut: **Ctrl + Shift + I** (PC) / **Cmnd + Option + I** (Mac)
     </section>
     <section class="slide" data-markdown>
       ##Setting Up Our Work Flow
@@ -532,20 +536,17 @@ text-transform: inherit;</textarea>
       <pre><code>h1 {
   font-family: "Brush Script MT", cursive;
   font-weight: 400;
-  margin: 0;
   font-size: 80px;
 }
 h2 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  margin: 0;
   text-transform: uppercase;
   font-size: 32px;
 }
 h3 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  margin: 0;
   text-transform: uppercase;
 }</code></pre>
 
@@ -581,7 +582,6 @@ h3 {
       
       ```
       h1, h2, h3 {
-        margin: 0;
         font-weight: 400;
       }
       h2, h3 {
@@ -610,53 +610,275 @@ h3 {
       Your page should look something like this: [Example 3](examples/3-typography.html)
     </section>
 
+    <section class="slide">
+      <h1>The Box Model</h1>
+    </section>
+    
     <section class="slide" data-markdown>
-      ## box model, padding/margin/borders
+      ##What is The Box Model?
 
-###What is the box model?
-* show examples
-* examples using inspect element / dev tools
-* box model fix
+      The browser looks at every HTML element on the page as a rectangular box. The CSS Box Model describes the way CSS styles the size and spacing of HTML elements.
+
+      Understanding the box model is crucial for understanding how to position elements with CSS to create the desired page layout. This is one of the trickiest part of CSS, so don't worry if it seems confusing!
+
+      CSS uses 5 properties to determine the size and spacing of these boxes:
+
+      * `margin` - adds/removes space *outside* of the element
+      * `padding` - adds/removes space *inside* of the element
+      * `border` - adds a border outside of the element
+      * `width` - can be set to a specific size via CSS
+      * `height` - can be set to a specific size via CSS
     </section>
 
-    <section class="slide" data-markdown>
-      ## width & min/max-width, margin auto
+    <section class="slide">
+      <h2>Padding and Margin</h2>
 
-show example of adding padding to a couple sections 
-<!-- - pushing elements with margin inside.  -->
-set widths/padding on **profile section tag** to show why we need to create an inner wrapper.
+      <p>The <code>padding</code> and <code>margin</code> can both be declared using similar syntax of 1 to 4 values. Values can be declared using different measurement units but pixels or percentages are most commonly used. Setting the value to "0" will <strong>remove</strong> any default space on an HTML element. Any positive value will <strong>add</strong> space.</p>
 
-    </section>
-
-    <section class="slide" data-markdown>
-      ##Exercise
-
-      * show examples of using padding, max-width and width with percentages
-      * create an innner wrapper
-      * add it just to profile section for demostration
-
-      [example 5](project/index-5.html)
-
-      <!-- * padding: 30px 300px; will allow colour to stay but widths give a different kind of control to sizing.
-      * add max width and margin auto to profile to show background color
-      * add content-wrap div to just profile
-      * add padding for less than 1000px and percentage width -->
+      <ul>
+        <li>4 values mean top, right, bottom, left</li>
+        <li>3 values mean top, right/left, bottom</li>
+        <li>2 values means top/bottom, right/left</li>
+        <li>1 value means the same amount of padding on all sides</li>
+      </ul>
       
+      <p>Change some values to see the difference between margin and padding. Let's also inspect the element using Chrome's Developer tool.</p>
+
+      <textarea class="snippet" data-subject="#padding">background: lightblue; 
+padding: 0 0 0 0;
+margin: 0 0 0 0;</textarea>
+      <p id="padding">padding and margin test</p>
     </section>
+    <section class="slide" data-markdown>
+      ##Padding and Margin (continued)
+      The previous slide uses the shorthand properties. Both can also be declared by specifying a particular side.
+
+      ```
+      padding-top: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      padding-left: 10px;
+      ```
+      ```
+      margin-top: 10px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      ```
+    </section>
+
+    <section class="slide" data-markdown>
+      ##Border
+
+      The `border` property resides between the `margin` and `padding` and creates an outline around the element. It, too, has longhand and shorthand syntax.
+      
+      ```
+      /* longhand */
+      border-width: 2px;
+      border-style: solid;
+      border-color: red;
+
+      /* shorthand */
+      border: 2px solid red;
+      ```
+      Like padding and margin, a specific side of the element can be specified.
+      
+      ```
+      /* longhand */
+      border-top-width: 2px;
+      border-top-style: solid;
+      border-top-color: red;
+
+      /* shorthand */
+      border-top: 2px solid red;
+      ```
+    </section>
+
+    <section class="slide">
+      <h2>Box Model Review</h2>
+
+      <p>Let’s look at a diagram to see how all these different properties work together to change the size of an element.</p>
+
+      <img src="img/box-model.gif" alt="" title="">
+
+      <p>The original element started with at <strong>400 x 100</strong>. After including the padding, border &amp; margin, the size of the box is actually <strong>492 x 192</strong>.</p>
+    </section>
+      
+    <section class="slide image-only" data-markdown>
+      ##Can't... even...
+      ![](img/cant-even.gif)
+    </section>
+
+    <section class="slide">
+      <h2>Box Model Fix</h2>
+      <p>Luckily, there’s a fix for this.</p>
+      <p>Enter the <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">box-sizing: border-box</a> fix ftw!  I would recommend adding this snippet to all your projects.</p>
+<pre><code>/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}</code></pre>
+      <img src="img/box-model-fix.gif">
+    </section>
+
+    <section class="slide">
+      <h2>More about margin</h2>
+
+      <p><code>margin</code> also accepts negative values, padding does not. When using negative values, it will push the box outside of it’s natural spot within the surrounding elements.</p>
+
+      <textarea class="snippet" data-subject="#neg-margin">background-color: lightblue;
+width: 100px;
+padding: 20px;
+margin: 0px; /* change to negative value */</textarea>
+      <div id="neg-margin">box</div>
+    </section>
+
+    <section class="slide">
+      <h2>Center aligning with margin</h2>
+      <p>The margin property can also be used to center align block level elements. (More about block level elements later). First, a width needs to be set. Then, setting the left &amp; right values to <code>auto</code> will find the center of the page. The <code>0</code> just refers to the top and bottom value.</p>
+
+      <textarea class="snippet" data-subject="#margin-auto">background-color: lightblue;
+height: 100px;
+width: 600px;
+margin: 0 auto;</textarea>
+      <div id="margin-auto">box</div>
+
+      <div class="presenter-notes">
+      * show example of adding padding to a couple sections <br>
+      * Inspect the element to show how padding pushing elements with margin inside of the containing element.<br>
+      * set widths/margin: auto on profile section to show why we need to create an inner wrapper to set a background colour & center align content.</div>
+    </section>
+
+    <section class="slide" data-markdown>
+      ##Class exercise
+
+      1. Go back to our HTML & CSS project files, add `padding:1px` to the `header` section to see how it changes the spacing. Open up the Chrome Dev Tools and inspect the element.
+
+      1. The content is also too wide.  Let's use the `margin: 0 auto` trick to center align the content. Try adding the styles to the `.profile` section in your CSS file.
+      
+      ```
+      .profile {
+        width: 1000px;
+        margin: 0 auto;
+      }
+      ```
+      Your page will look something like this:
+
+      ![](img/margin-auto.png)
+    </section>
+
+    <section class="slide">
+      <h2>Class exercise (continued)</h2>
+
+      <p>The content is centered but now the background colour is restricted to the same width dimensions and doesn’t span the rest of the page anymore.  To fix this, we’ll need to create a “container” just for center aligning the content.</p>
+
+      <p>Let’s add a new <code>div</code> with a class of <code>content-wrap</code> <em>around all the profile content</em>.</p>
+
+      <pre><code>&lt;section class="profile"&gt;
+  &lt;div class="content-wrap"&gt;&lt;!-- new content wrap div --&gt;
+
+      &lt;img src="images/profile-generic.jpg" alt="Your Name"&gt;
+      &lt;div class="summary"&gt;
+          ...
+      &lt;/div&gt;
+
+  &lt;/div&gt;&lt;!-- close contact wrap div --&gt;
+&lt;/section&gt;
+</code></pre>
+
+      <p>Then apply the styles to <code>.content-wrap</code> instead of <code>.profile</code>. Let's add some padding while we're at it too.</p>
+      <pre><code>.content-wrap {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+</code></pre>
+    </section>
+
+    <section class="slide">
+      <h2>width &amp; max-width, px vs %</h2>
+      
+      <p>The content is all nice and centered now but what happens when the browser window is smaller than the set width?</p>
+
+      <p>Let’s look at the difference between the <code>max-width</code> and <code>width</code> property and using percentages and pixels.</p>
+
+      <textarea class="snippet" data-subject="#widths">border: 1px solid black;
+margin: 0 auto;
+width: 90%;
+max-width: 1000px;
+      </textarea>
+      <div id="widths">
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+    </section>
+
+    <section class="slide" data-markdown>
+      ##Class exercise
+
+      Update the `.content-wrap` styles to include `max-width` and update `width`.
+      
+      ```
+      .content-wrap {
+        max-width: 1000px;
+        width: 90%;
+        margin: 0 auto;
+        padding: 60px 0;
+      }
+      ```
+
+      Now we've created a reusable style that will help to keep our CSS nice and neat because we can apply this where ever this style is required, using the same class!
+    </section>
+
+    <section class="slide" data-markdown>
+      ##Exercise #4: Content wrappers! (15mins)
+
+      Add the `.content-wrap` to each section *except* the `header`.  We'll talk about why we're not adding this style to header after this exercise.
+
+      Let's go over how to collapse code blocks and tab multiple lines at the same time in Sublime first, to help make this addition easier.
+
+      Your page should look something like this: [example 4](examples/4-content-wrap.html).
+    </section>
+
     <section class="slide" data-markdown>
       ## The Dangers of "div-itis"
-      * dont need wrapper for header, just text-align center
-      * The dangers of "divitis" - only add what you need.  you can always add more later.
-      * refer to notes
+      
+      Be careful of "divitis"! Use the `&lt;div&gt;` to *group* related elements to be styled *together* as one section.  If you need to style a single element, like an `&lt;h1&gt;` for example, just style that element directly. The browser sees every element as a "box" so there's no need to put a box around a box!
+
+      A good rule of thumb is to only add what you need.  It's much easier to add more than to remove extra markup.
     </section>
+    <section class="slide image-only" data-markdown>
+      ##Avoid code bloat
+
+      ![](img/bloat.jpg)
+    </section>
+
     <section class="slide" data-markdown>
-      ##Exercise (15mins)
+      ##Update header & heading styles
+    
+      In the case of the `header` section, we can apply `text-align: center` instead of adding the `.content-wrap` since the content is short, we don't have to worry about containing it in a wrapper.
 
-      * add padding & text-align to header
-      * adjust margins for headings. (inspect to find out if padding or margin)
-      * Add content-wrapper div to each section
+      Let's also adjust the padding to add some more space in the header.
 
-      [example 6](project/index-6.html) 
+      The final code for header should look like this:
+      
+      ```
+      header {
+        background: #2c3e50;
+        text-align: center;
+        padding: 150px 0;
+      }
+      ```
+
+      While we're here, let's remove all of the default margins for the headings to get more control over how the spacing later on. Add `margin: 0` to the existing code block for the headers.
+      ```
+      h1, h2, h3 {
+        font-weight: 400;
+        margin: 0;
+      }
+      ```
+
+      Your page should now look like this: [Example](examples/5a-heading-headers.html)
     </section>
 
     <section class="slide" data-markdown>
