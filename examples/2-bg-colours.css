@@ -1,0 +1,35 @@
+/* HEADER
+----------*/
+header {
+  background: #2c3e50;
+}
+
+/* ABOUT ME / PROFILE
+----------------------*/
+.profile {
+  background: #8e44ad;
+}
+
+/* WORK EXPERIENCE
+-------------------*/
+.work-experience {
+  background: #2980b9;
+}
+
+/* SKILLS
+----------*/
+.skills {
+  background: #27ae60;
+}
+
+/* EDUCATION
+-------------*/
+.education {
+  background: #16a085;
+}
+
+/* CONTACT & FOOTER 
+--------------------*/
+.contact {
+  background: #c0392b;
+}
