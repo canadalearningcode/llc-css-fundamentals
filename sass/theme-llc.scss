@@ -74,11 +74,14 @@ footer {
 	z-index: 100;
 	text-align: center;
 	background: rgba(white, 0.6);
-	font-size: 12px;
+	font-size: 14px;
 	
 	.instructions {
 		float: right;
 		margin-right: 20px;
+	}
+	i {
+		color: $llc-pink;
 	}
 	.license {
 		float: left;
@@ -130,12 +133,12 @@ section.slide {
 	}
 }
 
-// Textarea for dynamic CSS demos
+// textarea for dynamic CSS demos
 textarea.snippet {
 	width: 100%;
 	border: 1px solid #222;
 	padding: 15px 20px;
-	font-family: Monaco, Andale Mono, monospace;
+	font-family: Monaco, Andale Mono, monospace;	
 }
 
 /* First/Intro slide

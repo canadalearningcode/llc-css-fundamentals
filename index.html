@@ -1,328 +1,602 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Ladies Learning Code: CSS Fundamentals</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Ladies Learning Code: CSS Fundamentals</title>
 
-    <!-- Theme-specific styles -->
-    <link href='http://fonts.googleapis.com/css?family=Quicksand|Montserrat:400,700|Pacifico' rel='stylesheet' type='text/css'>
-    
-    <!-- Don't alter slideshow.css, CSSS slide deck needs it to work -->
-    <link rel="stylesheet" href="css/slideshow.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/highlightjs-themes/monokai.css">
-    <link rel="stylesheet" href="css/theme-llc.css">
-    <!-- Workshop-specific styles -->
-    <link rel="stylesheet" href="css/workshop.css">
+  <!-- Theme-specific styles -->
+  <link href='http://fonts.googleapis.com/css?family=Quicksand|Pacifico' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400|Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  
+  <!-- Don't alter slideshow.css, CSSS slide deck needs it to work -->
+  <link rel="stylesheet" href="css/slideshow.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/highlightjs-themes/monokai.css">
+  <link rel="stylesheet" href="css/theme-llc.css">
+  <!-- Workshop-specific styles -->
+  <link rel="stylesheet" href="css/workshop.css">
 
-    <!-- Takes care of CSS3 prefixes! -->
-    <script src="scripts/prefixfree.min.js"></script>
+  <!-- Takes care of CSS3 prefixes! -->
+  <script src="scripts/prefixfree.min.js"></script>
 
 </head>
 
 <!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
-<body data-duration="30">
+<body data-duration="360">
 
-    <!-- First/Intro slide -->
-    <header class="intro slide">
-        <img class="logo" src="img/logo-llc-white.png">
-        <div class="info">
-            <h1>
-                <span class="title-bg">CSS Fundamentals</span><br>
-                <!-- if needed -->
-                <span class="title-bg">for Beginners</span>
-            </h1>
-            <h2><span>with</span> Christina Truong</h2>
+  <!-- First/Intro slide -->
+  <header class="intro slide">
+    <img class="logo" src="img/logo-llc-white.png">
+    <div class="info">
+      <h1>
+        <span class="title-bg">CSS Fundamentals</span><br>
+        <!-- if needed -->
+        <span class="title-bg">for Beginners</span>
+      </h1>
+      <h2><span>with</span> Christina Truong</h2>
 
-            <img class="instructor-img" src="img/christina-truong.jpg" alt="Christina Truong">
-            <ul>
-                <li><i class="fa fa-envelope"></i><a href="mailto:hello@christinatrong.com">hello@christinatrong.com</li>
-                <li><i class="fa fa-desktop"></i><a href="#" target="_blank">christinatruong.com</a></li>
-                <li><i class="fa fa-twitter"></i><a href="http://twitter.com/christinatruong" target="_blank">@christinatruong</a></li>
-            </ul>
-        </div>
-    </header>
+      <img class="instructor-img" src="img/christina-truong.jpg" alt="Christina Truong">
+      <ul>
+        <li><i class="fa fa-envelope"></i><a href="mailto:hello@christinatrong.com">hello@christinatrong.com</li>
+        <li><i class="fa fa-desktop"></i><a href="#" target="_blank">christinatruong.com</a></li>
+        <li><i class="fa fa-twitter"></i><a href="http://twitter.com/christinatruong" target="_blank">@christinatruong</a></li>
+      </ul>
+    </div>
+  </header>
 
-    <main>
-        <section class="slide" data-markdown>
-            ##Today's Project
+  <main>
+    <section class="slide" data-markdown>
+      ##Today's Project
 
-            ![final project](img/final-project-1.jpg)
-            ![final project](img/final-project-2.jpg)
+      Follow [this link](project/final.html) to see the whole project!
+      
+      ![final project](img/final-project-1.jpg)
+      ![final project](img/final-project-2.jpg)   
+    </section>
 
-            Follow [this link](project/final.html) to see the whole project!
-        </section>
-        <section class="slide" data-markdown>
-            ##Setting Up Our Dev Tools
+    <section class="slide" data-markdown>
+      ##Setting Up Our Dev Tools
 
-            [Sublime Text](http://www.sublimetext.com/2) - a text editor with colour highlighting and other helpful features. If you are unable to install Sublime Text, try installing: [Notepad++](http://notepad-plus-plus.org/) (Windows) or [Atom](https://atom.io/) (Mac).
+      [Sublime Text](http://www.sublimetext.com/2) - a text editor with colour highlighting and other helpful features. If you are unable to install Sublime Text, try installing: [Notepad++](http://notepad-plus-plus.org/) (Windows) or [Atom](https://atom.io/) (Mac).
 
-            [Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/) - Choose a modern web browser that supports current web standards and has good development tools. To set Chrome as your default browser, follow [these instructions](https://support.google.com/chrome/answer/95417?hl=en).
-            
-            Another good option is Firefox. Visit [browsehappy.com](http://browsehappy.com) for more info about modern browsers.
-        </section>
-        <section class="slide" data-markdown>
-            ##Setting Up Our Work Flow
+      [Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/) - Choose a modern web browser that supports current web standards and has good development tools. To set Chrome as your default browser, follow [these instructions](https://support.google.com/chrome/answer/95417?hl=en).
+      
+      Another good option is Firefox. Visit [browsehappy.com](http://browsehappy.com) for more info about modern browsers.
+    </section>
+    <section class="slide" data-markdown>
+      ##Setting Up Our Work Flow
 
-            Open our project files in the browser and text editor.
+      Open our project files in the browser and text editor.
 
-            1. Open Sublime Text and go to **File > Open**.
-            1. Navigate to the **Project** folder (in the folder you downloaded with today's slides).
-            1. With the entire folder selected, select **Open**.
-            1. You should see the folder open in Sublime's side bar.
-            1. click on index.html in the sidebar to open it.
-            1. Right click and select **Open in Browser**.
+      1. Open Sublime Text and go to **File > Open**.
 
-            No CSS has been applied yet so all you will see is the default HTML like in [this example](examples/1-no-css.html).
-        </section>
+        ![](img/1-setup.png)
+      1. Navigate to the **Project** folder (in the folder you downloaded with today's slides). With the entire folder selected, select **Open**.
 
-        <section class="slide" data-markdown>
-            ##HTML Quick Review
+        ![](img/2-setup.png)
+      1. The folder will appear in Sublime's side bar. Double click on **index.html** in the sidebar to open it.
 
-            **Headings**: h1, h2, ... h6
+        ![](img/3-setup.png)
+      1. Right click or two finger tap and select **Open in Browser**. This will open the HTML file in your *default* browser.
 
-            **Paragraphs**: p
+        ![](img/4-setup.png)
 
-            **Link**
+      No CSS has been applied yet so all you will see is the HTML content and the default styles like in [this example](examples/1-no-css.html).
+    </section>
 
-            **Lists**
+    <section class="slide" data-markdown>
+      ##HTML: Quick Review
+      
+      HTML is used to define *content* so use the appropriate tag that best describes the meaning of your content.
 
-            **Images**
+      **Headings**: There are 6 heading tags available (`&lt;h1&gt;,&lt;h2&gt;,...,&lt;h6&gt;`) and follow a hierarchical structure. `&lt;h1&gt;` represents the most important title/heading on the page and it's best to stick to using it just once per page. Other headings can be used multiple times.  It's important to use the appropriate tag to describe the content, not for the default heading styles. That's what CSS is for!
 
-        </section>
-        <section class="slide" data-markdown>
-            ##Exercise: Personalize the content (15 mins)
+      ```xml
+      &lt;h1&gt;Most Important Heading&lt;/h1&gt;
+      &lt;h2&gt;Important But Not As Much As h1&lt;/h2&gt;
+      ```
 
-            1. Update your name and tagline in the `header` section.
-            2. Update your profile / personal summary.
-            3. Update your profile image (if you have a picture handy).
+      **Paragraphs**: Created with the `&lt;p&gt;&lt;/p&gt;` tags.
+      ```xml
+      &lt;p&gt;I'm a paragraph.&lt;/p&gt;
+      ```
 
-            Don't forget to save your changes!  
-            Save the file using **File > Save**, or use keyboard shortcuts (**CMD + S** or **CNTL + S**)
+      **Link**: requires the addition of a `src` *attribute* to specify where to link to.
+      
+      ```
+      &lt;a href=&quot;http://website.com&quot;&gt;&lt;/a&gt;
+      ```
 
-            After saving, just refresh the browser to see the changes (rather than opening your file in a new tab every time). Find a work flow that works best for you when making frequent changes. 
-            
-            Don't worry if you don't finish. There's placeholder content already included in the starter template.
-        </section>
+      **Lists**: There are two kinds of lists: ordered (`ol`) for numbered lists & undordered (`ul`) for lists with bullets. Content must be included only within the list item (`li`).
+      
+      ```xml
+      &lt;ul&gt;
+        &lt;li&gt;Unordered list item&lt;/li&gt;
+        &lt;li&gt;Unordered list item&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ol&gt;
+        &lt;li&gt;Ordered list item&lt;/li&gt;
+        &lt;li&gt;Ordered list item&lt;/li&gt;
+      &lt;/ol&gt;
+      ```
+      **Images**: like links, also requires the an additional attribute, `src`, for linking to the image file.
 
-        <section class="slide" data-markdown>
-            #Let's dive into CSS
-        </section>
+      ```
+      &lt;img src=&quot;path/to/image.jpg&quot;&gt;
+      ```
 
-        <section class="slide" data-markdown>
-            ##What is CSS?
+    </section>
+    <section class="slide" data-markdown>
+      ##Exercise #1: Personalize the content (15 mins)
 
-            HTML defines *content*, CSS defines the *presentation*.
-        
-            CSS is made up of rules that reference HTML elements (like `p` and `ul`) and define what those elements should look like.
-            A CSS rule is made up of a *selector* and one or more *declarations*.
+      1. Update your name and tagline in the `header` section.
+      2. Update your profile / personal summary / profile image, if you have a picture handy.
 
+      Don't forget to save your changes!  
+      Save the file using **File > Save**, or use keyboard shortcuts (**CMD + S** or **CNTL + S**)
 
-                h2 {
-                    color: red;
-                    font-size: 12px;
-                }
-            
-            In the above example, `h2` is the selector and will apply all the styles in between the *declaration block* to all the `h2` headings.
-        </section>
+      After saving, just refresh the browser to see the changes (rather than opening your file in a new tab every time). Find a work flow that works best for you when making frequent changes. 
+      
+      Don't worry if you don't finish. There's placeholder content already included in the starter template.
+    </section>
 
-        <section class="slide" data-markdown>
-            ##CSS Syntax
+    <section class="slide" data-markdown>
+      #Let's dive into CSS
+    </section>
 
-            A declaration tells the browser what style to apply to the selected element.
+    <section class="slide" data-markdown>
+      ##CSS Overview
 
-            A declaration is always made up of two parts: a property and a value.
+      HTML defines *content*, CSS defines the *presentation*.
+    
+      <!-- CSS is made up of rules that reference HTML elements (like `p` and `ul`) and define what those elements should look like.
+      A CSS rule is made up of a **selector** and one or more **declarations**.
 
-            A property tells the browser what we are modifying (ex. font, colour, size). A value tells the browser how to modify the property (ex. Arial, green, small).
-            
-            ```
-            h2 {
-                font-size: 12px;
-            }
-            ```
+      A declaration tells the browser what style to apply to the selected element and is always made up of two parts: a **property** and a **value**. A **property** tells the browser what is being modified (ex. font, colour, size). A **value** tells the browser *how* to modify the property (ex. Arial, green, 12px). -->
+      **Selectors:** used to determine which element(s) to apply the styles to. Can target an HTML tag, class or ID.  
+      **Declaration block:** consists of a list of declarations (rules to follow) wrapped in curly braces `{}`.  
+      **Declarations** or rules to follow, are written using `property:value` pairs.
 
-            In the above example, which is the **selector**, **declaration**, **property** and **value**?
-        </section>
+        selector {
+          property: value;
+        }
 
-        <section class="slide" data-markdown>
-            ##Comments
-            
-            When, how, why to use them.
-            
-        </section>
+      **Properties** determine the type of style to be applied to
+      the element (e.g. color).
 
-        <section class="slide" data-markdown>
-            ##Classes vs IDs
-            
-            When elements selectors are too general, **classes** and **ids** can be used.
+      **Values** are specific to the property. Declarations must end with a semi-colon (`;`) to indicate that the instruction is complete.
+      
+      ![](img/css.png)
+    </section>
 
-            * The difference between the two.
-            * The syntax.
-            * Naming conventions
-        </section>
+    <section class="slide">
+      <h2>CSS Syntax</h2>
 
-        <section class="slide">
-            <h2>Adding Background Colours</h2>
-            <p>Using the <code>background</code> (shorthand) or <code>background-color</code> (longhand) property to add colours to various page sections can be very useful when laying out the CSS for your HTML document. For now, you can use either.  We will be going more in depth with the various background options. Try changing the color below and see what happens!</p>
+      <pre><code>h1 {
+  color: blue;
+  font-size: 12px;
+}</code></pre>
 
-            <textarea class="snippet" data-subject="#bg-shorthand">background: lightblue;</textarea>
-            <div id="bg-shorthand">
-                <p>Change the background using shorthand!</p>
-            </div>
-            <textarea class="snippet" data-subject="#bg-longhand">background-color: papayawhip;</textarea>
-            <div id="bg-longhand">
-                <p>Change the background using longhand!</p>
-            </div>
-        </section>
+      <p>In the above example:</p>
 
-        <section class="slide" data-markdown>
-            ##Colour Values: Hex Code, Keywords, RGB
-            
-            **Hex code:**
+      <ul>
+        <li>Which one is the selector? <br>
+          <span class="delayed">h1</span>
+        </li>
+        <li class="delayed">Which one is the property? <br>
+          <span class="delayed">color &amp; font-size</span>
+        </li>
+        <li class="delayed">Which one is the value? <br>
+          <span class="delayed">blue &amp; 12px</span>
+        </li>
+      </ul>        
+    </section>
 
-            **Keywords:**
+    <section class="slide" data-markdown>
+      ##Comments
+      
+      Comments in CSS are written between a slash & asterix (`/* */`) and must close in the opposite order. Comments are great for ... well... leaving comments!  
 
-            **RGB:**
+      Leave comments in your code as notes for yourself or others or for organizing your code blocks. It is also used for "commenting" out your code, meaning hiding it so it doesn't render but not deleting it.
+      
+      ```
+      /* GLOBAL STYLES */
+      p {
+        color: #cc0066; /* magenta */
+      }
 
-            Colour resources: [http://colours.neilorangepeel.com/](http://colours.neilorangepeel.com/), [http://flatuicolors.com/](http://flatuicolors.com/)
-            
-        </section>
+      /* HEADER STYLES */
+      header {
+        width: 80%;
+      }
 
-        <section class="slide" data-markdown>
-            ##Exercise: add background colours (15)
+      /*  Saving this for later
+      .slider {
+        width: 100px;
+        background: red;
+      }
+      */ 
+      ``` 
+    </section>
 
-            1. Use comments to organize your CSS.
-            
-            1. Using `background` or `background-color`, add a different background colour to each major section of the page.  Use an **element selector** for the header and **class selectors** for the sections since there are multiple section tags, we need to use a more specific selector to give them each a different colour.
+    <section class="slide" data-markdown>
+      ##Classes vs IDs
+      
+      When **type selectors** are too general (targeting the HTML element), **classes** and **ids** can be used. HTML gives us two ways to attach extra identifying information to target specific elements with two **attributes**, `class` and `id`.  
+      ``` 
+      /* targets ALL parapraphs */
+      p {
+        color: red;
+      }
+      /* only applies to the element that contains this class */
+      .danger {
+        color: red;
+      }
+      /* only applies to the element that contains this id  */
+      #danger {
+        color: red;
+      }
+      ```
+    </section>
+    <section class="slide" data-markdown>
+      ##Class Selectors
 
-                `header { }`  
-                `.profile { }`  
-                `.work-experience { }`  
-                `.skills { }`  
-                `.education { }`  
-                `.contact { }`
+      A `class` **attribute** can be added to any element but the value is defined by you.  The class can then be used as a selector to apply styles to *any* element that references the class attribute.  
+      
+      In CSS, a `class` selector is defined by a leading period (`.`) followed by the class name with *no* spaces as your CSS selector. 
+      Classes can be used multiple times on the same page. 
 
-            Your page should look something like this: [background colour example](examples/2-bg-colours.html).
-        </section>
+      ```xml
+      &lt;p&gt;Regular text&lt;/p&gt;
+&lt;p&gt;Regular text&lt;/p&gt;
+&lt;p class=&quot;fancy&quot;&gt;Fancy text here.&lt;/p&gt;
+      ```
+      ```
+      p {
+        color: red;
+        font-family: Georgia, "Times New Roman", serif;
+      }
+      .fancy {
+        text-transform: uppercase;
+      }
+      ```
+    </section>
+    <section class="slide" data-markdown>
+      ##id Selectors
 
-        <section class="slide">
-            <h2>Default styles, normalize vs reset stylesheets</h2>
+      `id` **attributes** are similar to `class` **attributes** because it can also be added to any element and given any value.
 
-            <p>* normalize vs reset - http://necolas.github.io/normalize.css/<br>
-            * linking to external stylesheets. intro to inheritance & cascading.</p>
-            
-            <p class="presenter-notes">
-                * look at differences after just adding normalize<br>
-                * explain why normalize has to come before custom css
-            </p>
-            
-        </section>
+      However, it can be used only *once* per page.  IDs should be used for significant style rules and is usually reserved for structural blocks. Some developers prefer not to use IDs at all for CSS styling because of specificity rules and classes can be used multiple times, making it more flexible.
 
-        <section class="slide" data-markdown>
-            ##Font Styles & Typography
+      In CSS, IDs are denoted by a leading number symbol (`#`).
+      ```
+      #header {
+        width: 800px;
+      }
+      ```
+    </section>
+    <section class="slide" data-markdown>
+      ##class and id Naming Conventions
 
-            * Web safe fonts
-            * google fonts
+      When choosing a class or id name, choose a descriptive name and do not use spaces. Hyphens (-), underscores (_) and camel case are acceptable. CSS is also case sensitive, so while these three examples look similar, CSS will read these as three different classes so it's important (for you own sanity) to pick one style and be consistent.
+      
+      ```
+      class="content-wrapper"
+      class="content_wrapper"
+      class="contentWrapper"
+      ```
+    </section>
 
-        </section>
+    <section class="slide">
+      <h2>Adding Background Colours</h2>
+      <p>Using the <code>background</code> (shorthand) or <code>background-color</code> (longhand) property to add colours to various page sections can be very useful when laying out the CSS for your HTML document. For now, you can use either.  We will be going more in depth with the various background options. Try changing the color below and see what happens!</p>
 
-        <section class="slide" data-markdown>
-            ##Font Styles & Typography
+      <textarea class="snippet" data-subject="#bg-shorthand">background: lightblue;</textarea>
+      <div id="bg-shorthand">
+        <p>Change the background using shorthand!</p>
+      </div>
+      <textarea class="snippet" data-subject="#bg-longhand">background-color: papayawhip;</textarea>
+      <div id="bg-longhand">
+        <p>Change the background using longhand!</p>
+      </div>
+    </section>
 
-            * Line height
-            * font weight
-            * font size
-            * font family
-            * text transform
+    <section class="slide" data-markdown>
+      ##color Property and Values
 
-            * add in-slide examples
-            <!-- * 62.5% method and rems? (if there is times) -->
-        </section>
+      The `color` property accepts different types of values.
 
-        <section class="slide">
-            
-            <h2>Typography & Intro to Refactoring</h2>
-            
-            <p>Let's add some styles together first.</p>
-            * set main font-family & line-height in body<br>
-            * set font-styles for headings<br>
-            * combine selectors for common styles
+      **keywords** - you can use the actual name of the colour for most basic colours (red, green, blue, pink, etc) as well as a few fancy ones like "papayaWhip" and "paleGoldenrod".
 
-            <!-- reference 3-typography -->
+      **RGB (red-green-blue)** - Uses *three* numerical values from 0-255. 0 represents black and 255 represents white. See below for syntax.
 
-            <p class="presenter-notes">
-            * Add main font family &amp; line-height to body - explain inheritance <br>
-            * put h2, h3 styles into separate selectors so you can show combining selectors and refactoring after. Use this to also explain specificity. Tell learners to just watch.  They can type along when you refactor with combined selectors.</p>
-            
-        </section>
-        <section class="slide">
-            
-            <h2>Exercise: Typography (20mins)</h2>
-            <ol>
-                <li>
-                    Find and add 2-3 font families<br>
-                    Need help deciding?  Try Open Sans (sans-serif), Merriweather (serif),Pacifico (cursive).
-                </li>
-                <li>Add some more or update the font & typography styles to your liking!</li>
-            </ol>
+      **hex code** - Made up of the number sign (`#`) followed by six hexadecimal characters (0-9, A-F) or three hexadecimal characters (0-9, A-F).
+      
+      ```
+      p {
+        background: firebrick;
+      }
+      p {
+        background: #B22222;
+      }
+      p {
+        background: rgb(178,34,34);
+      }
+      ```
+    </section>
+    <section class="slide" data-markdown>
+      ##Colour Resources
 
-            Resources:<br>
-            http://reference.sitepoint.com/css/typography
-            
-        </section>
+      [http://www.colorpicker.com/](http://www.colorpicker.com/)  
+      [http://colours.neilorangepeel.com/](http://colours.neilorangepeel.com/)    
+      [http://www.colourlovers.com/](http://www.colourlovers.com/)  
+      [http://flatuicolors.com/](http://flatuicolors.com/)  
+      [http://color.hailpixel.com/](http://color.hailpixel.com/)  
+      [http://wesandersonpalettes.tumblr.com/](http://wesandersonpalettes.tumblr.com/)
+    </section>
 
-        <section class="slide" data-markdown>
-            ## box model, padding/margin/borders
+    <section class="slide" data-markdown>
+      ##Referencing CSS
+
+      There are three ways to include (otherwise known as *referencing*) CSS in an HTML page.
+
+      ###Inline
+      Can be used in any HTML element using the `style` *attribute*.
+
+      ```
+      &lt;p style=&quot;color: blue;&quot;&gt;I'm writing CSS!&lt;/p&gt;
+      ```
+
+      This technique should be avoided but it's good to know how it works in case you encounter it "in the wild."
+
+      ###Internal
+      Uses `&lt;style&gt;` and is included in the `&lt;head&gt;` element.
+
+      ```    
+      &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;style&gt;
+          h1 {
+           font-size: 16px;
+          }
+        &lt;/style&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;p&gt;I'm still writing CSS!&lt;/p&gt;
+      &lt;/body&gt;
+      ```
+
+      This method is preferred over *inline* css, however it is still inefficient because if you had multiple web pages, you would have to copy the style block to every single page to duplicate the styles.
+
+      ###External
+      Links to an separate style sheet file. This method is recommended because it separates the CSS from the HTML document. The link to the stylesheet is referenced in the `&lt;head&gt;` on any page where these styles need to be included. Only the CSS file needs to be updated rather than the CSS block on every single page.
+
+      Referenced in the head element with a `&lt;link&gt;` tag and two **attributes**, `rel` and `href`. Just like creating links, the value of the `href` points to the location of the stylesheet.  The `rel` attribute describes the relationship.
+      
+      ```
+      &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+      &lt;/head&gt;
+      ```
+    </section>
+
+    <section class="slide" data-markdown>
+      ##Exercise 2: add background colours (15mins)
+
+      1. Use comments to organize your CSS.
+      
+      1. Using `background` or `background-color`, add a different background colour to each major section of the page.  Use an **element selector** for the header and **class selectors** for the sections. Since there are multiple `&lt;section&gt;` tags, we need to use a more specific selector to give them each a different colour.  Here are the selectors to get started: 
+      
+      ```
+      header { }  
+      .profile { }  
+      .work-experience { }  
+      .skills { }  
+      .education { }  
+      .contact { }
+      ```
+
+      Your page should look something like this: [background colour example](examples/2-bg-colours.html).
+    </section>
+
+    <section class="slide">
+      <h2>Default styles: Reset vs Normalize</h2>
+
+      <p>Every browser has its own default ‘user agent’ stylesheet to add default styles to the html elements. (ex. links are blue, h1 are bigger than h2)</p>
+
+      <p>A <strong>CSS Reset</strong> is a set of CSS rules that resets the styling of all HTML elements to a consistent baseline to avoiding cross-browser differences as much as possible.  <strong>Normalize</strong> is slightly different because it "normalizes" the default styling rather than removes the default styles.</p>
+
+      <p>Note that if you add it as a separate stylesheet, it should be included <em>before</em> your custom stylesheet.</p>
+
+      <p>These various stylesheets can be downloaded at <a href="http://www.cssreset.com/">cssreset.com</a> but for today, it’s already included in the <strong>Projects</strong> folder.</p>
+      
+      <p class="presenter-notes">
+        * look at differences after just adding normalize<br>
+        * explain why normalize has to come before custom css
+      </p>
+      
+    </section>
+    
+    <section class="slide" data-markdown>
+      ##Cascading, Inheritance and Specificity
+
+      CSS executes from top to bottom (hence "cascading"). So be careful of the the order of your CSS declarations. The declaration that comes *after* will override the one that came before.
+
+      In this example, what colour will the `&lt;h1&gt;` be?
+
+      ```
+      h1 {
+        color: black;
+      }
+      h1 {
+        color: blue;
+      }
+      ```
+    </section>
+    <section class="slide" data-markdown>
+      ##Cascading, Inheritance and Specificity
+
+      One of the strengths of CSS is styles can be inherited from parent to child elements using the family tree relationship between the elements.
+
+      ```
+      &lt;body&gt;
+        &lt;h1&gt;My Website&lt;/h1&gt;&lt;!-- child of body --&gt;
+        &lt;p&gt;This is a paragraph.&lt;/p&gt;&lt;!-- sibling of h1 and below p tag --&gt;
+        &lt;p&gt;This is another paragraph.&lt;/p&gt;
+      &lt;/body&gt;
+      ```
+      ```
+      body {
+        color: blue;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      h1 {
+        color: black;
+      }
+      ```
+
+      In the above example, the CSS properties to the body selector is inherited by the children and descendants so all the text would be blue and display the Helvetica font. 
+
+      However, when a more specific selector is used (`h1`), it overrides the inherited values because it's more *specific*.
+    </section>
+
+    <section class="slide">
+      <h1>Font Styles<br> &<br> Typography</h1>
+    </section>
+
+    <section class="slide" data-markdown>
+      ##Web safe fonts
+
+      The default font can be changed with the `font-family` **property**. However, not all fonts are installed on all computers so it's recommended to use fonts that are considered *web safe* &mdash; fonts that are commonly included on most computers.
+
+      It's best practice to list at least two or three font options to provide a fall-back if the user doesn't have the preferred fonts installed.
+
+      ```
+      font-family: Helvetica, Arial, sans-serif;
+      ```
+
+      Here's a handy resource for referencing web safe fonts: [CSS Font Stack](http://cssfontstack.com/).
+    </section>
+
+    <section class="slide" data-markdown>
+      ##Custom fonts
+
+      For more options than just using the web safe fonts, services like [Google Fonts](http://www.google.com/fonts/) and [Font Squirrel](http://www.fontsquirrel.com/) can make it easier to use a variety of fonts that aren't normally supported by all computers.
+
+      A service like **Font Squirrel** requires you to download the fonts and add it to your project files. The site features a handy [generator](http://www.fontsquirrel.com/tools/webfont-generator) to create different font files to support various browsers as well as include demo files and instructions on how to use it. 
+
+      **Google Fonts** allows you to link directly to their stylesheet and no file downloads are necessary. To use these fonts:
+
+      * Select the fonts you want to use and **Add to Collection**.  
+      * You can **Review** them to take a closer look, then choose *Use* when ready.
+      * Select font weights. The more you choose, the more it will slow down page load time.
+      * The default character set should contain what you need. Only select an option if you need to add additional language support.
+      * Grab the `&lt;link&gt;` code snippet and add it the `&lt;head&gt;` part of your page.
+      * Use the new fonts with the `font-family` property as listed in the example on the Google Fonts page.
+
+      That's it!
+    </section>
+
+    <section class="slide">
+      <h2>Font Styles & Typography</h2>
+      <p>Let's look at a few CSS properties for styling text.</p>
+      <textarea class="snippet">line-height: 1.25;
+font-family: Helvetica, Arial, serif;
+font-size: inherit;
+font-weight: normal;
+text-transform: inherit;</textarea>
+      <p>Just some text to test out the above styles. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni repellat sunt quae fugit illum in aut sed, quis nesciunt totam veritatis, dolores alias modi fuga commodi dicta facilis, consequatur temporibus.</p>
+
+      <p>Resource: <a href="http://reference.sitepoint.com/css/typography">Sitepoint Typographical Properties</a></p>
+    </section>
+
+    <section class="slide">
+      
+      <h2>Typography & Intro to Refactoring</h2>
+      
+      <p>Let's add some styles together first.</p>
+      * set main font-family & line-height in body<br>
+      * set font-styles for headings<br>
+      * combine selectors for common styles
+
+      <!-- reference 3-typography -->
+
+      <p class="presenter-notes">
+      * Add main font family &amp; line-height to body - explain inheritance <br>
+      * put h2, h3 styles into separate selectors so you can show combining selectors and refactoring after. Use this to also explain specificity. Tell learners to just watch.  They can type along when you refactor with combined selectors.</p>
+      
+    </section>
+    <section class="slide">
+      
+      <h2>Exercise: Typography (20mins)</h2>
+      <ol>
+        <li>
+          Find and add 2-3 font families<br>
+          Need help deciding?  Try Open Sans (sans-serif), Merriweather (serif),Pacifico (cursive).
+        </li>
+        <li>Add some more or update the font & typography styles to your liking!</li>
+      </ol>
+
+      Resources:<br>
+      http://reference.sitepoint.com/css/typography
+      
+    </section>
+
+    <section class="slide" data-markdown>
+      ## box model, padding/margin/borders
 
 ###What is the box model?
 * show examples
 * examples using inspect element / dev tools
 * box model fix
-        </section>
+    </section>
 
-        <section class="slide" data-markdown>
-            ## width & min/max-width, margin auto
+    <section class="slide" data-markdown>
+      ## width & min/max-width, margin auto
 
 show example of adding padding to a couple sections 
 <!-- - pushing elements with margin inside.  -->
 set widths/padding on **profile section tag** to show why we need to create an inner wrapper.
 
-        </section>
+    </section>
 
-        <section class="slide" data-markdown>
-            ##Exercise
+    <section class="slide" data-markdown>
+      ##Exercise
 
-            * show examples of using padding, max-width and width with percentages
-            * create an innner wrapper
-            * add it just to profile section for demostration
+      * show examples of using padding, max-width and width with percentages
+      * create an innner wrapper
+      * add it just to profile section for demostration
 
-            [example 5](project/index-5.html)
+      [example 5](project/index-5.html)
 
-            <!-- * padding: 30px 300px; will allow colour to stay but widths give a different kind of control to sizing.
-            * add max width and margin auto to profile to show background color
-            * add content-wrap div to just profile
-            * add padding for less than 1000px and percentage width -->
-            
-        </section>
-        <section class="slide" data-markdown>
-            ## The Dangers of "div-itis"
-            * dont need wrapper for header, just text-align center
-            * The dangers of "divitis" - only add what you need.  you can always add more later.
-            * refer to notes
-        </section>
-        <section class="slide" data-markdown>
-            ##Exercise (15mins)
+      <!-- * padding: 30px 300px; will allow colour to stay but widths give a different kind of control to sizing.
+      * add max width and margin auto to profile to show background color
+      * add content-wrap div to just profile
+      * add padding for less than 1000px and percentage width -->
+      
+    </section>
+    <section class="slide" data-markdown>
+      ## The Dangers of "div-itis"
+      * dont need wrapper for header, just text-align center
+      * The dangers of "divitis" - only add what you need.  you can always add more later.
+      * refer to notes
+    </section>
+    <section class="slide" data-markdown>
+      ##Exercise (15mins)
 
-            * add padding & text-align to header
-            * adjust margins for headings. (inspect to find out if padding or margin)
-            * Add content-wrapper div to each section
+      * add padding & text-align to header
+      * adjust margins for headings. (inspect to find out if padding or margin)
+      * Add content-wrapper div to each section
 
-            [example 6](project/index-6.html) 
-        </section>
+      [example 6](project/index-6.html) 
+    </section>
 
-        <section class="slide" data-markdown>
-            ##7. Images & BG  images
+    <section class="slide" data-markdown>
+      ##7. Images & BG  images
 
 ###background images
 * add to header
@@ -337,10 +611,10 @@ set widths/padding on **profile section tag** to show why we need to create an i
 **teacher note** show how each sample background looks different with the default bg settings since the images are all different sizes.
 
 [example 7](project/index-7.html) 
-        </section>
+    </section>
 
-        <section class="slide" data-markdown>
-            ##8. Floats
+    <section class="slide" data-markdown>
+      ##8. Floats
 * talk about stacking order of block and inline elements. (go back this when talking about display property)
 * breaks natural stacking order.  have to break it and put it back together.
 * need to set a width and equals 100%.  percentages will make it scalable. show difference between % and px.
@@ -349,11 +623,11 @@ set widths/padding on **profile section tag** to show why we need to create an i
 * what about the image? show how to make it same size as container but then refactor
 * show the different between clearfix and clear float
 
-            [example 8](project/index-8.html)
-        </section>
+      [example 8](project/index-8.html)
+    </section>
 
-        <section class="slide" data-markdown>
-        ##exercise
+    <section class="slide" data-markdown>
+    ##exercise
 * apply floats to profile image
 * make image fluid
 * refactor, put style right on the image itself
@@ -363,10 +637,10 @@ set widths/padding on **profile section tag** to show why we need to create an i
 * border radius
 
 http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/
-        </section>
+    </section>
 
-        <section class="slide" data-markdown>
-            ##9. inline / block / inline-block
+    <section class="slide" data-markdown>
+      ##9. inline / block / inline-block
 * examples of display inline & block
 * update h2 to inline-block
 * CSS3 transform 
@@ -376,9 +650,9 @@ http://css3please.com/
 http://leaverou.github.io/prefixfree/
 
 [example 9](project/index-9.html)
-        </section>
+    </section>
 
-        <section class="slide" data-markdown>
+    <section class="slide" data-markdown>
 ##10. more bg images and creating a bg overlay
 * linear gradient trick for overlay w/o positioning
 linear-gradient(rgba($black, 0.5),rgba($black, 0.5))
@@ -387,149 +661,149 @@ linear-gradient(rgba($black, 0.5),rgba($black, 0.5))
 * add linear gradient and update background images and colours
 
 [example 10](project/index-10.html)
-        </section>
+    </section>
 
-        <section class="slide" data-markdown>
-        ##11. Icon fonts
+    <section class="slide" data-markdown>
+    ##11. Icon fonts
 
-        * http://fortawesome.github.io/Font-Awesome/
-        * remember to add the http. will only work if you're on a server.
-        * add class of skills-list to reset list styles
+    * http://fortawesome.github.io/Font-Awesome/
+    * remember to add the http. will only work if you're on a server.
+    * add class of skills-list to reset list styles
 
-        ###Exercise
-        * add checkmarks, reset list styles
-        * style h3 & h4 for skills section
+    ###Exercise
+    * add checkmarks, reset list styles
+    * style h3 & h4 for skills section
 
-        [no more examples]
-        [final project](project/final.html)
+    [no more examples]
+    [final project](project/final.html)
 
-        </section>
+    </section>
 
-        <section class="slide" data-markdown>
-        ##Style skills section
-        
-        ###Exercise
-        * style h3 & h4 for skills section
-        * style the two list options
+    <section class="slide" data-markdown>
+    ##Style skills section
+    
+    ###Exercise
+    * style h3 & h4 for skills section
+    * style the two list options
 
-        </section>
+    </section>
 
-        <section class="slide" data-markdown>
-        ##Exercise - style work experience section
+    <section class="slide" data-markdown>
+    ##Exercise - style work experience section
 
-        * floats
-        * heading/font styles
+    * floats
+    * heading/font styles
 
-        </section>
+    </section>
 
-        <section class="slide" data-markdown>
-        ##Exercise - style education section
+    <section class="slide" data-markdown>
+    ##Exercise - style education section
 
-        * heading/font styles
-        </section>
+    * heading/font styles
+    </section>
 
-         <section class="slide" data-markdown>
-        ##Exercise - style footer section
-        
-        * floats, font styles
-        </section>
+     <section class="slide" data-markdown>
+    ##Exercise - style footer section
+    
+    * floats, font styles
+    </section>
 
-        <section class="slide" data-markdown>
-            ##positioning
+    <section class="slide" data-markdown>
+      ##positioning
 
-            in-slide examples
-        </section>
+      in-slide examples
+    </section>
 
-        <section class="slide" data-markdown>
-            ##Final Exercise!
+    <section class="slide" data-markdown>
+      ##Final Exercise!
 
-            position fixed download pdf links
+      position fixed download pdf links
 
-        </section>  
-        <section class="slide" data-markdown>
-            ##Next steps
+    </section>  
+    <section class="slide" data-markdown>
+      ##Next steps
 
-            list resources
-        </section>
+      list resources
+    </section>
 
 
-        <section class="slide">
-            <h1>Thank you!</h1>
-        </section>
+    <section class="slide">
+      <h1>Thank you!</h1>
+    </section>
 
-        <section class="slide">
-            <h2>Just some text and Code</h2>
-            <p>Sample of a slide with basic text and code snippets.</p>
-            <p>For HTML, the <code><</code> needs to be escaped! As long as the code snippet is wrapped in <code>&lt;pre>&lt;code>&lt;/code>&lt;/pre></code>, the syntax highlighting is taken care of!</p>
-            
-            <h3>HTML</h3>
-            <pre><code>&lt;!DOCTYPE html>
+    <section class="slide">
+      <h2>Just some text and Code</h2>
+      <p>Sample of a slide with basic text and code snippets.</p>
+      <p>For HTML, the <code><</code> needs to be escaped! As long as the code snippet is wrapped in <code>&lt;pre>&lt;code>&lt;/code>&lt;/pre></code>, the syntax highlighting is taken care of!</p>
+      
+      <h3>HTML</h3>
+      <pre><code>&lt;!DOCTYPE html>
 &lt;html&gt;
-    &lt;head&gt;
-        &lt;title&gt;&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-    &lt;/body&gt;
+  &lt;head&gt;
+    &lt;title&gt;&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
 &lt;/html></code></pre>
 
-            <h3>CSS</h3>
-            <pre><code>body {
-    margin: 0;
-    padding: 0;
+      <h3>CSS</h3>
+      <pre><code>body {
+  margin: 0;
+  padding: 0;
 }</code></pre>   
-        </section>
+    </section>
 
-        <section class="slide">
-            <h2>JavaScript & jQuery highlight example</h2>
-            <p>Code highlighting is provided by <a href="http://highlightjs.org">highlight.js</a>. Visit the site to see the full list of supported languages.</p>
-            <h3>JavaScript!</h3>
-            <pre><code>// Comment
+    <section class="slide">
+      <h2>JavaScript & jQuery highlight example</h2>
+      <p>Code highlighting is provided by <a href="http://highlightjs.org">highlight.js</a>. Visit the site to see the full list of supported languages.</p>
+      <h3>JavaScript!</h3>
+      <pre><code>// Comment
 document.addEventListener('DOMAttrModified',function(e) {
-    var node = e.target, attr = e.attrName;
-    if(/^input$/i.test(node.nodeName) 
-    &amp;&amp; (attr === 'placeholder' || attr === 'value')
-    || foo > 5)
-        Placeholder.update(node);
+  var node = e.target, attr = e.attrName;
+  if(/^input$/i.test(node.nodeName) 
+  &amp;&amp; (attr === 'placeholder' || attr === 'value')
+  || foo > 5)
+    Placeholder.update(node);
 }, false);</code></pre>
 
-            <h3>jQuery!</h3>
-            <pre><code>$(document).ready(function(){
-    $("p").hide("fast");
+      <h3>jQuery!</h3>
+      <pre><code>$(document).ready(function(){
+  $("p").hide("fast");
 });</code></pre>
-        </section>
+    </section>
 
-        <section class="slide">
-            <h2>Incremental display of content</h2>
-            <p>Use the arrow keys to reveal each line.  To use, just add a <code>class="delayed"</code>.</p>
-            <ul>
-                <li class="delayed">Make sure your computer is setup</li>
-                <li class="delayed">Web development breakdown</li>
-                <li class="delayed">Dive into HTML</li>
-                <li class="delayed">CSS fundamentals</li>
-            </ul>
-        </section>
+    <section class="slide">
+      <h2>Incremental display of content</h2>
+      <p>Use the arrow keys to reveal each line.  To use, just add a <code>class="delayed"</code>.</p>
+      <ul>
+        <li class="delayed">Make sure your computer is setup</li>
+        <li class="delayed">Web development breakdown</li>
+        <li class="delayed">Dive into HTML</li>
+        <li class="delayed">CSS fundamentals</li>
+      </ul>
+    </section>
 
-        <section class="slide">
-            <h2>CSS Snippets demo</h2>
-            <p>The whole slide will get the CSS applied to it. Go ahead, add/change/remove some CSS!</p>
-            <textarea class="snippet">background-color: lightblue;
+    <section class="slide">
+      <h2>CSS Snippets demo</h2>
+      <p>The whole slide will get the CSS applied to it. Go ahead, add/change/remove some CSS!</p>
+      <textarea class="snippet">background-color: lightblue;
 font-family: "Times New Roman", serif;
-            </textarea>
-        </section>
+      </textarea>
+    </section>
 
-        <section class="slide">
-            <h2>CSS Snippets demo</h2>
-            <p>You can also target specific elements</p>
-            <textarea class="snippet" data-subject="#test">background-color: lightblue;
+    <section class="slide">
+      <h2>CSS Snippets demo</h2>
+      <p>You can also target specific elements</p>
+      <textarea class="snippet" data-subject="#test">background-color: lightblue;
 font-family: "Times New Roman", serif;
 padding: 20px;
-            </textarea>
-            <div id="test">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt sint beatae dolor dolorum aliquid quis explicabo vitae numquam, quas illo dolore molestiae ratione, perferendis, deleniti nemo ea voluptatibus! Quibusdam.</p>
-            </div>
-        </section>
+      </textarea>
+      <div id="test">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt sint beatae dolor dolorum aliquid quis explicabo vitae numquam, quas illo dolore molestiae ratione, perferendis, deleniti nemo ea voluptatibus! Quibusdam.</p>
+      </div>
+    </section>
 
-        <section class="slide" data-markdown>
+    <section class="slide" data-markdown>
 ##Markdown example
 
 You can even write in Markdown as long as the `data-markdown` attribute is included. See the [documentation for markdown syntax](http://daringfireball.net/projects/markdown/).  Both text and code blocks are supported at this time.  Code blocks need to be denoted either by three backticks (`) or by tabbing the content in one indent (at least 4 spaces).  Tabbing to create a code block won't work in this slide deck if your content begins tabbed in in your source code.
@@ -546,58 +820,57 @@ var myJSVariable = "Syntax Highting for Javascript";
 
 ```css
 .css-selector{
-    highlight : syntax;
+  highlight : syntax;
 }
 ```
 #### indented example
 
-    code block that has to guess at the language and likely gets it wrong.  it thinks this is applescript.
+  code block that has to guess at the language and likely gets it wrong.  it thinks this is applescript.
 
-        </section>
+    </section>
 
-        <!-- Last slide -->
-        <section class="slide">
-            <h2>Thank you!</h2>
-            <p>Closing remarks</p>
-            <p class="attribution">Slidedecks created with <a href="https://github.com/LeaVerou/csss">Lea Verou's CSS-based SlideShow System</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
-        </section>
-
-    </main><!-- cls main section -->
+    <!-- Last slide -->
+    <section class="slide">
+      <h2>Thank you!</h2>
+      <p>Closing remarks</p>
+      <p class="attribution">Slidedecks created with <a href="https://github.com/LeaVerou/csss">Lea Verou's CSS-based SlideShow System</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
+    </section>
+  </main><!-- cls main section -->
 
    
-    <footer>
-        <p class="instructions">Use the left <i class="fa fa-arrow-left"></i> and right <i class="fa fa-arrow-right"></i> arrow keys to navigate</p>
+  <footer>
+    <p class="instructions">Use the left <i class="fa fa-arrow-left"></i> and right <i class="fa fa-arrow-right"></i> arrow keys to navigate</p>
 
-        <p class="license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
-    </footer>
+    <p class="license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
+  </footer>
 
 
-    <script src="scripts/slideshow.js"></script>
+  <script src="scripts/slideshow.js"></script>
 
-    <!-- Uncomment the plugins you need -->
-    <script src="scripts/plugins/css-edit.js"></script>
-    <script src="scripts/plugins/css-snippets.js"></script>
-    <script src="scripts/plugins/css-controls.js"></script>
-    <!-- <script src="plugins/code-highlight.js"></script>-->
+  <!-- Uncomment the plugins you need -->
+  <script src="scripts/plugins/css-edit.js"></script>
+  <script src="scripts/plugins/css-snippets.js"></script>
+  <script src="scripts/plugins/css-controls.js"></script>
+  <!-- <script src="plugins/code-highlight.js"></script>-->
 
-    <script src="scripts/plugins/markdown/marked.js"></script>
-    <script src="scripts/plugins/markdown/markdown.js"></script>
-    <script src="scripts/plugins/highlight/highlight.js"></script>    
-    <script>hljs.initHighlightingOnLoad();</script>
+  <script src="scripts/plugins/markdown/marked.js"></script>
+  <script src="scripts/plugins/markdown/markdown.js"></script>
+  <script src="scripts/plugins/highlight/highlight.js"></script>    
+  <script>hljs.initHighlightingOnLoad();</script>
 
-    <!-- Prettify -->
-    <script src="scripts/plugins/prettify.js"></script>
-    <script src="scripts/plugins/lang-css.js"></script>
-    <script src="scripts/plugins/prism.js"></script>
+  <!-- Prettify -->
+  <script src="scripts/plugins/prettify.js"></script>
+  <script src="scripts/plugins/lang-css.js"></script>
+  <script src="scripts/plugins/prism.js"></script>
 
-    <script>
-        var slideshow = new SlideShow();
+  <script>
+    var slideshow = new SlideShow();
 
-        // Grabs all the .snippet elements
-        var snippets = document.querySelectorAll('.snippet');
-        for(var i=0; i<snippets.length; i++) {
-            new CSSSnippet(snippets[i]);
-        }
-    </script>
+    // Grabs all the .snippet elements
+    var snippets = document.querySelectorAll('.snippet');
+    for(var i=0; i<snippets.length; i++) {
+      new CSSSnippet(snippets[i]);
+    }
+  </script>
 </body>
 </html>

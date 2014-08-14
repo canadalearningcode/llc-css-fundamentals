@@ -25,7 +25,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font: 2.5rem/1.4 "Montserrat", sans-serif;
+  font: 2.5rem/1.4 "Source Sans Pro", sans-serif;
   color: #222222;
   border-top: 4px solid #b109aa;
   -webkit-font-smoothing: antialiased;
@@ -73,11 +73,14 @@ footer {
   z-index: 100;
   text-align: center;
   background: rgba(255, 255, 255, 0.6);
-  font-size: 12px;
+  font-size: 14px;
 }
 footer .instructions {
   float: right;
   margin-right: 20px;
+}
+footer i {
+  color: #b109aa;
 }
 footer .license {
   float: left;
