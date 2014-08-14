@@ -752,6 +752,7 @@ margin: 0 auto;</textarea>
 
     <section class="slide" data-markdown>
       ##Class exercise
+      1. Add the box model fix to our CSS file. [link](/#slide38)
 
       1. Go back to our HTML & CSS project files, add `padding:1px` to the `header` section to see how it changes the spacing. Open up the Chrome Dev Tools and inspect the element.
 
@@ -1057,7 +1058,8 @@ max-width: 1000px;
       <p>Rule of thumb: if there's is an element that follows the floated element, apply <code>clear: both</code> to that element.  If all the elements need to be floated, apply the <code>.clearfix</code> class to the <em>parent</em> element.</p>
 
       <iframe width="100%" height="300" src="http://jsfiddle.net/ttt5ebhr/3/embedded/result,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
+      
+      <p>Let's add this clearfix snippet to our CSS file to use it later.</p>
       <p>Want to know more about the clearfix trick? Here you go:
       <a href="http://css-tricks.com/snippets/css/clear-fix/">http://css-tricks.com/snippets/css/clear-fix/</a></p> 
     </section>
@@ -1093,26 +1095,142 @@ max-width: 1000px;
     </section>
 
     <section class="slide">
-      <h2>More specific selectors</h2>
+      <h2>Child & Adjacent selectors</h2>
       
-      <p><strong>Child selectors</strong> - Matches any element that is a child of the element declared before it.</p>
+      <p><strong>Child selectors</strong> - Only matches an element that is a <em>child</em> of the element declared before it.</p>
       
-      <textarea class="snippet" data-subject="#child-selector">background-color: lightblue;
-font-family: "Times New Roman", serif;
-padding: 20px;
-      </textarea>
+      <textarea class="snippet" data-subject="#child-selector">#child-selector {
+  background: lightblue;
+}
+#child-selector p > a {
+  color: red;
+}</textarea>
       <div id="child-selector">
-        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet. <a href="#0">link</a></p>
+        <a href="#0">link</a>
       </div>
+      
+      <p><strong>Adjacent selectors</strong> - Matches any element immediately preceded by a sibling element E</p>
 
-      p > a {
-        /* will only apply to a tags that are 
+      <textarea class="snippet" data-subject="#adjacent-selector">#adjacent-selector {
+  background: gray;
+}
+#adjacent-selector p + a {
+  color: red;
+}</textarea>
+      <div id="adjacent-selector">
+        <p>Lorem ipsum dolor sit amet. <a href="#0">link</a></p>
+        <a href="#0">link</a>
+      </div>
+    </section>
+
+    <section class="slide" data-markdown>
+      ##Using multiple classes
+
+      It's common to use more than one class on one element to add different styles to it. To use multiple classes, declare it in the same class attribute but separate classes with a space.
+
+      ```xml
+      &lt;div class=&quot;class-1 class-2&quot;&gt;
+        content here
+      &lt;/div&gt;
+      ```
+
+      Any styles under `.class-1` AND `.class-2` will apply.
+
+      To select two (or more) classes at the same time, use both names as the selector with *no* space.  This style will only apply if *both* classes are declared in the element.
+      
+      ```css
+      .class-1.class-2 {
+        /* will only apply if both classes exist */
       }
-      E > F  
+      ```
+    </section>
+      
+    <section class="slide" data-markdown>
+    ##Class Exercise: Floats
+    
+    1.Add a float to profile image.
+      
+    ```
+    .profile img {
+      float: left;
+    }
+    ```
+    What happens to the parent element when a child element is floated?
 
-E + F Matches any F element immediately preceded by a sibling element E.  Adjacent selectors
+    2.Add the clearfix class to the parent element
 
-    <!-- * talk about stacking order of block and inline elements. (go back this when talking about display property)
+    3.Next, let's make the image a relative size to the page and add margin to create space between the image and text.
+
+    ```
+    .profile img {
+      float: left;
+      width: 30%;
+      margin-right: 2%;
+    }
+    ```
+
+    4.If the text is longer than the image, it will wrap around it. Let's put a width on the profile summary and float it too.
+    ```
+    .summary {
+      width: 68%;
+      float: right;
+    }
+    ```
+    </section>
+    
+    <section class="slide" data-markdown>
+      ##Exercise 6: Add More Floats and borders (15mins)
+
+      Let's add floats to the **Work Experience** section as well.  Here's a link to the [final project](project/final.html) again for reference. Here's some hints to get you started:
+
+      * In the HTML, the `.details` element contains the Company and date details and the `.description` element contains the job description. So we want to float `.details` left and `.descriptions` right.
+
+      ```
+      &lt;div class=&quot;item&quot;&gt;
+        &lt;div class=&quot;details&quot;&gt;
+          Company name, date, etc
+        &lt;/div&gt;
+        &lt;div class=&quot;description&quot;&gt;
+          Job description
+        &lt;/div&gt;
+      &lt;/div&gt;&lt;!-- close .item --&gt;
+      ```
+      * Remember, to float elements properly, declare a width as well.
+      * What happens when elements are floated? The parent element *collapses* so make sure to fix that as well!
+
+
+      If you have some extra time, feel free to follow these instructions for adding a border or tweak some font styles!
+
+      * Each Work Experience item is contain in an element with `.item`.  Create a new declaration block for `.item` and add a `border-bottom` style to it.  The syntax is: `border-bottom: size style colour;`
+      
+      ```
+      .item {
+        border-bottom: 1px solid #ccc;
+      }
+      ```
+      
+      Your page should look something like this: [Example 6](examples/6-floats.html).
+    <!-- * size the image 
+
+    width: 30%;
+
+    * and work experience section
+
+    * make image fluid
+    * refactor, put style right on the image itself
+    * clearfix vs clear float
+    * how to use multiple classes
+    * add border to see difference margin vs padding
+    * border radius
+
+http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/
+ http://css3please.com/  
+      http://leaverou.github.io/prefixfree/
+
+      [example 9](project/index-9.html) -->
+
+          <!-- * talk about stacking order of block and inline elements. (go back this when talking about display property)
 * breaks natural stacking order.  have to break it and put it back together.
 * need to set a width and equals 100%.  percentages will make it scalable. show difference between % and px.
 * go through in slide examples
@@ -1121,20 +1239,6 @@ E + F Matches any F element immediately preceded by a sibling element E.  Adjace
 * show the different between clearfix and clear float
 
       [example 8](project/index-8.html) -->
-    ##exercise
-* apply floats to profile image
-* make image fluid
-* refactor, put style right on the image itself
-* clearfix vs clear float
-* how to use multiple classes
-* add border to see difference margin vs padding
-* border radius
-
-http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/
- http://css3please.com/  
-      http://leaverou.github.io/prefixfree/
-
-      [example 9](project/index-9.html)
     </section>
 
 

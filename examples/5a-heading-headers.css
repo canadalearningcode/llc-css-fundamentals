@@ -1,5 +1,11 @@
 /* GLOBAL STYLES
 -----------------*/
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 body {
   font-family: "Merriweather", serif;
   line-height: 1.5;
