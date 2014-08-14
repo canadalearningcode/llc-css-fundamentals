@@ -516,34 +516,98 @@ text-transform: inherit;</textarea>
 
     <section class="slide">
       
-      <h2>Typography & Intro to Refactoring</h2>
+      <h2>Exercise #3: Typography</h2>
       
-      <p>Let's add some styles together first.</p>
-      * set main font-family & line-height in body<br>
-      * set font-styles for headings<br>
-      * combine selectors for common styles
+      <p>Let's add some styles together first. Let's start with some web safe fonts first, <a href="http://cssfontstack.com/">cssfontstack.com</a>.</p>
+
+      <p>1. Set the main font-family &amp; line-height using <code>body</code> as the selector.</p>
+
+      <pre><code>body {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  line-height: 1.5;
+}</code></pre>
+
+      <p>2. Set font styles for h1, h2 and h3</p>
+
+      <pre><code>h1 {
+  font-family: "Brush Script MT", cursive;
+  font-weight: 400;
+  margin: 0;
+  font-size: 80px;
+}
+h2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 32px;
+}
+h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  text-transform: uppercase;
+}</code></pre>
 
       <!-- reference 3-typography -->
 
       <p class="presenter-notes">
+      * reference 3-typography in example folder<br>
       * Add main font family &amp; line-height to body - explain inheritance <br>
-      * put h2, h3 styles into separate selectors so you can show combining selectors and refactoring after. Use this to also explain specificity. Tell learners to just watch.  They can type along when you refactor with combined selectors.</p>
-      
+      * put h2, h3 styles into separate blocks to show combining selectors & refactoring after. Use this to also explain specificity. Tell learners they have to option to try to type along or just watch to keep from slowing down the demo. They can catch up in the exercise work session since the final code will be posted in the next couple slides.</p>
     </section>
-    <section class="slide">
-      
-      <h2>Exercise: Typography (20mins)</h2>
-      <ol>
-        <li>
-          Find and add 2-3 font families<br>
-          Need help deciding?  Try Open Sans (sans-serif), Merriweather (serif),Pacifico (cursive).
-        </li>
-        <li>Add some more or update the font & typography styles to your liking!</li>
-      </ol>
 
-      Resources:<br>
-      http://reference.sitepoint.com/css/typography
+    <section class="slide" data-markdown>
+      ##Refactor!
+
+      What is refactoring? Code refactoring is the process of restructuring existing code to make it more efficient.
+
+      Writing clean, organized and efficient code will not only make your pages run faster but will makie it easier to maintain and can potentially reduce browser bugs. It's tempting to say "I'll fix it later" but later doesn't always come. It's important to refactor your code as you go along.
+
+      If you find you are declaring the same styles over and over again, try *combining selectors*, using a `class` or apply the style to a parent selector so the styles can be inherited.
+
+      Combining selectors allows you to apply the same styles to multiple selectors.  Make sure to separate selectors with a comma.
+
+      ```
+      h1, h2 {
+        /* will apply any styles here to both headings */
+      }
+      ```
+    </section>
+    <section class="slide" data-markdown>
+      ##Exercise #3 Typography (continued)
+
+      The previous example can be refactored to look like this:
       
+      ```
+      h1, h2, h3 {
+        margin: 0;
+        font-weight: 400;
+      }
+      h2, h3 {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-transform: uppercase;
+      }
+      h1 {
+        font-family: "Brush Script MT", cursive;
+        font-size: 80px;
+      }
+      h2 {
+        font-size: 32px;
+      }
+      ```
+    </section>
+    <section class="slide" data-markdown>
+      ##Exercise #3 Typography (Continued)(15mins)
+
+      1. Find and add 2-3 font families from [Google Fonts](http://www.google.com/fonts/)
+      1. Update the font & typography styles to your liking! You can add some more later as the page starts to come together more.
+
+      Resource: [Sitepoint Typographical Properties](http://reference.sitepoint.com/css/typography)
+
+      Need help deciding on fonts?  The example final project uses Open Sans (sans-serif), Merriweather (serif), Pacifico (cursive).
+      
+      Your page should look something like this: [Example 3](examples/3-typography.html)
     </section>
 
     <section class="slide" data-markdown>
