@@ -1287,7 +1287,69 @@ max-width: 1000px;
       }
       ```
     </section>
-    <section class="slide"></section>
+    <section class="slide" data-markdown>
+      ##Vendor prefixes
+
+      In some cases, to use a more advanced CSS3 styles, a standard CSS property may require an addition of a browser specific prefix. For example, the various prefixes for different browsers are as follows:
+
+      * Chrome: `-webkit-` 
+      * Firefox: `-moz- ` 
+      * Internet Explorer: `-ms-`
+      
+      Not all properties these prefixes and as newer browser versions come up, support for many of these prefixes are no longer required.  Here's a couple handy resources. Let's look at the first two.
+
+      * [css3please.com](http://css3please.com/)  
+      * [-prefix-free](http://leaverou.github.io/prefixfree/)  
+      * [css-tricks.com/how-to-deal-with-vendor-prefixes](http://css-tricks.com/how-to-deal-with-vendor-prefixes/)
+
+      -prefix-free has already been included in your project files and is linked in the `&lt;head>` like so:
+
+      ```xml
+      &lt;script src=&quot;scripts/prefixfree.min.js&quot;&gt;&lt;/ script&gt;
+
+      ```
+    </section>
+
+    <section class="slide">
+      <h2>Profile Heading Update</h2>
+
+      <ol>
+        <li>
+          <p>Let’s update the <code>&lt;h2&gt;</code> tag in the profile section and give it a style different from the other headings.  First, we’ll override the bottom border.  We need to use a selector that is specific to the profile section. Add a background color too. Try using your accent colour. </p>
+<pre><code>.profile h2 {
+  border: none;
+  background: #2980b9;
+}</code></pre>
+        </li>
+        <li>
+          <p>Headings are block level elements so they are going to want to span 100% width of it’s container.  We could set a width value on it but what if we change the greeting? Then we’d have to set the width again. Remember, inline elements are as wide as their content so let’s change the heading to which display option?</p>
+          <p class="delayed"><code>display: inline-block;</code> so we can access the block and inline behaviors. Let's add some padding too!</p>
+<pre class="delayed"><code>.profile h2 {
+  border: none;
+  background: #2980b9;
+  display: inline-block;
+  padding: 10px 20px;
+}</code></pre>
+        </li>
+      </ol>
+    </section>
+
+    <section class="slide" data-markdown>
+      ##CSS3 Transform
+
+      The `transform` property can be used to literally transform the element.  You can skew it, scale it and few other things.  Let's try adding just a slight `rotate` to it.  The value for `rotate` is defined in degrees.
+
+      Add this declaration to the Profile heading. Try using positive or negative numbers until you find one that you like!
+
+      ```
+      .profile h2 {
+        transform: rotate(-4deg);
+      } 
+      ```
+      Your page should look like this: [Example 9](examples/9-css3.html).
+      
+      More about `transform` [here](http://css-tricks.com/almanac/properties/t/transform/).
+    </section>
 
     <!-- * linear gradient trick for overlay w/o positioning
       linear-gradient(rgba($black, 0.5),rgba($black, 0.5))
@@ -1316,7 +1378,6 @@ http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/
     [no more examples]
     [final project](project/final.html)
  -->
-    </section>
 
     <section class="slide" data-markdown>
     ##Style skills section
