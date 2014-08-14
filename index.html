@@ -705,12 +705,12 @@ margin: 0 0 0 0;</textarea>
     </section>
       
     <section class="slide image-only" data-markdown>
-      ##Can't... even...
+      ##I Can't... even...
       ![](img/cant-even.gif)
     </section>
 
     <section class="slide">
-      <h2>Box Model Fix</h2>
+      <h2>Box Model Fix!</h2>
       <p>Luckily, there’s a fix for this.</p>
       <p>Enter the <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">box-sizing: border-box</a> fix ftw!  I would recommend adding this snippet to all your projects.</p>
 <pre><code>/* apply a natural box layout model to all elements */
@@ -880,28 +880,239 @@ max-width: 1000px;
 
       Your page should now look like this: [Example](examples/5a-heading-headers.html)
     </section>
-
+      
     <section class="slide" data-markdown>
-      ##7. Images & BG  images
-
-###background images
-* add to header
-* shorthand, longhand
-* no repeat
-* show differences for background size, start with 100%, contain, cover
-* background position
-* background fixed
-
-** note for shorthand, background size *has* to come after bg position or it won't work.
-
-**teacher note** show how each sample background looks different with the default bg settings since the images are all different sizes.
-
-[example 7](project/index-7.html) 
+      #Background images
     </section>
 
     <section class="slide" data-markdown>
-      ##8. Floats
-* talk about stacking order of block and inline elements. (go back this when talking about display property)
+      ##Background images
+      
+      So far we've used `background` for colours but can also use it for setting background images.
+      
+      ```
+      background-image: url(path/to/file.jpg); /* longhand */
+      background: url(path/to/file.jpg);/* shorthand */
+      ```
+      ###File Structure
+      Since our CSS file in *inside* a folder, we have to use `../` to go *up and out* of the folder to find the image files.
+
+      ```
+      background: url(../images/background-1.jpg);
+      ```
+      
+      Note how the images repeat. We can override that with another property, `background-repeat` or just add it to the shorthand `background` property.
+      
+      ```
+      /* shorthand */
+      background: url(../images/background-1.jpg) no-repeat; 
+
+      /* longhand */
+      background-image: url(../images/background-1.jpg); 
+      background-repeat: no-repeat;
+      ```
+    </section>
+    <section class="slide" data-markdown>
+      ##Fluid background images
+
+      CSS3 introduced the `background-size` property to make a background images fluid and flexible. The syntax is:
+
+      ```
+      background-size: width height;
+      ```
+
+      The default values for width and height are `auto` and retains the original image dimensions. If only one value is defined, it is assumed to be the `width`. The height will be set to auto and the image will keep its aspect ratio.
+
+      There are several ways to define sizing dimensions using various types of values (px, percentages, keywords, etc).
+
+      `background-size` is the longhand property.  To include it in the shorthand `background` property, it *must* be included after `background-position`, separated with the `/` character.  
+      
+      ```
+      header {
+        background-image: url(../images/background-1.jpg);
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: 100%;
+      }
+      ```
+      ```
+      header {
+        background: url(../images/background-1.jpg) no-repeat 50% / 100%;
+      }
+      ```
+      If no background position value is being used, background-size won't work in the shorthand property so in this case, it may be less error prone to add it via the longhand property.
+      
+      ```
+      header {
+        background: url(../images/background-1.jpg) no-repeat 50%;
+        background-size: 100%;
+      }
+      ```
+    </section>
+
+    <section class="slide" data-markdown>
+      ##More About Background
+
+      `background-size` also accepts keyword values, `contain` and `cover`.
+
+      `contain` scales the image to fit its container. The image will grow or shrink proportionally but the width and height will not exceed the container's dimensions.
+
+      `cover` scales the image to fit the entire container but, if that has a different aspect ratio, the image will be cropped.
+
+      Let's add one more property, `background-attachment`.  Set the value to fixed and see what happens! (This can be added to the shorthand property)
+
+      ```
+      background: url(../images/background-2.jpg) no-repeat fixed 50%;
+      ```
+    </section>
+
+    <section class="slide" data-markdown>
+      ##Exercise 5: Update header background styles (10mins)
+
+      Based on the previous slides, update your header's background image and styles.  There are a few images in your **Project** folder to choose from or add one of your own.
+
+      Resources:   
+      [http://unsplash.com/](http://unsplash.com/)  
+      [http://littlevisuals.co/](http://littlevisuals.co/)  
+      [http://nos.twnsnd.co/](http://nos.twnsnd.co/)
+
+      Your page should look something like this: [Example 5](examples/5b-heading-bg.html)
+    </section>
+    
+    <section class="slide" data-markdown>
+      #Inline & Block
+      #Elements
+    </section>
+
+    <section class="slide" data-markdown>
+      ##Inline vs Block Elements
+      By default, some HTML elements are displayed as block or inline elements.
+
+      ###Block Elements
+
+      * takes up 100% width of its container, no matter how long the actual content is
+      * will be the same height as its content
+      * always starts on a new line
+      * can wrap other block level elements or inline elements
+      * can apply sizing related CSS to it (margin, padding, height, width)
+
+      ###Inline Elements
+
+      * will be the height and width of its content
+      * always appears "in a line" with other inline level elements
+      * can wrap other inline elements but cannot wrap block level elements *except* `&lt;a&gt;` tags.  This is only valid with an HTML5 doctype.
+      * does not render CSS height and width at all, will apply margin and padding but with unexpected results
+
+      ###Inline-block
+
+      * best of both worlds
+      * floats left and is the size & height of its content, like inline elements
+      * accepts height and width values like block elements
+
+      **Extra Resource**: [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
+    </section>
+
+    <section class="slide js-fiddle">
+      <h2>Block & Inline Example</h2>
+      <p>Click <strong>Edit in JSFiddle</strong> to make edits. Let's see what happens when apply height, width, margin and padding to inline and block elements. Then we can add</p>
+
+      <iframe width="100%" height="300" src="http://jsfiddle.net/WC5K4/4/embedded/result,html,css/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+    </section>
+
+    <section class="slide" data-markdown>
+      ##CSS Display property
+
+      These default display styles can be changed using the CSS `display` property.
+
+      `display: inline` can be used to get block level elements to line up side by side, in a line. The only problem is the block level element will not render sizing properties, just like default inline elements.
+
+      `display: block` can be used to make inline elements behave like a block level element (be able to apply size related properties) but they will no longer sit side by side, in a line.
+
+      `display: inline-block` is the best of both worlds. Elements will line up side by side and also render sizing properties.
+      
+      `display: none;` will hide the element.
+
+      Let's go back to our previous example and try using the `display` property.
+    </section>
+
+    <section class="slide" data-markdown>
+      ##CSS Float Property
+
+      Remember, block-style HTML elements like `&lt;p>`, `&lt;div>` and `&lt;section>` automatically start on a new line and stack on top of each other. To get two block elements to align side-by-side, the `float` property can be used as well. 
+
+      CSS floats can float elements left or right.
+
+      **However**, we have to break the natural stacking flow when an element is floated. This will cause any element *after* the floated element to try to move up beside it or just not display properly because we've disrupted the natural stacking flow. The parent container will also collapse.
+
+      **Also**, if there is no width set, the element will float but the width will automatically be the width of its content.
+    </section>
+    <section class="slide image-only">
+      <img src="img/shittier.gif">
+      <h2 class="delayed">Just kidding! We can fix it.</h2>
+    </section>
+
+    <section class="slide js-fiddle">
+      <h2>Float, Clear and Clearfix</h2>
+      <p>First we have to break it, then put it back together.  One of the most confusing CSS concepts is when to use <code>clear:both</code> and the <code>.clearfix</code> class.</p>
+      <p>Rule of thumb: if there's is an element that follows the floated element, apply <code>clear: both</code> to that element.  If all the elements need to be floated, apply the <code>.clearfix</code> class to the <em>parent</em> element.</p>
+
+      <iframe width="100%" height="300" src="http://jsfiddle.net/ttt5ebhr/3/embedded/result,html,css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+      <p>Want to know more about the clearfix trick? Here you go:
+      <a href="http://css-tricks.com/snippets/css/clear-fix/">http://css-tricks.com/snippets/css/clear-fix/</a></p> 
+    </section>
+      
+    <section class="slide" data-markdown>
+      #More selectors & Using multiple classes
+    </section>
+
+    <section class="slide" data-markdown>
+      ##Descendant selectors
+      
+      **Descendant selectors** - Matches any element that is a descendant of the element declared before it.
+      
+      ```css
+      p a {
+        /* targets only a tags nested inside of p tags */
+      }
+      .classname a {
+        /* targets only a tags nested inside any element with the matching classname */
+      }
+      ```
+      **Protip:** Just like Inception, never go more than three levels deep. Truth.
+
+      ```
+      nav ul li a span {
+        /* NOOOOOOOOOOO */
+      }
+      ```
+
+      Feel free to skip a level but be mindful of specificity rules. For example, `nav ul li a span` would override `nav a`.
+
+      However, it’s generally easier to start with less specific selectors and make them more specific, as needed, rather than starting with very specific selectors and adding extra markup or classes to try to override the styles.
+    </section>
+
+    <section class="slide">
+      <h2>More specific selectors</h2>
+      
+      <p><strong>Child selectors</strong> - Matches any element that is a child of the element declared before it.</p>
+      
+      <textarea class="snippet" data-subject="#child-selector">background-color: lightblue;
+font-family: "Times New Roman", serif;
+padding: 20px;
+      </textarea>
+      <div id="child-selector">
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+
+      p > a {
+        /* will only apply to a tags that are 
+      }
+      E > F  
+
+E + F Matches any F element immediately preceded by a sibling element E.  Adjacent selectors
+
+    <!-- * talk about stacking order of block and inline elements. (go back this when talking about display property)
 * breaks natural stacking order.  have to break it and put it back together.
 * need to set a width and equals 100%.  percentages will make it scalable. show difference between % and px.
 * go through in slide examples
@@ -909,10 +1120,7 @@ max-width: 1000px;
 * what about the image? show how to make it same size as container but then refactor
 * show the different between clearfix and clear float
 
-      [example 8](project/index-8.html)
-    </section>
-
-    <section class="slide" data-markdown>
+      [example 8](project/index-8.html) -->
     ##exercise
 * apply floats to profile image
 * make image fluid
@@ -923,20 +1131,12 @@ max-width: 1000px;
 * border radius
 
 http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/
+ http://css3please.com/  
+      http://leaverou.github.io/prefixfree/
+
+      [example 9](project/index-9.html)
     </section>
 
-    <section class="slide" data-markdown>
-      ##9. inline / block / inline-block
-* examples of display inline & block
-* update h2 to inline-block
-* CSS3 transform 
-* vendor prefixes
-
-http://css3please.com/  
-http://leaverou.github.io/prefixfree/
-
-[example 9](project/index-9.html)
-    </section>
 
     <section class="slide" data-markdown>
 ##10. more bg images and creating a bg overlay

@@ -108,6 +108,11 @@ footer .license img {
 .slide:target {
   overflow: scroll;
 }
+.slide.js-fiddle > iframe:only-of-type {
+  position: static;
+  width: 525px;
+  height: 350px;
+}
 
 /* vertical align heading */
 section.slide {
