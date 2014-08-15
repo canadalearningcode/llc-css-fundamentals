@@ -205,7 +205,7 @@ header {
   border-radius: 50%;
   background: black;
 }
-.skills-circles ul span {
+.skills-circles span {
   line-height: normal;
   display: inline-block;
   vertical-align: middle;
