@@ -10,15 +10,15 @@
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400|Open+Sans:400,300' rel='stylesheet' type='text/css'>
   
   <!-- Don't alter slideshow.css, CSSS slide deck needs it to work -->
-  <link rel="stylesheet" href="css/slideshow.css">
-  <link rel="stylesheet" href="css/font-awesome.css">
-  <link rel="stylesheet" href="css/highlightjs-themes/monokai.css">
-  <link rel="stylesheet" href="css/theme-llc.css">
+  <link rel="stylesheet" href="framework/css/slideshow.css">
+  <link rel="stylesheet" href="framework/css/font-awesome.css">
+  <link rel="stylesheet" href="framework/css/highlightjs-themes/monokai.css">
+  <link rel="stylesheet" href="framework/css/theme-llc.css">
   <!-- Workshop-specific styles -->
-  <link rel="stylesheet" href="css/workshop.css">
+  <link rel="stylesheet" href="framework/css/workshop.css">
 
   <!-- Takes care of CSS3 prefixes! -->
-  <script src="scripts/prefixfree.min.js"></script>
+  <script src="framework/scripts/prefixfree.min.js"></script>
 
 </head>
 
@@ -27,7 +27,7 @@
 
   <!-- First/Intro slide -->
   <header class="intro slide">
-    <img class="logo" src="img/logo-llc-white.png">
+    <img class="logo" src="framework/img/logo-llc-white.png">
     <div class="info">
       <h1>
         <span class="title-bg">CSS Fundamentals</span><br>
@@ -36,7 +36,7 @@
       </h1>
       <h2><span>with</span> Christina Truong</h2>
 
-      <img class="instructor-img" src="img/christina-truong.jpg" alt="Christina Truong">
+      <img class="instructor-img" src="framework/img/christina-truong.jpg" alt="Christina Truong">
       <ul>
         <li><i class="fa fa-envelope"></i><a href="mailto:hello@christinatrong.com">hello@christinatrong.com</li>
         <li><i class="fa fa-desktop"></i><a href="#" target="_blank">christinatruong.com</a></li>
@@ -51,14 +51,14 @@
 
       Follow [this link](project/final.html) to see the whole project!
       
-      ![final project](img/final-project.jpg)  
+      ![final project](framework/img/final-project.jpg)  
     </section>
 
     <section class="slide image-only" data-markdown>
       ##A demonstration of what can be
       ##accomplished through CSS-based design
 
-      ![](img/css-zen-garden.png)
+      ![](framework/img/css-zen-garden.png)
 
       http://csszengarden.com/
     </section>
@@ -83,16 +83,16 @@
 
       1. Open Sublime Text and go to **File > Open**.
 
-        ![](img/1-setup.png)
+        ![](framework/img/1-setup.png)
       1. Navigate to the **Project** folder (in the folder you downloaded with today's slides). With the entire folder selected, select **Open**.
 
-        ![](img/2-setup.png)
+        ![](framework/img/2-setup.png)
       1. The folder will appear in Sublime's side bar. Double click on **index.html** in the sidebar to open it.
 
-        ![](img/3-setup.png)
+        ![](framework/img/3-setup.png)
       1. Right click or two finger tap and select **Open in Browser**. This will open the HTML file in your *default* browser.
 
-        ![](img/4-setup.png)
+        ![](framework/img/4-setup.png)
 
       No CSS has been applied yet so all you will see is the HTML content and the default styles like in [this example](project/examples/1-no-css.html).
     </section>
@@ -176,7 +176,7 @@
 
       **Values** are specific to the property. Declarations must end with a semi-colon (`;`) to indicate that the instruction is complete.
       
-      ![](img/css.png)
+      ![](framework/img/css.png)
     </section>
 
     <section class="slide">
@@ -695,14 +695,14 @@ margin: 0 0 0 0;</textarea>
 
       <p>Let’s look at a diagram to see how all these different properties work together to change the size of an element.</p>
 
-      <img src="img/box-model.gif" alt="" title="">
+      <img src="framework/img/box-model.gif" alt="" title="">
 
       <p>The original element started with a width and height of <strong>400 x 100</strong>. After including the padding, border &amp; margin, the size of the box is actually <strong>492 x 192</strong>!</p>
     </section>
       
     <section class="slide image-only" data-markdown>
       ##I Can't... even...
-      ![](img/cant-even.gif)
+      ![](framework/img/cant-even.gif)
     </section>
 
     <section class="slide">
@@ -715,7 +715,7 @@ margin: 0 0 0 0;</textarea>
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }</code></pre>
-      <img src="img/box-model-fix.gif">
+      <img src="framework/img/box-model-fix.gif">
     </section>
 
     <section class="slide">
@@ -762,7 +762,7 @@ margin: 0 auto;</textarea>
       ```
       Your page will look something like this:
 
-      ![](img/margin-auto.png)
+      ![](framework/img/margin-auto.png)
     </section>
 
     <section class="slide">
@@ -857,7 +857,7 @@ max-width: 1000px;
     <section class="slide image-only" data-markdown>
       ##Avoid code bloat
 
-      ![](img/bloat.jpg)
+      ![](framework/img/bloat.jpg)
     </section>
 
     <section class="slide" data-markdown>
@@ -1049,7 +1049,7 @@ max-width: 1000px;
       **Also**, if there is no width set, the element will float but the width will automatically be the width of its content.
     </section>
     <section class="slide image-only">
-      <img src="img/shittier.gif">
+      <img src="framework/img/shittier.gif">
       <h2 class="delayed">Just kidding! We can fix it.</h2>
     </section>
 
@@ -1545,13 +1545,13 @@ Here's what your page should look like: [example 10](project/examples/10-skills-
     <section class="slide image-only" data-markdown>
       ##Hmm....
 
-      ![](img/circles.png)
+      ![](framework/img/circles.png)
 
       If you see this, you didn't break it. It's just CSS.
     </section>
 
     <section class="slide image-only" data-markdown>
-      ![](img/css.gif)
+      ![](framework/img/css.gif)
     </section>
 
     <section class="slide" data-markdown>
@@ -1565,7 +1565,7 @@ Here's what your page should look like: [example 10](project/examples/10-skills-
 
       ... Unless you have text that is more than one line.
 
-      ![](img/line-height.png)
+      ![](framework/img/line-height.png)
     </section>
 
     <section class="slide" data-markdown>
@@ -1770,13 +1770,13 @@ fixed:  absolutely positioned box, relative to the viewport. -->
     </section>
     
     <section class="slide" data-markdown>
-      ##Final Exercise!
+      ##Final Stretch!
       
       From now until the end, take some time to make changes to smaller details like font sizes, margin, padding to give your HTML that extra polish!
     </section>
 
     <section class="slide image-only" data-markdown>
-      ![](img/now-what.gif)
+      ![](framework/img/now-what.gif)
     </section>
 
     <section class="slide" data-markdown>
@@ -1804,7 +1804,7 @@ fixed:  absolutely positioned box, relative to the viewport. -->
       </h2>
       <h3><span>with</span> Christina Truong</h3>
 
-      <img class="instructor-img" src="img/christina-truong.jpg" alt="Christina Truong">
+      <img class="instructor-img" src="framework/img/christina-truong.jpg" alt="Christina Truong">
       <ul>
         <li><i class="fa fa-envelope"></i><a href="mailto:hello@christinatrong.com">hello@christinatrong.com</li>
         <li><i class="fa fa-desktop"></i><a href="#" target="_blank">christinatruong.com</a></li>
@@ -1819,27 +1819,27 @@ fixed:  absolutely positioned box, relative to the viewport. -->
   <footer>
     <p class="instructions">Use the left <i class="fa fa-arrow-left"></i> and right <i class="fa fa-arrow-right"></i> arrow keys to navigate</p>
 
-    <p class="license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
+    <!-- <p class="license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a> by <a framework/xmlns:cc="http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a> --></p>
   </footer>
 
 
-  <script src="scripts/slideshow.js"></script>
+  <script src="framework/scripts/slideshow.js"></script>
 
   <!-- Uncomment the plugins you need -->
-  <script src="scripts/plugins/css-edit.js"></script>
-  <script src="scripts/plugins/css-snippets.js"></script>
-  <script src="scripts/plugins/css-controls.js"></script>
+  <script src="framework/scripts/plugins/css-edit.js"></script>
+  <script src="framework/scripts/plugins/css-snippets.js"></script>
+  <script src="framework/scripts/plugins/css-controls.js"></script>
   <!-- <script src="plugins/code-highlight.js"></script>-->
 
-  <script src="scripts/plugins/markdown/marked.js"></script>
-  <script src="scripts/plugins/markdown/markdown.js"></script>
-  <script src="scripts/plugins/highlight/highlight.js"></script>    
+  <script src="framework/scripts/plugins/markdown/marked.js"></script>
+  <script src="framework/scripts/plugins/markdown/markdown.js"></script>
+  <script src="framework/scripts/plugins/highlight/highlight.js"></script>    
   <script>hljs.initHighlightingOnLoad();</script>
 
   <!-- Prettify -->
-  <script src="scripts/plugins/prettify.js"></script>
-  <script src="scripts/plugins/lang-css.js"></script>
-  <script src="scripts/plugins/prism.js"></script>
+  <script src="framework/scripts/plugins/prettify.js"></script>
+  <script src="framework/scripts/plugins/lang-css.js"></script>
+  <script src="framework/scripts/plugins/prism.js"></script>
 
   <script>
     var slideshow = new SlideShow();
