@@ -6,6 +6,12 @@
     box-sizing: border-box;
 }
 
+.clearfix:after { /* clearfix */
+  content: "";
+  display: table;
+  clear: both;
+}
+
 body {
   font-family: "Merriweather", serif;
   line-height: 1.5;
@@ -40,7 +46,7 @@ h2 {
 /* HEADER
 ----------*/
 header {
-  background: url(../images/background-2.jpg) no-repeat fixed 50%;
+  background: url(../../images/background-2.jpg) no-repeat fixed 50%;
   background-size: cover;
   text-align: center;
   padding: 150px 0;
@@ -51,12 +57,34 @@ header {
 .profile {
   background: #8e44ad;
 }
+.profile img {
+  float: left;
+  width: 30%;
+  margin-right: 2%;
+}
+.summary {
+  width: 68%;
+  float: right;
+}
+
 
 /* WORK EXPERIENCE
 -------------------*/
 .work-experience {
   background: #2980b9;
 }
+.work-experience .details {
+  width: 30%;
+  float: left;
+}
+.work-experience .description {
+  width: 70%;
+  float: right;
+}
+.work-experience .item {
+  border-bottom: 1px solid #ccc;
+}
+
 
 /* SKILLS
 ----------*/

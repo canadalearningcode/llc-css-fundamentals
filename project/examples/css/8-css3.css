@@ -15,7 +15,7 @@
 body {
   font-family: "Merriweather", serif;
   line-height: 1.5;
-  background: url(../images/background-2.jpg) no-repeat fixed 50%;
+  background: url(../../images/background-2.jpg) no-repeat fixed 50%;
   background-size: cover;
 }
 
@@ -75,15 +75,28 @@ header {
   background: rgba(0,0,0,0.8);
   color: #ffffff;
 }
+.profile h2 {
+  border: none;
+  background: #2980b9;
+  display: inline-block;
+  padding: 10px 20px;
+  transform: rotate(-4deg);
+  margin-bottom: 10px; 
+}
 .profile img {
   float: left;
-  width: 30%;
-  margin-right: 2%;
+  width: 27%;
+  margin-right: 3%;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  padding: 4px;
 }
 .summary {
-  width: 68%;
+  width: 70%;
   float: right;
 }
+
+
 
 
 /* WORK EXPERIENCE
@@ -107,7 +120,7 @@ header {
 /* SKILLS
 ----------*/
 .skills {
-  background: url(../images/background-4.jpg) no-repeat fixed;
+  background: url(../../images/background-4.jpg) no-repeat fixed;
   background-size: cover;
 }
 

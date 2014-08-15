@@ -15,6 +15,8 @@
 body {
   font-family: "Merriweather", serif;
   line-height: 1.5;
+  background: url(../../images/background-2.jpg) no-repeat fixed 50%;
+  background-size: cover;
 }
 
 h1, h2, h3 {
@@ -35,6 +37,9 @@ h1 {
 h2 {
   font-size: 32px;
 }
+a {
+  color: #2980b9;
+}
 .content-wrap {
   max-width: 1000px;
   width: 90%;
@@ -46,8 +51,6 @@ h2 {
 /* HEADER
 ----------*/
 header {
-  background: url(../images/background-2.jpg) no-repeat fixed 50%;
-  background-size: cover;
   text-align: center;
   padding: 150px 0;
 }
@@ -55,7 +58,8 @@ header {
 /* ABOUT ME / PROFILE
 ----------------------*/
 .profile {
-  background: #8e44ad;
+  background: rgba(0,0,0,0.8);
+  color: #ffffff;
 }
 .profile img {
   float: left;
