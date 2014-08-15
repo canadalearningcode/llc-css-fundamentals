@@ -1516,6 +1516,35 @@ Here's what your page should look like: [example 10](project/examples/10-skills-
     </section>
 
     <section class="slide" data-markdown>
+      ##More Inline-Block (and a bunch of other stuff)
+
+      For the second option for the **Skills** section, let's turn this lists into circles and center align them.
+
+      For this exercise, let's use `display: inline-block` *instead* of `float: left` to get them to line up side-by-side and still* be center aligned from the inherited style of `text-align: center`.
+      
+      Our selector will target only the list items contained within the circle option list to ensure that these styles will only be specific to this list. Since we want the individual list items itself to be lined up side-by-side, we have to target them specifically.
+
+      ```css
+      .skills-circles ul li {
+        display: inline-block;
+      }
+      ```
+
+      There are currently 4 items so let's give them a width of 25% to break them even 4 even boxes but still maintain flexibility. Put a background colour on it too just to see what's going on.
+
+      ```css
+      .skills-circles ul li {
+        display: inline-block;
+        width: 25%;
+        background: blue;
+      }
+      ```
+    </section>
+
+    <!-- <section class="slide" data-markdown>
+
+    </section>
+    <section class="slide" data-markdown>
       ##positioning
        * floats, font styles
 
@@ -1527,17 +1556,14 @@ Here's what your page should look like: [example 10](project/examples/10-skills-
 
       position fixed download pdf links
 
-    </section>  
+    </section>   -->
     <section class="slide" data-markdown>
       ##Next steps
-
-      list resources
     </section>
 
     <!-- Last slide -->
     <section class="slide">
       <h2>Thank you!</h2>
-      <p>Closing remarks</p>
       <p class="attribution">Slidedecks created with <a href="https://github.com/LeaVerou/csss">Lea Verou's CSS-based SlideShow System</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
     </section>
   </main><!-- cls main section -->
