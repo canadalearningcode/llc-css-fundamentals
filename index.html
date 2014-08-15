@@ -1701,13 +1701,83 @@ fixed:  absolutely positioned box, relative to the viewport. -->
     </section>
 
     <section class="slide" data-markdown>
-      ##Final Exercise!
+      ##Getting ready for the Final Exercise!
+      
+      Some people may still be interested having a hard copy of your resume, so let's give them an option to download a copy. Go back to your HTML document and add a link to a copy of the resume.  In your projects folder, there is a **resume.pdf** that you can use for today or feel free to use yours if you have it handy.
 
-      position fixed download pdf links
+      Use the anchor tag to link to your resume file. You can also add a new HTML5 `download` attribute to trigger a download right away! Also, give it a class to apply unique styles to it.
+      
+      ```xml
+      &lt;a class="download" href=&quot;resume.pdf&quot; download&gt;
+      ```
+    
+      ###Download attribute value
 
+      `download` is one of the few attributes that do not require a value. If no value is declared, the file name that is downloaded will be the same as the file name attached in the link.  If a value is defined, the downloaded file will be the same name as that value. This technique would be useful if your site used generated file names.
+
+      ```xml
+      &lt;a class="download" href=&quot;resume.pdf&quot; download="new-filename.pdf"&gt;
+      ```
     </section>
+    <section class="slide">
+      <h2>Exercise 13: Position and style download link</h2>
+
+      <p>Apply fixed positioning to this element so that it’s always available as the user is scrolling through the page. </p>
+
+      <p>What properties &amp; values are needed to position this element to the top right of the page?</p>
+
+<pre class="delayed"><code>.download {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+</code></pre>
+      
+      <div class="delayed">
+        <p><code>a</code> tags are inline elements by default so to apply padding or other sizing styles to it, we need to change it’s display value to inline-block</p>
+
+<pre><code>.download {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: inline-block;
+}
+</code></pre>
+      </div>
+    </section>
+
+    <section class="slide" data-markdown>
+      ##Exercise 13: Position and style download link
+
+      Now style the link as you wish! Add some padding, remove default link underline and change the color!
+
+      Your final code could look something like this:
+
+      ```css
+      .download {
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: inline-block;
+        background: #2980b9;
+        padding: 18px;
+        text-decoration: none;
+        color: #fff;
+      }
+      ```
+      [Example 13](examples/13-fixed.html)
+    </section>
+    
+    <section class="slide" data-markdown>
+      ##Final Exercise!
+      
+      From now until the end, take some time to make changes to smaller details like font sizes, margin, padding to give your HTML that extra polish!
+    </section>
+
     <section class="slide" data-markdown>
       ##Next steps
+
+      
     </section>
 
     <!-- Last slide -->
