@@ -1614,18 +1614,90 @@ Here's what your page should look like: [example 10](project/examples/10-skills-
       ```
 
       Your page should look like this: [Example 12](project/examples/12-circles.html).
-
     </section>
 
-
-    <!-- <section class="slide" data-markdown>
-
-    </section>
     <section class="slide" data-markdown>
-      ##positioning
-       * floats, font styles
+      ##Positioning in CSS
+      
+      Sometimes floats and display just doesn't cut it. 
 
-      in-slide examples
+      The `position` property can be used to place elements in specific spots on the page without affecting the elements around it the way floats do.  There are three options: relative, absolute and fixed. Elements are all `static` by default.
+
+      `position` is used in conjunction with offset properties: `top`, `right`, `bottom`, and `left`. These are use to identify where an element will be positioned.
+
+    </section>
+    <section class="slide">
+      <h2>Position: relative</h2>
+      
+      <p>When setting the position to <code>relative</code>, elements will still appear within the <strong>normal flow</strong> a page but will unlock the additional offset properties (top, right, bottom, left).  You can use these values to nudge the element in different directions.</p>
+
+
+       <textarea class="snippet" data-subject="#relative">.box { 
+  width: 100px;
+  height: 100px; 
+  background: blue;
+  position: relative;
+  top:;
+}
+      </textarea>
+      <div id="#relative">
+        <div class="box"></div>
+      </div>  
+    </section>
+
+    <section class="slide">
+      <h2>Position: absolute</h2>
+      
+      <p>When positioning an element as <code>absolute</code>, it needs to also be paired with <code>relative</code> positioning. `relative` on it's own doesn't affect other elements but it is used to <em>contain</em> an `absolute` position element to a particular spot. Otherwise, it will position itself to the <em>viewport</em>, or browser window.</p>
+      <pre><code>&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+      <textarea class="snippet" data-subject="#absolute">.container {
+  position: relative;
+}
+.box { 
+  width: 100px;
+  height: 100px; 
+  background: blue;
+  position: absolute;
+  top:;
+}</textarea>
+
+      <div id="absolute">
+        <div class="container">
+          <div class="box"></div>
+        </div>
+      </div>  
+    </section>
+
+<!-- absolute:  positioned relative to its containing block/parent element. Removed from the flow and have no effect on later siblings
+
+fixed:  absolutely positioned box, relative to the viewport. -->
+    <section class="slide">
+      <h2>Position: fixed</h2>
+      
+      <p>When positioning an element as <code>fixed</code>, it will <<em>always</em> be positioned to the viewport. `relative` won't have any effect on this property. Also, it will always stay fixed on the page, even on page scroll.</p>
+      <pre><code>&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+      <textarea class="snippet" data-subject="#fixed">.container {
+  position:;
+}
+.box { 
+  width: 100px;
+  height: 100px; 
+  background: blue;
+  position: fixed;
+  top:;
+}</textarea>
+
+      <div id="fixed">
+        <div class="container">
+          <div class="box"></div>
+        </div>
+      </div>  
     </section>
 
     <section class="slide" data-markdown>
@@ -1633,7 +1705,7 @@ Here's what your page should look like: [example 10](project/examples/10-skills-
 
       position fixed download pdf links
 
-    </section>   -->
+    </section>
     <section class="slide" data-markdown>
       ##Next steps
     </section>

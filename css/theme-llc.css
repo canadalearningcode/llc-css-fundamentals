@@ -215,3 +215,7 @@ textarea.snippet {
   background: rgba(255, 255, 255, 0.9);
   font-size: 18px;
 }
+
+.delayed.displayed {
+  opacity: 1;
+}
