@@ -86,7 +86,7 @@
 
         ![](img/4-setup.png)
 
-      No CSS has been applied yet so all you will see is the HTML content and the default styles like in [this example](examples/1-no-css.html).
+      No CSS has been applied yet so all you will see is the HTML content and the default styles like in [this example](project/examples/1-no-css.html).
     </section>
 
     <section class="slide" data-markdown>
@@ -401,7 +401,7 @@
       .contact { }
       ```
 
-      Your page should look something like this: [background colour example](examples/2-bg-colours.html).
+      Your page should look something like this: [background colour example](project/examples/2-bg-colours.html).
     </section>
 
     <section class="slide">
@@ -568,7 +568,7 @@ h3 {
     <section class="slide" data-markdown>
       ##Exercise #3 Typography (continued)
 
-      The previous example can be refactored to look like this:
+      The previous example can be re-factored to look like this:
       
       ```
       h1, h2, h3 {
@@ -597,7 +597,7 @@ h3 {
 
       Need help deciding on fonts?  The example project uses Open Sans (sans-serif), Merriweather (serif), Pacifico (cursive).
       
-      Your page should look something like this: [Example 3](examples/3-typography.html)
+      Your page should look something like this: [Example 3](project/examples/3-typography.html)
     </section>
 
     <section class="slide">
@@ -824,7 +824,7 @@ max-width: 1000px;
 
       Let's go over how to collapse code blocks and tab multiple lines at the same time in Sublime first, to help make this addition easier.
 
-      Your page should look something like this: [example 4](examples/4-content-wrap.html).
+      Your page should look something like this: [example 4](project/examples/4-content-wrap.html).
     </section>
 
     <section class="slide" data-markdown>
@@ -873,7 +873,7 @@ max-width: 1000px;
       }
       ```
 
-      Your page should now look like this: [Example](examples/5a-heading-headers.html)
+      Your page should now look like this: [Example](project/examples/5a-heading-headers.html)
     </section>
       
     <section class="slide" data-markdown>
@@ -970,7 +970,7 @@ max-width: 1000px;
       [http://littlevisuals.co/](http://littlevisuals.co/)  
       [http://nos.twnsnd.co/](http://nos.twnsnd.co/)
 
-      Your page should look something like this: [Example 5](examples/5b-heading-bg.html)
+      Your page should look something like this: [Example 5](project/examples/5b-heading-bg.html)
     </section>
     
     <section class="slide" data-markdown>
@@ -1202,7 +1202,7 @@ max-width: 1000px;
       }
       ```
       
-      Your page should look something like this: [Example 6](examples/6-floats.html).
+      Your page should look something like this: [Example 6](project/examples/6-floats.html).
     </section>
 
 
@@ -1251,7 +1251,7 @@ max-width: 1000px;
 
       If you get stuck, ask a mentor! Don't worry if you don't finish, we'll go through it together as a class.
 
-      Your page should look something like this: [Example 7](/examples/7-bg.html)
+      Your page should look something like this: [Example 7](/project/examples/7-bg.html)
     </section>
 
     <section class="slide" data-markdown>
@@ -1339,7 +1339,7 @@ max-width: 1000px;
         transform: rotate(-4deg);
       } 
       ```
-      Your page should look like this: [Example 8](examples/8-css3.html).
+      Your page should look like this: [Example 8](project/examples/8-css3.html).
 
       More about `transform` [here](http://css-tricks.com/almanac/properties/t/transform/).
     </section>
@@ -1405,7 +1405,7 @@ max-width: 1000px;
 
       Take some time to experiment with what we just covered.
 
-      Here's the sample page: [Example 9](examples/9-animate.html). 
+      Here's the sample page: [Example 9](project/examples/9-animate.html). 
     </section>
 
     <section class="slide">
@@ -1466,47 +1466,58 @@ background: linear-gradient(rgba(), rgba()), url(http://www.stevensegallery.com/
   ...
 &lt;/div&gt;
 ```
-Here's what your page should look like: [example 10](examples/10-skills-section.html)
+Here's what your page should look like: [example 10](project/examples/10-skills-section.html)
     </section>
-
-    <!-- ###Exercise
-    * style h3 & h4 for skills section
-    * style the two list options -->
-    
-    <!-- 
-    * add border to see difference margin vs padding
-    * border radius
-
-
- 
-   <!--  ##11. Icon fonts
-
-    * http://fortawesome.github.io/Font-Awesome/
-    * remember to add the http. will only work if you're on a server.
-    * add class of skills-list to reset list styles
-
-    ###Exercise
-    * add checkmarks, reset list styles
-    * style h3 & h4 for skills section
-
-    [no more examples]
-    [final project](project/final.html)
- -->
 
     <section class="slide" data-markdown>
-    ##Exercise - style education section
+    ##Icon fonts
+    
+    Icon fonts are an easy way to add imagery to your web page but still have the flexibility of styling properties like size and colour using CSS since they *are* fonts!
 
-    * heading/font styles
+    There's many to choose from but today we'll use Font Awesome: 
+    [http://fortawesome.github.io/Font-Awesome/](http://fortawesome.github.io/Font-Awesome/)
+
+    Under **Getting Started**, there are different options for adding the font files.  If using the CDN, remember to add the "http" to make it work when you run your page "locally" (on your computer).
+    
+    Simple to use, pick an icon you'd like to use and copy the supplied markup and class and that's it! There are already some included in your project.  All of the social icons are included with an icon font.
     </section>
 
-     <section class="slide" data-markdown>
-    ##Exercise - style footer section
-    
-    * floats, font styles
+    <section class="slide" data-markdown>
+    ##Class Exercise - Resetting List Styles
+
+    Add some flair to the skills list by adding icons to each skill.  But first, let's reset some of the default list styles.
+
+    To remove the default bullet points, use the CSS property and value, `list-style-type: none;` and can be added to the `ul` since that element is used to create the list.  Lists also have padding to create the indent so reset that by using a value of 0.
+
+    Since we want to remove the bullets from all the lists in this section, we can target them all at once using a **descendant selector**. We can use `.skill`, since that's the class for the entire section, and `ul` to target all the lists.
+
+```css
+.skills ul {
+  list-style-type: none;
+  padding: 0;
+}
+```
+    </section>
+
+    <section class="slide" data-markdown>
+      ##Exercise 11: Adding Icon Fonts (15mins)
+
+      Now that the bullets have been removed, let's add a checkmark. Visit [Font Awesome](http://fortawesome.github.io/Font-Awesome/) and go to **Icons** to get the code.
+
+      Copy the markup and add it to your HTML file, where ever you want the icon to appear.  In this case, we want it in each *list item* (`li`).
+
+      For this exercise, add the check marks (or whichever icon you'd like to use) to each list item and use the CSS `color` property to change the color of *only* the icons.  
+
+      **Bonus:** Try center aligning the headings and lists like in the [final project](project/final.html).
+
+      **Extra Bonus:** Try changing the color or the `h4` subheadings.
+
+      Your page should look something like this: [Example 11](project/examples/11-icon-fonts.html)
     </section>
 
     <section class="slide" data-markdown>
       ##positioning
+       * floats, font styles
 
       in-slide examples
     </section>
@@ -1521,109 +1532,6 @@ Here's what your page should look like: [example 10](examples/10-skills-section.
       ##Next steps
 
       list resources
-    </section>
-
-
-    <section class="slide">
-      <h1>Thank you!</h1>
-    </section>
-
-    <section class="slide">
-      <h2>Just some text and Code</h2>
-      <p>Sample of a slide with basic text and code snippets.</p>
-      <p>For HTML, the <code><</code> needs to be escaped! As long as the code snippet is wrapped in <code>&lt;pre>&lt;code>&lt;/code>&lt;/pre></code>, the syntax highlighting is taken care of!</p>
-      
-      <h3>HTML</h3>
-      <pre><code>&lt;!DOCTYPE html>
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-  &lt;/body&gt;
-&lt;/html></code></pre>
-
-      <h3>CSS</h3>
-      <pre><code>body {
-  margin: 0;
-  padding: 0;
-}</code></pre>   
-    </section>
-
-    <section class="slide">
-      <h2>JavaScript & jQuery highlight example</h2>
-      <p>Code highlighting is provided by <a href="http://highlightjs.org">highlight.js</a>. Visit the site to see the full list of supported languages.</p>
-      <h3>JavaScript!</h3>
-      <pre><code>// Comment
-document.addEventListener('DOMAttrModified',function(e) {
-  var node = e.target, attr = e.attrName;
-  if(/^input$/i.test(node.nodeName) 
-  &amp;&amp; (attr === 'placeholder' || attr === 'value')
-  || foo > 5)
-    Placeholder.update(node);
-}, false);</code></pre>
-
-      <h3>jQuery!</h3>
-      <pre><code>$(document).ready(function(){
-  $("p").hide("fast");
-});</code></pre>
-    </section>
-
-    <section class="slide">
-      <h2>Incremental display of content</h2>
-      <p>Use the arrow keys to reveal each line.  To use, just add a <code>class="delayed"</code>.</p>
-      <ul>
-        <li class="delayed">Make sure your computer is setup</li>
-        <li class="delayed">Web development breakdown</li>
-        <li class="delayed">Dive into HTML</li>
-        <li class="delayed">CSS fundamentals</li>
-      </ul>
-    </section>
-
-    <section class="slide">
-      <h2>CSS Snippets demo</h2>
-      <p>The whole slide will get the CSS applied to it. Go ahead, add/change/remove some CSS!</p>
-      <textarea class="snippet">background-color: lightblue;
-font-family: "Times New Roman", serif;
-      </textarea>
-    </section>
-
-    <section class="slide">
-      <h2>CSS Snippets demo</h2>
-      <p>You can also target specific elements</p>
-      <textarea class="snippet" data-subject="#test">background-color: lightblue;
-font-family: "Times New Roman", serif;
-padding: 20px;
-      </textarea>
-      <div id="test">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt sint beatae dolor dolorum aliquid quis explicabo vitae numquam, quas illo dolore molestiae ratione, perferendis, deleniti nemo ea voluptatibus! Quibusdam.</p>
-      </div>
-    </section>
-
-    <section class="slide" data-markdown>
-##Markdown example
-
-You can even write in Markdown as long as the `data-markdown` attribute is included. See the [documentation for markdown syntax](http://daringfireball.net/projects/markdown/).  Both text and code blocks are supported at this time.  Code blocks need to be denoted either by three backticks (`) or by tabbing the content in one indent (at least 4 spaces).  Tabbing to create a code block won't work in this slide deck if your content begins tabbed in in your source code.
-
-You can specify the language of the codeblock by following the three backticks immediately by the language name.  View the source to see this in action
-
-#### Javascript Example
-
-```javascript
-var myJSVariable = "Syntax Highting for Javascript";
-```
-
-#### Css Example
-
-```css
-.css-selector{
-  highlight : syntax;
-}
-```
-#### indented example
-
-  code block that has to guess at the language and likely gets it wrong.  it thinks this is applescript.
-
     </section>
 
     <!-- Last slide -->
