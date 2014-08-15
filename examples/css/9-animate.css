@@ -43,6 +43,9 @@ section h2 {
 a {
   color: #2980b9;
 }
+a:hover {
+  color: #000;
+}
 .content-wrap {
   max-width: 1000px;
   width: 90%;
@@ -82,6 +85,12 @@ header {
   padding: 10px 20px;
   transform: rotate(-4deg);
   margin-bottom: 10px; 
+}
+.profile h2:hover {
+  /*-webkit-animation-name: bounce;*/
+  animation-name: bounce;
+  /*-webkit-transform-origin: center bottom;*/
+  transform-origin: center bottom;
 }
 .profile img {
   float: left;

@@ -54,7 +54,7 @@ h2 {
 }
 h3 {
 	margin-bottom: 0;
-	font-size: 28px;
+	font-size: $font-size-h3;
 
 	+ p {
 		margin-top: 0;
@@ -84,8 +84,11 @@ footer {
 	z-index: 100;
 	text-align: center;
 	background: rgba(white, 0.6);
-	font-size: 14px;
+	font-size: 16px;
 	
+	p {
+		margin: 5px 0;
+	}
 	.instructions {
 		float: right;
 		margin-right: 20px;
@@ -107,7 +110,7 @@ footer {
 /* Base styles for slides
 --------------------------*/
 .slide {
-	padding: 45px 5%;
+	padding: 45px 3%;
 	height: 100%;
 
 	&:target {
@@ -115,6 +118,9 @@ footer {
 	}
 }
 
+header.slide:target {
+	overflow: visible;
+}
 
 /* vertical align heading */
 section.slide {
@@ -125,7 +131,7 @@ section.slide {
 		text-align: center;
 		top: 42%;
 		transform: translateY(-42%);
-		font-size: $font-size-h1 + 10px;
+		font-size: $font-size-h1 + 1rem;
 	}
 }
 
@@ -222,5 +228,7 @@ textarea.snippet {
 	background: rgba(255, 255, 255, .9);
 	font-size: 18px;
 }
+
+
 
 

@@ -25,7 +25,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font: 25px "Source Sans Pro", sans-serif;
+  font: 2.5rem "Source Sans Pro", sans-serif;
   color: #222222;
   border-top: 4px solid #b109aa;
   -webkit-font-smoothing: antialiased;
@@ -49,12 +49,12 @@ h1, h2 {
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 4rem;
 }
 
 h3 {
   margin-bottom: 0;
-  font-size: 28px;
+  font-size: 2.8rem;
 }
 h3 + p {
   margin-top: 0;
@@ -72,7 +72,7 @@ code {
   font-family: Monaco, Andale Mono, monospace;
   color: #444;
   padding: 1px 4px;
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 footer {
@@ -82,7 +82,10 @@ footer {
   z-index: 100;
   text-align: center;
   background: rgba(255, 255, 255, 0.6);
-  font-size: 14px;
+  font-size: 16px;
+}
+footer p {
+  margin: 5px 0;
 }
 footer .instructions {
   float: right;
@@ -102,16 +105,15 @@ footer .license img {
 /* Base styles for slides
 --------------------------*/
 .slide {
-  padding: 45px 5%;
+  padding: 45px 3%;
   height: 100%;
 }
 .slide:target {
   overflow: scroll;
 }
-.slide.js-fiddle > iframe:only-of-type {
-  position: static;
-  width: 525px;
-  height: 350px;
+
+header.slide:target {
+  overflow: visible;
 }
 
 /* vertical align heading */
@@ -123,7 +125,7 @@ section.slide h1 {
   text-align: center;
   top: 42%;
   transform: translateY(-42%);
-  font-size: 85px;
+  font-size: 8.5rem;
 }
 
 #timer {
@@ -158,7 +160,7 @@ textarea.snippet {
   height: 65px;
 }
 .intro h1 {
-  font-size: 75px;
+  font-size: 7.5rem;
   margin: 20px 0;
   color: white;
 }

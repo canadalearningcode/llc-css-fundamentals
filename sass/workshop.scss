@@ -7,3 +7,11 @@
 		width: 60%;
 	}
 }
+
+.slide {
+	&.js-fiddle > iframe:only-of-type {
+		position: static;
+		max-height: 253px;
+	}
+}
+
