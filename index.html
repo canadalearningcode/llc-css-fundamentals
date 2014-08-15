@@ -46,13 +46,21 @@
   </header>
 
   <main>
-    <section class="slide" data-markdown>
+    <section class="slide image-only" data-markdown>
       ##Today's Project
 
       Follow [this link](project/final.html) to see the whole project!
       
-      ![final project](img/final-project-1.jpg)
-      ![final project](img/final-project-2.jpg)   
+      ![final project](img/final-project.jpg)  
+    </section>
+
+    <section class="slide image-only" data-markdown>
+      ##A demonstration of what can be
+      ##accomplished through CSS-based design
+
+      ![](img/css-zen-garden.png)
+
+      http://csszengarden.com/
     </section>
 
     <section class="slide" data-markdown>
@@ -276,7 +284,7 @@
 
       When choosing a `class` or `id` name, choose a descriptive name and do not use spaces. Hyphens (-), underscores (_) and camel case are acceptable. 
 
-      CSS is also case sensitive, so while these three examples look similar, CSS will read these as three different classes so it's important (for you own sanity) to pick one style and be consistent.
+      CSS is also case sensitive, so while these three examples look similar, CSS will read these as three different classes so it's important (for your own sanity) to pick one style and be consistent.
       
       ```
       class="content-wrapper"
@@ -446,7 +454,7 @@
       ```
       &lt;body&gt;
         &lt;h1&gt;My Website&lt;/h1&gt;&lt;!-- child of body --&gt;
-        &lt;p&gt;This is a paragraph.&lt;/p&gt;&lt;!-- sibling of h1 and below p tag --&gt;
+        &lt;p&gt;This is a paragraph.&lt;/p&gt;&lt;!-- sibling of h1 --&gt;
       &lt;/body&gt;
       ```
       ```
@@ -1288,19 +1296,12 @@ max-width: 1000px;
       * Firefox: `-moz- ` 
       * Internet Explorer: `-ms-`
       
-      Not all properties these prefixes and as newer browser versions come up, support for many of these prefixes are no longer required.  Here's a couple handy resources. Let's look at the first two.
+      Not all properties these prefixes and as newer browser versions come up, support for many of these prefixes are no longer required.  Here's a couple handy resources. 
       
       * [caniuse.com](http://caniuse.com)
       * [css3please.com](http://css3please.com/)  
-      * [-prefix-free](http://leaverou.github.io/prefixfree/)  
+      * [-prefix-free](http://leaverou.github.io/prefixfree/) - note, doesn't work **locally** in Chrome.   
       * [css-tricks.com/how-to-deal-with-vendor-prefixes](http://css-tricks.com/how-to-deal-with-vendor-prefixes/)
-
-      -prefix-free has already been included in your project files and is linked in the `&lt;head>` like so:
-
-      ```xml
-      &lt;script src=&quot;scripts/prefixfree.min.js&quot;&gt;&lt;/ script&gt;
-
-      ```
     </section>
 
     <section class="slide">
@@ -1847,6 +1848,14 @@ fixed:  absolutely positioned box, relative to the viewport. -->
     var snippets = document.querySelectorAll('.snippet');
     for(var i=0; i<snippets.length; i++) {
       new CSSSnippet(snippets[i]);
+    }
+
+    var links = document.getElementByTagName("a");
+    for (var i = 0; i < links.length; i++) {
+        var link = links[i];
+        link.addEventListener(function () {
+            window.open(this.href);
+        });
     }
   </script>
 </body>
