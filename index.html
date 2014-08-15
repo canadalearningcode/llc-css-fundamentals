@@ -1515,31 +1515,108 @@ Here's what your page should look like: [example 10](project/examples/10-skills-
       Your page should look something like this: [Example 11](project/examples/11-icon-fonts.html)
     </section>
 
+    <section class="slide">
+      <h2>Making circles</h2>
+
+      <p>For the second option for the <strong>Skills</strong> section, let’s turn this lists into circles and center align them.</p>
+
+      <p>For this exercise, let’s use <code>display: inline-block</code> <em>instead</em> of <code>float: left</code> to get them to line up side-by-side and still be center aligned from the inherited style of <code>text-align: center</code>.</p>
+
+      <p>Our selector will target only the list items contained within the circle option list to ensure that these styles will only be specific to this list. Since we want the individual list items itself to be lined up side-by-side, we have to target them specifically.</p>
+
+      <pre><code>.skills-circles ul li {}</code></pre>
+    </section>
+
+    <section class="slide">
+      <h2>Making circles (continued)</h2>
+      <p>We can give them an equal width &amp; height as well to create a perfect circle using which CSS property?</p>
+      <p class="delayed">border-radius!</p>
+      <p class="delayed">Let’s add a border as well.</p>
+<pre class="delayed"><code>.skills-circles ul li {
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    border: 2px solid yourAccentColour;
+    border-radius: 50%;
+}
+</code></pre>
+    </section>
+    <section class="slide image-only" data-markdown>
+      ##Hmm....
+
+      ![](img/circles.png)
+
+      If you see this, you didn't break it. It's just CSS.
+    </section>
+
+    <section class="slide image-only" data-markdown>
+      ![](img/css.gif)
+    </section>
+
     <section class="slide" data-markdown>
-      ##More Inline-Block (and a bunch of other stuff)
+      ##Center align
 
-      For the second option for the **Skills** section, let's turn this lists into circles and center align them.
+      Aligning elements horizontally is pretty straightforward, `text-align: center` or `margin: 0 auto`.  
 
-      For this exercise, let's use `display: inline-block` *instead* of `float: left` to get them to line up side-by-side and still* be center aligned from the inherited style of `text-align: center`.
-      
-      Our selector will target only the list items contained within the circle option list to ensure that these styles will only be specific to this list. Since we want the individual list items itself to be lined up side-by-side, we have to target them specifically.
+      Vertical align? No so much. 
 
-      ```css
+      Today we are going to try out one way. Remember `line-height`? It's used to create spacing between lines of content but if we set it to be the same as the height of the box, it will make the content inside align vertically.
+
+      ... Unless you have text that is more than one line.
+
+      ![](img/line-height.png)
+    </section>
+
+    <section class="slide" data-markdown>
+      ##Center align (continued)
+
+      If we look at the HTML markup, a `span` tag was added around each word so that we can still use the `line-height` trick on the list item, but now we can use the `span` tag to override the styles we don't want.
+
+```xml
+&lt;ul&gt;
+  &lt;li&gt;&lt;span&gt;Social Media&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span&gt;Marketing Strategy&lt;/span&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;
+```
+      ```
       .skills-circles ul li {
         display: inline-block;
+        height: 150px;
+        width: 150px;
+        border: 2px solid #2980b9;
+        border-radius: 50%;
+        line-height: 150px;
       }
       ```
+      Create a new declaration block for the `span` tag, you can skip a couple levels even though it's nested inside of the `li` (remember, Inception... )
 
-      There are currently 4 items so let's give them a width of 25% to break them even 4 even boxes but still maintain flexibility. Put a background colour on it too just to see what's going on.
+      We need to make the span take on the characteristics if a block element in order for this fix to work.
 
       ```css
-      .skills-circles ul li {
+      .skills-circles span {
         display: inline-block;
-        width: 25%;
-        background: blue;
       }
       ```
     </section>
+
+    <section class="slide" data-markdown>
+      ##Center align (continued)
+      
+      Now, set the `line-height` to normal to override the `line-height` set in the `li`.  Then finally, `vertical-align: middle` can be added to vertically align the lines of text to each other (which probably seems like it should have work in the first place but doesnt... ugh.)
+      
+      ```
+      .skills-circles span {
+        display: inline-block;
+        line-height: normal;
+        vertical-align: middle;
+      }
+      ```
+
+      Your page should look like this: [Example 12](project/examples/12-circles.html).
+
+    </section>
+
 
     <!-- <section class="slide" data-markdown>
 
