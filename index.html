@@ -1093,13 +1093,13 @@ max-width: 1000px;
       }
       ```
 
-      Feel free to skip a level but be mindful of specificity rules. For example, `nav ul li a span` would override `nav a`. It’s generally easier to start with less specific selectors and make them more specific, as needed, rather than starting with very specific selectors and adding extra markup or classes to try to override the styles.
+      Feel free to skip a level but be mindful of specificity rules. For example, `nav ul li a` would override `nav a`. It’s generally easier to start with less specific selectors and make them more specific, as needed, rather than starting with very specific selectors and adding extra markup or classes to try to override the styles.
     </section>
 
     <section class="slide">
       <h2>Child & Adjacent selectors</h2>
       
-      <p><strong>Child selectors</strong> - Only matches an element that is a <em>child</em> of the element declared before it.</p>
+      <p><strong>Child selectors</strong> - Only matches an element that is a direct <em>child</em> of the element declared before it.</p>
       
       <textarea class="snippet" data-subject="#child-selector">#child-selector {
   background: lightblue;
@@ -1112,7 +1112,7 @@ max-width: 1000px;
         <a href="#0">link</a>
       </div>
       
-      <p><strong>Adjacent selectors</strong> - Matches any element immediately preceded by a sibling element E</p>
+      <p><strong>Adjacent selectors</strong> - allows you to select an element that is directly after another specific element.</p>
 
       <textarea class="snippet" data-subject="#adjacent-selector">#adjacent-selector {
   background: gray;
@@ -1124,6 +1124,8 @@ max-width: 1000px;
         <p>Lorem ipsum dolor sit amet. <a href="#0">link inside paragraph</a>.</p>
         <a href="#0">link</a>
       </div>
+    
+      <p><strong>Extra Resource</strong>: <a href="http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048">The 30 CSS Selectors you Must Memorize</a></p>
     </section>
 
     <section class="slide" data-markdown>
