@@ -117,7 +117,7 @@
       **Link**: requires the addition of a `src` *attribute* to specify where to link to.
       
       ```
-      &lt;a href=&quot;http://website.com&quot;&gt;&lt;/a&gt;
+      &lt;a href=&quot;http://website.com&quot;&gt;link&lt;/a&gt;
       ```
 
       **Lists**: There are two kinds of lists: ordered (`ol`) for numbered lists & undordered (`ul`) for lists with bullets. Content must be included only within the list item (`li`).
@@ -160,8 +160,7 @@
     <section class="slide" data-markdown>
       ##CSS Overview
 
-      HTML defines *content*, CSS defines the *presentation*.
-  
+      HTML defines *content*, CSS defines the *presentation*.  
       **Selectors:** used to determine which element(s) to apply the styles to. Can target an HTML tag, class or ID.  
       **Declaration block:** consists of a list of declarations (rules to follow) wrapped in curly braces `{}`.  
       **Declarations** or rules to follow, are written using `property:value` pairs.
@@ -172,8 +171,7 @@
       }
       ```
       **Properties** determine the type of style to be applied to
-      the element (e.g. color).
-
+      the element (e.g. color).  
       **Values** are specific to the property. Declarations must end with a semi-colon (`;`) to indicate that the instruction is complete.
       
       ![](framework/img/css.png)
@@ -205,17 +203,18 @@
     <section class="slide" data-markdown>
       ##Comments
       
-      Comments in CSS are written between a slash & asterix (`/* */`) and must close in the opposite order. Comments are great for ... well... leaving comments!  Leave comments in your code as notes for yourself or others or for organizing your code blocks. It is also used for "commenting" out your code, or hiding it so it doesn't render on the page but not deleting it.
+      Comments in CSS are written between a slash & asterix (`/* */`) and must close in the opposite order. Comments are great for ... well... leaving comments!  Leave comments in your code as notes for yourself (or others), for organizing your code blocks or for "commenting" out your code (hiding it).
       
       ```
-      /* GLOBAL STYLES */
       p {
         color: #cc0066; /* magenta */
       }
+
       /* HEADER STYLES */
       header {
         width: 80%;
       }
+
       /*  Saving this for later
       .slider {
         width: 100px;
@@ -282,7 +281,7 @@
     <section class="slide" data-markdown>
       ##class and id Naming Conventions
 
-      When choosing a `class` or `id` name, choose a descriptive name and do not use spaces. Hyphens (-), underscores (_) and camel case are acceptable. 
+      When choosing a `class` or `id` name, use a descriptive name and don't use spaces. Hyphens (-), underscores (_) and camel case are acceptable. 
 
       CSS is also case sensitive, so while these three examples look similar, CSS will read these as three different classes so it's important (for your own sanity) to pick one style and be consistent.
       
@@ -394,9 +393,9 @@
     <section class="slide" data-markdown>
       ##Exercise 2: add background colours (10mins)
       
-      1. Create a new stylesheet called main.css and save it to the **css** folder.  Link it to your HTML document.
+      1. In Sublime, open **main.css** (it should be blank). It is located in **Project > css **. Link it (reference it) in your HTML document.
 
-      1. Use comments to organize your CSS.
+      1. Try using comments to organize your CSS into sections so you can group related CSS together.
       
       1. Using `background` or `background-color`, add a different background colour to each major section of the page.  Use an **element selector** for the header and **class selectors** for the sections. Since there are multiple `&lt;section&gt;` tags, we need to use a more specific selector to give them each a different colour.  Here are the selectors to get started: 
       
@@ -514,7 +513,8 @@
 font-family: Helvetica, Arial, serif;
 font-size: inherit;
 font-weight: normal;
-text-transform: inherit;</textarea>
+text-transform: inherit;
+color: #222222;</textarea>
       <p>Just some text to test out the above styles. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni repellat sunt quae fugit illum in aut sed, quis nesciunt totam veritatis, dolores alias modi fuga commodi dicta facilis, consequatur temporibus.</p>
 
       <p>Resource: <a href="http://reference.sitepoint.com/css/typography">Sitepoint Typographical Properties</a></p>
@@ -599,7 +599,7 @@ h3 {
       ##Exercise #3 Typography (Continued)(15mins)
 
       1. Find and add 2-3 font families from [Google Fonts](http://www.google.com/fonts/)
-      1. Update the font & typography styles to your liking! You can add some more later as the page starts to come together more.
+      1. Update the font & typography styles to your liking! You can add some more later as the page starts to come together.
 
       Resource: [Sitepoint Typographical Properties](http://reference.sitepoint.com/css/typography)
 
@@ -1672,9 +1672,6 @@ Here's what your page should look like: [example 10](project/examples/10-skills-
       </div>  
     </section>
 
-<!-- absolute:  positioned relative to its containing block/parent element. Removed from the flow and have no effect on later siblings
-
-fixed:  absolutely positioned box, relative to the viewport. -->
     <section class="slide">
       <h2>Position: fixed</h2>
       
@@ -1819,7 +1816,7 @@ fixed:  absolutely positioned box, relative to the viewport. -->
   <footer>
     <p class="instructions">Use the left <i class="fa fa-arrow-left"></i> and right <i class="fa fa-arrow-right"></i> arrow keys to navigate</p>
 
-    <!-- <p class="license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a> by <a framework/xmlns:cc="http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a> --></p>
+    <p class="license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a> by <a framework/xmlns:cc="http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
   </footer>
 
 
