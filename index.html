@@ -1,1861 +1,1864 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>Ladies Learning Code: CSS Fundamentals</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Ladies Learning Code: CSS Fundamentals</title>
 
-  <!-- Theme-specific styles -->
-  <link href='http://fonts.googleapis.com/css?family=Quicksand|Pacifico' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400|Open+Sans:400,300' rel='stylesheet' type='text/css'>
-  
-  <!-- Don't alter slideshow.css, CSSS slide deck needs it to work -->
-  <link rel="stylesheet" href="framework/css/slideshow.css">
-  <link rel="stylesheet" href="framework/css/font-awesome.css">
-  <link rel="stylesheet" href="framework/css/highlightjs-themes/monokai.css">
-  <link rel="stylesheet" href="framework/css/theme-llc.css">
-  <!-- Workshop-specific styles -->
-  <link rel="stylesheet" href="framework/css/workshop.css">
+    <!-- Don't alter slideshow.css, CSSS slide deck needs it to work -->
+    <link rel="stylesheet" href="framework/css/slideshow.css">
 
-  <!-- Takes care of CSS3 prefixes! -->
-  <script src="framework/scripts/prefixfree.min.js"></script>
+    <!-- Theme-specific styles -->
+    <link href='http://fonts.googleapis.com/css?family=Quicksand|Pacifico|Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="framework/css/font-awesome.css">
+    <link rel="stylesheet" href="framework/css/highlightjs-themes/monokai.css">
+    <link rel="stylesheet" href="framework/css/theme-llc.css">
+    <link rel="shortcut icon" href="framework/img/favicon.ico"> 
 
+    <!-- Workshop-specific styles -->
+    <link rel="stylesheet" href="framework/css/workshop.css">
+
+    <!-- Takes care of CSS3 prefixes! -->
+    <script src="framework/scripts/prefixfree.min.js"></script>
 </head>
 
 <!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
 <body data-duration="360">
+    
+    <!-- makes all links open in a new window -->
+    <base target="_blank">
 
-  <!-- First/Intro slide -->
-  <header class="intro slide">
-    <img class="logo" src="framework/img/logo-llc-white.png">
-    <div class="info">
-      <h1>
-        <span class="title-bg">CSS Fundamentals</span><br>
-        <!-- if needed -->
-        <span class="title-bg">for Beginners</span>
-      </h1>
-      <h2><span>with</span> Christina Truong</h2>
+    <!-- First/Intro slide -->
+    <header class="intro slide">
+        <img class="logo" src="framework/img/logo-llc-white.png">
+        <div class="info">
+            <h1>
+                <span class="title-bg">CSS Fundamentals</span><br>
+                <!-- if needed -->
+                <span class="title-bg">for Beginners</span>
+            </h1>
+            <h2><span>with</span> Christina Truong</h2>
 
-      <img class="instructor-img" src="framework/img/christina-truong.jpg" alt="Christina Truong">
-      <ul>
-        <li><i class="fa fa-envelope"></i><a href="mailto:hello@christinatrong.com">hello@christinatrong.com</li>
-        <li><i class="fa fa-desktop"></i><a href="#" target="_blank">christinatruong.com</a></li>
-        <li><i class="fa fa-twitter"></i><a href="http://twitter.com/christinatruong" target="_blank">@christinatruong</a></li>
-      </ul>
-    </div>
-  </header>
+            <img class="instructor-img" src="framework/img/christina-truong.jpg" alt="Christina Truong">
+            <ul>
+                <li><i class="fa fa-envelope"></i><a href="mailto:hello@christinatrong.com">hello@christinatrong.com</li>
+                <li><i class="fa fa-desktop"></i><a href="#" target="_blank">christinatruong.com</a></li>
+                <li><i class="fa fa-twitter"></i><a href="http://twitter.com/christinatruong" target="_blank">@christinatruong</a></li>
+            </ul>
+        </div>
+    </header>
 
-  <main>
-    <section class="slide image-only" data-markdown>
-      ##Today's Project
+    <main>
+        <section class="slide image-only" data-markdown>
+            ##Today's Project
 
-      Follow [this link](project/final.html) to see the whole project!
-      
-      ![final project](framework/img/final-project.jpg)  
-    </section>
+            Follow [this link](project/final.html) to see the whole project!
+            
+            ![final project](framework/img/final-project.jpg)  
+        </section>
 
-    <section class="slide image-only" data-markdown>
-      ##A demonstration of what can be
-      ##accomplished through CSS-based design
+        <section class="slide image-only" data-markdown>
+            ##A demonstration of what can be
+            ##accomplished through CSS-based design
 
-      ![](framework/img/css-zen-garden.png)
+            ![](framework/img/css-zen-garden.png)
 
-      http://csszengarden.com/
-    </section>
+            http://csszengarden.com/
+        </section>
 
-    <section class="slide" data-markdown>
-      ##Setting Up Our Dev Tools
+        <section class="slide" data-markdown>
+            ##Setting Up Our Dev Tools
 
-      **[Sublime Text](http://www.sublimetext.com/2)** - a text editor with colour highlighting and other helpful features. If you are unable to install Sublime Text, try installing: [Notepad++](http://notepad-plus-plus.org/) (Windows) or [Atom](https://atom.io/) (Mac).
+            **[Sublime Text](http://www.sublimetext.com/2)** - a text editor with colour highlighting and other helpful features. If you are unable to install Sublime Text, try installing: [Notepad++](http://notepad-plus-plus.org/) (Windows) or [Atom](https://atom.io/) (Mac).
 
-      **[Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/)** - Choose a modern web browser that supports current web standards and has good development tools. To set Chrome as your default browser, follow [these instructions](https://support.google.com/chrome/answer/95417?hl=en). Another good option is Firefox. Visit [browsehappy.com](http://browsehappy.com) for more info about modern browsers.
+            **[Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/)** - Choose a modern web browser that supports current web standards and has good development tools. To set Chrome as your default browser, follow [these instructions](https://support.google.com/chrome/answer/95417?hl=en). Another good option is Firefox. Visit [browsehappy.com](http://browsehappy.com) for more info about modern browsers.
 
-      **Developer tools** allow us to *inspect* any web page to see how it's built. These tools also make it easier to test and debug code. The tools can be accessed in 3 ways:
-      
-      * right-click / two-finger tap on a web page and select **Inspect Element**
-      * select the menu icon in the top right hand corner of the Chrome browser and select **Tools > Developer Tools**
-      * keyboard shortcut: **Ctrl + Shift + I** (PC) / **Cmnd + Option + I** (Mac)
-    </section>
-    <section class="slide" data-markdown>
-      ##Setting Up Our Work Flow
+            **Developer tools** allow us to *inspect* any web page to see how it's built. These tools also make it easier to test and debug code. The tools can be accessed in 3 ways:
+            
+            * right-click / two-finger tap on a web page and select **Inspect Element**
+            * select the menu icon in the top right hand corner of the Chrome browser and select **Tools > Developer Tools**
+            * keyboard shortcut: **Ctrl + Shift + I** (PC) / **Cmnd + Option + I** (Mac)
+        </section>
+        <section class="slide" data-markdown>
+            ##Setting Up Our Work Flow
 
-      Open our project files in the browser and text editor.
+            Open our project files in the browser and text editor.
 
-      1. Open Sublime Text and go to **File > Open**.
+            1. Open Sublime Text and go to **File > Open**.
 
-        ![](framework/img/1-setup.png)
-      1. Navigate to the **Project** folder (in the folder you downloaded with today's slides). With the entire folder selected, select **Open**.
+                ![](framework/img/1-setup.png)
+            1. Navigate to the **Project** folder (in the folder you downloaded with today's slides). With the entire folder selected, select **Open**.
 
-        ![](framework/img/2-setup.png)
-      1. The folder will appear in Sublime's side bar. Double click on **index.html** in the sidebar to open it.
+                ![](framework/img/2-setup.png)
+            1. The folder will appear in Sublime's side bar. Double click on **index.html** in the sidebar to open it.
 
-        ![](framework/img/3-setup.png)
-      1. Right click or two finger tap and select **Open in Browser**. This will open the HTML file in your *default* browser.
+                ![](framework/img/3-setup.png)
+            1. Right click or two finger tap and select **Open in Browser**. This will open the HTML file in your *default* browser.
 
-        ![](framework/img/4-setup.png)
+                ![](framework/img/4-setup.png)
 
-      No CSS has been applied yet so all you will see is the HTML content and the default styles like in [this example](project/examples/1-no-css.html).
-    </section>
+            No CSS has been applied yet so all you will see is the HTML content and the default styles like in [this example](project/examples/1-no-css.html).
+        </section>
 
-    <section class="slide" data-markdown>
-      ##HTML: Quick Review
-      
-      HTML is used to define *content* so use the appropriate tag that best describes the meaning of your content.
+        <section class="slide" data-markdown>
+            ##HTML: Quick Review
+            
+            HTML is used to define *content* so use the appropriate tag that best describes the meaning of your content.
 
-      **Headings**: There are 6 heading tags available (`&lt;h1&gt;,&lt;h2&gt;,...,&lt;h6&gt;`) and follow a hierarchical structure. `&lt;h1&gt;` represents the most important title/heading on the page and it's best to stick to using it just once per page. Other headings can be used multiple times.  It's important to use the appropriate tag to describe the content, not for the default heading styles. That's what CSS is for!
+            **Headings**: There are 6 heading tags available (`&lt;h1&gt;,&lt;h2&gt;,...,&lt;h6&gt;`) and follow a hierarchical structure. `&lt;h1&gt;` represents the most important title/heading on the page and it's best to stick to using it just once per page. Other headings can be used multiple times.  It's important to use the appropriate tag to describe the content, not for the default heading styles. That's what CSS is for!
 
-      ```xml
-      &lt;h1&gt;Most Important Heading&lt;/h1&gt;
-      &lt;h2&gt;Important But Not As Much As h1&lt;/h2&gt;
-      ```
+            ```xml
+            &lt;h1&gt;Most Important Heading&lt;/h1&gt;
+            &lt;h2&gt;Important But Not As Much As h1&lt;/h2&gt;
+            ```
 
-      **Paragraphs**: Created with the `&lt;p&gt;&lt;/p&gt;` tags.
-      ```xml
-      &lt;p&gt;I'm a paragraph.&lt;/p&gt;
-      ```
+            **Paragraphs**: Created with the `&lt;p&gt;&lt;/p&gt;` tags.
+            ```xml
+            &lt;p&gt;I'm a paragraph.&lt;/p&gt;
+            ```
 
-      **Link**: requires the addition of a `src` *attribute* to specify where to link to.
-      
-      ```
-      &lt;a href=&quot;http://website.com&quot;&gt;link&lt;/a&gt;
-      ```
+            **Link**: requires the addition of a `src` *attribute* to specify where to link to.
+            
+            ```
+            &lt;a href=&quot;http://website.com&quot;&gt;link&lt;/a&gt;
+            ```
 
-      **Lists**: There are two kinds of lists: ordered (`ol`) for numbered lists & undordered (`ul`) for lists with bullets. Content must be included only within the list item (`li`).
-      
-      ```xml
-      &lt;ul&gt;
-        &lt;li&gt;Unordered list item&lt;/li&gt;
-        &lt;li&gt;Unordered list item&lt;/li&gt;
-      &lt;/ul&gt;
-      &lt;ol&gt;
-        &lt;li&gt;Ordered list item&lt;/li&gt;
-        &lt;li&gt;Ordered list item&lt;/li&gt;
-      &lt;/ol&gt;
-      ```
-      **Images**: like links, also requires the an additional attribute, `src`, for linking to the image file.
+            **Lists**: There are two kinds of lists: ordered (`ol`) for numbered lists & undordered (`ul`) for lists with bullets. Content must be included only within the list item (`li`).
+            
+            ```xml
+            &lt;ul&gt;
+                &lt;li&gt;Unordered list item&lt;/li&gt;
+                &lt;li&gt;Unordered list item&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;ol&gt;
+                &lt;li&gt;Ordered list item&lt;/li&gt;
+                &lt;li&gt;Ordered list item&lt;/li&gt;
+            &lt;/ol&gt;
+            ```
+            **Images**: like links, also requires the an additional attribute, `src`, for linking to the image file.
 
-      ```
-      &lt;img src=&quot;path/to/image.jpg&quot;&gt;
-      ```
+            ```
+            &lt;img src=&quot;path/to/image.jpg&quot;&gt;
+            ```
 
-    </section>
-    <section class="slide" data-markdown>
-      ##Exercise #1: Personalize the content (10 mins)
+        </section>
+        <section class="slide" data-markdown>
+            ##Exercise #1: Personalize the content (10 mins)
 
-      1. Update your name and tagline in the `header` section.
-      2. Update your profile / personal summary / profile image, if you have a picture handy.
+            1. Update your name and tagline in the `header` section.
+            2. Update your profile / personal summary / profile image, if you have a picture handy.
 
-      Don't forget to save your changes!  
-      Save the file using **File > Save**, or use keyboard shortcuts (**CMD + S** or **CNTL + S**)
+            Don't forget to save your changes!  
+            Save the file using **File > Save**, or use keyboard shortcuts (**CMD + S** or **CNTL + S**)
 
-      After saving, just refresh the browser to see the changes (rather than opening your file in a new tab every time). Find a work flow that works best for you when making frequent changes. 
-      
-      Don't worry if you don't finish. There's placeholder content already included in the starter template.
-    </section>
+            After saving, just refresh the browser to see the changes (rather than opening your file in a new tab every time). Find a work flow that works best for you when making frequent changes. 
+            
+            Don't worry if you don't finish. There's placeholder content already included in the starter template.
+        </section>
 
-    <section class="slide" data-markdown>
-      #Let's dive into CSS
-    </section>
+        <section class="slide" data-markdown>
+            #Let's dive into CSS
+        </section>
 
-    <section class="slide" data-markdown>
-      ##CSS Overview
+        <section class="slide" data-markdown>
+            ##CSS Overview
 
-      HTML defines *content*, CSS defines the *presentation*.  
-      **Selectors:** used to determine which element(s) to apply the styles to. Can target an HTML tag, class or ID.  
-      **Declaration block:** consists of a list of declarations (rules to follow) wrapped in curly braces `{}`.  
-      **Declarations** or rules to follow, are written using `property:value` pairs.
+            HTML defines *content*, CSS defines the *presentation*.  
+            **Selectors:** used to determine which element(s) to apply the styles to. Can target an HTML tag, class or ID.  
+            **Declaration block:** consists of a list of declarations (rules to follow) wrapped in curly braces `{}`.  
+            **Declarations** or rules to follow, are written using `property:value` pairs.
 
-      ```css
-      selector {
-        property: value;
-      }
-      ```
-      **Properties** determine the type of style to be applied to
-      the element (e.g. color).  
-      **Values** are specific to the property. Declarations must end with a semi-colon (`;`) to indicate that the instruction is complete.
-      
-      ![](framework/img/css.png)
-    </section>
+            ```css
+            selector {
+                property: value;
+            }
+            ```
+            **Properties** determine the type of style to be applied to
+            the element (e.g. color).  
+            **Values** are specific to the property. Declarations must end with a semi-colon (`;`) to indicate that the instruction is complete.
+            
+            ![](framework/img/css.png)
+        </section>
 
-    <section class="slide">
-      <h2>CSS Syntax</h2>
+        <section class="slide">
+            <h2>CSS Syntax</h2>
 
-      <pre><code>h1 {
-  color: blue;
-  font-size: 12px;
+            <pre><code>h1 {
+    color: blue;
+    font-size: 12px;
 }</code></pre>
 
-      <p>In the above example:</p>
+            <p>In the above example:</p>
 
-      <ul>
-        <li>Which one is the selector? <br>
-          <span class="delayed">h1</span>
-        </li>
-        <li class="delayed">Which one is the property? <br>
-          <span class="delayed">color &amp; font-size</span>
-        </li>
-        <li class="delayed">Which one is the value? <br>
-          <span class="delayed">blue &amp; 12px</span>
-        </li>
-      </ul>        
-    </section>
+            <ul>
+                <li>Which one is the selector? <br>
+                    <span class="delayed">h1</span>
+                </li>
+                <li class="delayed">Which one is the property? <br>
+                    <span class="delayed">color &amp; font-size</span>
+                </li>
+                <li class="delayed">Which one is the value? <br>
+                    <span class="delayed">blue &amp; 12px</span>
+                </li>
+            </ul>        
+        </section>
 
-    <section class="slide" data-markdown>
-      ##Comments
-      
-      Comments in CSS are written between a slash & asterix (`/* */`) and must close in the opposite order. Comments are great for ... well... leaving comments!  Leave comments in your code as notes for yourself (or others), for organizing your code blocks or for "commenting" out your code (hiding it).
-      
-      ```
-      p {
-        color: #cc0066; /* magenta */
-      }
+        <section class="slide" data-markdown>
+            ##Comments
+            
+            Comments in CSS are written between a slash & asterix (`/* */`) and must close in the opposite order. Comments are great for ... well... leaving comments!  Leave comments in your code as notes for yourself (or others), for organizing your code blocks or for "commenting" out your code (hiding it).
+            
+            ```
+            p {
+                color: #cc0066; /* magenta */
+            }
 
-      /* HEADER STYLES */
-      header {
-        width: 80%;
-      }
+            /* HEADER STYLES */
+            header {
+                width: 80%;
+            }
 
-      /*  Saving this for later
-      .slider {
-        width: 100px;
-        background: red;
-      }
-      */ 
-      ``` 
-    </section>
+            /*  Saving this for later
+            .slider {
+                width: 100px;
+                background: red;
+            }
+            */ 
+            ``` 
+        </section>
 
-    <section class="slide" data-markdown>
-      ##Classes vs IDs
-      
-      When **type selectors** are too general (targeting the HTML element), HTML gives us two ways to attach extra identifying information to target specific elements with two **attributes**, `class` and `id`.  
-      ``` 
-      /* targets ALL parapraphs */
-      p {
-        color: red;
-      }
-      /* only applies to the element that contains this class */
-      .danger {
-        color: red;
-      }
-      /* only applies to the element that contains this id  */
-      #danger {
-        color: red;
-      }
-      ```
-    </section>
-    <section class="slide" data-markdown>
-      ##Class Selectors
+        <section class="slide" data-markdown>
+            ##Classes vs IDs
+            
+            When **type selectors** are too general (targeting the HTML element), HTML gives us two ways to attach extra identifying information to target specific elements with two **attributes**, `class` and `id`.  
+            ``` 
+            /* targets ALL parapraphs */
+            p {
+                color: red;
+            }
+            /* only applies to the element that contains this class */
+            .danger {
+                color: red;
+            }
+            /* only applies to the element that contains this id  */
+            #danger {
+                color: red;
+            }
+            ```
+        </section>
+        <section class="slide" data-markdown>
+            ##Class Selectors
 
-      A `class` **attribute** can be added to any element but the value is defined by you.  The class can then be used as a selector to apply styles to *any* element that references the class attribute. In CSS, a `class` selector is defined by a leading period (`.`) followed by the class name with *no* spaces as your CSS selector. 
-      Classes can be used multiple times on the same page. 
+            A `class` **attribute** can be added to any element but the value is defined by you.  The class can then be used as a selector to apply styles to *any* element that references the class attribute. In CSS, a `class` selector is defined by a leading period (`.`) followed by the class name with *no* spaces as your CSS selector. 
+            Classes can be used multiple times on the same page. 
 
-      ```xml
-      &lt;p&gt;Regular text&lt;/p&gt;
+            ```xml
+            &lt;p&gt;Regular text&lt;/p&gt;
 &lt;p&gt;Regular text&lt;/p&gt;
 &lt;p class=&quot;fancy&quot;&gt;Fancy text here.&lt;/p&gt;
-      ```
-      ```
-      p {
-        color: red;
-        font-family: Georgia, "Times New Roman", serif;
-      }
-      .fancy {
-        text-transform: uppercase;
-      }
-      ```
-    </section>
-    <section class="slide" data-markdown>
-      ##id Selectors
+            ```
+            ```
+            p {
+                color: red;
+                font-family: Georgia, "Times New Roman", serif;
+            }
+            .fancy {
+                text-transform: uppercase;
+            }
+            ```
+        </section>
+        <section class="slide" data-markdown>
+            ##id Selectors
 
-      `id` **attributes** are similar to `class` **attributes** because it can also be added to any element and given any value.
+            `id` **attributes** are similar to `class` **attributes** because it can also be added to any element and given any value.
 
-      However, it can be used only *once* per page.  IDs should be used for significant style rules and is usually reserved for structural blocks. Some developers prefer not to use IDs at all for CSS styling because of specificity rules and classes can be used multiple times, making it more flexible.
+            However, it can be used only *once* per page.  IDs should be used for significant style rules and is usually reserved for structural blocks. Some developers prefer not to use IDs at all for CSS styling because of specificity rules and classes can be used multiple times, making it more flexible.
 
-      In CSS, IDs are denoted by a leading number symbol (`#`).
-      ```
-      #header {
-        width: 800px;
-      }
-      ```
-    </section>
-    <section class="slide" data-markdown>
-      ##class and id Naming Conventions
+            In CSS, IDs are denoted by a leading number symbol (`#`).
+            ```
+            #header {
+                width: 800px;
+            }
+            ```
+        </section>
+        <section class="slide" data-markdown>
+            ##class and id Naming Conventions
 
-      When choosing a `class` or `id` name, use a descriptive name and don't use spaces. Hyphens (-), underscores (_) and camel case are acceptable. 
+            When choosing a `class` or `id` name, use a descriptive name and don't use spaces. Hyphens (-), underscores (_) and camel case are acceptable. 
 
-      CSS is also case sensitive, so while these three examples look similar, CSS will read these as three different classes so it's important (for your own sanity) to pick one style and be consistent.
-      
-      ```
-      class="content-wrapper"
-      class="content_wrapper"
-      class="contentWrapper"
-      ```
-    </section>
+            CSS is also case sensitive, so while these three examples look similar, CSS will read these as three different classes so it's important (for your own sanity) to pick one style and be consistent.
+            
+            ```
+            class="content-wrapper"
+            class="content_wrapper"
+            class="contentWrapper"
+            ```
+        </section>
 
-    <section class="slide">
-      <h2>Adding Background Colours</h2>
-      <p>Using the <code>background</code> (shorthand) or <code>background-color</code> (longhand) property to add colours to various page sections can be very useful when laying out the CSS for your HTML document. For now, you can use either.  We will be going more in depth with the various background options. Try changing the color below and see what happens!</p>
+        <section class="slide">
+            <h2>Adding Background Colours</h2>
+            <p>Using the <code>background</code> (shorthand) or <code>background-color</code> (longhand) property to add colours to various page sections can be very useful when laying out the CSS for your HTML document. For now, you can use either.  We will be going more in depth with the various background options. Try changing the color below and see what happens!</p>
 
-      <textarea class="snippet" data-subject="#bg-shorthand">background: lightblue;</textarea>
-      <div id="bg-shorthand">
-        <p>Change the background using shorthand!</p>
-      </div>
-      <textarea class="snippet" data-subject="#bg-longhand">background-color: papayawhip;</textarea>
-      <div id="bg-longhand">
-        <p>Change the background using longhand!</p>
-      </div>
-    </section>
+            <textarea class="snippet" data-subject="#bg-shorthand">background: lightblue;</textarea>
+            <div id="bg-shorthand">
+                <p>Change the background using shorthand!</p>
+            </div>
+            <textarea class="snippet" data-subject="#bg-longhand">background-color: papayawhip;</textarea>
+            <div id="bg-longhand">
+                <p>Change the background using longhand!</p>
+            </div>
+        </section>
 
-    <section class="slide" data-markdown>
-      ##color Property and Values
+        <section class="slide" data-markdown>
+            ##color Property and Values
 
-      The `color` property accepts different types of values.
+            The `color` property accepts different types of values.
 
-      **keywords** - you can use the actual name of the colour for most basic colours (red, green, blue, pink, etc) as well as a few fancy ones like "papayaWhip" and "paleGoldenrod".  
-      **RGB (red-green-blue)** - Uses *three* numerical values from 0-255. 0 represents black and 255 represents white. See below for syntax.  
-      **hex code** - Made up of the number sign (`#`) followed by six hexadecimal characters (0-9, A-F) or three hexadecimal characters (0-9, A-F).
-      
-      ```
-      p {
-        background: firebrick;
-      }
-      p {
-        background: #B22222;
-      }
-      p {
-        background: rgb(178,34,34);
-      }
-      ```
-    </section>
-    <section class="slide" data-markdown>
-      ##Colour Resources
+            **keywords** - you can use the actual name of the colour for most basic colours (red, green, blue, pink, etc) as well as a few fancy ones like "papayaWhip" and "paleGoldenrod".  
+            **RGB (red-green-blue)** - Uses *three* numerical values from 0-255. 0 represents black and 255 represents white. See below for syntax.  
+            **hex code** - Made up of the number sign (`#`) followed by six hexadecimal characters (0-9, A-F) or three hexadecimal characters (0-9, A-F).
+            
+            ```
+            p {
+                background: firebrick;
+            }
+            p {
+                background: #B22222;
+            }
+            p {
+                background: rgb(178,34,34);
+            }
+            ```
+        </section>
+        <section class="slide" data-markdown>
+            ##Colour Resources
 
-      [http://www.colorpicker.com/](http://www.colorpicker.com/)  
-      [http://colours.neilorangepeel.com/](http://colours.neilorangepeel.com/)    
-      [http://www.colourlovers.com/](http://www.colourlovers.com/)  
-      [http://flatuicolors.com/](http://flatuicolors.com/)  
-      [http://color.hailpixel.com/](http://color.hailpixel.com/)  
-      [http://wesandersonpalettes.tumblr.com/](http://wesandersonpalettes.tumblr.com/)
-    </section>
+            [http://www.colorpicker.com/](http://www.colorpicker.com/)  
+            [http://colours.neilorangepeel.com/](http://colours.neilorangepeel.com/)    
+            [http://www.colourlovers.com/](http://www.colourlovers.com/)  
+            [http://flatuicolors.com/](http://flatuicolors.com/)  
+            [http://color.hailpixel.com/](http://color.hailpixel.com/)  
+            [http://wesandersonpalettes.tumblr.com/](http://wesandersonpalettes.tumblr.com/)
+        </section>
 
-    <section class="slide" data-markdown>
-      ##Referencing CSS
+        <section class="slide" data-markdown>
+            ##Referencing CSS
 
-      There are three ways to include (otherwise known as *referencing*) CSS in an HTML page.
+            There are three ways to include (otherwise known as *referencing*) CSS in an HTML page.
 
-      ###Inline
-      Can be used in any HTML element using the `style` *attribute*.
+            ###Inline
+            Can be used in any HTML element using the `style` *attribute*.
 
-      ```
-      &lt;p style=&quot;color: blue;&quot;&gt;I'm writing CSS!&lt;/p&gt;
-      ```
+            ```
+            &lt;p style=&quot;color: blue;&quot;&gt;I'm writing CSS!&lt;/p&gt;
+            ```
 
-      This technique should be avoided but it's good to know how it works in case you encounter it "in the wild."
+            This technique should be avoided but it's good to know how it works in case you encounter it "in the wild."
 
-      ###Internal
-      Uses `&lt;style&gt;` and is included in the `&lt;head&gt;` element.
+            ###Internal
+            Uses `&lt;style&gt;` and is included in the `&lt;head&gt;` element.
 
-      ```    
-      &lt;head&gt;
-        &lt;title&gt;Page Title&lt;/title&gt;
-        &lt;meta charset=&quot;utf-8&quot;&gt;
-        &lt;style&gt;
-          h1 {
-           font-size: 16px;
-          }
-        &lt;/style&gt;
-      &lt;/head&gt;
-      &lt;body&gt;
-        &lt;p&gt;I'm still writing CSS!&lt;/p&gt;
-      &lt;/body&gt;
-      ```
+            ```    
+            &lt;head&gt;
+                &lt;title&gt;Page Title&lt;/title&gt;
+                &lt;meta charset=&quot;utf-8&quot;&gt;
+                &lt;style&gt;
+                    h1 {
+                     font-size: 16px;
+                    }
+                &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;p&gt;I'm still writing CSS!&lt;/p&gt;
+            &lt;/body&gt;
+            ```
 
-      This method is preferred over *inline* css, however it is still inefficient because if you had multiple web pages, you would have to copy the style block to every single page to duplicate the styles.
+            This method is preferred over *inline* css, however it is still inefficient because if you had multiple web pages, you would have to copy the style block to every single page to duplicate the styles.
 
-      ###External
-      Links to a separate style sheet file. This method is recommended because it separates the CSS from the HTML document. The link to the stylesheet is referenced in the `&lt;head&gt;` on any page where these styles need to be included. Only the CSS file needs to be updated rather than the CSS block on every single page.
+            ###External
+            Links to a separate style sheet file. This method is recommended because it separates the CSS from the HTML document. The link to the stylesheet is referenced in the `&lt;head&gt;` on any page where these styles need to be included. Only the CSS file needs to be updated rather than the CSS block on every single page.
 
-      Referenced in the head element with a `&lt;link&gt;` tag and two **attributes**, `rel` and `href`. Just like creating links, the value of the `href` points to the location of the stylesheet. 
+            Referenced in the head element with a `&lt;link&gt;` tag and two **attributes**, `rel` and `href`. Just like creating links, the value of the `href` points to the location of the stylesheet. 
 
-      Though it is not required, css files are often saved in a css folder for organization, so make sure the file path points to the appropriate directory.
+            Though it is not required, css files are often saved in a css folder for organization, so make sure the file path points to the appropriate directory.
 
-      The `rel` attribute describes the relationship.
-      
-      ```
-      &lt;head&gt;
-        &lt;title&gt;Page Title&lt;/title&gt;
-        &lt;meta charset=&quot;utf-8&quot;&gt;
-        &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-      &lt;/head&gt;
-      ```
-    </section>
+            The `rel` attribute describes the relationship.
+            
+            ```
+            &lt;head&gt;
+                &lt;title&gt;Page Title&lt;/title&gt;
+                &lt;meta charset=&quot;utf-8&quot;&gt;
+                &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
+            &lt;/head&gt;
+            ```
+        </section>
 
-    <section class="slide" data-markdown>
-      ##Exercise 2: add background colours (10mins)
-      
-      1. In Sublime, open **main.css** (it should be blank). It is located in **Project > css **. Link it (reference it) in your HTML document.
+        <section class="slide" data-markdown>
+            ##Exercise 2: add background colours (10mins)
+            
+            1. In Sublime, open **main.css** (it should be blank). It is located in **Project > css **. Link it (reference it) in your HTML document.
 
-      1. Try using comments to organize your CSS into sections so you can group related CSS together.
-      
-      1. Using `background` or `background-color`, add a different background colour to each major section of the page.  Use an **element selector** for the header and **class selectors** for the sections. Since there are multiple `&lt;section&gt;` tags, we need to use a more specific selector to give them each a different colour.  Here are the selectors to get started: 
-      
-      ```
-      header { }  
-      .profile { }  
-      .work-experience { }  
-      .skills { }  
-      .education { }  
-      .contact { }
-      ```
+            1. Try using comments to organize your CSS into sections so you can group related CSS together.
+            
+            1. Using `background` or `background-color`, add a different background colour to each major section of the page.  Use an **element selector** for the header and **class selectors** for the sections. Since there are multiple `&lt;section&gt;` tags, we need to use a more specific selector to give them each a different colour.  Here are the selectors to get started: 
+            
+            ```
+            header { }  
+            .profile { }  
+            .work-experience { }  
+            .skills { }  
+            .education { }  
+            .contact { }
+            ```
 
-      Your page should look something like this: [background colour example](project/examples/2-bg-colours.html).
-    </section>
+            Your page should look something like this: [background colour example](project/examples/2-bg-colours.html).
+        </section>
 
-    <section class="slide">
-      <h2>Default styles: Reset vs Normalize</h2>
+        <section class="slide">
+            <h2>Default styles: Reset vs Normalize</h2>
 
-      <p>Every browser has its own default ‘user agent’ stylesheet to add default styles to the html elements. (ex. links are blue, h1 are bigger than h2)</p>
+            <p>Every browser has its own default ‘user agent’ stylesheet to add default styles to the html elements. (ex. links are blue, h1 are bigger than h2)</p>
 
-      <p>A <strong>CSS Reset</strong> is a set of CSS rules that resets the styling of all HTML elements to a consistent baseline to avoiding cross-browser differences as much as possible.  <strong>Normalize</strong> is slightly different because it "normalizes" the default styling rather than removes the default styles.</p>
+            <p>A <strong>CSS Reset</strong> is a set of CSS rules that resets the styling of all HTML elements to a consistent baseline to avoiding cross-browser differences as much as possible.  <strong>Normalize</strong> is slightly different because it "normalizes" the default styling rather than removes the default styles.</p>
 
-      <p>Note that if you add it as a separate stylesheet, it should be included <em>before</em> your custom stylesheet.</p>
+            <p>Note that if you add it as a separate stylesheet, it should be included <em>before</em> your custom stylesheet.</p>
 
-      <p>These various stylesheets can be downloaded at <a href="http://www.cssreset.com/">cssreset.com</a> but for today, it’s already included in the <strong>Projects</strong> folder.</p>
-      
-      <p class="presenter-notes">
-        * look at differences after just adding normalize<br>
-        * explain why normalize has to come before custom css
-      </p>
-      
-    </section>
-    
-    <section class="slide" data-markdown>
-      ##Cascading, Inheritance and Specificity
+            <p>These various stylesheets can be downloaded at <a href="http://www.cssreset.com/">cssreset.com</a> but for today, it’s already included in the <strong>Projects</strong> folder.</p>
+            
+            <p class="presenter-notes">
+                * look at differences after just adding normalize<br>
+                * explain why normalize has to come before custom css
+            </p>
+            
+        </section>
+        
+        <section class="slide" data-markdown>
+            ##Cascading, Inheritance and Specificity
 
-      CSS executes from top to bottom (hence "cascading"), so be careful of the the order of your CSS declarations. The declaration that comes *after* will override the one that came before.
+            CSS executes from top to bottom (hence "cascading"), so be careful of the the order of your CSS declarations. The declaration that comes *after* will override the one that came before.
 
-      In this example, what colour will the `&lt;h1&gt;` be?
+            In this example, what colour will the `&lt;h1&gt;` be?
 
-      ```
-      h1 {
-        color: black;
-      }
-      h1 {
-        color: blue;
-      }
-      ```
-    </section>
-    <section class="slide" data-markdown>
-      ##Cascading, Inheritance and Specificity
+            ```
+            h1 {
+                color: black;
+            }
+            h1 {
+                color: blue;
+            }
+            ```
+        </section>
+        <section class="slide" data-markdown>
+            ##Cascading, Inheritance and Specificity
 
-      One of the strengths of CSS is styles can be inherited from parent to child elements using the family tree relationship between the elements.
+            One of the strengths of CSS is styles can be inherited from parent to child elements using the family tree relationship between the elements.
 
-      ```
-      &lt;body&gt;
-        &lt;h1&gt;My Website&lt;/h1&gt;&lt;!-- child of body --&gt;
-        &lt;p&gt;This is a paragraph.&lt;/p&gt;&lt;!-- sibling of h1 --&gt;
-      &lt;/body&gt;
-      ```
-      ```
-      body {
-        color: blue;
-        font-family: Helvetica, Arial, sans-serif;
-      }
-      h1 {
-        color: black;
-      }
-      ```
+            ```
+            &lt;body&gt;
+                &lt;h1&gt;My Website&lt;/h1&gt;&lt;!-- child of body --&gt;
+                &lt;p&gt;This is a paragraph.&lt;/p&gt;&lt;!-- sibling of h1 --&gt;
+            &lt;/body&gt;
+            ```
+            ```
+            body {
+                color: blue;
+                font-family: Helvetica, Arial, sans-serif;
+            }
+            h1 {
+                color: black;
+            }
+            ```
 
-      In the above example, the CSS properties in the body selector is inherited by the children and descendants so all the text would be blue and display the Helvetica font. However, when a more specific selector is used (`h1`), it overrides the inherited values because it's more *specific*.
-    </section>
+            In the above example, the CSS properties in the body selector is inherited by the children and descendants so all the text would be blue and display the Helvetica font. However, when a more specific selector is used (`h1`), it overrides the inherited values because it's more *specific*.
+        </section>
 
-    <section class="slide">
-      <h1>Font Styles<br> &<br> Typography</h1>
-    </section>
+        <section class="slide">
+            <h1>Font Styles<br> &<br> Typography</h1>
+        </section>
 
-    <section class="slide" data-markdown>
-      ##Web safe fonts
+        <section class="slide" data-markdown>
+            ##Web safe fonts
 
-      The default font can be changed with the `font-family` **property**. However, not all fonts are installed on all computers so it's recommended to use fonts that are considered *web safe* &mdash; fonts that are commonly included on most computers.
+            The default font can be changed with the `font-family` **property**. However, not all fonts are installed on all computers so it's recommended to use fonts that are considered *web safe* &mdash; fonts that are commonly included on most computers.
 
-      It's best practice to list at least two or three font options to provide a fall-back if the user doesn't have the preferred fonts installed.
+            It's best practice to list at least two or three font options to provide a fall-back if the user doesn't have the preferred fonts installed.
 
-      ```
-      font-family: Helvetica, Arial, sans-serif;
-      ```
+            ```
+            font-family: Helvetica, Arial, sans-serif;
+            ```
 
-      Here's a handy resource for referencing web safe fonts: [CSS Font Stack](http://cssfontstack.com/).
-    </section>
+            Here's a handy resource for referencing web safe fonts: [CSS Font Stack](http://cssfontstack.com/).
+        </section>
 
-    <section class="slide" data-markdown>
-      ##Custom fonts
+        <section class="slide" data-markdown>
+            ##Custom fonts
 
-      For more options than just using the web safe fonts, services like [Google Fonts](http://www.google.com/fonts/) and [Font Squirrel](http://www.fontsquirrel.com/) can make it easier to use a variety of fonts that aren't normally supported by all computers.
+            For more options than just using the web safe fonts, services like [Google Fonts](http://www.google.com/fonts/) and [Font Squirrel](http://www.fontsquirrel.com/) can make it easier to use a variety of fonts that aren't normally supported by all computers.
 
-      A service like **Font Squirrel** requires you to download the fonts and add it to your project files. The site features a handy [generator](http://www.fontsquirrel.com/tools/webfont-generator) to create different font files to support various browsers as well as include demo files and instructions on how to use it. 
+            A service like **Font Squirrel** requires you to download the fonts and add it to your project files. The site features a handy [generator](http://www.fontsquirrel.com/tools/webfont-generator) to create different font files to support various browsers as well as include demo files and instructions on how to use it. 
 
-      **Google Fonts** allows you to link directly to their stylesheet and no file downloads are necessary. To use these fonts:
+            **Google Fonts** allows you to link directly to their stylesheet and no file downloads are necessary. To use these fonts:
 
-      * Select the fonts you want to use and **Add to Collection**.  
-      * You can **Review** them to take a closer look, then choose *Use* when ready.
-      * Select font weights. The more you choose, the more it will slow down page load time.
-      * The default character set should contain what you need. Only select an option if you need to add additional language support.
-      * Grab the `&lt;link&gt;` code snippet and add it the `&lt;head&gt;` part of your page.
-      * Use the new fonts with the `font-family` property as listed in the example on the Google Fonts page.
+            * Select the fonts you want to use and **Add to Collection**.  
+            * You can **Review** them to take a closer look, then choose *Use* when ready.
+            * Select font weights. The more you choose, the more it will slow down page load time.
+            * The default character set should contain what you need. Only select an option if you need to add additional language support.
+            * Grab the `&lt;link&gt;` code snippet and add it the `&lt;head&gt;` part of your page.
+            * Use the new fonts with the `font-family` property as listed in the example on the Google Fonts page.
 
-      That's it!
-    </section>
+            That's it!
+        </section>
 
-    <section class="slide">
-      <h2>Font Styles & Typography</h2>
-      <p>Let's look at a few CSS properties for styling text.</p>
-      <textarea class="snippet">line-height: 1.25;
+        <section class="slide">
+            <h2>Font Styles & Typography</h2>
+            <p>Let's look at a few CSS properties for styling text.</p>
+            <textarea class="snippet">line-height: 1.25;
 font-family: Helvetica, Arial, serif;
 font-size: inherit;
 font-weight: normal;
 text-transform: inherit;
 color: #222222;</textarea>
-      <p>Just some text to test out the above styles. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni repellat sunt quae fugit illum in aut sed, quis nesciunt totam veritatis, dolores alias modi fuga commodi dicta facilis, consequatur temporibus.</p>
+            <p>Just some text to test out the above styles. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni repellat sunt quae fugit illum in aut sed, quis nesciunt totam veritatis, dolores alias modi fuga commodi dicta facilis, consequatur temporibus.</p>
 
-      <p>Resource: <a href="http://reference.sitepoint.com/css/typography">Sitepoint Typographical Properties</a></p>
-    </section>
+            <p>Resource: <a href="http://reference.sitepoint.com/css/typography">Sitepoint Typographical Properties</a></p>
+        </section>
 
-    <section class="slide">
-      
-      <h2>Exercise #3: Typography</h2>
-      
-      <p>Let's add some styles together first and start with some web safe fonts, <a href="http://cssfontstack.com/">cssfontstack.com</a>.</p>
+        <section class="slide">
+            
+            <h2>Exercise #3: Typography</h2>
+            
+            <p>Let's add some styles together first and start with some web safe fonts, <a href="http://cssfontstack.com/">cssfontstack.com</a>.</p>
 
-      <p>1. Set the main font-family &amp; line-height using <code>body</code> as the selector.</p>
+            <p>1. Set the main font-family &amp; line-height using <code>body</code> as the selector.</p>
 
-      <pre><code>body {
-  font-family: Georgia, Times, "Times New Roman", serif;
-  line-height: 1.5;
+            <pre><code>body {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    line-height: 1.5;
 }</code></pre>
 
-      <p>2. Set font styles for h1, h2 and h3</p>
+            <p>2. Set font styles for h1, h2 and h3</p>
 
-      <pre><code>h1 {
-  font-family: "Brush Script MT", cursive;
-  font-weight: 400;
-  font-size: 80px;
+            <pre><code>h1 {
+    font-family: "Brush Script MT", cursive;
+    font-weight: 400;
+    font-size: 80px;
 }
 h2 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  font-size: 32px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 32px;
 }
 h3 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
 }</code></pre>
 
-      <!-- reference 3-typography -->
+            <!-- reference 3-typography -->
 
-      <p class="presenter-notes">
-      * reference 3-typography in example folder<br>
-      * Add main font family &amp; line-height to body - explain inheritance <br>
-      * put h2, h3 styles into separate blocks to show combining selectors & refactoring after. Use this to also explain specificity. Tell learners they have to option to try to type along or just watch to keep from slowing down the demo. They can catch up in the exercise work session since the final code will be posted in the next couple slides.</p>
-    </section>
+            <p class="presenter-notes">
+            * reference 3-typography in example folder<br>
+            * Add main font family &amp; line-height to body - explain inheritance <br>
+            * put h2, h3 styles into separate blocks to show combining selectors & refactoring after. Use this to also explain specificity. Tell learners they have to option to try to type along or just watch to keep from slowing down the demo. They can catch up in the exercise work session since the final code will be posted in the next couple slides.</p>
+        </section>
 
-    <section class="slide" data-markdown>
-      ##Refactor!
+        <section class="slide" data-markdown>
+            ##Refactor!
 
-      What is refactoring? Code refactoring is the process of restructuring existing code to make it more efficient. Writing clean, organized and efficient code will not only make your pages run faster but will make it easier to maintain and can potentially reduce browser bugs. It's tempting to say "I'll fix it later" but later doesn't always come. It's important to re-factor your code as you go along.
+            What is refactoring? Code refactoring is the process of restructuring existing code to make it more efficient. Writing clean, organized and efficient code will not only make your pages run faster but will make it easier to maintain and can potentially reduce browser bugs. It's tempting to say "I'll fix it later" but later doesn't always come. It's important to re-factor your code as you go along.
 
-      If you find you are declaring the same styles over and over again, try using a `class` or apply the style to a parent selector so the styles can be inherited. You can also *combine* selectors to apply the same styles to multiple selectors at the same time.  Make sure to separate selectors with a comma.
+            If you find you are declaring the same styles over and over again, try using a `class` or apply the style to a parent selector so the styles can be inherited. You can also *combine* selectors to apply the same styles to multiple selectors at the same time.  Make sure to separate selectors with a comma.
 
-      ```
-      h1, h2 {
-        /* will apply any styles here to both headings */
-      }
-      ```
-    </section>
-    <section class="slide" data-markdown>
-      ##Exercise #3 Typography (continued)
+            ```
+            h1, h2 {
+                /* will apply any styles here to both headings */
+            }
+            ```
+        </section>
+        <section class="slide" data-markdown>
+            ##Exercise #3 Typography (continued)
 
-      The previous example can be re-factored to look like this:
-      
-      ```
-      h1, h2, h3 {
-        font-weight: 400;
-      }
-      h2, h3 {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        text-transform: uppercase;
-      }
-      h1 {
-        font-family: "Brush Script MT", cursive;
-        font-size: 80px;
-      }
-      h2 {
-        font-size: 32px;
-      }
-      ```
-    </section>
-    <section class="slide" data-markdown>
-      ##Exercise #3 Typography (Continued)(15mins)
+            The previous example can be re-factored to look like this:
+            
+            ```
+            h1, h2, h3 {
+                font-weight: 400;
+            }
+            h2, h3 {
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                text-transform: uppercase;
+            }
+            h1 {
+                font-family: "Brush Script MT", cursive;
+                font-size: 80px;
+            }
+            h2 {
+                font-size: 32px;
+            }
+            ```
+        </section>
+        <section class="slide" data-markdown>
+            ##Exercise #3 Typography (Continued)(15mins)
 
-      1. Find and add 2-3 font families from [Google Fonts](http://www.google.com/fonts/)
-      1. Update the font & typography styles to your liking! You can add some more later as the page starts to come together.
+            1. Find and add 2-3 font families from [Google Fonts](http://www.google.com/fonts/)
+            1. Update the font & typography styles to your liking! You can add some more later as the page starts to come together.
 
-      Resource: [Sitepoint Typographical Properties](http://reference.sitepoint.com/css/typography)
+            Resource: [Sitepoint Typographical Properties](http://reference.sitepoint.com/css/typography)
 
-      Need help deciding on fonts?  The example project uses Open Sans (sans-serif), Merriweather (serif), Pacifico (cursive).
-      
-      Your page should look something like this: [Example 3](project/examples/3-typography.html)
-    </section>
+            Need help deciding on fonts?  The example project uses Open Sans (sans-serif), Merriweather (serif), Pacifico (cursive).
+            
+            Your page should look something like this: [Example 3](project/examples/3-typography.html)
+        </section>
 
-    <section class="slide">
-      <h1>The Box Model</h1>
-    </section>
-    
-    <section class="slide" data-markdown>
-      ##What is The Box Model?
+        <section class="slide">
+            <h1>The Box Model</h1>
+        </section>
+        
+        <section class="slide" data-markdown>
+            ##What is The Box Model?
 
-      The browser looks at every HTML element on the page as a rectangular box. The CSS Box Model describes the way CSS styles the size and spacing of HTML elements. Understanding the box model is crucial for understanding how to position elements with CSS to create the desired page layout. This is one of the trickiest part of CSS, so don't worry if it seems confusing!
+            The browser looks at every HTML element on the page as a rectangular box. The CSS Box Model describes the way CSS styles the size and spacing of HTML elements. Understanding the box model is crucial for understanding how to position elements with CSS to create the desired page layout. This is one of the trickiest part of CSS, so don't worry if it seems confusing!
 
-      CSS uses 5 properties to determine the size and spacing of these boxes:
+            CSS uses 5 properties to determine the size and spacing of these boxes:
 
-      * `margin` - adds/removes space *outside* of the element
-      * `padding` - adds/removes space *inside* of the element
-      * `border` - adds a border outside of the element
-      * `width` - can be set to a specific size via CSS
-      * `height` - can be set to a specific size via CSS
-    </section>
+            * `margin` - adds/removes space *outside* of the element
+            * `padding` - adds/removes space *inside* of the element
+            * `border` - adds a border outside of the element
+            * `width` - can be set to a specific size via CSS
+            * `height` - can be set to a specific size via CSS
+        </section>
 
-    <section class="slide">
-      <h2>Padding and Margin</h2>
+        <section class="slide">
+            <h2>Padding and Margin</h2>
 
-      <p>The <code>padding</code> and <code>margin</code> can both be declared using similar syntax of 1 to 4 values. Values can be declared using different measurement units but pixels or percentages are most commonly used. Setting the value to "0" will <strong>remove</strong> any default space on an HTML element. Any positive value will <strong>add</strong> space.</p>
+            <p>The <code>padding</code> and <code>margin</code> can both be declared using similar syntax of 1 to 4 values. Values can be declared using different measurement units but pixels or percentages are most commonly used. Setting the value to "0" will <strong>remove</strong> any default space on an HTML element. Any positive value will <strong>add</strong> space.</p>
 
-      <ul>
-        <li>4 values means top, right, bottom, left</li>
-        <li>3 values means top, right/left, bottom</li>
-        <li>2 values means top/bottom, right/left</li>
-        <li>1 value means the same amount of padding on all sides</li>
-      </ul>
-      
-      <p>Change some values to see the difference between margin and padding. Let's also inspect the element using Chrome's Developer tool.</p>
+            <ul>
+                <li>4 values means top, right, bottom, left</li>
+                <li>3 values means top, right/left, bottom</li>
+                <li>2 values means top/bottom, right/left</li>
+                <li>1 value means the same amount of padding on all sides</li>
+            </ul>
+            
+            <p>Change some values to see the difference between margin and padding. Let's also inspect the element using Chrome's Developer tool.</p>
 
-      <textarea class="snippet" data-subject="#padding">background: lightblue; 
+            <textarea class="snippet" data-subject="#padding">background: lightblue; 
 padding: 0 0 0 0;
 margin: 0 0 0 0;</textarea>
-      <p id="padding">padding and margin test</p>
-    </section>
-    <section class="slide" data-markdown>
-      ##Padding and Margin (continued)
-      The previous slide uses the shorthand properties. Both can also be declared by specifying a particular side.
+            <p id="padding">padding and margin test</p>
+        </section>
+        <section class="slide" data-markdown>
+            ##Padding and Margin (continued)
+            The previous slide uses the shorthand properties. Both can also be declared by specifying a particular side.
 
-      ```
-      padding-top: 10px;
-      padding-right: 10px;
-      padding-bottom: 10px;
-      padding-left: 10px;
-      ```
-      ```
-      margin-top: 10px;
-      margin-right: 10px;
-      margin-bottom: 10px;
-      margin-left: 10px;
-      ```
-    </section>
+            ```
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            ```
+            ```
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            ```
+        </section>
 
-    <section class="slide" data-markdown>
-      ##Border
+        <section class="slide" data-markdown>
+            ##Border
 
-      The `border` property resides between the `margin` and `padding` and creates an outline around the element. It, too, has longhand and shorthand syntax.
-      
-      ```
-      /* longhand */
-      border-width: 2px;
-      border-style: solid;
-      border-color: red;
+            The `border` property resides between the `margin` and `padding` and creates an outline around the element. It, too, has longhand and shorthand syntax.
+            
+            ```
+            /* longhand */
+            border-width: 2px;
+            border-style: solid;
+            border-color: red;
 
-      /* shorthand */
-      border: 2px solid red;
-      ```
-      Like padding and margin, a specific side of the element can be specified.
-      
-      ```
-      /* longhand */
-      border-top-width: 2px;
-      border-top-style: solid;
-      border-top-color: red;
+            /* shorthand */
+            border: 2px solid red;
+            ```
+            Like padding and margin, a specific side of the element can be specified.
+            
+            ```
+            /* longhand */
+            border-top-width: 2px;
+            border-top-style: solid;
+            border-top-color: red;
 
-      /* shorthand */
-      border-top: 2px solid red;
-      ```
-    </section>
+            /* shorthand */
+            border-top: 2px solid red;
+            ```
+        </section>
 
-    <section class="slide">
-      <h2>Box Model Review</h2>
+        <section class="slide">
+            <h2>Box Model Review</h2>
 
-      <p>Let’s look at a diagram to see how all these different properties work together to change the size of an element.</p>
+            <p>Let’s look at a diagram to see how all these different properties work together to change the size of an element.</p>
 
-      <img src="framework/img/box-model.gif" alt="" title="">
+            <img src="framework/img/box-model.gif" alt="" title="">
 
-      <p>The original element started with a width and height of <strong>400 x 100</strong>. After including the padding, border &amp; margin, the size of the box is actually <strong>492 x 192</strong>!</p>
-    </section>
-      
-    <section class="slide image-only" data-markdown>
-      ##I Can't... even...
-      ![](framework/img/cant-even.gif)
-    </section>
+            <p>The original element started with a width and height of <strong>400 x 100</strong>. After including the padding, border &amp; margin, the size of the box is actually <strong>492 x 192</strong>!</p>
+        </section>
+            
+        <section class="slide image-only" data-markdown>
+            ##I Can't... even...
+            ![](framework/img/cant-even.gif)
+        </section>
 
-    <section class="slide">
-      <h2>Box Model Fix!</h2>
-      <p>Luckily, there’s a fix for this.</p>
-      <p>Enter the <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">box-sizing: border-box</a> fix ftw!  It is recommended to add this snippet to all your projects.</p>
+        <section class="slide">
+            <h2>Box Model Fix!</h2>
+            <p>Luckily, there’s a fix for this.</p>
+            <p>Enter the <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">box-sizing: border-box</a> fix ftw!  It is recommended to add this snippet to all your projects.</p>
 <pre><code>/* apply a natural box layout model to all elements */
 *, *:before, *:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
 }</code></pre>
-      <img src="framework/img/box-model-fix.gif">
-    </section>
+            <img src="framework/img/box-model-fix.gif">
+        </section>
 
-    <section class="slide">
-      <h2>More about margin</h2>
+        <section class="slide">
+            <h2>More about margin</h2>
 
-      <p><code>margin</code> also accepts negative values, padding does not. When using negative values, it will push the box outside of it’s natural spot within the surrounding elements.</p>
+            <p><code>margin</code> also accepts negative values, padding does not. When using negative values, it will push the box outside of it’s natural spot within the surrounding elements.</p>
 
-      <textarea class="snippet" data-subject="#neg-margin">background-color: lightblue;
+            <textarea class="snippet" data-subject="#neg-margin">background-color: lightblue;
 width: 100px;
 padding: 20px;
 margin: 0px; /* change to negative value */</textarea>
-      <div id="neg-margin">box</div>
-    </section>
+            <div id="neg-margin">box</div>
+        </section>
 
-    <section class="slide">
-      <h2>Center aligning with margin</h2>
-      <p>The margin property can also be used to center align block level elements. (More about block level elements later). First, a width needs to be set. Then, setting the left &amp; right values to <code>auto</code> will find the center of the page. The <code>0</code> just refers to the top and bottom value.</p>
+        <section class="slide">
+            <h2>Center aligning with margin</h2>
+            <p>The margin property can also be used to center align block level elements. (More about block level elements later). First, a width needs to be set. Then, setting the left &amp; right values to <code>auto</code> will find the center of the page. The <code>0</code> just refers to the top and bottom value.</p>
 
-      <textarea class="snippet" data-subject="#margin-auto">background-color: lightblue;
+            <textarea class="snippet" data-subject="#margin-auto">background-color: lightblue;
 height: 100px;
 width: 600px;
 margin: 0 auto;</textarea>
-      <div id="margin-auto">box</div>
+            <div id="margin-auto">box</div>
 
-      <div class="presenter-notes">
-      * show example of adding padding to a couple sections <br>
-      * Inspect the element to show how padding pushing elements with margin inside of the containing element.<br>
-      * set widths/margin: auto on profile section to show why we need to create an inner wrapper to set a background colour & center align content.</div>
-    </section>
+            <div class="presenter-notes">
+            * show example of adding padding to a couple sections <br>
+            * Inspect the element to show how padding pushing elements with margin inside of the containing element.<br>
+            * set widths/margin: auto on profile section to show why we need to create an inner wrapper to set a background colour & center align content.</div>
+        </section>
 
-    <section class="slide" data-markdown>
-      ##Class exercise
-      1. Add the box model fix to our CSS file. [link](/#slide38)
+        <section class="slide" data-markdown>
+            ##Class exercise
+            1. Add the box model fix to our CSS file. [link](/#slide38)
 
-      1. Go back to our HTML & CSS project files, add `padding:1px` to the `header` section to see how it changes the spacing. Open up the Chrome Dev Tools and inspect the element.
+            1. Go back to our HTML & CSS project files, add `padding:1px` to the `header` section to see how it changes the spacing. Open up the Chrome Dev Tools and inspect the element.
 
-      1. The content is also too wide.  Let's use the `margin: 0 auto` trick to center align the content. Try adding the styles to the `.profile` section in your CSS file.
-      
-      ```
-      .profile {
-        width: 1000px;
-        margin: 0 auto;
-      }
-      ```
-      Your page will look something like this:
+            1. The content is also too wide.  Let's use the `margin: 0 auto` trick to center align the content. Try adding the styles to the `.profile` section in your CSS file.
+            
+            ```
+            .profile {
+                width: 1000px;
+                margin: 0 auto;
+            }
+            ```
+            Your page will look something like this:
 
-      ![](framework/img/margin-auto.png)
-    </section>
+            ![](framework/img/margin-auto.png)
+        </section>
 
-    <section class="slide">
-      <h2>Class exercise (continued)</h2>
+        <section class="slide">
+            <h2>Class exercise (continued)</h2>
 
-      <p>The content is centered but the background colour is restricted by the width dimension and doesn’t span the rest of the page anymore. To fix this, we’ll need to create a “container” just for center aligning the content by adding a new <code>div</code> with a class of <code>content-wrap</code> <em>around all of the profile content</em>.</p>
+            <p>The content is centered but the background colour is restricted by the width dimension and doesn’t span the rest of the page anymore. To fix this, we’ll need to create a “container” just for center aligning the content by adding a new <code>div</code> with a class of <code>content-wrap</code> <em>around all of the profile content</em>.</p>
 
-      <pre><code>&lt;section class="profile"&gt;
-  &lt;div class="content-wrap"&gt;&lt;!-- new content wrap div --&gt;
+            <pre><code>&lt;section class="profile"&gt;
+    &lt;div class="content-wrap"&gt;&lt;!-- new content wrap div --&gt;
 
-      &lt;img src="images/profile-generic.jpg" alt="Your Name"&gt;
-      &lt;div class="summary"&gt;
-          ...
-      &lt;/div&gt;
+            &lt;img src="images/profile-generic.jpg" alt="Your Name"&gt;
+            &lt;div class="summary"&gt;
+                    ...
+            &lt;/div&gt;
 
-  &lt;/div&gt;&lt;!-- close contact wrap div --&gt;
+    &lt;/div&gt;&lt;!-- close contact wrap div --&gt;
 &lt;/section&gt;
 </code></pre>
 
-      <p>Then apply the styles to <code>.content-wrap</code> instead of <code>.profile</code>. Let's add some padding while we're at it too.</p>
-      <pre><code>.content-wrap {
-  width: 1000px;
-  margin: 0 auto;
-  padding: 60px 0;
+            <p>Then apply the styles to <code>.content-wrap</code> instead of <code>.profile</code>. Let's add some padding while we're at it too.</p>
+            <pre><code>.content-wrap {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 60px 0;
 }
 </code></pre>
-    </section>
+        </section>
 
-    <section class="slide">
-      <h2>width &amp; max-width, px vs %</h2>
-      
-      <p>The content is all nice and centered now but what happens when the browser window is smaller than the set width?</p>
+        <section class="slide">
+            <h2>width &amp; max-width, px vs %</h2>
+            
+            <p>The content is all nice and centered now but what happens when the browser window is smaller than the set width?</p>
 
-      <p>Let’s look at the difference between the <code>max-width</code> and <code>width</code> property and using percentages and pixels.</p>
+            <p>Let’s look at the difference between the <code>max-width</code> and <code>width</code> property and using percentages and pixels.</p>
 
-      <textarea class="snippet" data-subject="#widths">border: 1px solid black;
+            <textarea class="snippet" data-subject="#widths">border: 1px solid black;
 margin: 0 auto;
 width: 90%;
 max-width: 1000px;
-      </textarea>
-      <div id="widths">
-        <p>Lorem ipsum dolor sit amet.</p>
-      </div>
-    </section>
+            </textarea>
+            <div id="widths">
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </section>
 
-    <section class="slide" data-markdown>
-      ##Class exercise
+        <section class="slide" data-markdown>
+            ##Class exercise
 
-      Update the `.content-wrap` styles to include `max-width` and update `width`.
-      
-      ```
-      .content-wrap {
-        max-width: 1000px;
-        width: 90%;
-        margin: 0 auto;
-        padding: 60px 0;
-      }
-      ```
+            Update the `.content-wrap` styles to include `max-width` and update `width`.
+            
+            ```
+            .content-wrap {
+                max-width: 1000px;
+                width: 90%;
+                margin: 0 auto;
+                padding: 60px 0;
+            }
+            ```
 
-      Now we've created a reusable style that will help to keep our CSS nice and neat because we can apply this where ever this style is required, using the same class!
-    </section>
+            Now we've created a reusable style that will help to keep our CSS nice and neat because we can apply this where ever this style is required, using the same class!
+        </section>
 
-    <section class="slide" data-markdown>
-      ##Exercise #4: Content wrappers! (15mins)
+        <section class="slide" data-markdown>
+            ##Exercise #4: Content wrappers! (15mins)
 
-      Add the `.content-wrap` to each section *except* the `header`.  We'll talk about why we're not adding this style to header after this exercise.
+            Add the `.content-wrap` to each section *except* the `header`.  We'll talk about why we're not adding this style to header after this exercise.
 
-      Let's go over how to collapse code blocks and tab multiple lines at the same time in Sublime first, to help make this addition easier.
+            Let's go over how to collapse code blocks and tab multiple lines at the same time in Sublime first, to help make this addition easier.
 
-      Your page should look something like this: [example 4](project/examples/4-content-wrap.html).
-    </section>
+            Your page should look something like this: [example 4](project/examples/4-content-wrap.html).
+        </section>
 
-    <section class="slide" data-markdown>
-      ## The Dangers of "div-itis"
-      
-      Be careful of "divitis"! Use the `&lt;div&gt;` to *group* related elements to be styled *together* as one section.  If you need to style a single element, like an `&lt;h1&gt;` for example, just style that element directly. The browser sees every element as a "box" so there's no need to put a box around a box!
+        <section class="slide" data-markdown>
+            ## The Dangers of "div-itis"
+            
+            Be careful of "divitis"! Use the `&lt;div&gt;` to *group* related elements to be styled *together* as one section.  If you need to style a single element, like an `&lt;h1&gt;` for example, just style that element directly. The browser sees every element as a "box" so there's no need to put a box around a box!
 
-      A good rule of thumb is to only add what you need.  It's much easier to add more than to remove extra markup.
-      
-      ```xml
-      &lt;div class=&quot;title&quot;&gt;
-        &lt;h1&gt;Heading&lt;/h1&gt;
-      &lt;/div&gt;
-      ```
+            A good rule of thumb is to only add what you need.  It's much easier to add more than to remove extra markup.
+            
+            ```xml
+            &lt;div class=&quot;title&quot;&gt;
+                &lt;h1&gt;Heading&lt;/h1&gt;
+            &lt;/div&gt;
+            ```
 
-      can just be
+            can just be
 
-      ```xml
-      &lt;h1 class=&quot;title&quot;&gt;Heading&lt;/h1&gt;
-      ```
-    </section>
-    <section class="slide image-only" data-markdown>
-      ##Avoid code bloat
+            ```xml
+            &lt;h1 class=&quot;title&quot;&gt;Heading&lt;/h1&gt;
+            ```
+        </section>
+        <section class="slide image-only" data-markdown>
+            ##Avoid code bloat
 
-      ![](framework/img/bloat.jpg)
-    </section>
+            ![](framework/img/bloat.jpg)
+        </section>
 
-    <section class="slide" data-markdown>
-      ##Update header & heading styles
-    
-      In the case of the `header` section, we can apply `text-align: center` instead of adding the `.content-wrap` since the content is short, we don't have to worry about containing it in a wrapper. Also, adjust the padding to add some more space in the header. The final code for header should look like this:
-      
-      ```
-      header {
-        background: #2c3e50;
-        text-align: center;
-        padding: 150px 0;
-      }
-      ```
+        <section class="slide" data-markdown>
+            ##Update header & heading styles
+        
+            In the case of the `header` section, we can apply `text-align: center` instead of adding the `.content-wrap` since the content is short, we don't have to worry about containing it in a wrapper. Also, adjust the padding to add some more space in the header. The final code for header should look like this:
+            
+            ```
+            header {
+                background: #2c3e50;
+                text-align: center;
+                padding: 150px 0;
+            }
+            ```
 
-      While we're here, let's remove all of the default margins for the headings to get more control over how the spacing later on. Add `margin: 0` to the existing code block for the headers.
-      ```
-      h1, h2, h3 {
-        font-weight: 400;
-        margin: 0;
-      }
-      ```
+            While we're here, let's remove all of the default margins for the headings to get more control over how the spacing later on. Add `margin: 0` to the existing code block for the headers.
+            ```
+            h1, h2, h3 {
+                font-weight: 400;
+                margin: 0;
+            }
+            ```
 
-      Your page should now look like this: [Example](project/examples/5a-heading-headers.html)
-    </section>
-      
-    <section class="slide" data-markdown>
-      #Background images
-    </section>
+            Your page should now look like this: [Example](project/examples/5a-heading-headers.html)
+        </section>
+            
+        <section class="slide" data-markdown>
+            #Background images
+        </section>
 
-    <section class="slide" data-markdown>
-      ##Background images
-      
-      So far we've used `background` for colours but it can also be used for setting background images.
-      
-      ```
-      background-image: url(path/to/file.jpg); /* longhand */
-      background: url(path/to/file.jpg);/* shorthand */
-      ```
-      Since our CSS file in *inside* a folder, use `../` to go *up and out* of the folder to get to the image files.
+        <section class="slide" data-markdown>
+            ##Background images
+            
+            So far we've used `background` for colours but it can also be used for setting background images.
+            
+            ```
+            background-image: url(path/to/file.jpg); /* longhand */
+            background: url(path/to/file.jpg);/* shorthand */
+            ```
+            Since our CSS file in *inside* a folder, use `../` to go *up and out* of the folder to get to the image files.
 
-      ```
-      background: url(../images/background-1.jpg);
-      ```
-      
-      Note how the images repeat. We can override that with another property, `background-repeat` or just add it to the shorthand `background` property.
-      
-      ```
-      /* shorthand */
-      background: url(../images/background-1.jpg) no-repeat; 
+            ```
+            background: url(../images/background-1.jpg);
+            ```
+            
+            Note how the images repeat. We can override that with another property, `background-repeat` or just add it to the shorthand `background` property.
+            
+            ```
+            /* shorthand */
+            background: url(../images/background-1.jpg) no-repeat; 
 
-      /* longhand */
-      background-image: url(../images/background-1.jpg); 
-      background-repeat: no-repeat;
-      ```
-    </section>
-    <section class="slide" data-markdown>
-      ##Fluid background images
+            /* longhand */
+            background-image: url(../images/background-1.jpg); 
+            background-repeat: no-repeat;
+            ```
+        </section>
+        <section class="slide" data-markdown>
+            ##Fluid background images
 
-      CSS3 introduced the `background-size` property to make a background images fluid and flexible. The syntax is:
+            CSS3 introduced the `background-size` property to make a background images fluid and flexible. The syntax is:
 
-      ```
-      background-size: width height;
-      ```
+            ```
+            background-size: width height;
+            ```
 
-      The default values for width and height are `auto` and retains the original image dimensions. If only one value is defined, it is assumed to be the `width`. The height will be set to auto and the image will keep its aspect ratio.
+            The default values for width and height are `auto` and retains the original image dimensions. If only one value is defined, it is assumed to be the `width`. The height will be set to auto and the image will keep its aspect ratio.
 
-      There are several ways to define sizing dimensions using various types of values (px, percentages, keywords, etc).
+            There are several ways to define sizing dimensions using various types of values (px, percentages, keywords, etc).
 
-      `background-size` is the longhand property.  To include it in the shorthand `background` property, it *must* be included after `background-position`, separated with the `/` character.  
-      
-      ```
-      header {
-        background-image: url(../images/background-1.jpg);
-        background-repeat: no-repeat;
-        background-position: 50%;
-        background-size: 100%;
-      }
-      ```
-      ```
-      header {
-        background: url(../images/background-1.jpg) no-repeat 50% / 100%;
-      }
-      ```
-      If no background position value is being used, background-size won't work in the shorthand property so in this case, it may be less error prone to add it via the longhand property.
-      
-      ```
-      header {
-        background: url(../images/background-1.jpg) no-repeat 50%;
-        background-size: 100%;
-      }
-      ```
-    </section>
+            `background-size` is the longhand property.  To include it in the shorthand `background` property, it *must* be included after `background-position`, separated with the `/` character.  
+            
+            ```
+            header {
+                background-image: url(../images/background-1.jpg);
+                background-repeat: no-repeat;
+                background-position: 50%;
+                background-size: 100%;
+            }
+            ```
+            ```
+            header {
+                background: url(../images/background-1.jpg) no-repeat 50% / 100%;
+            }
+            ```
+            If no background position value is being used, background-size won't work in the shorthand property so in this case, it may be less error prone to add it via the longhand property.
+            
+            ```
+            header {
+                background: url(../images/background-1.jpg) no-repeat 50%;
+                background-size: 100%;
+            }
+            ```
+        </section>
 
-    <section class="slide" data-markdown>
-      ##More About Background
+        <section class="slide" data-markdown>
+            ##More About Background
 
-      `background-size` also accepts keyword values, `contain` and `cover`.
+            `background-size` also accepts keyword values, `contain` and `cover`.
 
-      `contain` scales the image to fit its container. The image will grow or shrink proportionally but the width and height will not exceed the container's dimensions.
+            `contain` scales the image to fit its container. The image will grow or shrink proportionally but the width and height will not exceed the container's dimensions.
 
-      `cover` scales the image to fit the entire container but, if that has a different aspect ratio, the image will be cropped.
+            `cover` scales the image to fit the entire container but, if that has a different aspect ratio, the image will be cropped.
 
-      Let's add one more property, `background-attachment`.  Set the value to fixed and see what happens! (This can be added to the shorthand property)
+            Let's add one more property, `background-attachment`.  Set the value to fixed and see what happens! (This can be added to the shorthand property)
 
-      ```
-      background: url(../images/background-2.jpg) no-repeat fixed 50%;
-      ```
-    </section>
+            ```
+            background: url(../images/background-2.jpg) no-repeat fixed 50%;
+            ```
+        </section>
 
-    <section class="slide" data-markdown>
-      ##Exercise 5: Update header background styles (10mins)
+        <section class="slide" data-markdown>
+            ##Exercise 5: Update header background styles (10mins)
 
-      Based on the previous slides, update your header's background image and styles.  There are a few images in your **Project** folder to choose from or add one of your own.
+            Based on the previous slides, update your header's background image and styles.  There are a few images in your **Project** folder to choose from or add one of your own.
 
-      Resources:   
-      [http://unsplash.com/](http://unsplash.com/)  
-      [http://littlevisuals.co/](http://littlevisuals.co/)  
-      [http://nos.twnsnd.co/](http://nos.twnsnd.co/)
+            Resources:   
+            [http://unsplash.com/](http://unsplash.com/)  
+            [http://littlevisuals.co/](http://littlevisuals.co/)  
+            [http://nos.twnsnd.co/](http://nos.twnsnd.co/)
 
-      Your page should look something like this: [Example 5](project/examples/5b-heading-bg.html)
-    </section>
-    
-    <section class="slide" data-markdown>
-      #Inline & Block
-      #Elements
-    </section>
+            Your page should look something like this: [Example 5](project/examples/5b-heading-bg.html)
+        </section>
+        
+        <section class="slide" data-markdown>
+            #Inline & Block
+            #Elements
+        </section>
 
-    <section class="slide" data-markdown>
-      ##Inline vs Block Elements
-      By default, some HTML elements are displayed as block or inline elements.
+        <section class="slide" data-markdown>
+            ##Inline vs Block Elements
+            By default, some HTML elements are displayed as block or inline elements.
 
-      ###Block Elements
+            ###Block Elements
 
-      * takes up 100% width of its container, no matter how long the actual content is
-      * will be the same height as its content
-      * always starts on a new line
-      * can wrap other block level elements or inline elements
-      * can apply sizing related CSS to it (margin, padding, height, width)
+            * takes up 100% width of its container, no matter how long the actual content is
+            * will be the same height as its content
+            * always starts on a new line
+            * can wrap other block level elements or inline elements
+            * can apply sizing related CSS to it (margin, padding, height, width)
 
-      ###Inline Elements
+            ###Inline Elements
 
-      * will be the height and width of its content
-      * always appears "in a line" with other inline level elements
-      * can wrap other inline elements but cannot wrap block level elements *except* `&lt;a&gt;` tags.  This is only valid with an HTML5 doctype.
-      * does not render CSS height and width at all, will apply margin and padding but with unexpected results
+            * will be the height and width of its content
+            * always appears "in a line" with other inline level elements
+            * can wrap other inline elements but cannot wrap block level elements *except* `&lt;a&gt;` tags.  This is only valid with an HTML5 doctype.
+            * does not render CSS height and width at all, will apply margin and padding but with unexpected results
 
-      ###Inline-block
+            ###Inline-block
 
-      * best of both worlds
-      * floats left and is the size & height of its content, like inline elements
-      * accepts height and width values like block elements
+            * best of both worlds
+            * floats left and is the size & height of its content, like inline elements
+            * accepts height and width values like block elements
 
-      **Extra Resource**: [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
-    </section>
+            **Extra Resource**: [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
+        </section>
 
-    <section class="slide js-fiddle">
-      <h2>Block & Inline Example</h2>
-      <p>Click <strong>Edit in JSFiddle</strong> to make edits. Let's see what happens when height, width, margin and padding is applied to inline and block elements.</p>
+        <section class="slide js-fiddle">
+            <h2>Block & Inline Example</h2>
+            <p>Click <strong>Edit in JSFiddle</strong> to make edits. Let's see what happens when height, width, margin and padding is applied to inline and block elements.</p>
 
-      <iframe src="http://jsfiddle.net/WC5K4/4/embedded/html,css/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-    </section>
+            <iframe src="http://jsfiddle.net/WC5K4/4/embedded/html,css/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+        </section>
 
-    <section class="slide" data-markdown>
-      ##CSS Display property
+        <section class="slide" data-markdown>
+            ##CSS Display property
 
-      These default display styles can be changed using the CSS `display` property.
+            These default display styles can be changed using the CSS `display` property.
 
-      `display: inline` can be used to get block level elements to line up side by side, in a line. The only problem is the block level element will not render sizing properties, just like default inline elements.
+            `display: inline` can be used to get block level elements to line up side by side, in a line. The only problem is the block level element will not render sizing properties, just like default inline elements.
 
-      `display: block` can be used to make inline elements behave like a block level element (be able to apply size related properties) but they will no longer sit side by side, in a line.
+            `display: block` can be used to make inline elements behave like a block level element (be able to apply size related properties) but they will no longer sit side by side, in a line.
 
-      `display: inline-block` is the best of both worlds. Elements will line up side by side and also render sizing properties.
-      
-      `display: none;` will hide the element.
+            `display: inline-block` is the best of both worlds. Elements will line up side by side and also render sizing properties.
+            
+            `display: none;` will hide the element.
 
-      Let's go back to our previous example and try using the `display` property.
-    </section>
+            Let's go back to our previous example and try using the `display` property.
+        </section>
 
-    <section class="slide" data-markdown>
-      ##CSS Float Property
+        <section class="slide" data-markdown>
+            ##CSS Float Property
 
-      Remember, block-style HTML elements like `&lt;p>`, `&lt;div>` and `&lt;section>` automatically start on a new line and stack on top of each other. To get two block elements to align side-by-side, the `float` property can be used. 
+            Remember, block-style HTML elements like `&lt;p>`, `&lt;div>` and `&lt;section>` automatically start on a new line and stack on top of each other. To get two block elements to align side-by-side, the `float` property can be used. 
 
-      CSS floats can float elements left or right.
+            CSS floats can float elements left or right.
 
-      **However**, we have to break the natural stacking flow when an element is floated. This will cause any element *after* the floated element to try to move up beside it or just not display properly because we've disrupted the natural stacking flow. The parent container will also collapse.
+            **However**, we have to break the natural stacking flow when an element is floated. This will cause any element *after* the floated element to try to move up beside it or just not display properly because we've disrupted the natural stacking flow. The parent container will also collapse.
 
-      **Also**, if there is no width set, the element will float but the width will automatically be the width of its content.
-    </section>
-    <section class="slide image-only">
-      <img src="framework/img/shittier.gif">
-      <h2 class="delayed">Just kidding! We can fix it.</h2>
-    </section>
+            **Also**, if there is no width set, the element will float but the width will automatically be the width of its content.
+        </section>
+        <section class="slide image-only">
+            <img src="framework/img/shittier.gif">
+            <h2 class="delayed">Just kidding! We can fix it.</h2>
+        </section>
 
-    <section class="slide js-fiddle">
-      <h2>Float, Clear and Clearfix</h2>
-      <p>First we have to break it, then put it back together.  One of the most confusing CSS concepts is when to use <code>clear:both</code> and the <code>.clearfix</code> class. Rule of thumb: if there's is an element that follows the floated element, apply <code>clear: both</code> to that element.  If all the elements need to be floated, apply the <code>.clearfix</code> class to the <em>parent</em> element.</p>
+        <section class="slide js-fiddle">
+            <h2>Float, Clear and Clearfix</h2>
+            <p>First we have to break it, then put it back together.  One of the most confusing CSS concepts is when to use <code>clear:both</code> and the <code>.clearfix</code> class. Rule of thumb: if there's is an element that follows the floated element, apply <code>clear: both</code> to that element.  If all the elements need to be floated, apply the <code>.clearfix</code> class to the <em>parent</em> element.</p>
 
-      <iframe src="http://jsfiddle.net/ttt5ebhr/3/embedded/html,css/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-      
-      <p>Let's add this clearfix snippet to our CSS file to use it later.</p>
-      <p>Want to know more about the clearfix trick and clearing floats? Here you go:<br>
-      <a href="http://css-tricks.com/snippets/css/clear-fix/">http://css-tricks.com/snippets/css/clear-fix/</a><br>
-      <a href="http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/">http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/</a>
-      </p> 
+            <iframe src="http://jsfiddle.net/ttt5ebhr/3/embedded/html,css/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            
+            <p>Let's add this clearfix snippet to our CSS file to use it later.</p>
+            <p>Want to know more about the clearfix trick and clearing floats? Here you go:<br>
+            <a href="http://css-tricks.com/snippets/css/clear-fix/">http://css-tricks.com/snippets/css/clear-fix/</a><br>
+            <a href="http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/">http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/</a>
+            </p> 
 
 
-    </section>
-      
-    <section class="slide" data-markdown>
-      #More selectors & Using multiple classes
-    </section>
+        </section>
+            
+        <section class="slide" data-markdown>
+            #More selectors & Using multiple classes
+        </section>
 
-    <section class="slide" data-markdown>
-      ##Descendant selectors
-      
-      **Descendant selectors** - Matches any element that is a descendant of the element declared before it.
-      
-      ```css
-      p a {
-        /* targets only a tags nested inside of p tags */
-      }
-      .classname a {
-        /* targets only a tags nested inside any element with the matching classname */
-      }
-      ```
-      **Protip:** Just like Inception, never go more than three levels deep. Truth.
+        <section class="slide" data-markdown>
+            ##Descendant selectors
+            
+            **Descendant selectors** - Matches any element that is a descendant of the element declared before it.
+            
+            ```css
+            p a {
+                /* targets only a tags nested inside of p tags */
+            }
+            .classname a {
+                /* targets only a tags nested inside any element with the matching classname */
+            }
+            ```
+            **Protip:** Just like Inception, never go more than three levels deep. Truth.
 
-      ```
-      nav ul li a span {
-        /* NOOOOOOOOOOO */
-      }
-      ```
+            ```
+            nav ul li a span {
+                /* NOOOOOOOOOOO */
+            }
+            ```
 
-      Feel free to skip a level but be mindful of specificity rules. For example, `nav ul li a` would override `nav a`. It’s generally easier to start with less specific selectors and make them more specific, as needed, rather than starting with very specific selectors and adding extra markup or classes to try to override the styles.
-    </section>
+            Feel free to skip a level but be mindful of specificity rules. For example, `nav ul li a` would override `nav a`. It’s generally easier to start with less specific selectors and make them more specific, as needed, rather than starting with very specific selectors and adding extra markup or classes to try to override the styles.
+        </section>
 
-    <section class="slide">
-      <h2>Child & Adjacent selectors</h2>
-      
-      <p><strong>Child selectors</strong> - Only matches an element that is a direct <em>child</em> of the element declared before it.</p>
-      
-      <textarea class="snippet" data-subject="#child-selector">#child-selector {
-  background: lightblue;
+        <section class="slide">
+            <h2>Child & Adjacent selectors</h2>
+            
+            <p><strong>Child selectors</strong> - Only matches an element that is a direct <em>child</em> of the element declared before it.</p>
+            
+            <textarea class="snippet" data-subject="#child-selector">#child-selector {
+    background: lightblue;
 }
 #child-selector p > a {
-  color: red;
+    color: red;
 }</textarea>
-      <div id="child-selector">
-        <p>Lorem ipsum dolor sit amet. <a href="#0">link inside paragraph</a>.</p>
-        <a href="#0">link</a>
-      </div>
-      
-      <p><strong>Adjacent selectors</strong> - allows you to select an element that is directly after another specific element.</p>
+            <div id="child-selector">
+                <p>Lorem ipsum dolor sit amet. <a href="#0">link inside paragraph</a>.</p>
+                <a href="#0">link</a>
+            </div>
+            
+            <p><strong>Adjacent selectors</strong> - allows you to select an element that is directly after another specific element.</p>
 
-      <textarea class="snippet" data-subject="#adjacent-selector">#adjacent-selector {
-  background: gray;
+            <textarea class="snippet" data-subject="#adjacent-selector">#adjacent-selector {
+    background: gray;
 }
 #adjacent-selector p + a {
-  color: red;
+    color: red;
 }</textarea>
-      <div id="adjacent-selector">
-        <p>Lorem ipsum dolor sit amet. <a href="#0">link inside paragraph</a>.</p>
-        <a href="#0">link</a>
-      </div>
-    
-      <p><strong>Extra Resource</strong>: <a href="http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048">The 30 CSS Selectors you Must Memorize</a></p>
-    </section>
-
-    <section class="slide" data-markdown>
-      ##Using multiple classes
-
-      It's common to use more than one class on one element to add different styles to it. To use multiple classes, declare it in the same class attribute but separate classes with a space.
-
-      ```xml
-      &lt;div class=&quot;class-1 class-2&quot;&gt;
-        content here
-      &lt;/div&gt;
-      ```
-
-      Any styles under `.class-1` AND `.class-2` will apply.
-
-      To select two (or more) classes at the same time, use both names as the selector with *no* space.  This style will only apply if *both* classes are declared in the element.
-      
-      ```css
-      .class-1.class-2 {
-        /* will only apply if both classes exist */
-      }
-      ```
-    </section>
-      
-    <section class="slide" data-markdown>
-    ##Class Exercise: Floats
-    
-    1.Add a float to profile image. What happens to the parent element when a child element is floated?
+            <div id="adjacent-selector">
+                <p>Lorem ipsum dolor sit amet. <a href="#0">link inside paragraph</a>.</p>
+                <a href="#0">link</a>
+            </div>
         
-    ```
-    .profile img {
-      float: left;
-    }
-    ```
-    2.Add the clearfix class to the parent element
+            <p><strong>Extra Resource</strong>: <a href="http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048">The 30 CSS Selectors you Must Memorize</a></p>
+        </section>
 
-    3.Make the image a relative size to the page and add margin to create space between the image and text.
+        <section class="slide" data-markdown>
+            ##Using multiple classes
 
-    ```
-    .profile img {
-      float: left;
-      width: 27%;
-      margin-right: 3%;
-    }
-    ```
+            It's common to use more than one class on one element to add different styles to it. To use multiple classes, declare it in the same class attribute but separate classes with a space.
 
-    4.If the text is longer than the image, it will wrap around it. Let's put a width on the profile summary and float it too.
-    ```
-    .summary {
-      width: 70%;
-      float: right;
-    }
-    ```
-    </section>
-    
-    <section class="slide" data-markdown>
-      ##Exercise 6: Add More Floats and borders (15mins)
+            ```xml
+            &lt;div class=&quot;class-1 class-2&quot;&gt;
+                content here
+            &lt;/div&gt;
+            ```
 
-      Add floats to the **Work Experience** section.  Here's a link to the [final project](project/final.html) for reference and some hints to get you started:
+            Any styles under `.class-1` AND `.class-2` will apply.
 
-      In the HTML, the `.details` element contains the info that should be displayed on the left and the `.description` element contains the content to be displayed on the right. Floats can be applied to achieve this.
-
-      Remember, to float elements properly, declare a width as well.
-      
-      What happens when elements are floated? The parent element *collapses* so make sure to fix that as well!
-
-      ```
-      &lt;div class=&quot;item&quot;&gt;
-        &lt;div class=&quot;details&quot;&gt;
-          Company name, date, etc
-        &lt;/div&gt;
-        &lt;div class=&quot;description&quot;&gt;
-          Job description
-        &lt;/div&gt;
-      &lt;/div&gt;&lt;!-- close .item --&gt;
-      ```
-      If you have some extra time, feel free to follow these instructions for adding a border or tweak some font styles!
-
-      * Each Work Experience item is contain in an element with the `.item` class.  Create a new declaration block for `.item` and add the `border-bottom` property to it.  The syntax is: `border-bottom: size style color;`
-      
-      ```
-      .item {
-        border-bottom: 1px solid #ccc;
-      }
-      ```
-      
-      Your page should look something like this: [Example 6](project/examples/6-floats.html).
-    </section>
-
-
-    <section class="slide" data-markdown>
-      ##More Background Styles
-
-      It's time to get rid of these testing background colours and put in some nicer looking styles.
-
-      For the **Profile** section, add an opaque background style to see the header image behind it. Use the `background` property but with an RGBa value. The 'a' represents the alpha transparency. (There is an `opacity` property too but it makes the text opaque too so we'll use `background` instead).
-
-      ```
-      .profile {
-        background: rgba(0,0,0,0.8);
-      }
-      ```
-    </section>
-
-    <section class="slide" data-markdown>
-      ##More Background Styles
-
-      Uh oh? Why didn't it work? The **Profile** and **Header** sections are *siblings* as in the elements come one after another.  In order for the image to show through, it has to be declared in an ancestor or parent element.  
-
-      * Let's move the `background` styles from the `header` selector to `body`.
-
-      * Change the font color in `.profile` to white, to see the text more clearly.
-
-      * Pick an accent colour and apply it to all links (`a` tags).
-      
-      **Colour inspiration:**    
-      [http://colours.neilorangepeel.com/](http://colours.neilorangepeel.com/)  
-      [http://flatuicolors.com/](http://flatuicolors.com/)  
-    </section>
-
-    <section class="slide" data-markdown>
-      ##Exercise #7: Keep going with Background styles (20mins)
-
-      1. Update the **Work Experience** and **Education** section with the same background colour. The sample project is using a very light gray (#FEFEFC).
-
-      1. Change the font colour of the Profile, Skills & Contact section to white or #ffffff.
-      
-      1. Add another background image to the **Skills** section. Don't worry about the overlay effect right now.  Just add the image.
-
-      1. Add an underline to the `&lt;h2>` headings, #cccccc or a colour of your choosing. 
-
-      1. Update the background colour for the Contact section. Use #111111 or a colour of your choosing.
-
-      If you get stuck, ask a mentor! Don't worry if you don't finish, we'll go through it together as a class.
-
-      Your page should look something like this: [Example 7](/project/examples/7-bg.html)
-    </section>
-
-    <section class="slide" data-markdown>
-      #CSS3!
-    </section>
+            To select two (or more) classes at the same time, use both names as the selector with *no* space.  This style will only apply if *both* classes are declared in the element.
+            
+            ```css
+            .class-1.class-2 {
+                /* will only apply if both classes exist */
+            }
+            ```
+        </section>
+            
+        <section class="slide" data-markdown>
+        ##Class Exercise: Floats
         
-    <section class="slide" data-markdown>
-      ##CSS3 Properties: border-radius
+        1.Add a float to profile image. What happens to the parent element when a child element is floated?
+                
+        ```
+        .profile img {
+            float: left;
+        }
+        ```
+        2.Add the clearfix class to the parent element
 
-      Take a break from tweaking spacing and floats and start adding some newer CSS3 features. The introduction of CSS3 brought in new ways to do things that previously had to be done in Flash, JavaScript or complicated hacks.
+        3.Make the image a relative size to the page and add margin to create space between the image and text.
 
-      Let's start with `border-radius`.  Once upon a time, rounded corners required cutting images with transparent backgrounds and blah blah blah...  Now we can do it with one line of CSS! Add this style to the existing declaration block for the profile image. Percentages or pixel values can be used. The bigger the number, the more rounded the corners will be. To get a perfect circle, set the `border-radius` to 50% and the original image must also be a square (or else it will look oval).
-      ```
-      .profile img {
-        border-radius: 50%;
-      }
-      ```
+        ```
+        .profile img {
+            float: left;
+            width: 27%;
+            margin-right: 3%;
+        }
+        ```
 
-      Let's add a border and some padding. Remember, padding adds space *inside* of an element.
-      ```
-      .profile img {
-        border-radius: 50%;
-        border: 1px solid #ddd;
-        padding: 4px;
-      }
-      ```
-    </section>
-    <section class="slide" data-markdown>
-      ##Vendor prefixes
+        4.If the text is longer than the image, it will wrap around it. Let's put a width on the profile summary and float it too.
+        ```
+        .summary {
+            width: 70%;
+            float: right;
+        }
+        ```
+        </section>
+        
+        <section class="slide" data-markdown>
+            ##Exercise 6: Add More Floats and borders (15mins)
 
-      In some cases, to use a more advanced CSS3 styles, a standard CSS property may require an addition of a browser specific prefix. For example, the various prefixes for different browsers are as follows:
+            Add floats to the **Work Experience** section.  Here's a link to the [final project](project/final.html) for reference and some hints to get you started:
 
-      * Chrome: `-webkit-` 
-      * Firefox: `-moz- ` 
-      * Internet Explorer: `-ms-`
-      
-      Not all properties these prefixes and as newer browser versions come up, support for many of these prefixes are no longer required.  Here's a couple handy resources. 
-      
-      * [caniuse.com](http://caniuse.com)
-      * [css3please.com](http://css3please.com/)  
-      * [-prefix-free](http://leaverou.github.io/prefixfree/) - note, doesn't work **locally** in Chrome.   
-      * [css-tricks.com/how-to-deal-with-vendor-prefixes](http://css-tricks.com/how-to-deal-with-vendor-prefixes/)
-    </section>
+            In the HTML, the `.details` element contains the info that should be displayed on the left and the `.description` element contains the content to be displayed on the right. Floats can be applied to achieve this.
 
-    <section class="slide">
-      <h2>Profile Heading Update</h2>
+            Remember, to float elements properly, declare a width as well.
+            
+            What happens when elements are floated? The parent element *collapses* so make sure to fix that as well!
 
-      <ol>
-        <li>
-          <p>Let’s update the <code>&lt;h2&gt;</code> tag in the profile section and give it a style different from the other headings.  First, we’ll override the bottom border.  We need to use a selector that is specific to the profile section. Add a background color too. Try using your accent colour. </p>
+            ```
+            &lt;div class=&quot;item&quot;&gt;
+                &lt;div class=&quot;details&quot;&gt;
+                    Company name, date, etc
+                &lt;/div&gt;
+                &lt;div class=&quot;description&quot;&gt;
+                    Job description
+                &lt;/div&gt;
+            &lt;/div&gt;&lt;!-- close .item --&gt;
+            ```
+            If you have some extra time, feel free to follow these instructions for adding a border or tweak some font styles!
+
+            * Each Work Experience item is contain in an element with the `.item` class.  Create a new declaration block for `.item` and add the `border-bottom` property to it.  The syntax is: `border-bottom: size style color;`
+            
+            ```
+            .item {
+                border-bottom: 1px solid #ccc;
+            }
+            ```
+            
+            Your page should look something like this: [Example 6](project/examples/6-floats.html).
+        </section>
+
+
+        <section class="slide" data-markdown>
+            ##More Background Styles
+
+            It's time to get rid of these testing background colours and put in some nicer looking styles.
+
+            For the **Profile** section, add an opaque background style to see the header image behind it. Use the `background` property but with an RGBa value. The 'a' represents the alpha transparency. (There is an `opacity` property too but it makes the text opaque too so we'll use `background` instead).
+
+            ```
+            .profile {
+                background: rgba(0,0,0,0.8);
+            }
+            ```
+        </section>
+
+        <section class="slide" data-markdown>
+            ##More Background Styles
+
+            Uh oh? Why didn't it work? The **Profile** and **Header** sections are *siblings* as in the elements come one after another.  In order for the image to show through, it has to be declared in an ancestor or parent element.  
+
+            * Let's move the `background` styles from the `header` selector to `body`.
+
+            * Change the font color in `.profile` to white, to see the text more clearly.
+
+            * Pick an accent colour and apply it to all links (`a` tags).
+            
+            **Colour inspiration:**    
+            [http://colours.neilorangepeel.com/](http://colours.neilorangepeel.com/)  
+            [http://flatuicolors.com/](http://flatuicolors.com/)  
+        </section>
+
+        <section class="slide" data-markdown>
+            ##Exercise #7: Keep going with Background styles (20mins)
+
+            1. Update the **Work Experience** and **Education** section with the same background colour. The sample project is using a very light gray (#FEFEFC).
+
+            1. Change the font colour of the Profile, Skills & Contact section to white or #ffffff.
+            
+            1. Add another background image to the **Skills** section. Don't worry about the overlay effect right now.  Just add the image.
+
+            1. Add an underline to the `&lt;h2>` headings, #cccccc or a colour of your choosing. 
+
+            1. Update the background colour for the Contact section. Use #111111 or a colour of your choosing.
+
+            If you get stuck, ask a mentor! Don't worry if you don't finish, we'll go through it together as a class.
+
+            Your page should look something like this: [Example 7](/project/examples/7-bg.html)
+        </section>
+
+        <section class="slide" data-markdown>
+            #CSS3!
+        </section>
+                
+        <section class="slide" data-markdown>
+            ##CSS3 Properties: border-radius
+
+            Take a break from tweaking spacing and floats and start adding some newer CSS3 features. The introduction of CSS3 brought in new ways to do things that previously had to be done in Flash, JavaScript or complicated hacks.
+
+            Let's start with `border-radius`.  Once upon a time, rounded corners required cutting images with transparent backgrounds and blah blah blah...  Now we can do it with one line of CSS! Add this style to the existing declaration block for the profile image. Percentages or pixel values can be used. The bigger the number, the more rounded the corners will be. To get a perfect circle, set the `border-radius` to 50% and the original image must also be a square (or else it will look oval).
+            ```
+            .profile img {
+                border-radius: 50%;
+            }
+            ```
+
+            Let's add a border and some padding. Remember, padding adds space *inside* of an element.
+            ```
+            .profile img {
+                border-radius: 50%;
+                border: 1px solid #ddd;
+                padding: 4px;
+            }
+            ```
+        </section>
+        <section class="slide" data-markdown>
+            ##Vendor prefixes
+
+            In some cases, to use a more advanced CSS3 styles, a standard CSS property may require an addition of a browser specific prefix. For example, the various prefixes for different browsers are as follows:
+
+            * Chrome: `-webkit-` 
+            * Firefox: `-moz- ` 
+            * Internet Explorer: `-ms-`
+            
+            Not all properties these prefixes and as newer browser versions come up, support for many of these prefixes are no longer required.  Here's a couple handy resources. 
+            
+            * [caniuse.com](http://caniuse.com)
+            * [css3please.com](http://css3please.com/)  
+            * [-prefix-free](http://leaverou.github.io/prefixfree/) - note, doesn't work **locally** in Chrome.   
+            * [css-tricks.com/how-to-deal-with-vendor-prefixes](http://css-tricks.com/how-to-deal-with-vendor-prefixes/)
+        </section>
+
+        <section class="slide">
+            <h2>Profile Heading Update</h2>
+
+            <ol>
+                <li>
+                    <p>Let’s update the <code>&lt;h2&gt;</code> tag in the profile section and give it a style different from the other headings.  First, we’ll override the bottom border.  We need to use a selector that is specific to the profile section. Add a background color too. Try using your accent colour. </p>
 <pre><code>.profile h2 {
-  border: none;
-  background: #2980b9;
+    border: none;
+    background: #2980b9;
 }</code></pre>
-        </li>
-        <li>
-          <p>Headings are block level elements so they are going to want to span 100% width of it’s container.  We could set a width value on it but what if we change the greeting? Then we’d have to set the width again. Remember, inline elements are as wide as their content so let’s change the heading to which display option?</p>
-          <p class="delayed"><code>display: inline-block;</code> so we can access the block and inline behaviors. Let's add some padding too!</p>
+                </li>
+                <li>
+                    <p>Headings are block level elements so they are going to want to span 100% width of it’s container.  We could set a width value on it but what if we change the greeting? Then we’d have to set the width again. Remember, inline elements are as wide as their content so let’s change the heading to which display option?</p>
+                    <p class="delayed"><code>display: inline-block;</code> so we can access the block and inline behaviors. Let's add some padding too!</p>
 <pre class="delayed"><code>.profile h2 {
-  border: none;
-  background: #2980b9;
-  display: inline-block;
-  padding: 10px 20px;
+    border: none;
+    background: #2980b9;
+    display: inline-block;
+    padding: 10px 20px;
 }</code></pre>
-        </li>
-      </ol>
-    </section>
+                </li>
+            </ol>
+        </section>
 
-    <section class="slide" data-markdown>
-      ##CSS3 Transform
+        <section class="slide" data-markdown>
+            ##CSS3 Transform
 
-      The `transform` property can be used to literally transform the element.  You can skew it, scale it and few other things.  Let's try adding just a slight `rotate` to it.  The value for `rotate` is defined in degrees.
+            The `transform` property can be used to literally transform the element.  You can skew it, scale it and few other things.  Let's try adding just a slight `rotate` to it.  The value for `rotate` is defined in degrees.
 
-      Add this declaration to the Profile heading. Try using positive or negative numbers until you find one that you like!
+            Add this declaration to the Profile heading. Try using positive or negative numbers until you find one that you like!
 
-      ```
-      .profile h2 {
-        transform: rotate(-4deg);
-      } 
-      ```
-      Your page should look like this: [Example 8](project/examples/8-css3.html).
+            ```
+            .profile h2 {
+                transform: rotate(-4deg);
+            } 
+            ```
+            Your page should look like this: [Example 8](project/examples/8-css3.html).
 
-      More about `transform` [here](http://css-tricks.com/almanac/properties/t/transform/).
-    </section>
+            More about `transform` [here](http://css-tricks.com/almanac/properties/t/transform/).
+        </section>
 
-    <section class="slide" data-markdown>
-      ##Animations
+        <section class="slide" data-markdown>
+            ##Animations
 
-      Let's check out some fun things we can do with this CSS3 animations library:
+            Let's check out some fun things we can do with this CSS3 animations library:
 
-      http://daneden.github.io/animate.css/
+            http://daneden.github.io/animate.css/
 
-      The CSS stylesheet has already been downloaded and added to the project css folder.  We just need to link it to the HTML file. Remember the rules of cascading and inheritance so put it *before* your custom stylesheet.
+            The CSS stylesheet has already been downloaded and added to the project css folder.  We just need to link it to the HTML file. Remember the rules of cascading and inheritance so put it *before* your custom stylesheet.
 
-      Open **animate.css** in Sublime and take a peek at how to make these animations!
+            Open **animate.css** in Sublime and take a peek at how to make these animations!
 
-      In order for these animations to work, we just need to include the desired animation in addition to the `.animated` class in the HTML tag itself, since the CSS is already taken care of.  For example, if I wanted my `&lt;h1>` to fade in from the left, it would look like this:
-    
-      ```xml
-      &lt;h1 class=&quot;animated fadeInLeft&quot;&gt;Name&lt;/h1&gt;
-      ```
-    </section>
-    <section class="slide" data-markdown>
-      ##Animations on hover
+            In order for these animations to work, we just need to include the desired animation in addition to the `.animated` class in the HTML tag itself, since the CSS is already taken care of.  For example, if I wanted my `&lt;h1>` to fade in from the left, it would look like this:
+        
+            ```xml
+            &lt;h1 class=&quot;animated fadeInLeft&quot;&gt;Name&lt;/h1&gt;
+            ```
+        </section>
+        <section class="slide" data-markdown>
+            ##Animations on hover
 
-      Let's try adding an animation and other changes on hover using the `:hover` **psuedo** selector.
+            Let's try adding an animation and other changes on hover using the `:hover` **psuedo** selector.
 
-      Psuedo selectors need to be attached to an element with a colon (`:`) and no space. A very common use for this selector is for links.  Let's add a simple colour change when links are hovered on.
+            Psuedo selectors need to be attached to an element with a colon (`:`) and no space. A very common use for this selector is for links.  Let's add a simple colour change when links are hovered on.
 
-      ```
-      a:hover {
-        color: #000;
-      }
-      ```
+            ```
+            a:hover {
+                color: #000;
+            }
+            ```
 
-      To make a change on hover for the "hello" heading, the selector will look like this:
+            To make a change on hover for the "hello" heading, the selector will look like this:
 
-      ```
-      .profile h2:hover {}
-      ```
-      
-      We can take a look through the **animate.css** stylesheet and pull out the declarations we want to use and apply it to the hover selector instead of adding it to the HTML element.  That way, the animation won't happen until it's hovered on!
+            ```
+            .profile h2:hover {}
+            ```
+            
+            We can take a look through the **animate.css** stylesheet and pull out the declarations we want to use and apply it to the hover selector instead of adding it to the HTML element.  That way, the animation won't happen until it's hovered on!
 
-      **But**, the `.animated` class still needs to be added in the HTML because that class contains the general styles needed to trigger the specific animations.
+            **But**, the `.animated` class still needs to be added in the HTML because that class contains the general styles needed to trigger the specific animations.
 
-      ```xml
-      &lt;h2 class=&quot;animated&quot;&gt;Hello!&lt;/h2&gt;
-      ```  
-      
-      ```
-      .profile h2:hover {
-        /* This is the bounce CSS */
-        -webkit-animation-name: bounce;
-        animation-name: bounce;
-        -webkit-transform-origin: center bottom;
-        transform-origin: center bottom;
-      }
-      ```
-      **Note** that the `animation-name` is dependent on the matching `@keyframe` animation in the original **animate.css* file. It won't work without it.
-    </section>
+            ```xml
+            &lt;h2 class=&quot;animated&quot;&gt;Hello!&lt;/h2&gt;
+            ```  
+            
+            ```
+            .profile h2:hover {
+                /* This is the bounce CSS */
+                -webkit-animation-name: bounce;
+                animation-name: bounce;
+                -webkit-transform-origin: center bottom;
+                transform-origin: center bottom;
+            }
+            ```
+            **Note** that the `animation-name` is dependent on the matching `@keyframe` animation in the original **animate.css* file. It won't work without it.
+        </section>
 
-    <section class="slide" data-markdown>
-      ##Exercise 9: Animations (10mins)
+        <section class="slide" data-markdown>
+            ##Exercise 9: Animations (10mins)
 
-      Take some time to experiment with what we just covered.
+            Take some time to experiment with what we just covered.
 
-      Here's the sample page: [Example 9](project/examples/9-animate.html). 
-    </section>
+            Here's the sample page: [Example 9](project/examples/9-animate.html). 
+        </section>
 
-    <section class="slide">
-      <h2>Gradients</h2>
+        <section class="slide">
+            <h2>Gradients</h2>
 
-      <p><code>background</code> can also be used to create a gradient. Using CSS gradients instead of an image file, is better for flexibility and performance.</p>
+            <p><code>background</code> can also be used to create a gradient. Using CSS gradients instead of an image file, is better for flexibility and performance.</p>
 
-      <p>Gradients are usually one color that fades into another. With CSS you can control the direction of the fade, the colors, as well as where the color changes happen.</p>
+            <p>Gradients are usually one color that fades into another. With CSS you can control the direction of the fade, the colors, as well as where the color changes happen.</p>
 
-      <p>Gradients are set using the <code>background-image</code> property. The shorthand <code>background</code> property will also work.</p>
+            <p>Gradients are set using the <code>background-image</code> property. The shorthand <code>background</code> property will also work.</p>
 
-      <p>To set the values, use <code>linear-gradient(color, color)</code> to set the start and stop colour. The axis defaults at a top-to-bottom angle, though it is also possible to change the direction of the axis.</p>
+            <p>To set the values, use <code>linear-gradient(color, color)</code> to set the start and stop colour. The axis defaults at a top-to-bottom angle, though it is also possible to change the direction of the axis.</p>
 
-      <p>To change the direction to left-to-right, pass an additional parameter at the beginning of <code>linear-gradient()</code>starting with the word "to" and the direction. (ex. "to right")</p>
+            <p>To change the direction to left-to-right, pass an additional parameter at the beginning of <code>linear-gradient()</code>starting with the word "to" and the direction. (ex. "to right")</p>
 
-      <pre><code>background-image: linear-gradient(to right, red, blue);</code></pre>
+            <pre><code>background-image: linear-gradient(to right, red, blue);</code></pre>
 
-      <p>In the example below, try putting a start and stop colour. Then try changing the direction.</p>
+            <p>In the example below, try putting a start and stop colour. Then try changing the direction.</p>
 
-      <textarea class="snippet">background: linear-gradient();</textarea>
+            <textarea class="snippet">background: linear-gradient();</textarea>
 
-      <p>Learn all about gradients here: <a href="http://css-tricks.com/css3-gradients/">http://css-tricks.com/css3-gradients/</a></p>
-    </section>
+            <p>Learn all about gradients here: <a href="http://css-tricks.com/css3-gradients/">http://css-tricks.com/css3-gradients/</a></p>
+        </section>
 
-    <section class="slide">
-      <h2>Gradients and Background Images</h2>
+        <section class="slide">
+            <h2>Gradients and Background Images</h2>
 
-      <p>In our Skills section, the text is hard to read on top of the background image.  Before CSS gradients, the other way to create an overlay effect on a background image was to use CSS <code>position</code> to position a box with an opaque background colour <em>on top</em> of the image.  But now it is so much easier with gradients and setting multiple background images. </p>
+            <p>In our Skills section, the text is hard to read on top of the background image.  Before CSS gradients, the other way to create an overlay effect on a background image was to use CSS <code>position</code> to position a box with an opaque background colour <em>on top</em> of the image.  But now it is so much easier with gradients and setting multiple background images. </p>
 
-      <p>Declare the gradient first so it can sit on top of the image. We also want the to see the image through the gradient so use RGBA color values to set the alpha transparency.</p>
+            <p>Declare the gradient first so it can sit on top of the image. We also want the to see the image through the gradient so use RGBA color values to set the alpha transparency.</p>
 
-      <textarea class="snippet" data-subject="#bg-image-gradient">height: 300px; 
+            <textarea class="snippet" data-subject="#bg-image-gradient">height: 300px; 
 background: linear-gradient(rgba(), rgba()), url(http://www.stevensegallery.com/460/300);
-      </textarea>
-      <div id="bg-image-gradient">
-      </div>
-      <p>image source: <a href="http://www.stevensegallery.com/">http://www.stevensegallery.com</a></p>
-    </section>
+            </textarea>
+            <div id="bg-image-gradient">
+            </div>
+            <p>image source: <a href="http://www.stevensegallery.com/">http://www.stevensegallery.com</a></p>
+        </section>
 
-    <section class="slide" data-markdown>
-      ##Exercise 10: Gradient background & more floats! (20mins)
-      
-      Using the previous example, add a gradient effect to the Skills section to make the text on background image more legible.
+        <section class="slide" data-markdown>
+            ##Exercise 10: Gradient background & more floats! (20mins)
+            
+            Using the previous example, add a gradient effect to the Skills section to make the text on background image more legible.
 
-      **Challenge!**
+            **Challenge!**
 
-      In the Skills section, there are also two options, a `.skills-list` option and a `.skills-circle` option. Hold off on the circle option for now but for the list, try adding floats to the `.column` class to get the three lists to line up side by side.  Don't forget about all the funny quirks that happen to the stacking flow when floats are added!
+            In the Skills section, there are also two options, a `.skills-list` option and a `.skills-circle` option. Hold off on the circle option for now but for the list, try adding floats to the `.column` class to get the three lists to line up side by side.  Don't forget about all the funny quirks that happen to the stacking flow when floats are added!
 
 ```xml
 &lt;div class=&quot;skills-list&quot;&gt;
-  &lt;h3&gt;List Option&lt;/h3&gt;
-  &lt;div class=&quot;columns&quot;&gt;&lt;!--float this class! --&gt;
-    &lt;h4&gt;Best at:&lt;/h4&gt;
-    &lt;ul&gt;
-     stuff
-    &lt;/ul&gt;
-  &lt;/div&gt;
-  ...
+    &lt;h3&gt;List Option&lt;/h3&gt;
+    &lt;div class=&quot;columns&quot;&gt;&lt;!--float this class! --&gt;
+        &lt;h4&gt;Best at:&lt;/h4&gt;
+        &lt;ul&gt;
+         stuff
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    ...
 &lt;/div&gt;
 ```
 Here's what your page should look like: [example 10](project/examples/10-skills-section.html)
-    </section>
+        </section>
 
-    <section class="slide" data-markdown>
-    ##Icon fonts
-    
-    Icon fonts are an easy way to add imagery to your web page but still have the flexibility of styling properties like size and colour using CSS since they *are* fonts!
+        <section class="slide" data-markdown>
+        ##Icon fonts
+        
+        Icon fonts are an easy way to add imagery to your web page but still have the flexibility of styling properties like size and colour using CSS since they *are* fonts!
 
-    There's many to choose from but today we'll use Font Awesome: 
-    [http://fortawesome.github.io/Font-Awesome/](http://fortawesome.github.io/Font-Awesome/)
+        There's many to choose from but today we'll use Font Awesome: 
+        [http://fortawesome.github.io/Font-Awesome/](http://fortawesome.github.io/Font-Awesome/)
 
-    Under **Getting Started**, there are different options for adding the font files.  If using the CDN, remember to add the "http" to make it work when you run your page "locally" (on your computer).
-    
-    Simple to use, pick an icon you'd like to use and copy the supplied markup and class and that's it! There are already some included in your project.  All of the social icons are included with an icon font.
-    </section>
+        Under **Getting Started**, there are different options for adding the font files.  If using the CDN, remember to add the "http" to make it work when you run your page "locally" (on your computer).
+        
+        Simple to use, pick an icon you'd like to use and copy the supplied markup and class and that's it! There are already some included in your project.  All of the social icons are included with an icon font.
+        </section>
 
-    <section class="slide" data-markdown>
-    ##Class Exercise - Resetting List Styles
+        <section class="slide" data-markdown>
+        ##Class Exercise - Resetting List Styles
 
-    Add some flair to the skills list by adding icons to each skill.  But first, let's reset some of the default list styles.
+        Add some flair to the skills list by adding icons to each skill.  But first, let's reset some of the default list styles.
 
-    To remove the default bullet points, use the CSS property and value, `list-style-type: none;` and can be added to the `ul` since that element is used to create the list.  Lists also have padding to create the indent so reset that by using a value of 0.
+        To remove the default bullet points, use the CSS property and value, `list-style-type: none;` and can be added to the `ul` since that element is used to create the list.  Lists also have padding to create the indent so reset that by using a value of 0.
 
-    Since we want to remove the bullets from all the lists in this section, we can target them all at once using a **descendant selector**. We can use `.skill`, since that's the class for the entire section, and `ul` to target all the lists.
+        Since we want to remove the bullets from all the lists in this section, we can target them all at once using a **descendant selector**. We can use `.skill`, since that's the class for the entire section, and `ul` to target all the lists.
 
 ```css
 .skills ul {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
 ```
-    </section>
+        </section>
 
-    <section class="slide" data-markdown>
-      ##Exercise 11: Adding Icon Fonts (15mins)
+        <section class="slide" data-markdown>
+            ##Exercise 11: Adding Icon Fonts (15mins)
 
-      Now that the bullets have been removed, let's add a checkmark. Visit [Font Awesome](http://fortawesome.github.io/Font-Awesome/) and go to **Icons** to get the code.
+            Now that the bullets have been removed, let's add a checkmark. Visit [Font Awesome](http://fortawesome.github.io/Font-Awesome/) and go to **Icons** to get the code.
 
-      Copy the markup and add it to your HTML file, where ever you want the icon to appear.  In this case, we want it in each *list item* (`li`).
+            Copy the markup and add it to your HTML file, where ever you want the icon to appear.  In this case, we want it in each *list item* (`li`).
 
-      For this exercise, add the check marks (or whichever icon you'd like to use) to each list item and use the CSS `color` property to change the color of *only* the icons.  
+            For this exercise, add the check marks (or whichever icon you'd like to use) to each list item and use the CSS `color` property to change the color of *only* the icons.  
 
-      **Bonus:** Try center aligning the headings and lists like in the [final project](project/final.html).
+            **Bonus:** Try center aligning the headings and lists like in the [final project](project/final.html).
 
-      **Extra Bonus:** Try changing the color or the `h4` subheadings.
+            **Extra Bonus:** Try changing the color or the `h4` subheadings.
 
-      Your page should look something like this: [Example 11](project/examples/11-icon-fonts.html)
-    </section>
+            Your page should look something like this: [Example 11](project/examples/11-icon-fonts.html)
+        </section>
 
-    <section class="slide">
-      <h2>Making circles</h2>
+        <section class="slide">
+            <h2>Making circles</h2>
 
-      <p>For the second option for the <strong>Skills</strong> section, let’s turn this lists into circles and center align them.</p>
+            <p>For the second option for the <strong>Skills</strong> section, let’s turn this lists into circles and center align them.</p>
 
-      <p>For this exercise, let’s use <code>display: inline-block</code> <em>instead</em> of <code>float: left</code> to get them to line up side-by-side and still be center aligned from the inherited style of <code>text-align: center</code>.</p>
+            <p>For this exercise, let’s use <code>display: inline-block</code> <em>instead</em> of <code>float: left</code> to get them to line up side-by-side and still be center aligned from the inherited style of <code>text-align: center</code>.</p>
 
-      <p>Our selector will target only the list items contained within the circle option list to ensure that these styles will only be specific to this list. Since we want the individual list items itself to be lined up side-by-side, we have to target them specifically.</p>
+            <p>Our selector will target only the list items contained within the circle option list to ensure that these styles will only be specific to this list. Since we want the individual list items itself to be lined up side-by-side, we have to target them specifically.</p>
 
-      <pre><code>.skills-circles ul li {}</code></pre>
-    </section>
+            <pre><code>.skills-circles ul li {}</code></pre>
+        </section>
 
-    <section class="slide">
-      <h2>Making circles (continued)</h2>
-      <p>We can give them an equal width &amp; height as well to create a perfect circle using which CSS property?</p>
-      <p class="delayed">border-radius!</p>
-      <p class="delayed">Let’s add a border as well.</p>
+        <section class="slide">
+            <h2>Making circles (continued)</h2>
+            <p>We can give them an equal width &amp; height as well to create a perfect circle using which CSS property?</p>
+            <p class="delayed">border-radius!</p>
+            <p class="delayed">Let’s add a border as well.</p>
 <pre class="delayed"><code>.skills-circles ul li {
-    display: inline-block;
-    height: 150px;
-    width: 150px;
-    border: 2px solid yourAccentColour;
-    border-radius: 50%;
-}
-</code></pre>
-    </section>
-    <section class="slide image-only" data-markdown>
-      ##Hmm....
-
-      ![](framework/img/circles.png)
-
-      If you see this, you didn't break it. It's just CSS.
-    </section>
-
-    <section class="slide image-only" data-markdown>
-      ![](framework/img/css.gif)
-    </section>
-
-    <section class="slide" data-markdown>
-      ##Center align
-
-      Aligning elements horizontally is pretty straightforward, `text-align: center` or `margin: 0 auto`.  
-
-      Vertical align? No so much. 
-
-      Today we are going to try out one way. Remember `line-height`? It's used to create spacing between lines of content but if we set it to be the same as the height of the box, it will make the content inside align vertically.
-
-      ... Unless you have text that is more than one line.
-
-      ![](framework/img/line-height.png)
-    </section>
-
-    <section class="slide" data-markdown>
-      ##Center align (continued)
-
-      If we look at the HTML markup, a `span` tag was added around each word so that we can still use the `line-height` trick on the list item, but now we can use the `span` tag to override the styles we don't want.
-
-```xml
-&lt;ul&gt;
-  &lt;li&gt;&lt;span&gt;Social Media&lt;/span&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;span&gt;Marketing Strategy&lt;/span&gt;&lt;/li&gt;
-  ...
-&lt;/ul&gt;
-```
-      ```
-      .skills-circles ul li {
         display: inline-block;
         height: 150px;
         width: 150px;
-        border: 2px solid #2980b9;
+        border: 2px solid yourAccentColour;
         border-radius: 50%;
-        line-height: 150px;
-      }
-      ```
-      Create a new declaration block for the `span` tag, you can skip a couple levels even though it's nested inside of the `li` (remember, Inception... )
-
-      We need to make the span take on the characteristics if a block element in order for this fix to work.
-
-      ```css
-      .skills-circles span {
-        display: inline-block;
-      }
-      ```
-    </section>
-
-    <section class="slide" data-markdown>
-      ##Center align (continued)
-      
-      Now, set the `line-height` to normal to override the `line-height` set in the `li`.  Then finally, `vertical-align: middle` can be added to vertically align the lines of text to each other (which probably seems like it should have work in the first place but doesnt... ugh.)
-      
-      ```
-      .skills-circles span {
-        display: inline-block;
-        line-height: normal;
-        vertical-align: middle;
-      }
-      ```
-
-      Your page should look like this: [Example 12](project/examples/12-circles.html).
-    </section>
-
-    <section class="slide" data-markdown>
-      ##Positioning in CSS
-      
-      Sometimes floats and display just doesn't cut it. 
-
-      The `position` property can be used to place elements in specific spots on the page without affecting the elements around it the way floats do.  There are three options: relative, absolute and fixed. Elements are all `static` by default.
-
-      `position` is used in conjunction with offset properties: `top`, `right`, `bottom`, and `left`. These are use to identify where an element will be positioned.
-
-    </section>
-    <section class="slide">
-      <h2>Position: relative</h2>
-      
-      <p>When setting the position to <code>relative</code>, elements will still appear within the <strong>normal flow</strong> a page but will unlock the additional offset properties (top, right, bottom, left).  You can use these values to nudge the element in different directions.</p>
-
-
-       <textarea class="snippet" data-subject="#relative">.box { 
-  width: 100px;
-  height: 100px; 
-  background: blue;
-  position: relative;
-  top:;
 }
-      </textarea>
-      <div id="#relative">
-        <div class="box"></div>
-      </div>  
-    </section>
+</code></pre>
+        </section>
+        <section class="slide image-only" data-markdown>
+            ##Hmm....
 
-    <section class="slide">
-      <h2>Position: absolute</h2>
-      
-      <p>When positioning an element as <code>absolute</code>, it needs to also be paired with <code>relative</code> positioning. `relative` on it's own doesn't affect other elements but it is used to <em>contain</em> an `absolute` position element to a particular spot. Otherwise, it will position itself to the <em>viewport</em>, or browser window.</p>
-      <pre><code>&lt;div class=&quot;container&quot;&gt;
-    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+            ![](framework/img/circles.png)
+
+            If you see this, you didn't break it. It's just CSS.
+        </section>
+
+        <section class="slide image-only" data-markdown>
+            ![](framework/img/css.gif)
+        </section>
+
+        <section class="slide" data-markdown>
+            ##Center align
+
+            Aligning elements horizontally is pretty straightforward, `text-align: center` or `margin: 0 auto`.  
+
+            Vertical align? No so much. 
+
+            Today we are going to try out one way. Remember `line-height`? It's used to create spacing between lines of content but if we set it to be the same as the height of the box, it will make the content inside align vertically.
+
+            ... Unless you have text that is more than one line.
+
+            ![](framework/img/line-height.png)
+        </section>
+
+        <section class="slide" data-markdown>
+            ##Center align (continued)
+
+            If we look at the HTML markup, a `span` tag was added around each word so that we can still use the `line-height` trick on the list item, but now we can use the `span` tag to override the styles we don't want.
+
+```xml
+&lt;ul&gt;
+    &lt;li&gt;&lt;span&gt;Social Media&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span&gt;Marketing Strategy&lt;/span&gt;&lt;/li&gt;
+    ...
+&lt;/ul&gt;
+```
+            ```
+            .skills-circles ul li {
+                display: inline-block;
+                height: 150px;
+                width: 150px;
+                border: 2px solid #2980b9;
+                border-radius: 50%;
+                line-height: 150px;
+            }
+            ```
+            Create a new declaration block for the `span` tag, you can skip a couple levels even though it's nested inside of the `li` (remember, Inception... )
+
+            We need to make the span take on the characteristics if a block element in order for this fix to work.
+
+            ```css
+            .skills-circles span {
+                display: inline-block;
+            }
+            ```
+        </section>
+
+        <section class="slide" data-markdown>
+            ##Center align (continued)
+            
+            Now, set the `line-height` to normal to override the `line-height` set in the `li`.  Then finally, `vertical-align: middle` can be added to vertically align the lines of text to each other (which probably seems like it should have work in the first place but doesnt... ugh.)
+            
+            ```
+            .skills-circles span {
+                display: inline-block;
+                line-height: normal;
+                vertical-align: middle;
+            }
+            ```
+
+            Your page should look like this: [Example 12](project/examples/12-circles.html).
+        </section>
+
+        <section class="slide" data-markdown>
+            ##Positioning in CSS
+            
+            Sometimes floats and display just doesn't cut it. 
+
+            The `position` property can be used to place elements in specific spots on the page without affecting the elements around it the way floats do.  There are three options: relative, absolute and fixed. Elements are all `static` by default.
+
+            `position` is used in conjunction with offset properties: `top`, `right`, `bottom`, and `left`. These are use to identify where an element will be positioned.
+
+        </section>
+        <section class="slide">
+            <h2>Position: relative</h2>
+            
+            <p>When setting the position to <code>relative</code>, elements will still appear within the <strong>normal flow</strong> a page but will unlock the additional offset properties (top, right, bottom, left).  You can use these values to nudge the element in different directions.</p>
+
+
+             <textarea class="snippet" data-subject="#relative">.box { 
+    width: 100px;
+    height: 100px; 
+    background: blue;
+    position: relative;
+    top:;
+}
+            </textarea>
+            <div id="#relative">
+                <div class="box"></div>
+            </div>  
+        </section>
+
+        <section class="slide">
+            <h2>Position: absolute</h2>
+            
+            <p>When positioning an element as <code>absolute</code>, it needs to also be paired with <code>relative</code> positioning. `relative` on it's own doesn't affect other elements but it is used to <em>contain</em> an `absolute` position element to a particular spot. Otherwise, it will position itself to the <em>viewport</em>, or browser window.</p>
+            <pre><code>&lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-      <textarea class="snippet" data-subject="#absolute">.container {
-  position: relative;
+            <textarea class="snippet" data-subject="#absolute">.container {
+    position: relative;
 }
 .box { 
-  width: 100px;
-  height: 100px; 
-  background: blue;
-  position: absolute;
-  top:;
+    width: 100px;
+    height: 100px; 
+    background: blue;
+    position: absolute;
+    top:;
 }</textarea>
 
-      <div id="absolute">
-        <div class="container">
-          <div class="box"></div>
-        </div>
-      </div>  
-    </section>
+            <div id="absolute">
+                <div class="container">
+                    <div class="box"></div>
+                </div>
+            </div>  
+        </section>
 
-    <section class="slide">
-      <h2>Position: fixed</h2>
-      
-      <p>When positioning an element as <code>fixed</code>, it will <<em>always</em> be positioned to the viewport. `relative` won't have any effect on this property. Also, it will always stay fixed on the page, even on page scroll.</p>
-      <pre><code>&lt;div class=&quot;container&quot;&gt;
-    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+        <section class="slide">
+            <h2>Position: fixed</h2>
+            
+            <p>When positioning an element as <code>fixed</code>, it will <<em>always</em> be positioned to the viewport. `relative` won't have any effect on this property. Also, it will always stay fixed on the page, even on page scroll.</p>
+            <pre><code>&lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-      <textarea class="snippet" data-subject="#fixed">.container {
-  position:;
+            <textarea class="snippet" data-subject="#fixed">.container {
+    position:;
 }
 .box { 
-  width: 100px;
-  height: 100px; 
-  background: blue;
-  position: fixed;
-  top:;
+    width: 100px;
+    height: 100px; 
+    background: blue;
+    position: fixed;
+    top:;
 }</textarea>
 
-      <div id="fixed">
-        <div class="container">
-          <div class="box"></div>
-        </div>
-      </div>  
-    </section>
+            <div id="fixed">
+                <div class="container">
+                    <div class="box"></div>
+                </div>
+            </div>  
+        </section>
 
-    <section class="slide" data-markdown>
-      ##Getting ready for the Final Exercise!
-      
-      Some people may still be interested having a hard copy of your resume, so let's give them an option to download a copy. Go back to your HTML document and add a link to a copy of the resume.  In your projects folder, there is a **resume.pdf** that you can use for today or feel free to use yours if you have it handy.
+        <section class="slide" data-markdown>
+            ##Getting ready for the Final Exercise!
+            
+            Some people may still be interested having a hard copy of your resume, so let's give them an option to download a copy. Go back to your HTML document and add a link to a copy of the resume.  In your projects folder, there is a **resume.pdf** that you can use for today or feel free to use yours if you have it handy.
 
-      Use the anchor tag to link to your resume file. You can also add a new HTML5 `download` attribute to trigger a download right away! Also, give it a class to apply unique styles to it.
-      
-      ```xml
-      &lt;a class="download" href=&quot;resume.pdf&quot; download&gt;
-      ```
-    
-      ###Download attribute value
+            Use the anchor tag to link to your resume file. You can also add a new HTML5 `download` attribute to trigger a download right away! Also, give it a class to apply unique styles to it.
+            
+            ```xml
+            &lt;a class="download" href=&quot;resume.pdf&quot; download&gt;
+            ```
+        
+            ###Download attribute value
 
-      `download` is one of the few attributes that do not require a value. If no value is declared, the file name that is downloaded will be the same as the file name attached in the link.  If a value is defined, the downloaded file will be the same name as that value. This technique would be useful if your site used generated file names.
+            `download` is one of the few attributes that do not require a value. If no value is declared, the file name that is downloaded will be the same as the file name attached in the link.  If a value is defined, the downloaded file will be the same name as that value. This technique would be useful if your site used generated file names.
 
-      ```xml
-      &lt;a class="download" href=&quot;resume.pdf&quot; download="new-filename.pdf"&gt;
-      ```
-    </section>
-    <section class="slide">
-      <h2>Exercise 13: Position and style download link</h2>
+            ```xml
+            &lt;a class="download" href=&quot;resume.pdf&quot; download="new-filename.pdf"&gt;
+            ```
+        </section>
+        <section class="slide">
+            <h2>Exercise 13: Position and style download link</h2>
 
-      <p>Apply fixed positioning to this element so that it’s always available as the user is scrolling through the page. </p>
+            <p>Apply fixed positioning to this element so that it’s always available as the user is scrolling through the page. </p>
 
-      <p>What properties &amp; values are needed to position this element to the top right of the page?</p>
+            <p>What properties &amp; values are needed to position this element to the top right of the page?</p>
 
 <pre class="delayed"><code>.download {
-    position: fixed;
-    top: 0;
-    right: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
 }
 </code></pre>
-      
-      <div class="delayed">
-        <p><code>a</code> tags are inline elements by default so to apply padding or other sizing styles to it, we need to change it’s display value to inline-block</p>
+            
+            <div class="delayed">
+                <p><code>a</code> tags are inline elements by default so to apply padding or other sizing styles to it, we need to change it’s display value to inline-block</p>
 
 <pre><code>.download {
-    position: fixed;
-    top: 0;
-    right: 0;
-    display: inline-block;
-}
-</code></pre>
-      </div>
-    </section>
-
-    <section class="slide" data-markdown>
-      ##Exercise 13: Position and style download link
-
-      Now style the link as you wish! Add some padding, remove default link underline and change the color!
-
-      Your final code could look something like this:
-
-      ```css
-      .download {
         position: fixed;
         top: 0;
         right: 0;
         display: inline-block;
-        background: #2980b9;
-        padding: 18px;
-        text-decoration: none;
-        color: #fff;
-      }
-      ```
-      [Example 13](examples/13-fixed.html)
-    </section>
-    
-    <section class="slide" data-markdown>
-      ##Final Stretch!
-      
-      From now until the end, take some time to make changes to smaller details like font sizes, margin, padding to give your HTML that extra polish!
-    </section>
+}
+</code></pre>
+            </div>
+        </section>
 
-    <section class="slide image-only" data-markdown>
-      ![](framework/img/now-what.gif)
-    </section>
+        <section class="slide" data-markdown>
+            ##Exercise 13: Position and style download link
 
-    <section class="slide" data-markdown>
-      ##Next steps
+            Now style the link as you wish! Add some padding, remove default link underline and change the color!
 
-      Here are some resources to help dive deeper into HTML & CSS
+            Your final code could look something like this:
 
-      * [Learn to Code HTML & CSS](http://learn.shayhowe.com/)
-      * [Codecademy](http://www.codecademy.com/)
-      * [Treehouse](http://teamtreehouse.com/)
-      * [Code School](https://www.codeschool.com/)
-      * [HTML and CSS: Design & Build Websites](http://www.htmlandcssbook.com/) (book)
-      * [CodePen](http://codepen.io/)
-      * [CSSDeck](http://cssdeck.com)
+            ```css
+            .download {
+                position: fixed;
+                top: 0;
+                right: 0;
+                display: inline-block;
+                background: #2980b9;
+                padding: 18px;
+                text-decoration: none;
+                color: #fff;
+            }
+            ```
+            [Example 13](examples/13-fixed.html)
+        </section>
+        
+        <section class="slide" data-markdown>
+            ##Final Stretch!
+            
+            From now until the end, take some time to make changes to smaller details like font sizes, margin, padding to give your HTML that extra polish!
+        </section>
 
-    </section>
+        <section class="slide image-only" data-markdown>
+            ![](framework/img/now-what.gif)
+        </section>
 
-    <!-- Last slide -->
-    <section class="slide last">
-      <h2>Thank you!</h2>
+        <section class="slide" data-markdown>
+            ##Next steps
 
-      <h2 class="title">
-        <span class="title-bg">CSS Fundamentals</span><br>
-        <span class="title-bg">for Beginners</span>
-      </h2>
-      <h3><span>with</span> Christina Truong</h3>
+            Here are some resources to help dive deeper into HTML & CSS
 
-      <img class="instructor-img" src="framework/img/christina-truong.jpg" alt="Christina Truong">
-      <ul>
-        <li><i class="fa fa-envelope"></i><a href="mailto:hello@christinatrong.com">hello@christinatrong.com</li>
-        <li><i class="fa fa-desktop"></i><a href="#" target="_blank">christinatruong.com</a></li>
-        <li><i class="fa fa-twitter"></i><a href="http://twitter.com/christinatruong" target="_blank">@christinatruong</a></li>
-      </ul>
+            * [Learn to Code HTML & CSS](http://learn.shayhowe.com/)
+            * [Codecademy](http://www.codecademy.com/)
+            * [Treehouse](http://teamtreehouse.com/)
+            * [Code School](https://www.codeschool.com/)
+            * [HTML and CSS: Design & Build Websites](http://www.htmlandcssbook.com/) (book)
+            * [CodePen](http://codepen.io/)
+            * [CSSDeck](http://cssdeck.com)
 
-      <p class="attribution">Slidedecks created with <a href="https://github.com/LeaVerou/csss">Lea Verou's CSS-based SlideShow System</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
-    </section>
-  </main><!-- cls main section -->
+        </section>
 
-   
-  <footer>
-    <p class="instructions">Use the left <i class="fa fa-arrow-left"></i> and right <i class="fa fa-arrow-right"></i> arrow keys to navigate</p>
+        <!-- Last slide -->
+        <section class="slide last">
+            <h2>Thank you!</h2>
 
-    <p class="license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a> by <a framework/xmlns:cc="http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
-  </footer>
+            <h2 class="title">
+                <span class="title-bg">CSS Fundamentals</span><br>
+                <span class="title-bg">for Beginners</span>
+            </h2>
+            <h3><span>with</span> Christina Truong</h3>
+
+            <img class="instructor-img" src="framework/img/christina-truong.jpg" alt="Christina Truong">
+            <ul>
+                <li><i class="fa fa-envelope"></i><a href="mailto:hello@christinatrong.com">hello@christinatrong.com</li>
+                <li><i class="fa fa-desktop"></i><a href="#" target="_blank">christinatruong.com</a></li>
+                <li><i class="fa fa-twitter"></i><a href="http://twitter.com/christinatruong" target="_blank">@christinatruong</a></li>
+            </ul>
+
+            <p class="attribution">Slidedecks created with <a href="https://github.com/LeaVerou/csss">Lea Verou's CSS-based SlideShow System</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
+        </section>
+    </main><!-- cls main section -->
+
+     
+    <footer>
+        <p class="instructions">Use the left <i class="fa fa-arrow-left"></i> and right <i class="fa fa-arrow-right"></i> arrow keys to navigate</p>
+
+        <p class="license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a> by <a framework/xmlns:cc="http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
+    </footer>
 
 
-  <script src="framework/scripts/slideshow.js"></script>
+    <script src="framework/scripts/slideshow.js"></script>
 
-  <!-- Uncomment the plugins you need -->
-  <script src="framework/scripts/plugins/css-edit.js"></script>
-  <script src="framework/scripts/plugins/css-snippets.js"></script>
-  <script src="framework/scripts/plugins/css-controls.js"></script>
-  <!-- <script src="plugins/code-highlight.js"></script>-->
+    <!-- Uncomment the plugins you need -->
+    <script src="framework/scripts/plugins/css-edit.js"></script>
+    <script src="framework/scripts/plugins/css-snippets.js"></script>
+    <script src="framework/scripts/plugins/css-controls.js"></script>
+    <!-- <script src="plugins/code-highlight.js"></script>-->
 
-  <script src="framework/scripts/plugins/markdown/marked.js"></script>
-  <script src="framework/scripts/plugins/markdown/markdown.js"></script>
-  <script src="framework/scripts/plugins/highlight/highlight.js"></script>    
-  <script>hljs.initHighlightingOnLoad();</script>
+    <script src="framework/scripts/plugins/markdown/marked.js"></script>
+    <script src="framework/scripts/plugins/markdown/markdown.js"></script>
+    <script src="framework/scripts/plugins/highlight/highlight.js"></script>    
+    <script>hljs.initHighlightingOnLoad();</script>
 
-  <!-- Prettify -->
-  <script src="framework/scripts/plugins/prettify.js"></script>
-  <script src="framework/scripts/plugins/lang-css.js"></script>
-  <script src="framework/scripts/plugins/prism.js"></script>
+    <!-- Prettify -->
+    <script src="framework/scripts/plugins/prettify.js"></script>
+    <script src="framework/scripts/plugins/lang-css.js"></script>
+    <script src="framework/scripts/plugins/prism.js"></script>
 
-  <script>
-    var slideshow = new SlideShow();
+    <script>
+        var slideshow = new SlideShow();
 
-    // Grabs all the .snippet elements
-    var snippets = document.querySelectorAll('.snippet');
-    for(var i=0; i<snippets.length; i++) {
-      new CSSSnippet(snippets[i]);
-    }
+        // Grabs all the .snippet elements
+        var snippets = document.querySelectorAll('.snippet');
+        for(var i=0; i<snippets.length; i++) {
+            new CSSSnippet(snippets[i]);
+        }
 
-    var links = document.getElementByTagName("a");
-    for (var i = 0; i < links.length; i++) {
-        var link = links[i];
-        link.addEventListener(function () {
-            window.open(this.href);
-        });
-    }
-  </script>
+        var links = document.getElementByTagName("a");
+        for (var i = 0; i < links.length; i++) {
+                var link = links[i];
+                link.addEventListener(function () {
+                        window.open(this.href);
+                });
+        }
+    </script>
 </body>
 </html>

@@ -1,11 +1,11 @@
 /*
 	Slideshow theme for Ladies Learning Code
-	Additional customizations
-	@author Christina Truong
+	@author Christina Truong | christinatruong.com
 	@version 1.0
 */
 
 @import "variables";
+@import "mixins";
 
 
 /* Global styles
@@ -15,7 +15,8 @@
 	box-sizing: border-box;
 }
 
-/* updated clearfix hack: http://css-tricks.com/snippets/css/clear-fix/ */
+/* updated clearfix hack: 
+http://css-tricks.com/snippets/css/clear-fix/ */
 .group:after {
 	content: "";
 	display: table;
@@ -29,13 +30,18 @@ html {
 body {
 	padding: 0;
 	margin: 0;
-	// font: 2.5rem/1.4 $base-font;
 	font: $font-size-default/1.4 $base-font;
 	color: $gray-dark;
 	border-top: 4px solid $llc-pink;
 	-webkit-font-smoothing: antialiased;
 	background: #ecf0f1;
 }
+@-moz-document url-prefix() {
+	body {
+		font-weight: $light;
+	}
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: $heading-font;
 	line-height: 1.25;
@@ -44,6 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
 	font-weight: 400;
+	font-size: $font-size-h1;
 }
 h1, h2 {
 	margin: 0;
@@ -53,7 +60,7 @@ h2 {
 	font-size: $font-size-h2;
 }
 h3 {
-	margin-bottom: 0;
+	margin-bottom: 5px;
 	font-size: $font-size-h3;
 
 	+ p {
@@ -70,6 +77,9 @@ a {
 	}
 }
 
+pre code {
+	overflow-y: auto;
+}
 code {
 	font-family: Monaco, Andale Mono, monospace;
 	color: #444;
@@ -84,17 +94,17 @@ footer {
 	z-index: 100;
 	text-align: center;
 	background: rgba(white, 0.6);
-	font-size: 16px;
-	
+	font-size: 14px;
+
+	i {
+		color: $llc-pink;
+	}
 	p {
-		margin: 5px 0;
+		margin: 4px 0;
 	}
 	.instructions {
 		float: right;
 		margin-right: 20px;
-	}
-	i {
-		color: $llc-pink;
 	}
 	.license {
 		float: left;
@@ -110,32 +120,49 @@ footer {
 /* Base styles for slides
 --------------------------*/
 .slide {
-	padding: 45px 3%;
-	height: 100%;
+	padding: 45px 5%;
+	height: 96%;
+
+	img {
+		max-width: 100%;
+	}
 
 	&:target {
 		overflow: scroll;
 	}
-}
-
-header.slide:target {
-	overflow: visible;
-}
-
-/* vertical align heading */
-section.slide {
-	transform-style: preserve-3d;
-
-	h1 {
-		position: relative;
+	&.js-fiddle > iframe:only-of-type {
+		position: static;
+		width: 525px;
+		height: 350px;
+	}
+	&.centered {
 		text-align: center;
-		top: 42%;
-		transform: translateY(-42%);
-		font-size: $font-size-h1 + 1rem;
+
+		img {
+			width: 60%;
+		}
 	}
 }
 
-// Progress Bar
+
+/* vertical align heading */
+.slide.title {
+	transform-style: preserve-3d;
+	padding-left: 8%;
+	padding-right: 8%;
+
+	h1, h2 {
+		position: relative;
+		text-align: center;
+		top: 40%;
+		transform: translateY(-40%);
+	}
+	h2 {
+		color: $gray;
+	}
+}
+
+/* Progress Bar */
 #timer {
 	height: 4px;
 	line-height: 4px;
@@ -149,19 +176,50 @@ section.slide {
 	}
 }
 
-// textarea for dynamic CSS demos
+
+/* textarea for dynamic CSS demos */
 textarea.snippet {
 	width: 100%;
 	border: 1px solid #222;
 	padding: 15px 20px;
+	margin-bottom: 15px;
 	font-family: Monaco, Andale Mono, monospace;
-	font-size: 20px!important; /* todo, fix this */
 }
+
+
+/* table styles */
+table {
+	th {
+		font-weight: $normal;
+	}
+	img {
+		width: 100%;
+	}
+}
+
+
+/* Creates border for slide examples */
+.example {
+	border: 1px solid $gray-light;
+	padding: 0 15px;
+
+	p {
+		margin: 10px 0;
+	}
+}
+
+/* Incremental slides */
+.delayed.displayed, 
+.delayed-children > .displayed {
+    opacity: 1;
+}
+
 
 /* First/Intro slide
 ---------------------*/
 .intro {
-	/* background: $gray-dark; */ /*uncomment this if you don't want to use a background image */
+	/*uncomment this if you don't want to use a background image */
+	/* background: $gray-dark; */ 
 	background: linear-gradient(rgba($black, 0.1),rgba($black, 0.8)), url(../img/banner-home.jpg) no-repeat;
 	background-size: cover;
 	color: $white;
@@ -221,17 +279,12 @@ textarea.snippet {
 	border-radius: 2px;
 }
 
-/* presenter notes overrides */
+/* presenter notes overrides
+-------------------------------*/
 .presenter-notes {
-	bottom: 30px;
+	bottom: 0;
 	width: 100%;
 	background: rgba(255, 255, 255, .9);
 	font-size: 18px;
+	margin: 0;
 }
-
-.delayed.displayed {
-	opacity: 1;
-}
-
-
-
