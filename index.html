@@ -41,9 +41,9 @@
 
             <img class="instructor-img" src="framework/img/christina-truong.jpg" alt="Christina Truong">
             <ul>
-                <li><i class="fa fa-envelope"></i><a href="mailto:hello@christinatrong.com">hello@christinatrong.com</li>
-                <li><i class="fa fa-desktop"></i><a href="#" target="_blank">christinatruong.com</a></li>
-                <li><i class="fa fa-twitter"></i><a href="http://twitter.com/christinatruong" target="_blank">@christinatruong</a></li>
+                <li><i class="fa fa-envelope"></i><a href="mailto:hello@christinatruong.com">hello@christinatruong.com</li>
+                <li><i class="fa fa-desktop"></i><a href="#">christinatruong.com</a></li>
+                <li><i class="fa fa-twitter"></i><a href="http://twitter.com/christinatruong">@christinatruong</a></li>
             </ul>
         </div>
     </header>
@@ -100,6 +100,11 @@
             No CSS has been applied yet so all you will see is the HTML content and the default styles like in [this example](project/examples/1-no-css.html).
         </section>
 
+        <section class="slide title" data-markdown>
+            #hypertext markup language
+            ##The content layer
+        </section>
+
         <section class="slide" data-markdown>
             ##HTML: Quick Review
             
@@ -117,7 +122,7 @@
             &lt;p&gt;I'm a paragraph.&lt;/p&gt;
             ```
 
-            **Link**: requires the addition of a `src` *attribute* to specify where to link to.
+            **Link**: requires the addition of an `href` *attribute* to specify where to link to.
             
             ```
             &lt;a href=&quot;http://website.com&quot;&gt;link&lt;/a&gt;
@@ -146,7 +151,8 @@
             ##Exercise #1: Personalize the content (10 mins)
 
             1. Update your name and tagline in the `header` section.
-            2. Update your profile / personal summary / profile image, if you have a picture handy.
+            1. Update the page title in the `title` tag.
+            1. Update your profile / personal summary / profile image, if you have a picture handy.
 
             Don't forget to save your changes!  
             Save the file using **File > Save**, or use keyboard shortcuts (**CMD + S** or **CNTL + S**)
@@ -156,8 +162,9 @@
             Don't worry if you don't finish. There's placeholder content already included in the starter template.
         </section>
 
-        <section class="slide" data-markdown>
-            #Let's dive into CSS
+        <section class="slide title" data-markdown>
+            #Cascading Style Sheets
+            ##The presentation layer
         </section>
 
         <section class="slide" data-markdown>
@@ -472,8 +479,8 @@
             In the above example, the CSS properties in the body selector is inherited by the children and descendants so all the text would be blue and display the Helvetica font. However, when a more specific selector is used (`h1`), it overrides the inherited values because it's more *specific*.
         </section>
 
-        <section class="slide">
-            <h1>Font Styles<br> &<br> Typography</h1>
+        <section class="slide title" data-markdown>
+            #Typography
         </section>
 
         <section class="slide" data-markdown>
@@ -491,7 +498,7 @@
         </section>
 
         <section class="slide" data-markdown>
-            ##Custom fonts
+            ##Web fonts
 
             For more options than just using the web safe fonts, services like [Google Fonts](http://www.google.com/fonts/) and [Font Squirrel](http://www.fontsquirrel.com/) can make it easier to use a variety of fonts that aren't normally supported by all computers.
 
@@ -525,7 +532,7 @@ color: #222222;</textarea>
 
         <section class="slide">
             
-            <h2>Exercise #3: Typography</h2>
+            <h2>Class Exercise: Typography</h2>
             
             <p>Let's add some styles together first and start with some web safe fonts, <a href="http://cssfontstack.com/">cssfontstack.com</a>.</p>
 
@@ -555,8 +562,10 @@ h3 {
     text-transform: uppercase;
 }</code></pre>
 
-            <!-- reference 3-typography -->
-
+            <!-- 
+            PRESENTER NOTES:
+            Reference 3-typography 
+            -->
             <p class="presenter-notes">
             * reference 3-typography in example folder<br>
             * Add main font family &amp; line-height to body - explain inheritance <br>
@@ -566,7 +575,7 @@ h3 {
         <section class="slide" data-markdown>
             ##Refactor!
 
-            What is refactoring? Code refactoring is the process of restructuring existing code to make it more efficient. Writing clean, organized and efficient code will not only make your pages run faster but will make it easier to maintain and can potentially reduce browser bugs. It's tempting to say "I'll fix it later" but later doesn't always come. It's important to re-factor your code as you go along.
+            What is refactoring? Code refactoring is the process of restructuring existing code to make it more efficient. Writing clean, organized and efficient code will not only make your pages run faster but will make it easier to maintain and can potentially reduce browser bugs. It's tempting to say "I'll fix it later" but later doesn't always come. It's important to refactor your code as you go along.
 
             If you find you are declaring the same styles over and over again, try using a `class` or apply the style to a parent selector so the styles can be inherited. You can also *combine* selectors to apply the same styles to multiple selectors at the same time.  Make sure to separate selectors with a comma.
 
@@ -577,9 +586,9 @@ h3 {
             ```
         </section>
         <section class="slide" data-markdown>
-            ##Exercise #3 Typography (continued)
+            ##Class Exercise: Typography (continued)
 
-            The previous example can be re-factored to look like this:
+            The previous example can be refactored to look like this:
             
             ```
             h1, h2, h3 {
@@ -599,7 +608,7 @@ h3 {
             ```
         </section>
         <section class="slide" data-markdown>
-            ##Exercise #3 Typography (Continued)(15mins)
+            ##Exercise #3: Typography (10mins)
 
             1. Find and add 2-3 font families from [Google Fonts](http://www.google.com/fonts/)
             1. Update the font & typography styles to your liking! You can add some more later as the page starts to come together.
@@ -608,11 +617,11 @@ h3 {
 
             Need help deciding on fonts?  The example project uses Open Sans (sans-serif), Merriweather (serif), Pacifico (cursive).
             
-            Your page should look something like this: [Example 3](project/examples/3-typography.html)
+            Your page should look something like this: [Example 3](project/examples/3-typography.html).
         </section>
 
-        <section class="slide">
-            <h1>The Box Model</h1>
+        <section class="slide title" data-markdown>
+            #The Box Model
         </section>
         
         <section class="slide" data-markdown>
@@ -708,17 +717,23 @@ margin: 0 0 0 0;</textarea>
             ![](framework/img/cant-even.gif)
         </section>
 
-        <section class="slide">
-            <h2>Box Model Fix!</h2>
-            <p>Luckily, there’s a fix for this.</p>
-            <p>Enter the <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">box-sizing: border-box</a> fix ftw!  It is recommended to add this snippet to all your projects.</p>
-<pre><code>/* apply a natural box layout model to all elements */
-*, *:before, *:after {
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-}</code></pre>
-            <img src="framework/img/box-model-fix.gif">
+        <section class="slide" data-markdown>
+            ##Box Model Fix!
+                
+            Luckily, there’s a fix for this. Enter the [box-sizing: border-box](http://www.paulirish.com/2012/box-sizing-border-box-ftw/) fix ftw!  
+
+            It is recommended to add this snippet to all your projects.
+
+            ```
+            /* apply a natural box layout model to all elements, but allowing components to change */
+            html {
+                box-sizing: border-box;
+            }
+            *, *:before, *:after {
+                box-sizing: inherit;
+            }
+            ```
+            ![box model diagram](framework/img/box-model-fix.gif)
         </section>
 
         <section class="slide">
@@ -751,7 +766,7 @@ margin: 0 auto;</textarea>
 
         <section class="slide" data-markdown>
             ##Class exercise
-            1. Add the box model fix to our CSS file. [link](/#slide38)
+            1. Add the box model fix to our CSS file. [link](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
 
             1. Go back to our HTML & CSS project files, add `padding:1px` to the `header` section to see how it changes the spacing. Open up the Chrome Dev Tools and inspect the element.
 
@@ -984,7 +999,7 @@ max-width: 1000px;
             Your page should look something like this: [Example 5](project/examples/5b-heading-bg.html)
         </section>
         
-        <section class="slide" data-markdown>
+        <section class="slide title" data-markdown>
             #Inline & Block
             #Elements
         </section>
@@ -1071,7 +1086,7 @@ max-width: 1000px;
 
         </section>
             
-        <section class="slide" data-markdown>
+        <section class="slide title" data-markdown>
             #More selectors & Using multiple classes
         </section>
 
@@ -1264,10 +1279,10 @@ max-width: 1000px;
 
             If you get stuck, ask a mentor! Don't worry if you don't finish, we'll go through it together as a class.
 
-            Your page should look something like this: [Example 7](/project/examples/7-bg.html)
+            Your page should look something like this: [Example 7](project/examples/7-bg.html).
         </section>
 
-        <section class="slide" data-markdown>
+        <section class="slide title" data-markdown>
             #CSS3!
         </section>
                 
@@ -1808,7 +1823,7 @@ Here's what your page should look like: [example 10](project/examples/10-skills-
 
             <img class="instructor-img" src="framework/img/christina-truong.jpg" alt="Christina Truong">
             <ul>
-                <li><i class="fa fa-envelope"></i><a href="mailto:hello@christinatrong.com">hello@christinatrong.com</li>
+                <li><i class="fa fa-envelope"></i><a href="mailto:hello@christinatruong.com">hello@christinatruong.com</li>
                 <li><i class="fa fa-desktop"></i><a href="#" target="_blank">christinatruong.com</a></li>
                 <li><i class="fa fa-twitter"></i><a href="http://twitter.com/christinatruong" target="_blank">@christinatruong</a></li>
             </ul>
