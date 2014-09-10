@@ -54,14 +54,14 @@
 
             Follow [this link](project/final.html) to see the whole project!
             
-            ![final project](framework/img/final-project.jpg)  
+            ![final project](framework/img/workshop/final-project.jpg)  
         </section>
 
         <section class="slide image-only" data-markdown>
             ##A demonstration of what can be
             ##accomplished through CSS-based design
 
-            ![](framework/img/css-zen-garden.png)
+            ![](framework/img/workshop/css-zen-garden.png)
 
             http://csszengarden.com/
         </section>
@@ -82,20 +82,35 @@
         <section class="slide" data-markdown>
             ##Setting Up Our Work Flow
 
+            Inside of the folder you downloaded today, **llc-css-fundamentals-master**, there are many more folders and files that contain different content.
+            
+            ```
+            llc-css-fundamentals-master
+                |-- framework // Contains files needed for slide presentation. Do not edit!
+                |-- project // Contains files for today's workshop.
+                    |-- css // Only CSS files here.
+                    |-- examples // Example HTML/CSS files for each exercise.
+                    |-- images // Images for your project. You can also add your images here.
+                    |-- final.html // Finished example for you to refer to. The CSS file is in the CSS folder.
+                    |-- index.html // Your resume HTML page.
+                |-- index.html // This is the file you're viewing right now (slides)!
+            ```
+        </section>
+        <section class="slide" data-markdown>
+            ##Setting Up Our Work Flow
+
             Open our project files in the browser and text editor.
 
             1. Open Sublime Text and go to **File > Open**.
 
-                ![](framework/img/1-setup.png)
+                ![](framework/img/workshop/1-setup.png)
             1. Navigate to the **Project** folder (in the folder you downloaded with today's slides). With the entire folder selected, select **Open**.
-
-                ![](framework/img/2-setup.png)
+                <!-- ![](framework/img/workshop/2-setup.png) -->
             1. The folder will appear in Sublime's side bar. Double click on **index.html** in the sidebar to open it.
-
-                ![](framework/img/3-setup.png)
+                <!-- ![](framework/img/workshop/3-setup.png) -->
             1. Right click or two finger tap and select **Open in Browser**. This will open the HTML file in your *default* browser.
 
-                ![](framework/img/4-setup.png)
+                ![](framework/img/workshop/4-setup.png)
 
             No CSS has been applied yet so all you will see is the HTML content and the default styles like in [this example](project/examples/1-no-css.html).
         </section>
@@ -109,6 +124,12 @@
             ##HTML: Quick Review
             
             HTML is used to define *content* so use the appropriate tag that best describes the meaning of your content.
+
+            **Title**: Found in the `&lt;head>` section of the HTML document. Used for defining the page title. Displays in the browser's tab, search engine results and bookmarks.
+            
+            ```xml
+            &lt;title&gt;Page Title&lt;/title&gt;
+            ```
 
             **Headings**: There are 6 heading tags available (`&lt;h1&gt;,&lt;h2&gt;,...,&lt;h6&gt;`) and follow a hierarchical structure. `&lt;h1&gt;` represents the most important title/heading on the page and it's best to stick to using it just once per page. Other headings can be used multiple times.  It's important to use the appropriate tag to describe the content, not for the default heading styles. That's what CSS is for!
 
@@ -145,21 +166,19 @@
             ```
             &lt;img src=&quot;path/to/image.jpg&quot;&gt;
             ```
-
         </section>
         <section class="slide" data-markdown>
             ##Exercise #1: Personalize the content (10 mins)
 
-            1. Update your name and tagline in the `header` section.
             1. Update the page title in the `title` tag.
-            1. Update your profile / personal summary / profile image, if you have a picture handy.
+            1. Update your name and tagline in the `header` section.
+            1. Update your profile / personal summary / profile image.
 
-            Don't forget to save your changes!  
-            Save the file using **File > Save**, or use keyboard shortcuts (**CMD + S** or **CNTL + S**)
+            Don't forget to save your changes (**File > Save**) and refresh the browser after each update! Don't worry if you don't finish. There's placeholder content already included in the starter template.
 
-            After saving, just refresh the browser to see the changes (rather than opening your file in a new tab every time). Find a work flow that works best for you when making frequent changes. 
-            
-            Don't worry if you don't finish. There's placeholder content already included in the starter template.
+            **Protip!** Improve your work flow with keyboard shortcuts:  
+            **CMD/CTRL + S** to save  
+            **CMD/CTRL + R** to refresh the browser
         </section>
 
         <section class="slide title" data-markdown>
@@ -170,7 +189,8 @@
         <section class="slide" data-markdown>
             ##CSS Overview
 
-            HTML defines *content*, CSS defines the *presentation*.  
+            HTML defines *content*, CSS defines the *presentation*.
+
             **Selectors:** used to determine which element(s) to apply the styles to. Can target an HTML tag, class or ID.  
             **Declaration block:** consists of a list of declarations (rules to follow) wrapped in curly braces `{}`.  
             **Declarations** or rules to follow, are written using `property:value` pairs.
@@ -184,7 +204,7 @@
             the element (e.g. color).  
             **Values** are specific to the property. Declarations must end with a semi-colon (`;`) to indicate that the instruction is complete.
             
-            ![](framework/img/css.png)
+            ![](framework/img/workshop/css.png)
         </section>
 
         <section class="slide">
@@ -235,25 +255,32 @@
         </section>
 
         <section class="slide" data-markdown>
-            ##Classes vs IDs
+            ##Class & ID attributes
             
-            When **type selectors** are too general (targeting the HTML element), HTML gives us two ways to attach extra identifying information to target specific elements with two **attributes**, `class` and `id`.  
+            When **type selectors** are too general (targeting the HTML element), HTML gives us two ways to attach extra identifying information to target specific elements with two **attributes**, `class` (can be used multiple times) and `id` (can only be used once per page).  
+
             ``` 
             /* targets ALL parapraphs */
             p {
-                color: red;
+                color: blue;
             }
-            /* only applies to the element that contains this class */
+            /* only applies to the element that contains this class, defined by leading period */
             .danger {
                 color: red;
             }
-            /* only applies to the element that contains this id  */
+            /* only applies to the element that contains this id, defined by number symbol  */
             #danger {
-                color: red;
+                border: 1px solid red;
             }
             ```
+
+            ```xml   
+            &lt;p&gt;Regular text.&lt;/p&gt;
+&lt;p class=&quot;danger&quot;&gt;Red error message text or some other dangerous text.&lt;/p&gt;
+&lt;div id="danger"&gt;Will display a red border.&lt;/div&gt;
+            ```
         </section>
-        <section class="slide" data-markdown>
+        <!-- <section class="slide" data-markdown>
             ##Class Selectors
 
             A `class` **attribute** can be added to any element but the value is defined by you.  The class can then be used as a selector to apply styles to *any* element that references the class attribute. In CSS, a `class` selector is defined by a leading period (`.`) followed by the class name with *no* spaces as your CSS selector. 
@@ -287,11 +314,11 @@
                 width: 800px;
             }
             ```
-        </section>
+        </section> -->
         <section class="slide" data-markdown>
-            ##class and id Naming Conventions
+            ##class & id Naming Conventions
 
-            When choosing a `class` or `id` name, use a descriptive name and don't use spaces. Hyphens (-), underscores (_) and camel case are acceptable. 
+            When choosing a `class` or `id` name, use a descriptive name and do **not** use spaces. Hyphens (-), underscores (_) and camel case are acceptable. 
 
             CSS is also case sensitive, so while these three examples look similar, CSS will read these as three different classes so it's important (for your own sanity) to pick one style and be consistent.
             
@@ -304,7 +331,7 @@
 
         <section class="slide">
             <h2>Adding Background Colours</h2>
-            <p>Using the <code>background</code> (shorthand) or <code>background-color</code> (longhand) property to add colours to various page sections can be very useful when laying out the CSS for your HTML document. For now, you can use either.  We will be going more in depth with the various background options. Try changing the color below and see what happens!</p>
+            <p>Using the <code>background</code> (shorthand) or <code>background-color</code> (longhand) property to add colours to various page sections can be very useful when laying out the CSS for your HTML document. We will be going more in depth with the various background options  but for now, you can use either property. Try changing the colours below and see what happens!</p>
 
             <textarea class="snippet" data-subject="#bg-shorthand">background: lightblue;</textarea>
             <div id="bg-shorthand">
@@ -403,40 +430,42 @@
         <section class="slide" data-markdown>
             ##Exercise 2: add background colours (10mins)
             
-            1. In Sublime, open **main.css** (it should be blank). It is located in **Project > css **. Link it (reference it) in your HTML document.
+            1. In Sublime, open **style.css** (it should be blank). It is located in **project > css **. Link it (reference it) in your HTML document.
 
-            1. Try using comments to organize your CSS into sections so you can group related CSS together.
-            
             1. Using `background` or `background-color`, add a different background colour to each major section of the page.  Use an **element selector** for the header and **class selectors** for the sections. Since there are multiple `&lt;section&gt;` tags, we need to use a more specific selector to give them each a different colour.  Here are the selectors to get started: 
             
-            ```
-            header { }  
-            .profile { }  
-            .work-experience { }  
-            .skills { }  
-            .education { }  
-            .contact { }
-            ```
+                ```
+                header { }  
+                .profile { }  
+                .work-experience { }  
+                .skills { }  
+                .education { }  
+                .contact { }
+                ```
 
-            Your page should look something like this: [background colour example](project/examples/2-bg-colours.html).
+            1. Try using comments to organize your CSS into sections so you can group related CSS together.
+
+            Your page should look something like this: [background colour example](project/examples/2-bg-colours.html). Example files can be found under **project > examples** and **project > examples > css **.
         </section>
 
         <section class="slide">
             <h2>Default styles: Reset vs Normalize</h2>
 
-            <p>Every browser has its own default ‘user agent’ stylesheet to add default styles to the html elements. (ex. links are blue, h1 are bigger than h2)</p>
+            <p>Every browser has its own default ‘user agent’ stylesheet to add default styles to the html elements. Here's an example of Chrome's user agent style sheet, which can be seen using dev tools:</p>
+            <img src="framework/img/workshop/chrome-user-agent.png">
 
-            <p>A <strong>CSS Reset</strong> is a set of CSS rules that resets the styling of all HTML elements to a consistent baseline to avoiding cross-browser differences as much as possible.  <strong>Normalize</strong> is slightly different because it "normalizes" the default styling rather than removes the default styles.</p>
+            <p>A <strong>CSS Reset</strong> is a set of CSS rules that resets the user agent styles of the HTML elements to a consistent, <em>unstyled</em> baseline to avoid cross-browser differences as much as possible. <strong>Normalize</strong> is slightly different because it "normalizes" the consistencies to a default styling rather than <em>removes</em> the styles.</p>
 
-            <p>Note that if you add it as a separate stylesheet, it should be included <em>before</em> your custom stylesheet.</p>
+            <p>Another option is to choose a reset and customize it to create your own.</p>
 
-            <p>These various stylesheets can be downloaded at <a href="http://www.cssreset.com/">cssreset.com</a> but for today, it’s already included in the <strong>Projects</strong> folder.</p>
+            <p>Note that if you add it as a separate style sheet, it should be included <em>before</em> your custom style sheet.</p>
+
+            <p>These various style sheets can be downloaded at <a href="http://www.cssreset.com/">cssreset.com</a> but for today, it’s already included in the <strong>project > css</strong> folder. Let's add it to today's project file (index.html)</p>
             
             <p class="presenter-notes">
-                * look at differences after just adding normalize<br>
+                * Add the file and look at differences after just adding normalize<br>
                 * explain why normalize has to come before custom css
-            </p>
-            
+            </p>  
         </section>
         
         <section class="slide" data-markdown>
@@ -707,14 +736,14 @@ margin: 0 0 0 0;</textarea>
 
             <p>Let’s look at a diagram to see how all these different properties work together to change the size of an element.</p>
 
-            <img src="framework/img/box-model.gif" alt="" title="">
+            <img src="framework/img/workshop/box-model.gif" alt="" title="">
 
             <p>The original element started with a width and height of <strong>400 x 100</strong>. After including the padding, border &amp; margin, the size of the box is actually <strong>492 x 192</strong>!</p>
         </section>
             
         <section class="slide image-only" data-markdown>
             ##I Can't... even...
-            ![](framework/img/cant-even.gif)
+            ![](framework/img/workshop/cant-even.gif)
         </section>
 
         <section class="slide" data-markdown>
@@ -733,7 +762,7 @@ margin: 0 0 0 0;</textarea>
                 box-sizing: inherit;
             }
             ```
-            ![box model diagram](framework/img/box-model-fix.gif)
+            ![box model diagram](framework/img/workshop/box-model-fix.gif)
         </section>
 
         <section class="slide">
@@ -780,7 +809,7 @@ margin: 0 auto;</textarea>
             ```
             Your page will look something like this:
 
-            ![](framework/img/margin-auto.png)
+            ![](framework/img/workshop/margin-auto.png)
         </section>
 
         <section class="slide">
@@ -875,7 +904,7 @@ max-width: 1000px;
         <section class="slide image-only" data-markdown>
             ##Avoid code bloat
 
-            ![](framework/img/bloat.jpg)
+            ![](framework/img/workshop/bloat.jpg)
         </section>
 
         <section class="slide" data-markdown>
@@ -1067,7 +1096,7 @@ max-width: 1000px;
             **Also**, if there is no width set, the element will float but the width will automatically be the width of its content.
         </section>
         <section class="slide image-only">
-            <img src="framework/img/shittier.gif">
+            <img src="framework/img/workshop/shittier.gif">
             <h2 class="delayed">Just kidding! We can fix it.</h2>
         </section>
 
@@ -1565,13 +1594,13 @@ Here's what your page should look like: [example 10](project/examples/10-skills-
         <section class="slide image-only" data-markdown>
             ##Hmm....
 
-            ![](framework/img/circles.png)
+            ![](framework/img/workshop/circles.png)
 
             If you see this, you didn't break it. It's just CSS.
         </section>
 
         <section class="slide image-only" data-markdown>
-            ![](framework/img/css.gif)
+            ![](framework/img/workshop/css.gif)
         </section>
 
         <section class="slide" data-markdown>
@@ -1585,7 +1614,7 @@ Here's what your page should look like: [example 10](project/examples/10-skills-
 
             ... Unless you have text that is more than one line.
 
-            ![](framework/img/line-height.png)
+            ![](framework/img/workshop/line-height.png)
         </section>
 
         <section class="slide" data-markdown>
@@ -1793,7 +1822,7 @@ Here's what your page should look like: [example 10](project/examples/10-skills-
         </section>
 
         <section class="slide image-only" data-markdown>
-            ![](framework/img/now-what.gif)
+            ![](framework/img/workshop/now-what.gif)
         </section>
 
         <section class="slide" data-markdown>
@@ -1821,7 +1850,7 @@ Here's what your page should look like: [example 10](project/examples/10-skills-
             </h2>
             <h3><span>with</span> Christina Truong</h3>
 
-            <img class="instructor-img" src="framework/img/christina-truong.jpg" alt="Christina Truong">
+            <img class="instructor-img" src="framework/img/workshop/christina-truong.jpg" alt="Christina Truong">
             <ul>
                 <li><i class="fa fa-envelope"></i><a href="mailto:hello@christinatruong.com">hello@christinatruong.com</li>
                 <li><i class="fa fa-desktop"></i><a href="#" target="_blank">christinatruong.com</a></li>
@@ -1834,9 +1863,8 @@ Here's what your page should look like: [example 10](project/examples/10-skills-
 
      
     <footer>
+        <p class="license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="framework/img/cc-by-nc.svg" /></a> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
         <p class="instructions">Use the left <i class="fa fa-arrow-left"></i> and right <i class="fa fa-arrow-right"></i> arrow keys to navigate</p>
-
-        <p class="license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a> by <a framework/xmlns:cc="http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
     </footer>
 
 
