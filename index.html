@@ -207,29 +207,6 @@
             ![](framework/img/workshop/css.png)
         </section>
 
-        <section class="slide">
-            <h2>CSS Syntax</h2>
-
-            <pre><code>h1 {
-    color: blue;
-    font-size: 12px;
-}</code></pre>
-
-            <p>In the above example:</p>
-
-            <ul>
-                <li>Which one is the selector? <br>
-                    <span class="delayed">h1</span>
-                </li>
-                <li class="delayed">Which one is the property? <br>
-                    <span class="delayed">color &amp; font-size</span>
-                </li>
-                <li class="delayed">Which one is the value? <br>
-                    <span class="delayed">blue &amp; 12px</span>
-                </li>
-            </ul>        
-        </section>
-
         <section class="slide" data-markdown>
             ##Comments
             
@@ -427,6 +404,24 @@
             ```
         </section>
 
+        <section class="slide">
+            <h2>Default styles: Reset vs Normalize</h2>
+
+            <p>Every browser has its own default ‘user agent’ stylesheet to add default styles to the html elements. Here's an example of Chrome's user agent style sheet, which can be seen using dev tools:</p>
+            <img src="framework/img/workshop/chrome-user-agent.png">
+
+            <p>A <strong>CSS Reset</strong> is a set of CSS rules that resets the user agent styles of the HTML elements to a consistent, <em>unstyled</em> baseline to avoid cross-browser differences as much as possible. <strong>Normalize</strong> is slightly different because it "normalizes" the consistencies to a default styling rather than <em>removes</em> the styles. Another option is to choose a reset and customize it to create your own.</p>
+
+            <p>Note that if you add it as a separate style sheet, it should be included <em>before</em> your custom style sheet.</p>
+
+            <p>These various style sheets can be downloaded at <a href="http://www.cssreset.com/">cssreset.com</a> but for today, it’s already included in the <strong>project > css</strong> folder. Let's add it to today's project file (index.html).</p>
+            
+            <p class="presenter-notes">
+                * Add the file and look at differences after just adding normalize<br>
+                * explain why normalize has to come before custom css
+            </p>  
+        </section>
+
         <section class="slide" data-markdown>
             ##Exercise 2: add background colours (10mins)
             
@@ -445,27 +440,7 @@
 
             1. Try using comments to organize your CSS into sections so you can group related CSS together.
 
-            Your page should look something like this: [background colour example](project/examples/2-bg-colours.html). Example files can be found under **project > examples** and **project > examples > css **.
-        </section>
-
-        <section class="slide">
-            <h2>Default styles: Reset vs Normalize</h2>
-
-            <p>Every browser has its own default ‘user agent’ stylesheet to add default styles to the html elements. Here's an example of Chrome's user agent style sheet, which can be seen using dev tools:</p>
-            <img src="framework/img/workshop/chrome-user-agent.png">
-
-            <p>A <strong>CSS Reset</strong> is a set of CSS rules that resets the user agent styles of the HTML elements to a consistent, <em>unstyled</em> baseline to avoid cross-browser differences as much as possible. <strong>Normalize</strong> is slightly different because it "normalizes" the consistencies to a default styling rather than <em>removes</em> the styles.</p>
-
-            <p>Another option is to choose a reset and customize it to create your own.</p>
-
-            <p>Note that if you add it as a separate style sheet, it should be included <em>before</em> your custom style sheet.</p>
-
-            <p>These various style sheets can be downloaded at <a href="http://www.cssreset.com/">cssreset.com</a> but for today, it’s already included in the <strong>project > css</strong> folder. Let's add it to today's project file (index.html)</p>
-            
-            <p class="presenter-notes">
-                * Add the file and look at differences after just adding normalize<br>
-                * explain why normalize has to come before custom css
-            </p>  
+            Your page should look something like this: [background colour example](project/examples/2-bg-colours.html). Example files can be found under **project > examples** and **project > examples > css**.
         </section>
         
         <section class="slide" data-markdown>
@@ -547,14 +522,16 @@
 
         <section class="slide">
             <h2>Font Styles & Typography</h2>
-            <p>Let's look at a few CSS properties for styling text.</p>
-            <textarea class="snippet">line-height: 1.25;
+            <p>Let's experiment with a few CSS properties for styling text below by changing some values.</p>
+            <textarea class="snippet" data-subject="#typography-example">line-height: 1.25;
 font-family: Helvetica, Arial, serif;
 font-size: inherit;
 font-weight: normal;
 text-transform: inherit;
 color: #222222;</textarea>
-            <p>Just some text to test out the above styles. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni repellat sunt quae fugit illum in aut sed, quis nesciunt totam veritatis, dolores alias modi fuga commodi dicta facilis, consequatur temporibus.</p>
+            <div id="typography-example" class="example">
+                <p>Just some text to test out the above styles. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni repellat sunt quae fugit illum in aut sed, quis nesciunt totam veritatis, dolores alias modi fuga commodi dicta facilis, consequatur temporibus.</p>
+            </div>
 
             <p>Resource: <a href="http://reference.sitepoint.com/css/typography">Sitepoint Typographical Properties</a></p>
         </section>
@@ -563,7 +540,7 @@ color: #222222;</textarea>
             
             <h2>Class Exercise: Typography</h2>
             
-            <p>Let's add some styles together first and start with some web safe fonts, <a href="http://cssfontstack.com/">cssfontstack.com</a>.</p>
+            <p>Let's add some styles together using a few web safe fonts, <a href="http://cssfontstack.com/">cssfontstack.com</a>.</p>
 
             <p>1. Set the main font-family &amp; line-height using <code>body</code> as the selector.</p>
 
@@ -731,14 +708,17 @@ margin: 0 0 0 0;</textarea>
             ```
         </section>
 
-        <section class="slide">
-            <h2>Box Model Review</h2>
+        <section class="slide" data-markdown>
+            ##Box Model Review
 
-            <p>Let’s look at a diagram to see how all these different properties work together to change the size of an element.</p>
+            Let’s look at a diagram to see how all these different properties work together to change the size of an element.
 
-            <img src="framework/img/workshop/box-model.gif" alt="" title="">
+            ![box model](framework/img/workshop/box-model.gif)
 
-            <p>The original element started with a width and height of <strong>400 x 100</strong>. After including the padding, border &amp; margin, the size of the box is actually <strong>492 x 192</strong>!</p>
+
+            The original element started with a width and height of **400 x 100**. After including the padding, border &amp; margin, the size of the box is actually **452 x 152**!
+
+            Margin doesn't add to the actual size of the element but should be considered as part of the total size of the element because it adds space *around* it.
         </section>
             
         <section class="slide image-only" data-markdown>
@@ -768,13 +748,15 @@ margin: 0 0 0 0;</textarea>
         <section class="slide">
             <h2>More about margin</h2>
 
-            <p><code>margin</code> also accepts negative values, padding does not. When using negative values, it will push the box outside of it’s natural spot within the surrounding elements.</p>
+            <p><code>margin</code> also accepts negative values, padding does not. When using negative values, it will nudge the box outside of its natural spot within the page flow of the surrounding elements.</p>
 
             <textarea class="snippet" data-subject="#neg-margin">background-color: lightblue;
 width: 100px;
 padding: 20px;
 margin: 0px; /* change to negative value */</textarea>
             <div id="neg-margin">box</div>
+
+            <p>Extra resource: <a href="http://www.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/">The Definitive Guide to Using Negative Margins</a></p>
         </section>
 
         <section class="slide">
@@ -795,7 +777,7 @@ margin: 0 auto;</textarea>
 
         <section class="slide" data-markdown>
             ##Class exercise
-            1. Add the box model fix to our CSS file. [link](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
+            1. Add the box model fix to our CSS file. [link](index.html#slide39)
 
             1. Go back to our HTML & CSS project files, add `padding:1px` to the `header` section to see how it changes the spacing. Open up the Chrome Dev Tools and inspect the element.
 
@@ -812,42 +794,44 @@ margin: 0 auto;</textarea>
             ![](framework/img/workshop/margin-auto.png)
         </section>
 
-        <section class="slide">
-            <h2>Class exercise (continued)</h2>
+        <section class="slide" data-markdown>
+##Class exercise (continued)
 
-            <p>The content is centered but the background colour is restricted by the width dimension and doesn’t span the rest of the page anymore. To fix this, we’ll need to create a “container” just for center aligning the content by adding a new <code>div</code> with a class of <code>content-wrap</code> <em>around all of the profile content</em>.</p>
+The content is centered but the background colour is restricted by the width dimension and doesn’t span the rest of the page anymore. To fix this, we’ll need to create a “container” just for center aligning the content by adding a new `div<` with a class of `content-wrap` *around all of the profile content*.
 
-            <pre><code>&lt;section class="profile"&gt;
+```
+&lt;section class="profile"&gt;
     &lt;div class="content-wrap"&gt;&lt;!-- new content wrap div --&gt;
 
-            &lt;img src="images/profile-generic.jpg" alt="Your Name"&gt;
-            &lt;div class="summary"&gt;
-                    ...
-            &lt;/div&gt;
+        &lt;img src="images/profile-generic.jpg" alt="Your Name"&gt;
+        &lt;div class="summary"&gt;
+            ...
+        &lt;/div&gt;
 
     &lt;/div&gt;&lt;!-- close contact wrap div --&gt;
 &lt;/section&gt;
-</code></pre>
+    ```
 
-            <p>Then apply the styles to <code>.content-wrap</code> instead of <code>.profile</code>. Let's add some padding while we're at it too.</p>
-            <pre><code>.content-wrap {
+Then apply the styles to `.content-wrap` instead of `.profile`. Let's add some padding while we're at it too.
+```
+.content-wrap {
     width: 1000px;
     margin: 0 auto;
     padding: 60px 0;
 }
-</code></pre>
+```
         </section>
 
         <section class="slide">
             <h2>width &amp; max-width, px vs %</h2>
             
-            <p>The content is all nice and centered now but what happens when the browser window is smaller than the set width?</p>
+            <p>The content is all nice and centered now but what happens when the browser window is smaller than the set width? Let’s look at the difference between the <code>max-width</code> and <code>width</code> property and using percentages and pixels.</p>
 
-            <p>Let’s look at the difference between the <code>max-width</code> and <code>width</code> property and using percentages and pixels.</p>
+            <p>Minimize the screen and see how the box responds. Then change the width to a percentage value less than 100% and try it again.</p>
 
             <textarea class="snippet" data-subject="#widths">border: 1px solid black;
 margin: 0 auto;
-width: 90%;
+width: 100%;
 max-width: 1000px;
             </textarea>
             <div id="widths">
@@ -870,16 +854,6 @@ max-width: 1000px;
             ```
 
             Now we've created a reusable style that will help to keep our CSS nice and neat because we can apply this where ever this style is required, using the same class!
-        </section>
-
-        <section class="slide" data-markdown>
-            ##Exercise #4: Content wrappers! (15mins)
-
-            Add the `.content-wrap` to each section *except* the `header`.  We'll talk about why we're not adding this style to header after this exercise.
-
-            Let's go over how to collapse code blocks and tab multiple lines at the same time in Sublime first, to help make this addition easier.
-
-            Your page should look something like this: [example 4](project/examples/4-content-wrap.html).
         </section>
 
         <section class="slide" data-markdown>
@@ -908,6 +882,16 @@ max-width: 1000px;
         </section>
 
         <section class="slide" data-markdown>
+            ##Exercise #4: Content wrappers! (15mins)
+
+            Add the `.content-wrap` to each section *except* the `header`.  We'll avoid "divitis" by using different CSS to style the header (to be discussed after the exercise).
+
+            Let's go over how to collapse code blocks and tab multiple lines at the same time in Sublime first, to help make the addition of this markup a little easier.
+
+            Your page should look something like this: [example 4](project/examples/4-content-wrap.html).
+        </section>
+
+        <section class="slide" data-markdown>
             ##Update header & heading styles
         
             In the case of the `header` section, we can apply `text-align: center` instead of adding the `.content-wrap` since the content is short, we don't have to worry about containing it in a wrapper. Also, adjust the padding to add some more space in the header. The final code for header should look like this:
@@ -928,10 +912,18 @@ max-width: 1000px;
             }
             ```
 
-            Your page should now look like this: [Example](project/examples/5a-heading-headers.html)
+            Your page should now look like this: [Example](project/examples/5a-heading-headers.html).
         </section>
             
         <section class="slide" data-markdown>
+            ##Lunchtime exercise!
+
+            Need some time to check your work? Take a look in the example folder. We are now up to **5a-heading-headers.html** & **5a-heading-headers.css**
+
+            Also, prepare for the next exercise by picking two images to use as the background for your page. 
+        </section>
+
+        <section class="slide title" data-markdown>
             #Background images
         </section>
 
