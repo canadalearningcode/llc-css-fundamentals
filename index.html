@@ -321,22 +321,20 @@
         </section>
 
         <section class="slide" data-markdown>
-            ##color Property and Values
+            ##CSS color Property and Values
 
             The `color` property accepts different types of values.
 
             **keywords** - you can use the actual name of the colour for most basic colours (red, green, blue, pink, etc) as well as a few fancy ones like "papayaWhip" and "paleGoldenrod".  
+            
             **RGB (red-green-blue)** - Uses *three* numerical values from 0-255. 0 represents black and 255 represents white. See below for syntax.  
+            
             **hex code** - Made up of the number sign (`#`) followed by six hexadecimal characters (0-9, A-F) or three hexadecimal characters (0-9, A-F).
             
             ```
             p {
                 background: firebrick;
-            }
-            p {
                 background: #B22222;
-            }
-            p {
                 background: rgb(178,34,34);
             }
             ```
@@ -407,7 +405,7 @@
         <section class="slide">
             <h2>Default styles: Reset vs Normalize</h2>
 
-            <p>Every browser has its own default ‘user agent’ stylesheet to add default styles to the html elements. Here's an example of Chrome's user agent style sheet, which can be seen using dev tools:</p>
+            <p>Every browser has its own default <em>user agent</em> stylesheet to add default styles to the html elements. Here's an example of Chrome's user agent style sheet, which can be seen using dev tools:</p>
             <img src="framework/img/workshop/chrome-user-agent.png">
 
             <p>A <strong>CSS Reset</strong> is a set of CSS rules that resets the user agent styles of the HTML elements to a consistent, <em>unstyled</em> baseline to avoid cross-browser differences as much as possible. <strong>Normalize</strong> is slightly different because it "normalizes" the consistencies to a default styling rather than <em>removes</em> the styles. Another option is to choose a reset and customize it to create your own.</p>
@@ -425,7 +423,7 @@
         <section class="slide" data-markdown>
             ##Exercise 2: add background colours (10mins)
             
-            1. In Sublime, open **style.css** (it should be blank). It is located in **project > css **. Link it (reference it) in your HTML document.
+            1. In Sublime, open **style.css** (it should be blank) located in **project > css **. Link it (reference it) in your HTML document.
 
             1. Using `background` or `background-color`, add a different background colour to each major section of the page.  Use an **element selector** for the header and **class selectors** for the sections. Since there are multiple `&lt;section&gt;` tags, we need to use a more specific selector to give them each a different colour.  Here are the selectors to get started: 
             
@@ -918,9 +916,19 @@ max-width: 1000px;
         <section class="slide" data-markdown>
             ##Lunchtime exercise!
 
-            Need some time to check your work? Take a look in the example folder. We are now up to **5a-heading-headers.html** & **5a-heading-headers.css**
+            Need some time to check your work? 
 
-            Also, prepare for the next exercise by picking two images to use as the background for your page. 
+            Take a look in the **examples** folder. We are now up to **5a-heading-headers.html** & **5a-heading-headers.css**
+
+            Also, prepare for the next exercise by picking two images to use as the background images for your page. Here's the link to the [final project for reference](project/final.html).
+
+            Resources for free images:
+
+            * http://superfamous.com/
+            * http://www.gratisography.com/
+            * http://littlevisuals.co/  
+            * http://nos.twnsnd.co/
+            * http://unsplash.com/ 
         </section>
 
         <section class="slide title" data-markdown>
@@ -928,7 +936,7 @@ max-width: 1000px;
         </section>
 
         <section class="slide" data-markdown>
-            ##Background images
+            ##Class Exercise: Background images
             
             So far we've used `background` for colours but it can also be used for setting background images.
             
@@ -936,7 +944,9 @@ max-width: 1000px;
             background-image: url(path/to/file.jpg); /* longhand */
             background: url(path/to/file.jpg);/* shorthand */
             ```
-            Since our CSS file in *inside* a folder, use `../` to go *up and out* of the folder to get to the image files.
+            Since our CSS file in *inside* a folder, use `../` to go *up and out* of the folder to get to the image files. 
+
+            Let's add a background image to the `body` of your page. There are a few images in your **project > images** folder to choose from or add one of your own.
 
             ```
             background: url(../images/background-1.jpg);
@@ -962,9 +972,9 @@ max-width: 1000px;
             background-size: width height;
             ```
 
-            The default values for width and height are `auto` and retains the original image dimensions. If only one value is defined, it is assumed to be the `width`. The height will be set to auto and the image will keep its aspect ratio.
+            The default values for width and height are `auto` and retains the original image dimensions. If only one value is defined, it is assumed to be the `width`. The height will be set to `auto` and the image will keep its aspect ratio.
 
-            There are several ways to define sizing dimensions using various types of values (px, percentages, keywords, etc).
+            There are several ways to define sizing dimensions using px, percentages, keywords, etc.
 
             `background-size` is the longhand property.  To include it in the shorthand `background` property, it *must* be included after `background-position`, separated with the `/` character.  
             
@@ -992,7 +1002,7 @@ max-width: 1000px;
         </section>
 
         <section class="slide" data-markdown>
-            ##More About Background
+            ##Class Exercise: More About Background
 
             `background-size` also accepts keyword values, `contain` and `cover`.
 
@@ -1000,14 +1010,17 @@ max-width: 1000px;
 
             `cover` scales the image to fit the entire container but, if that has a different aspect ratio, the image will be cropped.
 
-            Let's add one more property, `background-attachment`.  Set the value to fixed and see what happens! (This can be added to the shorthand property)
-
+            Let's add background-size and one more property, `background-attachment`.  Set the value to fixed and see what happens! (This can be added to the shorthand property)
+            
+            Your code should now look something like this:
             ```
             background: url(../images/background-2.jpg) no-repeat fixed 50%;
+            background-size: cover;
             ```
+            And your page should look similar to [Example 5](project/examples/5b-heading-bg.html).
         </section>
 
-        <section class="slide" data-markdown>
+        <!-- <section class="slide" data-markdown>
             ##Exercise 5: Update header background styles (10mins)
 
             Based on the previous slides, update your header's background image and styles.  There are a few images in your **Project** folder to choose from or add one of your own.
@@ -1018,7 +1031,7 @@ max-width: 1000px;
             [http://nos.twnsnd.co/](http://nos.twnsnd.co/)
 
             Your page should look something like this: [Example 5](project/examples/5b-heading-bg.html)
-        </section>
+        </section> -->
         
         <section class="slide title" data-markdown>
             #Inline & Block
@@ -1114,7 +1127,7 @@ max-width: 1000px;
         <section class="slide" data-markdown>
             ##Descendant selectors
             
-            **Descendant selectors** - Matches any element that is a descendant of the element declared before it.
+            **Descendant selectors** - Matches any element that is a *descendant* of the element declared before it.
             
             ```css
             p a {
@@ -1124,7 +1137,7 @@ max-width: 1000px;
                 /* targets only a tags nested inside any element with the matching classname */
             }
             ```
-            **Protip:** Just like Inception, never go more than three levels deep. Truth.
+            **Protip:** Just like Inception, never go more than three levels deep!
 
             ```
             nav ul li a span {
@@ -1147,7 +1160,7 @@ max-width: 1000px;
     color: red;
 }</textarea>
             <div id="child-selector">
-                <p>Lorem ipsum dolor sit amet. <a href="#0">link inside paragraph</a>.</p>
+                <p>Child selector example <a href="#0">link inside paragraph</a>.</p>
                 <a href="#0">link</a>
             </div>
             
@@ -1160,7 +1173,7 @@ max-width: 1000px;
     color: red;
 }</textarea>
             <div id="adjacent-selector">
-                <p>Lorem ipsum dolor sit amet. <a href="#0">link inside paragraph</a>.</p>
+                <p>Adjacent selector example. <a href="#0">link inside paragraph</a>.</p>
                 <a href="#0">link</a>
             </div>
         
@@ -1190,34 +1203,35 @@ max-width: 1000px;
         </section>
             
         <section class="slide" data-markdown>
-        ##Class Exercise: Floats
+##Class Exercise: Floats
+
+1. Add a float to your profile image so the text can wrap around it. What happens to the parent element when a child element is floated?
         
-        1.Add a float to profile image. What happens to the parent element when a child element is floated?
-                
-        ```
-        .profile img {
-            float: left;
-        }
-        ```
-        2.Add the clearfix class to the parent element
+    ```
+    .profile img {
+        float: left;
+    }
+    ```
 
-        3.Make the image a relative size to the page and add margin to create space between the image and text.
+1. Add the `clearfix` class to the parent element.
 
-        ```
-        .profile img {
-            float: left;
-            width: 27%;
-            margin-right: 3%;
-        }
-        ```
+1. Make the image a relative size to the page and add margin to create space between the image and text.
 
-        4.If the text is longer than the image, it will wrap around it. Let's put a width on the profile summary and float it too.
-        ```
-        .summary {
-            width: 70%;
-            float: right;
-        }
-        ```
+    ```
+    .profile img {
+        float: left;
+        width: 27%;
+        margin-right: 3%;
+    }
+    ```
+
+1. If the text is longer than the image, it will wrap around it. Put a width on the profile summary and float it too.
+    ```
+    .summary {
+        width: 70%;
+        float: right;
+    }
+    ```
         </section>
         
         <section class="slide" data-markdown>
@@ -1229,7 +1243,7 @@ max-width: 1000px;
 
             Remember, to float elements properly, declare a width as well.
             
-            What happens when elements are floated? The parent element *collapses* so make sure to fix that as well!
+            What happens when elements are floated? The **parent element** *collapses* so make sure to *fix* that as well!
 
             ```
             &lt;div class=&quot;item&quot;&gt;
@@ -1241,7 +1255,7 @@ max-width: 1000px;
                 &lt;/div&gt;
             &lt;/div&gt;&lt;!-- close .item --&gt;
             ```
-            If you have some extra time, feel free to follow these instructions for adding a border or tweak some font styles!
+            **Bonus:** If you have some extra time, follow these instructions for adding a border or tweak some font styles!
 
             * Each Work Experience item is contain in an element with the `.item` class.  Create a new declaration block for `.item` and add the `border-bottom` property to it.  The syntax is: `border-bottom: size style color;`
             
@@ -1250,7 +1264,14 @@ max-width: 1000px;
                 border-bottom: 1px solid #ccc;
             }
             ```
-            
+            **Extra Bonus:** To make sure that all the Work Experience items have a border *except* the last item, we can use a **pseudo selector**, `:last-child`. Note the syntax below.
+
+            ```
+            .item:last-child {
+                border-bottom: none;
+            }
+            ```
+
             Your page should look something like this: [Example 6](project/examples/6-floats.html).
         </section>
 
@@ -1258,9 +1279,11 @@ max-width: 1000px;
         <section class="slide" data-markdown>
             ##More Background Styles
 
-            It's time to get rid of these testing background colours and put in some nicer looking styles.
+            It's time to get rid of these test background colours and put in some nicer looking styles.
 
-            For the **Profile** section, add an opaque background style to see the header image behind it. Use the `background` property but with an RGBa value. The 'a' represents the alpha transparency. (There is an `opacity` property too but it makes the text opaque too so we'll use `background` instead).
+            For the **Profile** section, add opacity to the background colour. Since the HTML for this section is a child element of `body`, adding opacity to the profile section will show the body image behind it.
+
+            Use the `background` property but with an `RGBa` value. The `a` represents the alpha transparency. (There is an `opacity` property too but it makes the text opaque too so we'll use `background` instead).
 
             ```
             .profile {
@@ -1269,12 +1292,8 @@ max-width: 1000px;
             ```
         </section>
 
-        <section class="slide" data-markdown>
+        <!-- <section class="slide" data-markdown>
             ##More Background Styles
-
-            Uh oh? Why didn't it work? The **Profile** and **Header** sections are *siblings* as in the elements come one after another.  In order for the image to show through, it has to be declared in an ancestor or parent element.  
-
-            * Let's move the `background` styles from the `header` selector to `body`.
 
             * Change the font color in `.profile` to white, to see the text more clearly.
 
@@ -1283,20 +1302,26 @@ max-width: 1000px;
             **Colour inspiration:**    
             [http://colours.neilorangepeel.com/](http://colours.neilorangepeel.com/)  
             [http://flatuicolors.com/](http://flatuicolors.com/)  
-        </section>
+        </section> -->
 
         <section class="slide" data-markdown>
-            ##Exercise #7: Keep going with Background styles (20mins)
+            ##Exercise #7: Background styles & accents (20mins)
 
             1. Update the **Work Experience** and **Education** section with the same background colour. The sample project is using a very light gray (#FEFEFC).
 
-            1. Change the font colour of the Profile, Skills & Contact section to white or #ffffff.
+            1. Change the font colour of the Profile, Skills & Contact section to white or #ffffff. (Try combining selectors for shared styles.)
             
             1. Add another background image to the **Skills** section. Don't worry about the overlay effect right now.  Just add the image.
 
             1. Add an underline to the `&lt;h2>` headings, #cccccc or a colour of your choosing. 
 
             1. Update the background colour for the Contact section. Use #111111 or a colour of your choosing.
+
+            1. Pick an accent colour and apply it to all links (`a` element).
+
+            **Colour inspiration:**    
+            [http://colours.neilorangepeel.com/](http://colours.neilorangepeel.com/)  
+            [http://flatuicolors.com/](http://flatuicolors.com/)  
 
             If you get stuck, ask a mentor! Don't worry if you don't finish, we'll go through it together as a class.
 
@@ -1329,15 +1354,15 @@ max-width: 1000px;
             ```
         </section>
         <section class="slide" data-markdown>
-            ##Vendor prefixes
+            ##CSS3 Vendor prefixes
 
-            In some cases, to use a more advanced CSS3 styles, a standard CSS property may require an addition of a browser specific prefix. For example, the various prefixes for different browsers are as follows:
+            In some cases, a standard CSS property may require an addition of a browser specific prefix. For example, the various prefixes for different browsers are as follows:
 
             * Chrome: `-webkit-` 
             * Firefox: `-moz- ` 
             * Internet Explorer: `-ms-`
             
-            Not all properties these prefixes and as newer browser versions come up, support for many of these prefixes are no longer required.  Here's a couple handy resources. 
+            Not all properties require these prefixes and as newer browser versions are released, support for many of these prefixes are no longer required.  Here are some handy resources. 
             
             * [caniuse.com](http://caniuse.com)
             * [css3please.com](http://css3please.com/)  
@@ -1600,7 +1625,7 @@ Here's what your page should look like: [example 10](project/examples/10-skills-
 
             Aligning elements horizontally is pretty straightforward, `text-align: center` or `margin: 0 auto`.  
 
-            Vertical align? No so much. 
+            Vertical align? Not so much. 
 
             Today we are going to try out one way. Remember `line-height`? It's used to create spacing between lines of content but if we set it to be the same as the height of the box, it will make the content inside align vertically.
 
