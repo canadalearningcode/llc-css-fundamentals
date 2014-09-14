@@ -42,9 +42,10 @@ section h2 {
 }
 a {
   color: #2980b9;
+  transition: all 0.5s ease;
 }
 a:hover {
-  color: #000;
+  color: #ffffff;
 }
 .content-wrap {
   max-width: 1000px;

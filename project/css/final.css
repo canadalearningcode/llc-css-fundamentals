@@ -50,6 +50,7 @@ section h2 {
 
 a {
   color: #16a085;
+  transition: all 0.5s ease;
 }
 a:hover {
   color: #fff;
@@ -107,6 +108,10 @@ header {
   transform: rotate(-4deg);
   margin-bottom: 10px;
   border: none;
+  transition: all 0.5s ease;
+}
+.profile h2:hover {
+  transform: rotate(4deg);
 }
 .profile .summary {
   float: left;
