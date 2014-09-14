@@ -15,6 +15,8 @@
 body {
   font-family: "Merriweather", serif;
   line-height: 1.5;
+  background: url(../images/background-2.jpg) no-repeat fixed 50%;
+  background-size: cover;
 }
 
 h1, h2, h3 {
@@ -35,6 +37,15 @@ h1 {
 h2 {
   font-size: 32px;
 }
+section h2 {
+  border-bottom: 1px solid #ccc;
+}
+a {
+  color: #2980b9;
+}
+a:hover {
+  color: #000;
+}
 .content-wrap {
   max-width: 1000px;
   width: 90%;
@@ -46,32 +57,61 @@ h2 {
 /* HEADER
 ----------*/
 header {
-  background: url(../../images/background-2.jpg) no-repeat fixed 50%;
-  background-size: cover;
   text-align: center;
   padding: 150px 0;
 }
 
+
+/* SHARED SECTION STYLES
+-------------------------*/
+.profile, .skills, .contact {
+  color: #ffffff;
+}
+.work-experience, .education {
+  background: #FEFEFC;
+}
+
+
 /* ABOUT ME / PROFILE
 ----------------------*/
 .profile {
-  background: #8e44ad;
+  background: rgba(0,0,0,0.8);
+  color: #ffffff;
+}
+.profile h2 {
+  border: none;
+  background: #2980b9;
+  display: inline-block;
+  padding: 10px 20px;
+  transform: rotate(-4deg);
+  margin-bottom: 10px; 
+}
+.profile h2:hover {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
 }
 .profile img {
   float: left;
-  width: 30%;
-  margin-right: 2%;
+  width: 27%;
+  margin-right: 3%;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  padding: 4px;
 }
 .summary {
-  width: 68%;
+  width: 70%;
   float: right;
 }
+
+
 
 
 /* WORK EXPERIENCE
 -------------------*/
 .work-experience {
-  background: #2980b9;
+
 }
 .work-experience .details {
   width: 30%;
@@ -84,25 +124,27 @@ header {
 .work-experience .item {
   border-bottom: 1px solid #ccc;
 }
-.work-experience .item:last-child {
-  border-bottom: none;
-}
 
 
 /* SKILLS
 ----------*/
 .skills {
-  background: #27ae60;
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url(../../images/background-4.jpg) no-repeat fixed;
+  background-size: cover;
+}
+.skills .columns {
+  width: 33.33%;
+  float: left;
 }
 
 /* EDUCATION
 -------------*/
 .education {
-  background: #16a085;
+
 }
 
 /* CONTACT & FOOTER 
 --------------------*/
 .contact {
-  background: #c0392b;
+  background: #111111;
 }

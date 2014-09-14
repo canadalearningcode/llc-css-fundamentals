@@ -911,7 +911,9 @@ max-width: 1000px;
             }
             ```
 
-            Your page should now look like this: [Example](project/examples/5a-heading-headers.html).
+            Your header should look similar to [example 5](project/examples/5-header.html): 
+
+            ![header](framework/img/workshop/header.jpg)
         </section>
             
         <section class="slide" data-markdown>
@@ -919,7 +921,7 @@ max-width: 1000px;
 
             Need some time to check your work? 
 
-            Take a look in the **examples** folder. We are now up to **5a-heading-headers.html** & **5a-heading-headers.css**
+            Take a look in the **examples** folder. We are now up to **5-header.html** & **5-header.css**
 
             Also, prepare for the next exercise by picking two images to use as the background images for your page. Here's the link to the [final project for reference](project/final.html).
 
@@ -1016,7 +1018,7 @@ max-width: 1000px;
             background: url(../images/background-2.jpg) no-repeat fixed 50%;
             background-size: cover;
             ```
-            And your page should look similar to [Example 5](project/examples/5b-heading-bg.html).
+            And your page should look similar to [Example 6](project/examples/6-background.html).
 
             **Extra resource**: https://developer.mozilla.org/en/docs/Web/CSS/background
         </section>
@@ -1506,35 +1508,32 @@ a:hover {
             <p>Declare the gradient first so it can sit on top of the image. We also want the to see the image through the gradient so use RGBA color values to set the alpha transparency.</p>
 
             <textarea class="snippet" data-subject="#bg-image-gradient">height: 300px; 
-background: linear-gradient(rgba(), rgba()), url(http://www.stevensegallery.com/460/300);
+background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(http://placepuppy.it/500/300);
             </textarea>
-            <div id="bg-image-gradient">
-            </div>
-            <p>image source: <a href="http://www.stevensegallery.com/">http://www.stevensegallery.com</a></p>
+            <div id="bg-image-gradient"></div>
         </section>
 
         <section class="slide" data-markdown>
-            ##Exercise 10: Gradient background & more floats! (20mins)
-            
-            Using the previous example, add a gradient effect to the Skills section to make the text on background image more legible.
+##Exercise 10: Gradient background & more floats! (20mins)
 
-            **Challenge!**
+1. Using the previous example, add a gradient effect to the Skills section to make the text on background image more legible.
 
-            In the Skills section, there are also two options, a `.skills-list` option and a `.skills-circle` option. Hold off on the circle option for now but for the list, try adding floats to the `.column` class to get the three lists to line up side by side.  Don't forget about all the funny quirks that happen to the stacking flow when floats are added!
+1. **Challenge!**   
+In the Skills section, there are also two options, a `.skills-list` option and a `.skills-circle` option. Hold off on the circle option for now but for the list, try adding floats to the `.column` class to get the three lists to line up side by side.  Don't forget about all the funny quirks that happen to the stacking flow when floats are added!
 
-```xml
-&lt;div class=&quot;skills-list&quot;&gt;
-    &lt;h3&gt;List Option&lt;/h3&gt;
-    &lt;div class=&quot;columns&quot;&gt;&lt;!--float this class! --&gt;
-        &lt;h4&gt;Best at:&lt;/h4&gt;
-        &lt;ul&gt;
-         stuff
-        &lt;/ul&gt;
+    ```xml
+    &lt;div class=&quot;skills-list&quot;&gt;
+        &lt;h3&gt;List Option&lt;/h3&gt;
+        &lt;div class=&quot;columns&quot;&gt;&lt;!--float this class! --&gt;
+            &lt;h4&gt;Best at:&lt;/h4&gt;
+            &lt;ul&gt;
+                ...
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        ...
     &lt;/div&gt;
-    ...
-&lt;/div&gt;
-```
-Here's what your page should look like: [example 10](project/examples/10-skills-section.html)
+    ```
+    Here's what your page should look like: [example 10](project/examples/10-skills-section.html)
         </section>
 
         <section class="slide" data-markdown>

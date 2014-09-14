@@ -15,7 +15,7 @@
 body {
   font-family: "Merriweather", serif;
   line-height: 1.5;
-  background: url(../../images/background-2.jpg) no-repeat fixed 50%;
+  background: url(../images/background-2.jpg) no-repeat fixed 50%;
   background-size: cover;
 }
 
@@ -42,9 +42,10 @@ section h2 {
 }
 a {
   color: #2980b9;
+  transition: all 0.5s ease;
 }
 a:hover {
-  color: #000;
+  color: #ffffff;
 }
 .content-wrap {
   max-width: 1000px;
@@ -85,12 +86,10 @@ header {
   padding: 10px 20px;
   transform: rotate(-4deg);
   margin-bottom: 10px; 
+  transition: all 0.5s ease;
 }
 .profile h2:hover {
-  -webkit-animation-name: bounce;
-  animation-name: bounce;
-  -webkit-transform-origin: center bottom;
-  transform-origin: center bottom;
+    transform: rotate(4deg);
 }
 .profile img {
   float: left;
@@ -110,6 +109,9 @@ header {
 
 /* WORK EXPERIENCE
 -------------------*/
+.work-experience {
+
+}
 .work-experience .details {
   width: 30%;
   float: left;
@@ -126,23 +128,9 @@ header {
 /* SKILLS
 ----------*/
 .skills {
-  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url(../../images/background-4.jpg) no-repeat fixed;
+  background: url(../images/background-4.jpg) no-repeat fixed;
   background-size: cover;
-  text-align: center;
 }
-.skills .columns {
-  width: 33.33%;
-  float: left;
-}
-.skills ul {
-  list-style-type: none;
-  padding: 0;
-}
-.skills-list i,
-.skills-list h4 {
-  color: #2980b9;
-}
-
 
 /* EDUCATION
 -------------*/

@@ -6,16 +6,10 @@
     box-sizing: border-box;
 }
 
-.clearfix:after { /* clearfix */
-  content: "";
-  display: table;
-  clear: both;
-}
-
 body {
   font-family: "Merriweather", serif;
   line-height: 1.5;
-  background: url(../../images/background-2.jpg) no-repeat fixed 50%;
+  background: url(../images/background-2.jpg) no-repeat fixed 50%;
   background-size: cover;
 }
 
@@ -37,12 +31,6 @@ h1 {
 h2 {
   font-size: 32px;
 }
-section h2 {
-  border-bottom: 1px solid #ccc;
-}
-a {
-  color: #2980b9;
-}
 .content-wrap {
   max-width: 1000px;
   width: 90%;
@@ -58,67 +46,32 @@ header {
   padding: 150px 0;
 }
 
-
-/* SHARED SECTION STYLES
--------------------------*/
-.profile, .skills, .contact {
-  color: #ffffff;
-}
-.work-experience, .education {
-  background: #FEFEFC;
-}
-
-
 /* ABOUT ME / PROFILE
 ----------------------*/
 .profile {
-  background: rgba(0,0,0,0.8);
-  color: #ffffff;
+  background: #8e44ad;
 }
-.profile img {
-  float: left;
-  width: 30%;
-  margin-right: 2%;
-}
-.summary {
-  width: 68%;
-  float: right;
-}
-
 
 /* WORK EXPERIENCE
 -------------------*/
 .work-experience {
-
+  background: #2980b9;
 }
-.work-experience .details {
-  width: 30%;
-  float: left;
-}
-.work-experience .description {
-  width: 70%;
-  float: right;
-}
-.work-experience .item {
-  border-bottom: 1px solid #ccc;
-}
-
 
 /* SKILLS
 ----------*/
 .skills {
-  background: url(../../images/background-4.jpg) no-repeat fixed;
-  background-size: cover;
+  background: #27ae60;
 }
 
 /* EDUCATION
 -------------*/
 .education {
-
+  background: #16a085;
 }
 
 /* CONTACT & FOOTER 
 --------------------*/
 .contact {
-  background: #111111;
+  background: #c0392b;
 }
