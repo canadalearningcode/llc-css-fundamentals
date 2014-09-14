@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Ladies Learning Code: CSS Fundamentals</title>
+
+    <!-- Don't alter slideshow.css, CSSS slide deck needs it to work -->
+    <link rel="stylesheet" href="css/slideshow.css">
+
+    <!-- Theme-specific styles -->
+    <link href='http://fonts.googleapis.com/css?family=Quicksand|Pacifico|Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/highlightjs-themes/monokai.css">
+    <link rel="stylesheet" href="css/theme-llc.css">
+    <link rel="shortcut icon" href="img/favicon.ico"> 
+
+    <!-- Workshop-specific styles -->
+    <link rel="stylesheet" href="css/workshop.css">
+
+    <!-- Takes care of CSS3 prefixes! -->
+    <script src="scripts/prefixfree.min.js"></script>
+</head>
+
+<body>
+    
+    <!-- makes all links open in a new window -->
+    <base target="_blank">
+
+    <main>
+        <section class="slide" data-markdown>
+            ##Animations
+
+            Check out some fun things you can do with this CSS3 animations library:
+
+            http://daneden.github.io/animate.css/
+
+            The CSS stylesheet has already been downloaded and added to the project css folder.  Just make sure to link it to the HTML file. Remember the rules of cascading and inheritance so put it *before* your custom stylesheet.
+
+            Open **animate.css** in Sublime and take a peek at how to make these animations!
+
+            In order for these animations to work, include the desired animation *in addition* to the `.animated` class in the HTML tag itself.  For example, if I wanted my `&lt;h1>` to fade in from the left, it would look like this:
+        
+            ```xml
+            &lt;h1 class=&quot;animated fadeInLeft&quot;&gt;Name&lt;/h1&gt;
+            ```
+        </section>
+        <section class="slide" data-markdown>
+            ##Animations on hover
+
+            Try adding an animation and other changes on hover using the `:hover` **psuedo** selector.
+
+            Remember, psuedo selectors need to be attached to an element with a colon (`:`) and no space.
+            
+            Look through the **animate.css** stylesheet and pull out the declarations you want to use and apply it to the hover selector instead of adding it to the HTML element.  That way, the animation won't happen until it's hovered on!
+
+            **But**, the `.animated` class still needs to be added in the HTML because that class contains the general styles needed to trigger the specific animations.
+
+            ```xml
+            &lt;h2 class=&quot;animated&quot;&gt;Hello!&lt;/h2&gt;
+            ```  
+            
+            ```
+            .profile h2:hover {
+                /* This is the bounce CSS */
+                -webkit-animation-name: bounce;
+                animation-name: bounce;
+                -webkit-transform-origin: center bottom;
+                transform-origin: center bottom;
+            }
+            ```
+            **Note** that the `animation-name` is dependent on the matching `@keyframe` animation in the original **animate.css** file. It won't work without it.
+
+            Here's the sample page: [animations example](project/examples/extras-animation.html). 
+        </section>
+    </main>
+    
+    <footer>
+        <p class="license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="img/cc-by-nc.svg" /></a> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
+        <p class="instructions">Use the left <i class="fa fa-arrow-left"></i> and right <i class="fa fa-arrow-right"></i> arrow keys to navigate</p>
+    </footer>
+
+
+    <script src="scripts/slideshow.js"></script>
+
+    <!-- Uncomment the plugins you need -->
+    <script src="scripts/plugins/css-edit.js"></script>
+    <script src="scripts/plugins/css-snippets.js"></script>
+    <script src="scripts/plugins/css-controls.js"></script>
+    <!-- <script src="plugins/code-highlight.js"></script>-->
+
+    <script src="scripts/plugins/markdown/marked.js"></script>
+    <script src="scripts/plugins/markdown/markdown.js"></script>
+    <script src="scripts/plugins/highlight/highlight.js"></script>    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- Prettify -->
+    <script src="scripts/plugins/prettify.js"></script>
+    <script src="scripts/plugins/lang-css.js"></script>
+    <script src="scripts/plugins/prism.js"></script>
+
+    <script>
+        var slideshow = new SlideShow();
+
+        // Grabs all the .snippet elements
+        var snippets = document.querySelectorAll('.snippet');
+        for(var i=0; i<snippets.length; i++) {
+            new CSSSnippet(snippets[i]);
+        }
+
+        var links = document.getElementByTagName("a");
+        for (var i = 0; i < links.length; i++) {
+                var link = links[i];
+                link.addEventListener(function () {
+                        window.open(this.href);
+                });
+        }
+    </script>
+</body>
+</html>
+
