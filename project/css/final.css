@@ -51,6 +51,10 @@ section h2 {
 a {
   color: #16a085;
 }
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
 
 .content-wrap {
   max-width: 1000px;

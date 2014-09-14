@@ -42,7 +42,7 @@
             <img class="instructor-img" src="framework/img/christina-truong.jpg" alt="Christina Truong">
             <ul>
                 <li><i class="fa fa-envelope"></i><a href="mailto:hello@christinatruong.com">hello@christinatruong.com</li>
-                <li><i class="fa fa-desktop"></i><a href="#">christinatruong.com</a></li>
+                <li><i class="fa fa-desktop"></i><a href="http://christinatruong.com">christinatruong.com</a></li>
                 <li><i class="fa fa-twitter"></i><a href="http://twitter.com/christinatruong">@christinatruong</a></li>
             </ul>
         </div>
@@ -69,7 +69,7 @@
         <section class="slide" data-markdown>
             ##Setting Up Our Dev Tools
 
-            **[Sublime Text](http://www.sublimetext.com/2)** - a text editor with colour highlighting and other helpful features. If you are unable to install Sublime Text, try installing: [Notepad++](http://notepad-plus-plus.org/) (Windows) or [Atom](https://atom.io/) (Mac).
+            **[Sublime Text](http://www.sublimetext.com)** - a text editor with colour highlighting and other helpful features. If you are unable to install Sublime Text, try installing: [Notepad++](http://notepad-plus-plus.org/) (Windows) or [Atom](https://atom.io/) (Mac).
 
             **[Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/)** - Choose a modern web browser that supports current web standards and has good development tools. To set Chrome as your default browser, follow [these instructions](https://support.google.com/chrome/answer/95417?hl=en). Another good option is Firefox. Visit [browsehappy.com](http://browsehappy.com) for more info about modern browsers.
 
@@ -89,9 +89,9 @@
                 |-- framework // Contains files needed for slide presentation. Do not edit!
                 |-- project // Contains files for today's workshop.
                     |-- css // Only CSS files here.
-                    |-- examples // Example HTML/CSS files for each exercise.
+                    |-- examples // Example HTML & CSS files for each exercise.
                     |-- images // Images for your project. You can also add your images here.
-                    |-- final.html // Finished example for you to refer to. The CSS file is in the CSS folder.
+                    |-- final.html // Finished example for reference. The CSS file is in the CSS folder.
                     |-- index.html // Your resume HTML page.
                 |-- index.html // This is the file you're viewing right now (slides)!
             ```
@@ -123,7 +123,7 @@
         <section class="slide" data-markdown>
             ##HTML: Quick Review
             
-            HTML is used to define *content* so use the appropriate tag that best describes the meaning of your content.
+            HTML is used to define *content* and HTML tags are used to describe the meaning of your content.
 
             **Title**: Found in the `&lt;head>` section of the HTML document. Used for defining the page title. Displays in the browser's tab, search engine results and bookmarks.
             
@@ -191,12 +191,11 @@
 
             HTML defines *content*, CSS defines the *presentation*.
 
-            **Selectors:** used to determine which element(s) to apply the styles to. Can target an HTML tag, class or ID.  
+            **Selectors:** used to determine which element(s) to apply the styles to. Can target an HTML tag, class or ID attribute (more on these later).  
             **Declaration block:** consists of a list of declarations (rules to follow) wrapped in curly braces `{}`.  
             **Declarations** or rules to follow, are written using `property:value` pairs.
 
             ```css
-
             selector {
                 property: value;
             }
@@ -211,7 +210,7 @@
         <section class="slide" data-markdown>
             ##Comments
             
-            Comments in CSS are written between a slash & asterisk (`/* */`) and must close in the opposite order. Comments are great for ... well... leaving comments!  Leave comments in your code as notes for yourself (or others), for organizing your code blocks or for "commenting" out your code (hiding it).
+            Comments in CSS are written between a slash & asterisk  and must close in the opposite order. Comments are great for ... well... leaving comments!  Leave notes for yourself (or others), organize your code blocks or for "commenting" out your code (hiding it for later).
             
             ```
             p {
@@ -363,7 +362,7 @@
             &lt;p style=&quot;color: blue;&quot;&gt;I'm writing CSS!&lt;/p&gt;
             ```
 
-            This technique should be avoided but it's good to know how it works in case you encounter it "in the wild."
+            This technique should be avoided but it's good to know how it works in case you encounter it.
 
             ###Internal
             Uses `&lt;style&gt;` and is included in the `&lt;head&gt;` element.
@@ -401,6 +400,8 @@
                 &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
             &lt;/head&gt;
             ```
+
+            **Protip!**  Sublime Text shortcut: type "link" + tab key. Ta da!
         </section>
 
         <section class="slide">
@@ -409,7 +410,9 @@
             <p>Every browser has its own default <em>user agent</em> stylesheet to add default styles to the html elements. Here's an example of Chrome's user agent style sheet, which can be seen using dev tools:</p>
             <img src="framework/img/workshop/chrome-user-agent.png">
 
-            <p>A <strong>CSS Reset</strong> is a set of CSS rules that resets the user agent styles of the HTML elements to a consistent, <em>unstyled</em> baseline to avoid cross-browser differences as much as possible. <strong>Normalize</strong> is slightly different because it "normalizes" the consistencies to a default styling rather than <em>removes</em> the styles. Another option is to choose a reset and customize it to create your own.</p>
+            <p>A <strong>CSS Reset</strong> is a set of CSS rules that resets the user agent styles of the HTML elements to a consistent, <em>unstyled</em> baseline to avoid cross-browser differences as much as possible.</p>
+
+            <p><strong>Normalize</strong> is slightly different because it "normalizes" the consistencies to a default style rather than <em>removing</em> the styles. Another option is to choose a reset and customize it yourself to create your own.</p>
 
             <p>Note that if you add it as a separate style sheet, it should be included <em>before</em> your custom style sheet.</p>
 
@@ -439,7 +442,7 @@
 
             1. Try using comments to organize your CSS into sections so you can group related CSS together.
 
-            Your page should look something like this: [background colour example](project/examples/2-bg-colours.html). Example files can be found under **project > examples** and **project > examples > css**.
+            Your page should look something like this: [background colour example](project/examples/2-bg-colours.html). All example files can be found under **project > examples**.
         </section>
         
         <section class="slide" data-markdown>
@@ -503,7 +506,7 @@
         <section class="slide" data-markdown>
             ##Web fonts
 
-            For more options than just using the web safe fonts, services like [Google Fonts](http://www.google.com/fonts/) and [Font Squirrel](http://www.fontsquirrel.com/) can make it easier to use a variety of fonts that aren't normally supported by all computers.
+            For more options than web safe fonts, services like [Google Fonts](http://www.google.com/fonts/) and [Font Squirrel](http://www.fontsquirrel.com/) make it easier to use a variety of fonts without worrying about whether it's installed on the users' computer.
 
             A service like **Font Squirrel** requires you to download the fonts and add it to your project files. The site features a handy [generator](http://www.fontsquirrel.com/tools/webfont-generator) to create different font files to support various browsers as well as include demo files and instructions on how to use it. 
 
@@ -521,7 +524,7 @@
 
         <section class="slide">
             <h2>Font Styles & Typography</h2>
-            <p>Let's experiment with a few CSS properties for styling text below by changing some values.</p>
+            <p>Let's experiment with a few CSS properties for styling text. Try changing some of the values below.</p>
             <textarea class="snippet" data-subject="#typography-example">line-height: 1.25;
 font-family: Helvetica, Arial, serif;
 font-size: inherit;
@@ -650,8 +653,8 @@ h3 {
 
             <ul>
                 <li>4 values means top, right, bottom, left</li>
-                <li>3 values means top, right/left, bottom</li>
-                <li>2 values means top/bottom, right/left</li>
+                <li>3 values means top, right & left, bottom</li>
+                <li>2 values means top & bottom, right & left</li>
                 <li>1 value means the same amount of padding on all sides</li>
             </ul>
             
@@ -921,7 +924,7 @@ max-width: 1000px;
 
             Need some time to check your work? 
 
-            Take a look in the **examples** folder. We are now up to **5-header.html** & **5-header.css**
+            Take a look in the **examples** folder. We are now up to **5-header.html** & **5-header.css**.
 
             Also, prepare for the next exercise by picking two images to use as the background images for your page. Here's the link to the [final project for reference](project/final.html).
 
@@ -1120,10 +1123,6 @@ max-width: 1000px;
             <a href="http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/">http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/</a>
             </p>
         </section>
-            
-        <section class="slide title" data-markdown>
-            #More selectors & Using multiple classes
-        </section>
 
         <section class="slide" data-markdown>
             ##Descendant selectors
@@ -1148,61 +1147,7 @@ max-width: 1000px;
 
             Feel free to skip a level but be mindful of specificity rules. For example, `nav ul li a` would override `nav a`. It’s generally easier to start with less specific selectors and make them more specific, as needed, rather than starting with very specific selectors and adding extra markup or classes to try to override the styles.
         </section>
-
-        <section class="slide">
-            <h2>Child & Adjacent selectors</h2>
-            
-            <p><strong>Child selectors</strong> - Only matches an element that is a direct <em>child</em> of the element declared before it.</p>
-            
-            <textarea class="snippet" data-subject="#child-selector">#child-selector {
-    background: lightblue;
-}
-#child-selector p > a {
-    color: red;
-}</textarea>
-            <div id="child-selector">
-                <p>Child selector example <a href="#0">link inside paragraph</a>.</p>
-                <a href="#0">link</a>
-            </div>
-            
-            <p><strong>Adjacent selectors</strong> - allows you to select an element that is directly after another specific element.</p>
-
-            <textarea class="snippet" data-subject="#adjacent-selector">#adjacent-selector {
-    background: gray;
-}
-#adjacent-selector p + a {
-    color: red;
-}</textarea>
-            <div id="adjacent-selector">
-                <p>Adjacent selector example. <a href="#0">link inside paragraph</a>.</p>
-                <a href="#0">link</a>
-            </div>
-        
-            <p><strong>Extra Resource</strong>: <a href="http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048">The 30 CSS Selectors you Must Memorize</a></p>
-        </section>
-
-        <section class="slide" data-markdown>
-            ##Using multiple classes
-
-            It's common to use more than one class on one element to add different styles to it. To use multiple classes, declare it in the same class attribute but separate classes with a space.
-
-            ```xml
-            &lt;div class=&quot;class-1 class-2&quot;&gt;
-                content here
-            &lt;/div&gt;
-            ```
-
-            Any styles under `.class-1` AND `.class-2` will apply.
-
-            To select two (or more) classes at the same time, use both names as the selector with *no* space.  This style will only apply if *both* classes are declared in the element.
-            
-            ```css
-            .class-1.class-2 {
-                /* will only apply if both classes exist */
-            }
-            ```
-        </section>
-            
+    
         <section class="slide" data-markdown>
 ##Class Exercise: Floats
 
@@ -1334,7 +1279,7 @@ max-width: 1000px;
         <section class="slide" data-markdown>
             ##CSS3 Properties: border-radius
 
-            Take a break from tweaking spacing and floats and start adding some newer CSS3 features. The introduction of CSS3 brought in new ways to do things that previously had to be done in Flash, JavaScript or complicated hacks.
+            The introduction of CSS3 brought in new ways to do things that previously had to be done in Flash, JavaScript or complicated hacks.
 
             Let's start with `border-radius`.  Once upon a time, rounded corners required cutting images with transparent backgrounds and blah blah blah...  Now we can do it with one line of CSS! Add this style to the existing declaration block for the profile image. Percentages or pixel values can be used. The bigger the number, the more rounded the corners will be. To get a perfect circle, set the `border-radius` to 50% and the original image must also be a square (or else it will look oval).
             ```
@@ -1764,6 +1709,8 @@ See below for final code but only if you get stuck!
             The final example has a circle option for displaying your skills.  See instructions [here](framework/extras-circles.html).
 
             You can also try out some more [animation effects](framework/extras-animations.html) or try adding a [favicon](http://blog.teamtreehouse.com/how-to-make-a-favicon).
+
+            Also, there are many many ways to select elements that go beyond descendant selectors, classes and ids.  See a few examples [here](framework/extras-advanced-selectors.html).
         </section>
 
         <section class="slide" data-markdown>

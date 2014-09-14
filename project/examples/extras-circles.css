@@ -1,0 +1,177 @@
+/* GLOBAL STYLES
+-----------------*/
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clearfix:after { /* clearfix */
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  line-height: 1.5;
+  background: url(../images/background-2.jpg) no-repeat fixed 50%;
+  background-size: cover;
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+  margin: 0;
+}
+
+h2, h3 {
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 32px;
+}
+section h2 {
+  border-bottom: 1px solid #ccc;
+}
+a {
+  color: #2980b9;
+}
+a:hover {
+  color: #000;
+}
+.content-wrap {
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+ 
+
+/* HEADER
+----------*/
+header {
+  text-align: center;
+  padding: 150px 0;
+}
+
+
+/* SHARED SECTION STYLES
+-------------------------*/
+.profile, .skills, .contact {
+  color: #ffffff;
+}
+.work-experience, .education {
+  background: #FEFEFC;
+}
+
+
+/* ABOUT ME / PROFILE
+----------------------*/
+.profile {
+  background: rgba(0,0,0,0.8);
+  color: #ffffff;
+}
+.profile h2 {
+  border: none;
+  background: #2980b9;
+  display: inline-block;
+  padding: 10px 20px;
+  transform: rotate(-4deg);
+  margin-bottom: 10px; 
+}
+.profile h2:hover {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+.profile img {
+  float: left;
+  width: 27%;
+  margin-right: 3%;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+.summary {
+  width: 70%;
+  float: right;
+}
+
+
+
+
+/* WORK EXPERIENCE
+-------------------*/
+.work-experience .details {
+  width: 30%;
+  float: left;
+}
+.work-experience .description {
+  width: 70%;
+  float: right;
+}
+.work-experience .item {
+  border-bottom: 1px solid #ccc;
+}
+.work-experience .item:last-child {
+  border-bottom: none;
+}
+
+
+/* SKILLS
+----------*/
+.skills {
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+  url(../images/background-4.jpg) no-repeat fixed;
+  background-size: cover;
+  text-align: center;
+}
+.skills .columns {
+  width: 33.33%;
+  float: left;
+}
+.skills ul {
+  list-style-type: none;
+  padding: 0;
+}
+.skills-list i,
+.skills-list h4 {
+  color: #2980b9;
+}
+.skills-circles ul {
+  
+}
+.skills-circles ul li {
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+  line-height: 150px;
+  border: 2px solid #2980b9;
+  border-radius: 50%;
+}
+.skills-circles span {
+  display: inline-block;
+  line-height: normal;
+  vertical-align: middle;
+}
+
+
+/* EDUCATION
+-------------*/
+.education {
+
+}
+
+/* CONTACT & FOOTER 
+--------------------*/
+.contact {
+  background: #111111;
+}
