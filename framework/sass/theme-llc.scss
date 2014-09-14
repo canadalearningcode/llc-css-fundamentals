@@ -125,14 +125,9 @@ footer {
 
 	img {
 		max-width: 100%;
-	}
+	}	
 	&:target {
 		overflow: auto;
-	}
-	&.js-fiddle > iframe:only-of-type {
-		position: static;
-		width: 525px;
-		height: 350px;
 	}
 	&.centered {
 		text-align: center;

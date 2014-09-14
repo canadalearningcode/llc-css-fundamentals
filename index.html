@@ -196,6 +196,7 @@
             **Declarations** or rules to follow, are written using `property:value` pairs.
 
             ```css
+
             selector {
                 property: value;
             }
@@ -210,7 +211,7 @@
         <section class="slide" data-markdown>
             ##Comments
             
-            Comments in CSS are written between a slash & asterix (`/* */`) and must close in the opposite order. Comments are great for ... well... leaving comments!  Leave comments in your code as notes for yourself (or others), for organizing your code blocks or for "commenting" out your code (hiding it).
+            Comments in CSS are written between a slash & asterisk (`/* */`) and must close in the opposite order. Comments are great for ... well... leaving comments!  Leave comments in your code as notes for yourself (or others), for organizing your code blocks or for "commenting" out your code (hiding it).
             
             ```
             p {
@@ -795,7 +796,7 @@ margin: 0 auto;</textarea>
         <section class="slide" data-markdown>
 ##Class exercise (continued)
 
-The content is centered but the background colour is restricted by the width dimension and doesn’t span the rest of the page anymore. To fix this, we’ll need to create a “container” just for center aligning the content by adding a new `div<` with a class of `content-wrap` *around all of the profile content*.
+The content is centered but the background colour is restricted by the width dimension and doesn’t span the rest of the page anymore. To fix this, we’ll need to create a “container” just for center aligning the content by adding a new `div` with a class of `content-wrap` *around all of the profile content*.
 
 ```
 &lt;section class="profile"&gt;
@@ -1010,14 +1011,14 @@ max-width: 1000px;
 
             `cover` scales the image to fit the entire container but, if that has a different aspect ratio, the image will be cropped.
 
-            Let's add background-size and one more property, `background-attachment`.  Set the value to fixed and see what happens! (This can be added to the shorthand property)
-            
-            Your code should now look something like this:
+            Let's add background-size and one more property, `background-attachment`.  Set the value to `fixed` and see what happens! (This can be added to the shorthand property) Your code should now look something like this:
             ```
             background: url(../images/background-2.jpg) no-repeat fixed 50%;
             background-size: cover;
             ```
             And your page should look similar to [Example 5](project/examples/5b-heading-bg.html).
+
+            **Extra resource**: https://developer.mozilla.org/en/docs/Web/CSS/background
         </section>
 
         <!-- <section class="slide" data-markdown>
@@ -1066,11 +1067,11 @@ max-width: 1000px;
             **Extra Resource**: [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
         </section>
 
-        <section class="slide js-fiddle">
+        <section class="slide">
             <h2>Block & Inline Example</h2>
             <p>Click <strong>Edit in JSFiddle</strong> to make edits. Let's see what happens when height, width, margin and padding is applied to inline and block elements.</p>
 
-            <iframe src="http://jsfiddle.net/WC5K4/4/embedded/html,css/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <iframe width="100%" height="60%" src="http://jsfiddle.net/WC5K4/4/embedded/html,css/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
         </section>
 
         <section class="slide" data-markdown>
@@ -1105,19 +1106,17 @@ max-width: 1000px;
             <h2 class="delayed">Just kidding! We can fix it.</h2>
         </section>
 
-        <section class="slide js-fiddle">
+        <section class="slide">
             <h2>Float, Clear and Clearfix</h2>
             <p>First we have to break it, then put it back together.  One of the most confusing CSS concepts is when to use <code>clear:both</code> and the <code>.clearfix</code> class. Rule of thumb: if there's is an element that follows the floated element, apply <code>clear: both</code> to that element.  If all the elements need to be floated, apply the <code>.clearfix</code> class to the <em>parent</em> element.</p>
 
-            <iframe src="http://jsfiddle.net/ttt5ebhr/3/embedded/html,css/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <iframe width="100%" height="360" src="http://jsfiddle.net/ttt5ebhr/3/embedded/html,css/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
             
             <p>Let's add this clearfix snippet to our CSS file to use it later.</p>
             <p>Want to know more about the clearfix trick and clearing floats? Here you go:<br>
             <a href="http://css-tricks.com/snippets/css/clear-fix/">http://css-tricks.com/snippets/css/clear-fix/</a><br>
             <a href="http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/">http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/</a>
-            </p> 
-
-
+            </p>
         </section>
             
         <section class="slide title" data-markdown>
@@ -1239,9 +1238,7 @@ max-width: 1000px;
 
             Add floats to the **Work Experience** section.  Here's a link to the [final project](project/final.html) for reference and some hints to get you started:
 
-            In the HTML, the `.details` element contains the info that should be displayed on the left and the `.description` element contains the content to be displayed on the right. Floats can be applied to achieve this.
-
-            Remember, to float elements properly, declare a width as well.
+            In the HTML, the `.details` element contains the info that should be displayed on the left and the `.description` element contains the content to be displayed on the right. Floats can be applied to achieve this. Remember, when floating elements, declare a width as well.
             
             What happens when elements are floated? The **parent element** *collapses* so make sure to *fix* that as well!
 
@@ -1264,7 +1261,7 @@ max-width: 1000px;
                 border-bottom: 1px solid #ccc;
             }
             ```
-            **Extra Bonus:** To make sure that all the Work Experience items have a border *except* the last item, we can use a **pseudo selector**, `:last-child`. Note the syntax below.
+            **Extra Bonus:** To make sure that all the **Work Experience** items have a border *except* the last item, use a **[pseudo-class selector](http://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:last-child)**, `:last-child`. Note the syntax below. 
 
             ```
             .item:last-child {
@@ -1281,7 +1278,7 @@ max-width: 1000px;
 
             It's time to get rid of these test background colours and put in some nicer looking styles.
 
-            For the **Profile** section, add opacity to the background colour. Since the HTML for this section is a child element of `body`, adding opacity to the profile section will show the body image behind it.
+            For the **Profile** section, add opacity to the background colour. Since the HTML for this section is nested inside of the `body` tag, adding opacity to the Profile section will show the `body` tag's background image behind it.
 
             Use the `background` property but with an `RGBa` value. The `a` represents the alpha transparency. (There is an `opacity` property too but it makes the text opaque too so we'll use `background` instead).
 
@@ -1305,9 +1302,9 @@ max-width: 1000px;
         </section> -->
 
         <section class="slide" data-markdown>
-            ##Exercise #7: Background styles & accents (20mins)
+            ##Exercise #7 (20mins)
 
-            1. Update the **Work Experience** and **Education** section with the same background colour. The sample project is using a very light gray (#FEFEFC).
+            1. Update the **Work Experience** and **Education** section with the same background colour. The sample project is using a very light gray (#fefefc).
 
             1. Change the font colour of the Profile, Skills & Contact section to white or #ffffff. (Try combining selectors for shared styles.)
             
@@ -1383,7 +1380,7 @@ max-width: 1000px;
                 </li>
                 <li>
                     <p>Headings are block level elements so they are going to want to span 100% width of it’s container.  We could set a width value on it but what if we change the greeting? Then we’d have to set the width again. Remember, inline elements are as wide as their content so let’s change the heading to which display option?</p>
-                    <p class="delayed"><code>display: inline-block;</code> so we can access the block and inline behaviors. Let's add some padding too!</p>
+                    <p class="delayed"><code>display: inline-block;</code> so we can access the block and inline behaviors. Add some padding too.</p>
 <pre class="delayed"><code>.profile h2 {
     border: none;
     background: #2980b9;
@@ -1406,74 +1403,78 @@ max-width: 1000px;
                 transform: rotate(-4deg);
             } 
             ```
-            Your page should look like this: [Example 8](project/examples/8-css3.html).
+            <!-- Your page should look like this: [Example 8](project/examples/8-css3.html). -->
+            The heading should look similar to this:
+
+            ![heading transform](framework/img/workshop/title-transform.png)
 
             More about `transform` [here](http://css-tricks.com/almanac/properties/t/transform/).
         </section>
-
         <section class="slide" data-markdown>
-            ##Animations
+            ##:hover Pseudo Selector
 
-            Let's check out some fun things we can do with this CSS3 animations library:
+            Let's try adding some changes on hover using the `:hover` [psuedo-class selector](http://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:hover).
 
-            http://daneden.github.io/animate.css/
-
-            The CSS stylesheet has already been downloaded and added to the project css folder.  We just need to link it to the HTML file. Remember the rules of cascading and inheritance so put it *before* your custom stylesheet.
-
-            Open **animate.css** in Sublime and take a peek at how to make these animations!
-
-            In order for these animations to work, we just need to include the desired animation in addition to the `.animated` class in the HTML tag itself, since the CSS is already taken care of.  For example, if I wanted my `&lt;h1>` to fade in from the left, it would look like this:
-        
-            ```xml
-            &lt;h1 class=&quot;animated fadeInLeft&quot;&gt;Name&lt;/h1&gt;
-            ```
-        </section>
-        <section class="slide" data-markdown>
-            ##Animations on hover
-
-            Let's try adding an animation and other changes on hover using the `:hover` **psuedo** selector.
-
-            Psuedo selectors need to be attached to an element with a colon (`:`) and no space. A very common use for this selector is for links.  Let's add a simple colour change when links are hovered on.
+            Psuedo selectors need to be attached to an element with a colon (`:`) with *no* space. A common use for this selector is for links.  Let's add a colour change on hover.
 
             ```
             a:hover {
-                color: #000;
+                color: #ffffff;
             }
             ```
 
-            To make a change on hover for the "hello" heading, the selector will look like this:
+            The `:hover` pseudo selector can be added to any element. Make a change on hover for the "hello" heading, to update the `transform` property. The code will look like this:
 
-            ```
-            .profile h2:hover {}
-            ```
-            
-            We can take a look through the **animate.css** stylesheet and pull out the declarations we want to use and apply it to the hover selector instead of adding it to the HTML element.  That way, the animation won't happen until it's hovered on!
-
-            **But**, the `.animated` class still needs to be added in the HTML because that class contains the general styles needed to trigger the specific animations.
-
-            ```xml
-            &lt;h2 class=&quot;animated&quot;&gt;Hello!&lt;/h2&gt;
-            ```  
-            
             ```
             .profile h2:hover {
-                /* This is the bounce CSS */
-                -webkit-animation-name: bounce;
-                animation-name: bounce;
-                -webkit-transform-origin: center bottom;
-                transform-origin: center bottom;
+                transform: rotate(4deg);
             }
             ```
-            **Note** that the `animation-name` is dependent on the matching `@keyframe` animation in the original **animate.css* file. It won't work without it.
+        </section>
+        <section class="slide">
+            <h2>CSS Transition</h2>
+            
+            <p>The transition property can be used to change values over a specified duration making the transition appear less abrupt. Hover over this paragraph to see the transition.  Experiment and change some of the values below.</p> 
+
+<pre><code>transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay];</code></pre>
+            
+            <textarea class="snippet">p {
+    transition: all 0.5s ease;
+    color: black;
+}
+p:hover {
+    background-color: #cccccc;
+    color: white;
+}</textarea>
+            <p>More about transition: <a href="http://css-tricks.com/almanac/properties/t/transition/">http://css-tricks.com/almanac/properties/t/transition</a></p>
         </section>
 
         <section class="slide" data-markdown>
-            ##Exercise 9: Animations (10mins)
+            ##Class exercise: hover & transition
 
-            Take some time to experiment with what we just covered.
+            Add the transition property to the hover effects. Your page should look similar to [example 8](project/examples/8-css3.html).
 
-            Here's the sample page: [Example 9](project/examples/9-animate.html). 
+```css
+a {
+    color: #2980b9;
+    transition: all 0.5s ease;
+}
+a:hover {
+    color: #ffffff;
+}
+.profile h2 {
+    ...
+    margin-bottom: 10px; 
+    transform: rotate(-4deg);  
+    transition: all 0.5s ease;
+}
+.profile h2:hover {
+    transform: rotate(4deg);
+}
+```
         </section>
+
+        
 
         <section class="slide">
             <h2>Gradients</h2>

@@ -121,10 +121,8 @@ footer .license img {
 .slide img {
   max-width: 100%;
 }
-.slide.js-fiddle > iframe:only-of-type {
-  position: static;
-  width: 525px;
-  height: 350px;
+.slide:target {
+  overflow: auto;
 }
 .slide.centered {
   text-align: center;

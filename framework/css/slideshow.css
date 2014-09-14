@@ -176,8 +176,7 @@
 			text-decoration: none;
 			text-shadow: 0 -.05em .05em black;
 		}
-
-	.slide > iframe:only-of-type,
+		
 	iframe.csss-import {
 		position: absolute;
 		top: 0;
