@@ -88,9 +88,6 @@ header {
 
 /* WORK EXPERIENCE
 -------------------*/
-.work-experience {
-
-}
 .work-experience .details {
   width: 30%;
   float: left;
@@ -101,6 +98,9 @@ header {
 }
 .work-experience .item {
   border-bottom: 1px solid #ccc;
+}
+.work-experience .item:last-child {
+  border-bottom: none;
 }
 
 

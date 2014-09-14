@@ -121,12 +121,16 @@ header {
 .work-experience .item {
   border-bottom: 1px solid #ccc;
 }
+.work-experience .item:last-child {
+  border-bottom: none;
+}
 
 
 /* SKILLS
 ----------*/
 .skills {
-  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url(../../images/background-4.jpg) no-repeat fixed;
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+  url(../../images/background-4.jpg) no-repeat fixed;
   background-size: cover;
   text-align: center;
 }
@@ -141,6 +145,22 @@ header {
 .skills-list i,
 .skills-list h4 {
   color: #2980b9;
+}
+.skills-circles ul {
+  
+}
+.skills-circles ul li {
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+  line-height: 150px;
+  border: 2px solid #2980b9;
+  border-radius: 50%;
+}
+.skills-circles span {
+  display: inline-block;
+  line-height: normal;
+  vertical-align: middle;
 }
 
 
