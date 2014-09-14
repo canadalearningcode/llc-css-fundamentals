@@ -60,6 +60,17 @@ header {
   text-align: center;
   padding: 150px 0;
 }
+/* download PDF resume */
+.download {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  background: #2980b9;
+  padding: 18px;
+  text-decoration: none;
+  color: #fff;
+}
 
 
 /* SHARED SECTION STYLES

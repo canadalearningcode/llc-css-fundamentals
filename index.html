@@ -49,7 +49,7 @@
     </header>
 
     <main>
-        <section class="slide image-only" data-markdown>
+        <section class="slide centered" data-markdown>
             ##Today's Project
 
             Follow [this link](project/final.html) to see the whole project!
@@ -57,7 +57,7 @@
             ![final project](framework/img/workshop/final-project.jpg)  
         </section>
 
-        <section class="slide image-only" data-markdown>
+        <section class="slide centered" data-markdown>
             ##A demonstration of what can be
             ##accomplished through CSS-based design
 
@@ -720,7 +720,7 @@ margin: 0 0 0 0;</textarea>
             Margin doesn't add to the actual size of the element but should be considered as part of the total size of the element because it adds space *around* it.
         </section>
             
-        <section class="slide image-only" data-markdown>
+        <section class="slide centered" data-markdown>
             ##I Can't... even...
             ![](framework/img/workshop/cant-even.gif)
         </section>
@@ -874,7 +874,7 @@ max-width: 1000px;
             &lt;h1 class=&quot;title&quot;&gt;Heading&lt;/h1&gt;
             ```
         </section>
-        <section class="slide image-only" data-markdown>
+        <section class="slide centered" data-markdown>
             ##Avoid code bloat
 
             ![](framework/img/workshop/bloat.jpg)
@@ -1103,7 +1103,7 @@ max-width: 1000px;
 
             **Also**, if there is no width set, the element will float but the width will automatically be the width of its content.
         </section>
-        <section class="slide image-only">
+        <section class="slide centered">
             <img src="framework/img/workshop/shittier.gif">
             <h2 class="delayed">Just kidding! We can fix it.</h2>
         </section>
@@ -1514,26 +1514,196 @@ background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(http://
         </section>
 
         <section class="slide" data-markdown>
-##Exercise 10: Gradient background & more floats! (20mins)
+##Exercise #10: Gradient & more floats (15 mins)
 
-1. Using the previous example, add a gradient effect to the Skills section to make the text on background image more legible.
+1. Using the previous example, add a gradient effect to the **Skills** section to make the text on background image more legible.
 
-1. **Challenge!**   
-In the Skills section, there are also two options, a `.skills-list` option and a `.skills-circle` option. Hold off on the circle option for now but for the list, try adding floats to the `.column` class to get the three lists to line up side by side.  Don't forget about all the funny quirks that happen to the stacking flow when floats are added!
+1. In the **Skills** section, there are two options, a `.skills-list` option and a `.skills-circle` option. Hold off on the circle option for now but for the list option, add floats to the `.column` class to get the **three** lists to line up side by side. We'll need to set the `width`, `float` and use the `clearfix` class.
 
-    ```xml
-    &lt;div class=&quot;skills-list&quot;&gt;
-        &lt;h3&gt;List Option&lt;/h3&gt;
-        &lt;div class=&quot;columns&quot;&gt;&lt;!--float this class! --&gt;
-            &lt;h4&gt;Best at:&lt;/h4&gt;
-            &lt;ul&gt;
-                ...
-            &lt;/ul&gt;
-        &lt;/div&gt;
-        ...
+Here's what your page should look like: [example 10](project/examples/10-skills-section.html).
+
+See below for final code but only if you get stuck!
+
+```
+.skills {
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url(../images/background-4.jpg) no-repeat fixed;
+  background-size: cover;
+}
+```  
+```
+.skills .columns {
+  width: 33.33%;
+  float: left;
+}
+```
+```xml
+&lt;div class=&quot;skills-list clearfix&quot;&gt;
+    &lt;h3&gt;List Option&lt;/h3&gt;
+    &lt;div class=&quot;columns&quot;&gt;&lt;!--float this class! --&gt;
+        &lt;h4&gt;Best at:&lt;/h4&gt;
+        &lt;ul&gt;
+            ...
+        &lt;/ul&gt;
     &lt;/div&gt;
-    ```
-    Here's what your page should look like: [example 10](project/examples/10-skills-section.html)
+    ...
+&lt;/div&gt;
+```
+        </section>
+
+        <section class="slide centered" data-markdown>
+            ##GIF Break
+            ![](framework/img/workshop/css.gif)
+        </section>
+
+        <section class="slide" data-markdown>
+            ##Positioning in CSS
+            
+            Sometimes floats and display just doesn't cut it. 
+
+            The `position` property can be used to place elements in specific spots on the page without affecting the elements around it the way floats do.  There are three options: `relative`, `absolute` and `fixed`. Elements are all `static` by default.
+
+            `position` is used in conjunction with offset properties: `top`, `right`, `bottom`, and `left`. These are use to identify where an element will be positioned.
+
+        </section>
+        <section class="slide">
+            <h2>Position: relative</h2>
+            
+            <p>When setting the position to <code>relative</code>, elements will still appear within the <strong>normal flow</strong> a page but will unlock the additional offset properties (top, right, bottom, left).  You can use these values to nudge the element in different directions. Try changing the <code>top</code> value below.</p>
+
+            <textarea class="snippet" data-subject="#relative">.box { 
+    width: 100px;
+    height: 100px; 
+    background: blue;
+    position: relative;
+    top: 0;
+}
+            </textarea>
+            <div id="#relative">
+                <div class="box"></div>
+            </div>  
+        </section>
+
+        <section class="slide">
+            <h2>Position: absolute</h2>
+            
+            <p>When positioning an element as <code>absolute</code>, it needs to also be paired with <code>relative</code> positioning. <code>relative</code> on its own doesn't affect other elements but it is used to <em>contain</em> an <code>absolute</code> position element to a particular spot. Otherwise, it will position itself to the <em>viewport</em>, or browser window.</p>
+
+            <p>Try removing the <code>position:relative</code> declaration below and see what happens.</p>
+
+<pre><code>&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            <textarea class="snippet" data-subject="#absolute">.container {
+    position: relative;
+}
+.box { 
+    width: 100px;
+    height: 100px; 
+    background: blue;
+    position: absolute;
+    top: 0;
+}</textarea>
+
+            <div id="absolute">
+                <div class="container">
+                    <div class="box"></div>
+                </div>
+            </div>  
+        </section>
+
+        <section class="slide">
+            <h2>Position: fixed</h2>
+            
+            <p>When positioning an element as <code>fixed</code>, it will <em>always</em> be positioned to the viewport. <code>relative</code> won't have any effect on this property. Also, it will always stay fixed on the page, even on page scroll. Try adding a <code>top</code> value (or any other directional offset property: <code>right</code>, <code>bottom</code>, <code>left</code>).</p>
+            <pre><code>&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            <textarea class="snippet" data-subject="#fixed">.container {
+    position: relative; /* has no effect */
+}
+.box { 
+    width: 100px;
+    height: 100px; 
+    background: blue;
+    position: fixed;
+    top: ;
+}</textarea>
+
+            <div id="fixed">
+                <div class="container">
+                    <div class="box"></div>
+                </div>
+            </div>  
+        </section>
+
+        <section class="slide" data-markdown>
+            ##Exercise #11: Download PDF resume
+            
+            Some people may still be interested having a hard copy of your resume, so let's give them an option to download a copy. Go back to your HTML document and add a link to a copy of the resume.  In your projects folder, there is a **resume.pdf** that you can use for today or feel free to use yours if you have it handy.
+
+            Use the anchor tag to link to your resume file. You can also add a new HTML5 `download` attribute to trigger a download right away! Also, give it a class to apply unique styles to it.
+            
+            ```xml
+            &lt;a class="download" href=&quot;resume.pdf&quot; download&gt;
+            ```
+        
+            ###Download attribute value
+
+            `download` is one of the few attributes that do not require a value. If no value is declared, the file name that is downloaded will be the same as the file name attached in the link.  If a value is defined, the downloaded file will be the same name as that value. This technique would be useful if your site used generated file names.
+
+            ```xml
+            &lt;a class="download" href=&quot;resume.pdf&quot; download="new-filename.pdf"&gt;
+            ```
+        </section>
+        <section class="slide">
+            <h2>Exercise 11: Position and style download link</h2>
+
+            <p>Use fixed positioning for the link to make it always available as the user is scrolling down the page. </p>
+
+            <p>What properties &amp; values are needed to position this element to the top right of the page?</p>
+
+<pre class="delayed"><code>.download {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+</code></pre>
+            
+            <div class="delayed">
+                <p><code>a</code> tags are inline elements by default so to apply padding or other sizing styles to it, we need to change its display value to <code>inline-block</code></p>
+
+<pre><code>.download {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: inline-block;
+}
+</code></pre>
+            </div>
+        </section>
+
+        <section class="slide" data-markdown>
+            ##Exercise 11: Position and style download link
+
+            Now style the link as you wish! Try adding some padding, remove the default link underline and change the colour.
+
+            Your page will look similar to [Example 11](project/examples/11-fixed.html) with the final code looking something like this:
+
+            ```css
+            .download {
+                position: fixed;
+                top: 0;
+                right: 0;
+                display: inline-block;
+                background: #2980b9;
+                padding: 18px;
+                text-decoration: none;
+                color: #fff;
+            }
+            ```
+            
         </section>
 
         <section class="slide" data-markdown>
@@ -1544,17 +1714,17 @@ In the Skills section, there are also two options, a `.skills-list` option and a
         There's many to choose from but today we'll use Font Awesome: 
         [http://fortawesome.github.io/Font-Awesome/](http://fortawesome.github.io/Font-Awesome/)
 
-        Under **Getting Started**, there are different options for adding the font files.  If using the CDN, remember to add the "http" to make it work when you run your page "locally" (on your computer).
+        Under **[Get Started](http://fortawesome.github.io/Font-Awesome/get-started/)**, there are different options for adding the font files.  If using the CDN, remember to add the "http" to make it work when you run your page "locally" (on your computer).
         
-        Simple to use, pick an icon you'd like to use and copy the supplied markup and class and that's it! There are already some included in your project.  All of the social icons are included with an icon font.
+        To use, [pick an icon](http://fortawesome.github.io/Font-Awesome/icons/) and copy the supplied markup and class and that's it! All of the social icons in the footer of your project's index.html file are included with an icon font.
         </section>
 
         <section class="slide" data-markdown>
         ##Class Exercise - Resetting List Styles
 
-        Add some flair to the skills list by adding icons to each skill.  But first, let's reset some of the default list styles.
+        Add some flair to the skills list by replacing the default bullets with an icon.  
 
-        To remove the default bullet points, use the CSS property and value, `list-style-type: none;` and can be added to the `ul` since that element is used to create the list.  Lists also have padding to create the indent so reset that by using a value of 0.
+        To remove the default bullet points, use the CSS property and value, `list-style-type: none;`. The `ul` is the selected element since it is used to create the list.  Lists also have default padding to create the indent, so reset that by using a value of 0.
 
         Since we want to remove the bullets from all the lists in this section, we can target them all at once using a **descendant selector**. We can use `.skill`, since that's the class for the entire section, and `ul` to target all the lists.
 
@@ -1581,256 +1751,6 @@ In the Skills section, there are also two options, a `.skills-list` option and a
 
             Your page should look something like this: [Example 11](project/examples/11-icon-fonts.html)
         </section>
-
-        <section class="slide">
-            <h2>Making circles</h2>
-
-            <p>For the second option for the <strong>Skills</strong> section, let’s turn this lists into circles and center align them.</p>
-
-            <p>For this exercise, let’s use <code>display: inline-block</code> <em>instead</em> of <code>float: left</code> to get them to line up side-by-side and still be center aligned from the inherited style of <code>text-align: center</code>.</p>
-
-            <p>Our selector will target only the list items contained within the circle option list to ensure that these styles will only be specific to this list. Since we want the individual list items itself to be lined up side-by-side, we have to target them specifically.</p>
-
-            <pre><code>.skills-circles ul li {}</code></pre>
-        </section>
-
-        <section class="slide">
-            <h2>Making circles (continued)</h2>
-            <p>We can give them an equal width &amp; height as well to create a perfect circle using which CSS property?</p>
-            <p class="delayed">border-radius!</p>
-            <p class="delayed">Let’s add a border as well.</p>
-<pre class="delayed"><code>.skills-circles ul li {
-        display: inline-block;
-        height: 150px;
-        width: 150px;
-        border: 2px solid yourAccentColour;
-        border-radius: 50%;
-}
-</code></pre>
-        </section>
-        <section class="slide image-only" data-markdown>
-            ##Hmm....
-
-            ![](framework/img/workshop/circles.png)
-
-            If you see this, you didn't break it. It's just CSS.
-        </section>
-
-        <section class="slide image-only" data-markdown>
-            ![](framework/img/workshop/css.gif)
-        </section>
-
-        <section class="slide" data-markdown>
-            ##Center align
-
-            Aligning elements horizontally is pretty straightforward, `text-align: center` or `margin: 0 auto`.  
-
-            Vertical align? Not so much. 
-
-            Today we are going to try out one way. Remember `line-height`? It's used to create spacing between lines of content but if we set it to be the same as the height of the box, it will make the content inside align vertically.
-
-            ... Unless you have text that is more than one line.
-
-            ![](framework/img/workshop/line-height.png)
-        </section>
-
-        <section class="slide" data-markdown>
-            ##Center align (continued)
-
-            If we look at the HTML markup, a `span` tag was added around each word so that we can still use the `line-height` trick on the list item, but now we can use the `span` tag to override the styles we don't want.
-
-```xml
-&lt;ul&gt;
-    &lt;li&gt;&lt;span&gt;Social Media&lt;/span&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;span&gt;Marketing Strategy&lt;/span&gt;&lt;/li&gt;
-    ...
-&lt;/ul&gt;
-```
-            ```
-            .skills-circles ul li {
-                display: inline-block;
-                height: 150px;
-                width: 150px;
-                border: 2px solid #2980b9;
-                border-radius: 50%;
-                line-height: 150px;
-            }
-            ```
-            Create a new declaration block for the `span` tag, you can skip a couple levels even though it's nested inside of the `li` (remember, Inception... )
-
-            We need to make the span take on the characteristics if a block element in order for this fix to work.
-
-            ```css
-            .skills-circles span {
-                display: inline-block;
-            }
-            ```
-        </section>
-
-        <section class="slide" data-markdown>
-            ##Center align (continued)
-            
-            Now, set the `line-height` to normal to override the `line-height` set in the `li`.  Then finally, `vertical-align: middle` can be added to vertically align the lines of text to each other (which probably seems like it should have work in the first place but doesnt... ugh.)
-            
-            ```
-            .skills-circles span {
-                display: inline-block;
-                line-height: normal;
-                vertical-align: middle;
-            }
-            ```
-
-            Your page should look like this: [Example 12](project/examples/12-circles.html).
-        </section>
-
-        <section class="slide" data-markdown>
-            ##Positioning in CSS
-            
-            Sometimes floats and display just doesn't cut it. 
-
-            The `position` property can be used to place elements in specific spots on the page without affecting the elements around it the way floats do.  There are three options: relative, absolute and fixed. Elements are all `static` by default.
-
-            `position` is used in conjunction with offset properties: `top`, `right`, `bottom`, and `left`. These are use to identify where an element will be positioned.
-
-        </section>
-        <section class="slide">
-            <h2>Position: relative</h2>
-            
-            <p>When setting the position to <code>relative</code>, elements will still appear within the <strong>normal flow</strong> a page but will unlock the additional offset properties (top, right, bottom, left).  You can use these values to nudge the element in different directions.</p>
-
-
-             <textarea class="snippet" data-subject="#relative">.box { 
-    width: 100px;
-    height: 100px; 
-    background: blue;
-    position: relative;
-    top:;
-}
-            </textarea>
-            <div id="#relative">
-                <div class="box"></div>
-            </div>  
-        </section>
-
-        <section class="slide">
-            <h2>Position: absolute</h2>
-            
-            <p>When positioning an element as <code>absolute</code>, it needs to also be paired with <code>relative</code> positioning. `relative` on it's own doesn't affect other elements but it is used to <em>contain</em> an `absolute` position element to a particular spot. Otherwise, it will position itself to the <em>viewport</em>, or browser window.</p>
-            <pre><code>&lt;div class=&quot;container&quot;&gt;
-        &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-            <textarea class="snippet" data-subject="#absolute">.container {
-    position: relative;
-}
-.box { 
-    width: 100px;
-    height: 100px; 
-    background: blue;
-    position: absolute;
-    top:;
-}</textarea>
-
-            <div id="absolute">
-                <div class="container">
-                    <div class="box"></div>
-                </div>
-            </div>  
-        </section>
-
-        <section class="slide">
-            <h2>Position: fixed</h2>
-            
-            <p>When positioning an element as <code>fixed</code>, it will <<em>always</em> be positioned to the viewport. `relative` won't have any effect on this property. Also, it will always stay fixed on the page, even on page scroll.</p>
-            <pre><code>&lt;div class=&quot;container&quot;&gt;
-        &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-            <textarea class="snippet" data-subject="#fixed">.container {
-    position:;
-}
-.box { 
-    width: 100px;
-    height: 100px; 
-    background: blue;
-    position: fixed;
-    top:;
-}</textarea>
-
-            <div id="fixed">
-                <div class="container">
-                    <div class="box"></div>
-                </div>
-            </div>  
-        </section>
-
-        <section class="slide" data-markdown>
-            ##Getting ready for the Final Exercise!
-            
-            Some people may still be interested having a hard copy of your resume, so let's give them an option to download a copy. Go back to your HTML document and add a link to a copy of the resume.  In your projects folder, there is a **resume.pdf** that you can use for today or feel free to use yours if you have it handy.
-
-            Use the anchor tag to link to your resume file. You can also add a new HTML5 `download` attribute to trigger a download right away! Also, give it a class to apply unique styles to it.
-            
-            ```xml
-            &lt;a class="download" href=&quot;resume.pdf&quot; download&gt;
-            ```
-        
-            ###Download attribute value
-
-            `download` is one of the few attributes that do not require a value. If no value is declared, the file name that is downloaded will be the same as the file name attached in the link.  If a value is defined, the downloaded file will be the same name as that value. This technique would be useful if your site used generated file names.
-
-            ```xml
-            &lt;a class="download" href=&quot;resume.pdf&quot; download="new-filename.pdf"&gt;
-            ```
-        </section>
-        <section class="slide">
-            <h2>Exercise 13: Position and style download link</h2>
-
-            <p>Apply fixed positioning to this element so that it’s always available as the user is scrolling through the page. </p>
-
-            <p>What properties &amp; values are needed to position this element to the top right of the page?</p>
-
-<pre class="delayed"><code>.download {
-        position: fixed;
-        top: 0;
-        right: 0;
-}
-</code></pre>
-            
-            <div class="delayed">
-                <p><code>a</code> tags are inline elements by default so to apply padding or other sizing styles to it, we need to change it’s display value to inline-block</p>
-
-<pre><code>.download {
-        position: fixed;
-        top: 0;
-        right: 0;
-        display: inline-block;
-}
-</code></pre>
-            </div>
-        </section>
-
-        <section class="slide" data-markdown>
-            ##Exercise 13: Position and style download link
-
-            Now style the link as you wish! Add some padding, remove default link underline and change the color!
-
-            Your final code could look something like this:
-
-            ```css
-            .download {
-                position: fixed;
-                top: 0;
-                right: 0;
-                display: inline-block;
-                background: #2980b9;
-                padding: 18px;
-                text-decoration: none;
-                color: #fff;
-            }
-            ```
-            [Example 13](examples/13-fixed.html)
-        </section>
         
         <section class="slide" data-markdown>
             ##Final Stretch!
@@ -1838,7 +1758,7 @@ In the Skills section, there are also two options, a `.skills-list` option and a
             From now until the end, take some time to make changes to smaller details like font sizes, margin, padding to give your HTML that extra polish!
         </section>
 
-        <section class="slide image-only" data-markdown>
+        <section class="slide centered" data-markdown>
             ![](framework/img/workshop/now-what.gif)
         </section>
 
