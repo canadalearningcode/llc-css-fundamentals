@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Ladies Learning Code: CSS Fundamentals</title>
+
+    <!-- Don't alter slideshow.css, CSSS slide deck needs it to work -->
+    <link rel="stylesheet" href="css/slideshow.css">
+
+    <!-- Theme-specific styles -->
+    <link href='http://fonts.googleapis.com/css?family=Quicksand|Pacifico|Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/highlightjs-themes/monokai.css">
+    <link rel="stylesheet" href="css/theme-llc.css">
+    <link rel="shortcut icon" href="img/favicon.ico"> 
+
+    <!-- Workshop-specific styles -->
+    <link rel="stylesheet" href="css/workshop.css">
+
+    <!-- Takes care of CSS3 prefixes! -->
+    <script src="scripts/prefixfree.min.js"></script>
+</head>
+
+<!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
+<body>
+    
+    <!-- makes all links open in a new window -->
+    <base target="_blank">
+	<main>
+    	<section class="slide" data-markdown>
+            ##CSS3 Transform
+
+            The `transform` property can be used to literally transform the element.  You can skew it, scale it and few other things.  Let's try adding just a slight `rotate` to it.  The value for `rotate` is defined in degrees.
+
+            Add this declaration to the Profile heading. Try using positive or negative numbers until you find one that you like!
+
+            ```
+            .profile h2 {
+                transform: rotate(-4deg);
+            } 
+            ```
+            
+            The heading should look similar to this:
+
+            ![heading transform](framework/img/workshop/title-transform.png)
+
+            More about `transform` [here](http://css-tricks.com/almanac/properties/t/transform/).
+        </section>
+        <section class="slide" data-markdown>
+            ##:hover Pseudo Selector
+
+            Let's try adding some changes on hover using the `:hover` [psuedo-class selector](http://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:hover).
+
+            Psuedo selectors need to be attached to an element with a colon (`:`) with *no* space. A common use for this selector is for links.  Let's add a colour change on hover.
+
+            ```
+            a:hover {
+                color: #ffffff;
+            }
+            ```
+
+            The `:hover` pseudo selector can be added to any element. Make a change on hover for the "hello" heading, to update the `transform` property. The code will look like this:
+
+            ```
+            .profile h2:hover {
+                transform: rotate(4deg);
+            }
+            ```
+        </section>
+        <section class="slide" data-markdown>
+            ##Class exercise: hover & transition
+
+            Add the transition property to the hover effects. Your page should look similar to [example 9](project/examples/9-css3.html).
+
+```css
+a {
+    color: #2980b9;
+    transition: all 0.5s ease;
+}
+a:hover {
+    color: #ffffff;
+}
+.profile h2 {
+    ...
+    margin-bottom: 10px; 
+    transform: rotate(-4deg);  
+    transition: all 0.5s ease;
+}
+.profile h2:hover {
+    transform: rotate(4deg);
+}
+```
+        </section>
+    </main>
+
+     
+    <footer>
+        <p class="license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="img/cc-by-nc.svg" /></a> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
+        <p class="instructions">Use the left <i class="fa fa-arrow-left"></i> and right <i class="fa fa-arrow-right"></i> arrow keys to navigate</p>
+    </footer>
+
+
+    <script src="scripts/slideshow.js"></script>
+
+    <!-- Uncomment the plugins you need -->
+    <script src="scripts/plugins/css-edit.js"></script>
+    <script src="scripts/plugins/css-snippets.js"></script>
+    <script src="scripts/plugins/css-controls.js"></script>
+    <!-- <script src="plugins/code-highlight.js"></script>-->
+
+    <script src="scripts/plugins/markdown/marked.js"></script>
+    <script src="scripts/plugins/markdown/markdown.js"></script>
+    <script src="scripts/plugins/highlight/highlight.js"></script>    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- Prettify -->
+    <script src="scripts/plugins/prettify.js"></script>
+    <script src="scripts/plugins/lang-css.js"></script>
+    <script src="scripts/plugins/prism.js"></script>
+
+    <script>
+        var slideshow = new SlideShow();
+
+        // Grabs all the .snippet elements
+        var snippets = document.querySelectorAll('.snippet');
+        for(var i=0; i<snippets.length; i++) {
+            new CSSSnippet(snippets[i]);
+        }
+
+        var links = document.getElementByTagName("a");
+        for (var i = 0; i < links.length; i++) {
+                var link = links[i];
+                link.addEventListener(function () {
+                        window.open(this.href);
+                });
+        }
+    </script>
+</body>
+</html>

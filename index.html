@@ -1003,9 +1003,9 @@ max-width: 1000px;</textarea>
 
         </section>
         <section class="slide" data-markdown>
-            ##Fluid background images
+            ##Background-size
 
-            CSS3 introduced the `background-size` property to make a background images fluid and flexible. The syntax is:
+            CSS3 introduced the `background-size` property which not only allows us to change the size of the image but also makes the background images fluid and flexible . The syntax is:
 
             ```
             background-size: width height;
@@ -1203,7 +1203,7 @@ max-width: 1000px;</textarea>
     }
     ```
 
-1. If the text is longer than the image, it will wrap around it. Put a width on the profile summary and float it too.
+1. If the text is longer than the image, it will wrap around it. Put a width on the profile summary and float it too. (If you want the text to wrap around the profile image, skip this step.)
     ```
     .summary {
         width: 70%;
@@ -1213,7 +1213,7 @@ max-width: 1000px;</textarea>
         </section>
         
         <section class="slide" data-markdown>
-            ##Exercise #7: Add More Floats and borders (15mins)
+            ##Exercise #7: Add More Floats and borders (20mins)
 
             Add floats to the **Work Experience** section.  Here's a link to the [final project](project/final.html) for reference and some hints to get you started:
 
@@ -1280,28 +1280,29 @@ max-width: 1000px;</textarea>
             [http://flatuicolors.com/](http://flatuicolors.com/)  
         </section> -->
 
-        <section class="slide" data-markdown>
-            ##Exercise #8: Background, colours, border (20mins)
+        <section class="slide">
+            <h2>Exercise #8: Background, colours, border (20mins)</h2>
 
-            1. Update the **Work Experience** and **Education** section with the same background colour. The sample project is using a very light gray (#fefefc).
+            <ol>
+                <li>Update the <strong>Work Experience</strong> and <strong>Education</strong> section with the same background colour. The sample project is using a very light gray (#fefefc).</li>
+                <li>Change the font colour of the Profile, Skills &amp; Contact section to white or #ffffff. (Try combining selectors for shared styles.)</li>
+                <li>Add another background image to the <strong>Skills</strong> section. Don’t worry about the overlay effect right now.  Just add the image.</li>
+                <li>Add an underline to the <code>&amp;lt;h2&gt;</code> headings, #cccccc or a colour of your choosing. </li>
+                <li>Update the background colour for the Contact section. Use #111111 or a colour of your choosing.</li>
+                <li>Pick an accent colour and apply it to all links (<code>a</code> element).</li>
+            </ol>
 
-            1. Change the font colour of the Profile, Skills & Contact section to white or #ffffff. (Try combining selectors for shared styles.)
-            
-            1. Add another background image to the **Skills** section. Don't worry about the overlay effect right now.  Just add the image.
+            <p><strong>Colour inspiration:</strong> <br>
+            <a href="http://colours.neilorangepeel.com/">http://colours.neilorangepeel.com/</a> <br>
+            <a href="http://flatuicolors.com/">http://flatuicolors.com/</a>  </p>
 
-            1. Add an underline to the `&lt;h2>` headings, #cccccc or a colour of your choosing. 
+            <p>If you get stuck, ask a mentor! Don’t worry if you don’t finish, we’ll go through it together as a class.</p>
 
-            1. Update the background colour for the Contact section. Use #111111 or a colour of your choosing.
+            <p>Your page should look similar to this: <a href="project/examples/8-bg.html">Example 8</a>.</p>
 
-            1. Pick an accent colour and apply it to all links (`a` element).
-
-            **Colour inspiration:**    
-            [http://colours.neilorangepeel.com/](http://colours.neilorangepeel.com/)  
-            [http://flatuicolors.com/](http://flatuicolors.com/)  
-
-            If you get stuck, ask a mentor! Don't worry if you don't finish, we'll go through it together as a class.
-
-            Your page should look similar to this: [Example 8](project/examples/8-bg.html).
+            <div class="presenter-notes">
+                <p>Have a class discussion. Go over the steps as a class and ask people if they want to share any questions, comments or gotchas.</p>
+            </div>
         </section>
 
         <section class="slide title" data-markdown>
@@ -1371,25 +1372,6 @@ max-width: 1000px;</textarea>
         </section>
 
         <section class="slide" data-markdown>
-            ##CSS3 Transform
-
-            The `transform` property can be used to literally transform the element.  You can skew it, scale it and few other things.  Let's try adding just a slight `rotate` to it.  The value for `rotate` is defined in degrees.
-
-            Add this declaration to the Profile heading. Try using positive or negative numbers until you find one that you like!
-
-            ```
-            .profile h2 {
-                transform: rotate(-4deg);
-            } 
-            ```
-            <!-- Your page should look like this: [Example 8](project/examples/8-css3.html). -->
-            The heading should look similar to this:
-
-            ![heading transform](framework/img/workshop/title-transform.png)
-
-            More about `transform` [here](http://css-tricks.com/almanac/properties/t/transform/).
-        </section>
-        <section class="slide" data-markdown>
             ##:hover Pseudo Selector
 
             Let's try adding some changes on hover using the `:hover` [psuedo-class selector](http://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:hover).
@@ -1399,14 +1381,6 @@ max-width: 1000px;</textarea>
             ```
             a:hover {
                 color: #ffffff;
-            }
-            ```
-
-            The `:hover` pseudo selector can be added to any element. Make a change on hover for the "hello" heading, to update the `transform` property. The code will look like this:
-
-            ```
-            .profile h2:hover {
-                transform: rotate(4deg);
             }
             ```
         </section>
@@ -1431,7 +1405,9 @@ p:hover {
         <section class="slide" data-markdown>
             ##Class exercise: hover & transition
 
-            Add the transition property to the hover effects. Your page should look similar to [example 9](project/examples/9-css3.html).
+            Add the transition property to the hover effects then try hovering over your links.
+
+            Your page should look similar to [example 9](project/examples/9-css3.html).
 
 ```css
 a {
@@ -1441,15 +1417,6 @@ a {
 a:hover {
     color: #ffffff;
 }
-.profile h2 {
-    ...
-    margin-bottom: 10px; 
-    transform: rotate(-4deg);  
-    transition: all 0.5s ease;
-}
-.profile h2:hover {
-    transform: rotate(4deg);
-}
 ```
         </section>
 
@@ -1458,15 +1425,11 @@ a:hover {
         <section class="slide">
             <h2>Gradients</h2>
 
-            <p><code>background</code> can also be used to create a gradient. Using CSS gradients instead of an image file, is better for flexibility and performance.</p>
-
-            <p>Gradients are usually one color that fades into another. With CSS you can control the direction of the fade, the colors, as well as where the color changes happen.</p>
+            <p><code>background</code> can also be used to create a gradient. Using CSS gradients instead of an image file, is better for flexibility and performance. Gradients are usually one color that fades into another. With CSS you can control the direction of the fade, the colors, as well as where the color changes happen.</p>
 
             <p>Gradients are set using the <code>background-image</code> property. The shorthand <code>background</code> property will also work.</p>
 
-            <p>To set the values, use <code>linear-gradient(color, color)</code> to set the start and stop colour. The axis defaults at a top-to-bottom angle, though it is also possible to change the direction of the axis.</p>
-
-            <p>To change the direction to left-to-right, pass an additional parameter at the beginning of <code>linear-gradient()</code>starting with the word "to" and the direction. (ex. "to right")</p>
+            <p>To set the values, use <code>linear-gradient(color, color)</code> to set the start and stop colour. The axis defaults at a top-to-bottom angle, though it is also possible to change the direction of the axis. To change the direction to left-to-right, pass an additional parameter at the beginning of <code>linear-gradient()</code>starting with the word "to" and the direction. (ex. "to right")</p>
 
             <pre><code>background-image: linear-gradient(to right, red, blue);</code></pre>
 
@@ -1480,12 +1443,12 @@ a:hover {
         <section class="slide">
             <h2>Gradients and Background Images</h2>
 
-            <p>In our Skills section, the text is hard to read on top of the background image.  Before CSS gradients, the other way to create an overlay effect on a background image was to use CSS <code>position</code> to position a box with an opaque background colour <em>on top</em> of the image.  But now it is so much easier with gradients and setting multiple background images. </p>
+            <p>In our Skills section, the text is hard to read on top of the background image. We can use gradients and set multiple background images to achieve this effect. </p>
 
-            <p>Declare the gradient first so it can sit on top of the image. We also want the to see the image through the gradient so use RGBA color values to set the alpha transparency.</p>
+            <p>Declare the gradient first so it can sit on top of the image. We also want to see the image through the gradient so use RGBA color values to set the alpha transparency.</p>
 
             <textarea class="snippet" data-subject="#bg-image-gradient">height: 300px; 
-background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(http://placepuppy.it/500/300);
+background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(project/images/background-4.jpg);
             </textarea>
             <div id="bg-image-gradient"></div>
         </section>
@@ -1541,66 +1504,18 @@ See below for final code but only if you get stuck!
 
             `position` is used in conjunction with offset properties: `top`, `right`, `bottom`, and `left`. These are use to identify where an element will be positioned.
 
-        </section>
-        <section class="slide">
-            <h2>Position: relative</h2>
-            
-            <p>When setting the position to <code>relative</code>, elements will still appear within the <strong>normal flow</strong> a page but will unlock the additional offset properties (top, right, bottom, left).  You can use these values to nudge the element in different directions. Try changing the <code>top</code> value below.</p>
+            Today we'll be using a fixed position. To learn more about position, [go here](framework/extras-positioning.html).
 
-            <textarea class="snippet" data-subject="#relative">.box { 
-    width: 100px;
-    height: 100px; 
-    background: blue;
-    position: relative;
-    top: 0;
-}
-            </textarea>
-            <div id="#relative">
-                <div class="box"></div>
-            </div>  
-        </section>
-
-        <section class="slide">
-            <h2>Position: absolute</h2>
-            
-            <p>When positioning an element as <code>absolute</code>, it needs to also be paired with <code>relative</code> positioning. <code>relative</code> on its own doesn't affect other elements but it is used to <em>contain</em> an <code>absolute</code> position element to a particular spot. Otherwise, it will position itself to the <em>viewport</em>, or browser window.</p>
-
-            <p>Try removing the <code>position:relative</code> declaration below and see what happens.</p>
-
-<pre><code>&lt;div class=&quot;container&quot;&gt;
-    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-            <textarea class="snippet" data-subject="#absolute">.container {
-    position: relative;
-}
-.box { 
-    width: 100px;
-    height: 100px; 
-    background: blue;
-    position: absolute;
-    top: 0;
-}</textarea>
-
-            <div id="absolute">
-                <div class="container">
-                    <div class="box"></div>
-                </div>
-            </div>  
         </section>
 
         <section class="slide">
             <h2>Position: fixed</h2>
             
-            <p>When positioning an element as <code>fixed</code>, it will <em>always</em> be positioned to the viewport. <code>relative</code> won't have any effect on this property. Also, it will always stay fixed on the page, even on page scroll. Try adding a <code>top</code> value (or any other directional offset property: <code>right</code>, <code>bottom</code>, <code>left</code>).</p>
-            <pre><code>&lt;div class=&quot;container&quot;&gt;
-    &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+            <p>When positioning an element as <code>fixed</code>, it will <em>always</em> be positioned to the viewport and will always stay fixed on the page, even on page scroll. Try adding a <code>top</code> value (or any other directional offset property: <code>right</code>, <code>bottom</code>, <code>left</code>).</p>
+            <pre><code>&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+</code></pre>
 
-            <textarea class="snippet" data-subject="#fixed">.container {
-    position: relative; /* has no effect */
-}
-.box { 
+            <textarea class="snippet" data-subject="#fixed">.box { 
     width: 100px;
     height: 100px; 
     background: blue;
@@ -1609,9 +1524,7 @@ See below for final code but only if you get stuck!
 }</textarea>
 
             <div id="fixed">
-                <div class="container">
-                    <div class="box"></div>
-                </div>
+                <div class="box"></div>
             </div>  
         </section>
 
@@ -1624,14 +1537,6 @@ See below for final code but only if you get stuck!
             
             ```xml
             &lt;a class="download" href=&quot;resume.pdf&quot; download&gt;
-            ```
-        
-            ###Download attribute value
-
-            `download` is one of the few attributes that do not require a value. If no value is declared, the file name that is downloaded will be the same as the file name attached in the link.  If a value is defined, the downloaded file will be the same name as that value. This technique would be useful if your site used generated file names.
-
-            ```xml
-            &lt;a class="download" href=&quot;resume.pdf&quot; download="new-filename.pdf"&gt;
             ```
         </section>
         <section class="slide">
