@@ -673,7 +673,7 @@ h3 {
                 <li>1 value means the same amount of padding on all sides</li>
             </ul>
             
-            <p>Change some values to see the difference between margin and padding. Let's also inspect the element using Chrome's Developer tool.</p>
+            <p>Change some values to see the difference between margin and padding. Trying using 1 - 4 values. Let's also inspect the element using Chrome's Developer tool.</p>
 
             <textarea class="snippet" data-subject="#padding">background: lightblue; 
 padding: 0 0 0 0;
@@ -910,7 +910,7 @@ max-width: 1000px;</textarea>
         <section class="slide" data-markdown>
             ##Update header & heading styles
         
-            In the case of the `header` section, we can apply `text-align: center` instead of adding the `.content-wrap` since the content is short, we don't have to worry about containing it in a wrapper. Also, adjust the padding to add some more space in the header. The final code for header should look like this:
+            In the case of the `header` section, we can apply `text-align: center` instead of adding the `.content-wrap` div. Since the content is short, we don't have to worry about containing it and can avoid "divitis". Also, adjust the padding to add some more space in the header. The final code for header should look like this:
             
             ```
             header {
@@ -1420,7 +1420,10 @@ a:hover {
 ```
         </section>
 
-        
+        <section class="slide centered" data-markdown>
+            ##GIF Break
+            ![](framework/img/workshop/css.gif)
+        </section>
 
         <section class="slide">
             <h2>Gradients</h2>
@@ -1490,11 +1493,6 @@ See below for final code but only if you get stuck!
 ```
         </section>
 
-        <section class="slide centered" data-markdown>
-            ##GIF Break
-            ![](framework/img/workshop/css.gif)
-        </section>
-
         <section class="slide" data-markdown>
             ##Positioning in CSS
             
@@ -1529,7 +1527,7 @@ See below for final code but only if you get stuck!
         </section>
 
         <section class="slide" data-markdown>
-            ##Exercise #11: Download PDF resume
+            ##Class Exercise: Download PDF resume
             
             Some people may still be interested having a hard copy of your resume, so let's give them an option to download a copy. Go back to your HTML document and add a link to a copy of the resume.  In your projects folder, there is a **resume.pdf** that you can use for today or feel free to use yours if you have it handy.
 
@@ -1540,7 +1538,7 @@ See below for final code but only if you get stuck!
             ```
         </section>
         <section class="slide">
-            <h2>Exercise 11: Position and style download link</h2>
+            <h2>Class Exercise: Position and style download link</h2>
 
             <p>Use fixed positioning for the link to make it always available as the user is scrolling down the page. </p>
 
@@ -1552,40 +1550,11 @@ See below for final code but only if you get stuck!
     right: 0;
 }
 </code></pre>
-            
-            <div class="delayed">
-                <p><code>a</code> tags are inline elements by default so to apply padding or other sizing styles to it, we need to change its display value to <code>inline-block</code></p>
-
-<pre><code>.download {
-    position: fixed;
-    top: 0;
-    right: 0;
-    display: inline-block;
-}
-</code></pre>
+            <p class="delayed">To style this download link to look more like a button, <a href="framework/extras-download-btn.html">follow these instructions here</a>.</p>
             </div>
-        </section>
-
-        <section class="slide" data-markdown>
-            ##Exercise 11: Position and style download link
-
-            Now style the link as you wish! Try adding some padding, remove the default link underline and change the colour.
-
-            Your page will look similar to [Example 11](project/examples/11-fixed.html) with the final code looking something like this:
-
-            ```css
-            .download {
-                position: fixed;
-                top: 0;
-                right: 0;
-                display: inline-block;
-                background: #2980b9;
-                padding: 18px;
-                text-decoration: none;
-                color: #fff;
-            }
-            ```
-            
+            <div class="presenter-notes">
+                <p>The slides for styling the download link have been moved to extras/homework section because it doesn't cover any new concepts. This was moved to make time to introduce icon fonts.</p>
+            </div>
         </section>
 
         <section class="slide" data-markdown>
@@ -1619,7 +1588,7 @@ See below for final code but only if you get stuck!
         </section>
 
         <section class="slide" data-markdown>
-            ##Exercise 12: Adding Icon Fonts (15mins)
+            ##Exercise #11: Adding Icon Fonts (15mins)
 
             Now that the bullets have been removed, let's add a checkmark. Visit [Font Awesome](http://fortawesome.github.io/Font-Awesome/) and go to **Icons** to get the code.
 
@@ -1631,7 +1600,7 @@ See below for final code but only if you get stuck!
 
             **Extra Bonus:** Try changing the color or the `h4` subheadings.
 
-            Your page should look similar to [Example 12](project/examples/12-icon-fonts.html).
+            Your page should look similar to [Example 11](project/examples/11-icon-fonts.html).
         </section>
         
         <section class="slide centered" data-markdown>

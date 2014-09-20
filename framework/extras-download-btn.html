@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Ladies Learning Code: CSS Fundamentals</title>
+
+    <!-- Don't alter slideshow.css, CSSS slide deck needs it to work -->
+    <link rel="stylesheet" href="css/slideshow.css">
+
+    <!-- Theme-specific styles -->
+    <link href='http://fonts.googleapis.com/css?family=Quicksand|Pacifico|Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/highlightjs-themes/monokai.css">
+    <link rel="stylesheet" href="css/theme-llc.css">
+    <link rel="shortcut icon" href="img/favicon.ico"> 
+
+    <!-- Workshop-specific styles -->
+    <link rel="stylesheet" href="css/workshop.css">
+
+    <!-- Takes care of CSS3 prefixes! -->
+    <script src="scripts/prefixfree.min.js"></script>
+</head>
+
+<!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
+<body>
+    
+    <!-- makes all links open in a new window -->
+    <base target="_blank">
+	<main>
+        <section class="slide">
+            <h2>Class Exercise: Position and style download link</h2>
+
+            <p>Use fixed positioning for the link to make it always available as the user is scrolling down the page. </p>
+
+            <p>What properties &amp; values are needed to position this element to the top right of the page?</p>
+
+<pre class="delayed"><code>.download {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+</code></pre>
+            
+            <div class="delayed">
+                <p><code>a</code> tags are inline elements by default so to apply padding or other sizing styles to it, we need to change its display value to <code>inline-block</code>.</p>
+
+<pre><code>.download {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: inline-block;
+}
+</code></pre>
+            </div>
+        </section>
+
+        <section class="slide" data-markdown>
+            ##Exercise #11: Style download link
+
+            Now style the link as you wish! Try adding some padding, remove the default link underline and change the colour.
+
+            Your page will look similar to [Example 11](project/examples/11-fixed.html) with the final code looking something like this:
+
+            ```css
+            .download {
+                position: fixed;
+                top: 0;
+                right: 0;
+                display: inline-block;
+                background: #2980b9;
+                padding: 18px;
+                text-decoration: none;
+                color: #fff;
+            }
+            ```
+            
+        </section>
+    </main>
+
+     
+    <footer>
+        <p class="license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="img/cc-by-nc.svg" /></a> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
+        <p class="instructions">Use the left <i class="fa fa-arrow-left"></i> and right <i class="fa fa-arrow-right"></i> arrow keys to navigate</p>
+    </footer>
+
+
+    <script src="scripts/slideshow.js"></script>
+
+    <!-- Uncomment the plugins you need -->
+    <script src="scripts/plugins/css-edit.js"></script>
+    <script src="scripts/plugins/css-snippets.js"></script>
+    <script src="scripts/plugins/css-controls.js"></script>
+    <!-- <script src="plugins/code-highlight.js"></script>-->
+
+    <script src="scripts/plugins/markdown/marked.js"></script>
+    <script src="scripts/plugins/markdown/markdown.js"></script>
+    <script src="scripts/plugins/highlight/highlight.js"></script>    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- Prettify -->
+    <script src="scripts/plugins/prettify.js"></script>
+    <script src="scripts/plugins/lang-css.js"></script>
+    <script src="scripts/plugins/prism.js"></script>
+
+    <script>
+        var slideshow = new SlideShow();
+
+        // Grabs all the .snippet elements
+        var snippets = document.querySelectorAll('.snippet');
+        for(var i=0; i<snippets.length; i++) {
+            new CSSSnippet(snippets[i]);
+        }
+
+        var links = document.getElementByTagName("a");
+        for (var i = 0; i < links.length; i++) {
+                var link = links[i];
+                link.addEventListener(function () {
+                        window.open(this.href);
+                });
+        }
+    </script>
+</body>
+</html>
