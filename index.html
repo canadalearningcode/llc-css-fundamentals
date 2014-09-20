@@ -46,6 +46,10 @@
                 <li><i class="fa fa-twitter"></i><a href="http://twitter.com/christinatruong">@christinatruong</a></li>
             </ul>
         </div>
+        <div class="presenter-notes">
+            <p>It's important to note at the beginning that a lot of material will be covered and their page will not be 100% complete by the end of the day but they will learn the tools to get the page structure together. "Homework" and additional resources are provided at the end to help them complete their project.</p>
+            <p>All code blocks in white is editable and changes will be reflected on the slide.  For exercises, all instructions listed under <strong>bonus</strong> are for those who complete the exercises early to make sure learners at all different levels have something to work on.</p>
+        </div>
     </header>
 
     <main>
@@ -167,18 +171,27 @@
             &lt;img src=&quot;path/to/image.jpg&quot;&gt;
             ```
         </section>
-        <section class="slide" data-markdown>
-            ##Exercise #1: Personalize the content (10 mins)
+        <section class="slide">
+            <h2>Exercise #1: Personalize the content (5-10 mins)</h2>
 
-            1. Update the page title in the `title` tag.
-            1. Update your name and tagline in the `header` section.
-            1. Update your profile / personal summary / profile image.
+            <ol>
+                <li>Update the page title in the <code>title</code> tag.</li>
+                <li>Update your name and tagline in the <code>header</code> section.</li>
+                <li>Update your profile image.</li>
+            </ol>
 
-            Don't forget to save your changes (**File > Save**) and refresh the browser after each update! Don't worry if you don't finish. There's placeholder content already included in the starter template.
+            <p><strong>Bonus:</strong> If you have some extra time, try updating the content for the rest of the page.</p>
 
-            **Protip!** Improve your work flow with keyboard shortcuts:  
-            **CMD/CTRL + S** to save  
-            **CMD/CTRL + R** to refresh the browser
+            <p>Don’t forget to save your changes (<strong>File &gt; Save</strong>) and refresh the browser after each update! Don’t worry if you don’t finish. There’s placeholder content already included in the starter template.</p>
+
+            <p><strong>Protip!</strong> Improve your work flow with keyboard shortcuts:  </p>
+
+            <p><strong>CMD/CTRL + S</strong> to save <br>
+            <strong>CMD/CTRL + R</strong> to refresh the browser</p>
+
+            <div class="presenter-notes">
+                Give the class 5 mins and then check if they completed #1-3. If not give them 5 more minutes.
+            </div>
         </section>
 
         <section class="slide title" data-markdown>
@@ -305,42 +318,26 @@
             class="contentWrapper"
             ```
         </section>
-
-        <section class="slide">
-            <h2>Adding Background Colours</h2>
-            <p>Using the <code>background</code> (shorthand) or <code>background-color</code> (longhand) property to add colours to various page sections can be very useful when laying out the CSS for your HTML document. We will be going more in depth with the various background options  but for now, you can use either property. Try changing the colours below and see what happens!</p>
-
-            <textarea class="snippet" data-subject="#bg-shorthand">background: lightblue;</textarea>
-            <div id="bg-shorthand">
-                <p>Change the background using shorthand!</p>
-            </div>
-            <textarea class="snippet" data-subject="#bg-longhand">background-color: papayawhip;</textarea>
-            <div id="bg-longhand">
-                <p>Change the background using longhand!</p>
-            </div>
-        </section>
-
+            
         <section class="slide" data-markdown>
-            ##CSS color Property and Values
+            ##CSS color Values
 
-            The `color` property accepts different types of values.
-
-            **keywords** - you can use the actual name of the colour for most basic colours (red, green, blue, pink, etc) as well as a few fancy ones like "papayaWhip" and "paleGoldenrod".  
+            **keywords** - use the actual name for most basic colours (red, green, blue, pink, etc) as well as a few fancy ones like "papayaWhip" and "paleGoldenrod".  
             
-            **RGB (red-green-blue)** - Uses *three* numerical values from 0-255. 0 represents black and 255 represents white. See below for syntax.  
+            **RGB (red-green-blue)** - Uses *three* numerical values from 0-255. 0 represents black, 255 represents white. See below for syntax.  
             
-            **hex code** - Made up of the number sign (`#`) followed by six hexadecimal characters (0-9, A-F) or three hexadecimal characters (0-9, A-F).
+            **hex code** - Made up of the number sign (`#`) followed by six hexadecimal characters (0-9, A-F).
             
             ```
+            /* These are all the same colour */
             p {
                 background: firebrick;
                 background: #B22222;
                 background: rgb(178,34,34);
             }
             ```
-        </section>
-        <section class="slide" data-markdown>
-            ##Colour Resources
+
+            **Colour Resources:**
 
             [http://www.colorpicker.com/](http://www.colorpicker.com/)  
             [http://colours.neilorangepeel.com/](http://colours.neilorangepeel.com/)    
@@ -348,6 +345,16 @@
             [http://flatuicolors.com/](http://flatuicolors.com/)  
             [http://color.hailpixel.com/](http://color.hailpixel.com/)  
             [http://wesandersonpalettes.tumblr.com/](http://wesandersonpalettes.tumblr.com/)
+        </section>
+
+        <section class="slide">
+            <h2>Adding Background Colours</h2>
+            <p>Using the <code>background</code> property to add colours to various page sections can be very useful when laying out the CSS for your HTML document. We will be going more in depth with the various background options  but for now, try changing the colours below and see what happens!</p>
+
+            <textarea class="snippet" data-subject="#bg-shorthand">background: lightblue;</textarea>
+            <div id="bg-shorthand">
+                <p>Change my background colour!</p>
+            </div>
         </section>
 
         <section class="slide" data-markdown>
@@ -404,32 +411,11 @@
             **Protip!**  Sublime Text shortcut: type "link" + tab key. Ta da!
         </section>
 
-        <section class="slide">
-            <h2>Default styles: Reset vs Normalize</h2>
-
-            <p>Every browser has its own default <em>user agent</em> stylesheet to add default styles to the html elements. Here's an example of Chrome's user agent style sheet, which can be seen using dev tools:</p>
-            <img src="framework/img/workshop/chrome-user-agent.png">
-
-            <p>A <strong>CSS Reset</strong> is a set of CSS rules that resets the user agent styles of the HTML elements to a consistent, <em>unstyled</em> baseline to avoid cross-browser differences as much as possible.</p>
-
-            <p><strong>Normalize</strong> is slightly different because it "normalizes" the consistencies to a default style rather than <em>removing</em> the styles. Another option is to choose a reset and customize it yourself to create your own.</p>
-
-            <p>Note that if you add it as a separate style sheet, it should be included <em>before</em> your custom style sheet.</p>
-
-            <p>These various style sheets can be downloaded at <a href="http://www.cssreset.com/">cssreset.com</a> but for today, it’s already included in the <strong>project > css</strong> folder. Let's add it to today's project file (index.html).</p>
-            
-            <p class="presenter-notes">
-                * Add the file and look at differences after just adding normalize<br>
-                * explain why normalize has to come before custom css
-            </p>  
-        </section>
-
         <section class="slide" data-markdown>
-            ##Exercise 2: add background colours (10mins)
+            ##Exercise #2: add background colours (10mins)
             
             1. In Sublime, open **style.css** (it should be blank) located in **project > css **. Link it (reference it) in your HTML document.
-
-            1. Using `background` or `background-color`, add a different background colour to each major section of the page.  Use an **element selector** for the header and **class selectors** for the sections. Since there are multiple `&lt;section&gt;` tags, we need to use a more specific selector to give them each a different colour.  Here are the selectors to get started: 
+            1. Using `background`, add a different colour to each major section of the page.  Use an **element selector** for the header and **class selectors** for the sections. Since there are multiple `&lt;section&gt;` tags, we need to use a more specific selector.  Here are the selectors to get you started: 
             
                 ```
                 header { }  
@@ -440,9 +426,29 @@
                 .contact { }
                 ```
 
-            1. Try using comments to organize your CSS into sections so you can group related CSS together.
+            **Bonus**: Add comments to organize your CSS into sections to group related CSS together.
 
-            Your page should look something like this: [background colour example](project/examples/2-bg-colours.html). All example files can be found under **project > examples**.
+            Your page should look something like this: [background colour example](project/examples/2-bg-colours.html) and your CSS will look [similar to this](project/examples/2-bg-colours.css). 
+
+            All example files can be found under **project > examples**.
+        </section>
+
+        <section class="slide">
+            <h2>Default styles: Reset vs Normalize</h2>
+            <p>You may notice that the colours don't span all the way to the edge of the page. That's because browsers have their own <em>user agent</em> style sheet to add default styles to the html elements. Here's an example of Chrome's user agent style sheet, which can be seen using dev tools:</p>
+            <img src="framework/img/workshop/chrome-user-agent.png">
+
+            <p>A <strong>CSS Reset</strong> is a set of CSS rules that resets the user agent styles of the HTML elements to a consistent, <em>unstyled</em> baseline to avoid cross-browser differences as much as possible.</p>
+
+            <p><strong>Normalize</strong> is slightly different because it "normalizes" the consistencies to a default style rather than <em>removing</em> the styles. Another option is to choose a reset and customize it yourself to create your own.</p>
+
+            <p>Note that if you add it as a separate style sheet, it should be included <em>before</em> your custom style sheet.</p>
+
+            <p>These various style sheets can be downloaded at <a href="http://www.cssreset.com/">cssreset.com</a> but for today, it’s already included in the <strong>project > css</strong> folder. Let's add it to today's project file (index.html).</p>
+            
+            <div class="presenter-notes">
+                <p>Add the normalize file and discuss the differences and explain why normalize has to come before custom css</p>
+            </div>  
         </section>
         
         <section class="slide" data-markdown>
@@ -574,10 +580,13 @@ h3 {
             PRESENTER NOTES:
             Reference 3-typography 
             -->
-            <p class="presenter-notes">
-            * reference 3-typography in example folder<br>
-            * Add main font family &amp; line-height to body - explain inheritance <br>
-            * put h2, h3 styles into separate blocks to show combining selectors & refactoring after. Use this to also explain specificity. Tell learners they have to option to try to type along or just watch to keep from slowing down the demo. They can catch up in the exercise work session since the final code will be posted in the next couple slides.</p>
+            <div class="presenter-notes">
+                <ul>
+                    <li>reference 3-typography in example folder</li>
+                    <li>Add main font family &amp; line-height to body - explain inheritance</li>
+                    <li>put h2, h3 styles into separate blocks to show combining selectors & refactoring after. Use this to also explain specificity. Tell learners they have to option to try to type along or just watch to keep from slowing down the demo. They can catch up in the exercise work session since the final code will be posted in the next couple slides.</li>
+                </ul>
+            </div>
         </section>
 
         <section class="slide" data-markdown>
@@ -585,7 +594,7 @@ h3 {
 
             What is refactoring? Code refactoring is the process of restructuring existing code to make it more efficient. Writing clean, organized and efficient code will not only make your pages run faster but will make it easier to maintain and can potentially reduce browser bugs. It's tempting to say "I'll fix it later" but later doesn't always come. It's important to refactor your code as you go along.
 
-            If you find you are declaring the same styles over and over again, try using a `class` or apply the style to a parent selector so the styles can be inherited. You can also *combine* selectors to apply the same styles to multiple selectors at the same time.  Make sure to separate selectors with a comma.
+            If you find you are declaring the same styles over and over again, try applying the style to a parent selector so the styles can be inherited. You can also *combine* selectors to apply the same styles to multiple selectors at the same time.  Make sure to separate selectors with a comma.
 
             ```
             h1, h2 {
@@ -615,17 +624,23 @@ h3 {
             }
             ```
         </section>
-        <section class="slide" data-markdown>
-            ##Exercise #3: Typography (10mins)
+        <section class="slide">
+            <h2>Exercise #3: Typography (10mins)</h2>
 
-            1. Find and add 2-3 font families from [Google Fonts](http://www.google.com/fonts/)
-            1. Update the font & typography styles to your liking! You can add some more later as the page starts to come together.
+            <ol>
+                <li>Find and add 2-3 font families from <a href="http://www.google.com/fonts/">Google Fonts</a></li>
+                <li>Update the font &amp; typography styles to your liking! You can add some more later as the page starts to come together.</li>
+            </ol>
 
-            Resource: [Sitepoint Typographical Properties](http://reference.sitepoint.com/css/typography)
+            <p>Resource: <a href="http://reference.sitepoint.com/css/typography">Sitepoint Typographical Properties</a></p>
 
-            Need help deciding on fonts?  The example project uses Open Sans (sans-serif), Merriweather (serif), Pacifico (cursive).
-            
-            Your page should look something like this: [Example 3](project/examples/3-typography.html).
+            <p>Need help deciding on fonts?  The example project uses Open Sans (sans-serif), Merriweather (serif), Pacifico (cursive).</p>
+
+            <p>Your page should look something like this: <a href="project/examples/3-typography.html">Example 3</a>.</p>
+
+            <div class="presenter-notes">
+                <p>Tell learners to take 5 mins to pick fonts. If they can't decide, just use the suggestions provided. Picking fonts is often a long process and this will keep from slowing down the day.</p>
+            </div>
         </section>
 
         <section class="slide title" data-markdown>
@@ -747,7 +762,7 @@ margin: 0 0 0 0;</textarea>
             ![box model diagram](framework/img/workshop/box-model-fix.gif)
         </section>
 
-        <section class="slide">
+        <!-- <section class="slide">
             <h2>More about margin</h2>
 
             <p><code>margin</code> also accepts negative values, padding does not. When using negative values, it will nudge the box outside of its natural spot within the page flow of the surrounding elements.</p>
@@ -759,7 +774,7 @@ margin: 0px; /* change to negative value */</textarea>
             <div id="neg-margin">box</div>
 
             <p>Extra resource: <a href="http://www.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/">The Definitive Guide to Using Negative Margins</a></p>
-        </section>
+        </section> -->
 
         <section class="slide">
             <h2>Center aligning with margin</h2>
@@ -771,29 +786,27 @@ width: 600px;
 margin: 0 auto;</textarea>
             <div id="margin-auto">box</div>
 
-            <div class="presenter-notes">
-            * show example of adding padding to a couple sections <br>
-            * Inspect the element to show how padding pushing elements with margin inside of the containing element.<br>
-            * set widths/margin: auto on profile section to show why we need to create an inner wrapper to set a background colour & center align content.</div>
+            <p>Margin also accepts negative values. See more <a href="framework/extras-negative-margin.html">here</a>.</p>
         </section>
 
-        <section class="slide" data-markdown>
-            ##Class exercise
-            1. Add the box model fix to our CSS file. [link](index.html#slide39)
+        <section class="slide">
+            <h2>Class exercise</h2>
+            <ol>
+                <li>Add the box model fix to our CSS file. <a href="index.html#slide38">link</a></li>
+                <li>Go back to our HTML &amp; CSS project files, add <code>padding:1px</code> to the <code>header</code> section to see how it changes the spacing. Open up the Chrome Dev Tools and inspect the element.</li>
+                <li>The content is also too wide.  Let’s use the <code>margin: 0 auto</code> trick to center align the content. Try adding the styles to the <code>.profile</code> section in your CSS file.</li>
+            </ol>
 
-            1. Go back to our HTML & CSS project files, add `padding:1px` to the `header` section to see how it changes the spacing. Open up the Chrome Dev Tools and inspect the element.
+<pre class="prettyprint"><code>.profile {
+    width: 1000px;
+    margin: 0 auto;
+}</code></pre>
 
-            1. The content is also too wide.  Let's use the `margin: 0 auto` trick to center align the content. Try adding the styles to the `.profile` section in your CSS file.
-            
-            ```
-            .profile {
-                width: 1000px;
-                margin: 0 auto;
-            }
-            ```
-            Your page will look something like this:
-
-            ![](framework/img/workshop/margin-auto.png)
+            <p>Your page will look something like this:</p>
+            <p><img src="framework/img/workshop/margin-auto.png" alt="" title=""></p>
+            <div class="presenter-notes">
+                <p>This exercise is to demonstrate why we need to add a wrapper around the content which is covered in the next step.</p>
+            </div>
         </section>
 
         <section class="slide" data-markdown>
@@ -824,6 +837,16 @@ Then apply the styles to `.content-wrap` instead of `.profile`. Let's add some p
 ```
         </section>
 
+        <section class="slide" data-markdown>
+            ##Exercise #4: Content wrappers! (15mins)
+
+            Add the `.content-wrap` to each section *except* the `header`. We'll discuss why we don't need to add it to the header soon.
+
+            Let's go over how to collapse code blocks and tab multiple lines at the same time in Sublime first, to help make the addition of this markup a little easier.
+
+            Your page should look something like this: [example 4](project/examples/4a-content-wrap.html).
+        </section>
+
         <section class="slide">
             <h2>width &amp; max-width, px vs %</h2>
             
@@ -834,8 +857,7 @@ Then apply the styles to `.content-wrap` instead of `.profile`. Let's add some p
             <textarea class="snippet" data-subject="#widths">border: 1px solid black;
 margin: 0 auto;
 width: 100%;
-max-width: 1000px;
-            </textarea>
+max-width: 1000px;</textarea>
             <div id="widths">
                 <p>Lorem ipsum dolor sit amet.</p>
             </div>
@@ -854,8 +876,10 @@ max-width: 1000px;
                 padding: 60px 0;
             }
             ```
+            
+            Your page will now look like this [example](project/examples/4b-content-wrap.html). Minimize the screen to test the updates.
 
-            Now we've created a reusable style that will help to keep our CSS nice and neat because we can apply this where ever this style is required, using the same class!
+            Now we've created a reusable style that will help to keep our CSS nice and neat because we can apply this class where ever this style is required.
         </section>
 
         <section class="slide" data-markdown>
@@ -884,16 +908,6 @@ max-width: 1000px;
         </section>
 
         <section class="slide" data-markdown>
-            ##Exercise #4: Content wrappers! (15mins)
-
-            Add the `.content-wrap` to each section *except* the `header`.  We'll avoid "divitis" by using different CSS to style the header (to be discussed after the exercise).
-
-            Let's go over how to collapse code blocks and tab multiple lines at the same time in Sublime first, to help make the addition of this markup a little easier.
-
-            Your page should look something like this: [example 4](project/examples/4-content-wrap.html).
-        </section>
-
-        <section class="slide" data-markdown>
             ##Update header & heading styles
         
             In the case of the `header` section, we can apply `text-align: center` instead of adding the `.content-wrap` since the content is short, we don't have to worry about containing it in a wrapper. Also, adjust the padding to add some more space in the header. The final code for header should look like this:
@@ -919,22 +933,23 @@ max-width: 1000px;
             ![header](framework/img/workshop/header.jpg)
         </section>
             
-        <section class="slide" data-markdown>
-            ##Lunchtime exercise!
+        <section class="slide">
+            <h2>Lunchtime exercise!</h2>
 
-            Need some time to check your work? 
-
-            Take a look in the **examples** folder. We are now up to **5-header.html** & **5-header.css**.
-
-            Also, prepare for the next exercise by picking two images to use as the background images for your page. Here's the link to the [final project for reference](project/final.html).
-
-            Resources for free images:
-
-            * http://superfamous.com/
-            * http://www.gratisography.com/
-            * http://littlevisuals.co/  
-            * http://nos.twnsnd.co/
-            * http://unsplash.com/ 
+            <p>Need some time to check your work? </p>
+            <p>Take a look in the <strong>examples</strong> folder. We are now up to <strong>5-header.html</strong> &amp; <strong>5-header.css</strong>.</p>
+            <p>Also, prepare for the next exercise by picking two images to use as the background images for your page. Here’s the link to the <a href="project/final.html">final project for reference</a>.</p>
+            <p>Resources for free images:</p>
+            <ul>
+                <li><a href="http://superfamous.com/">http://superfamous.com/</a></li>
+                <li><a href="http://www.gratisography.com/">http://www.gratisography.com/</a></li>
+                <li><a href="http://littlevisuals.co/">http://littlevisuals.co/</a>  </li>
+                <li><a href="http://nos.twnsnd.co/">http://nos.twnsnd.co/</a></li>
+                <li><a href="http://unsplash.com/">http://unsplash.com/</a> </li>
+            </ul>
+            <div class="presenter-notes">
+                <p>This lunchtime exercise will give learners a chance to catch up if needed and a chance to find images to personalize their site without taking up class time. The afternoon covers a lot of material and this will help speed it along.  You should aim to hit lunchtime between 12:15 - 12:30pm. A 45 min lunch is recommended.</p>
+            </div>
         </section>
 
         <section class="slide title" data-markdown>
@@ -1803,12 +1818,13 @@ See below for final code but only if you get stuck!
             new CSSSnippet(snippets[i]);
         }
 
-        var links = document.getElementByTagName("a");
+        // Opens all links in a new window
+        var links = document.getElementsByTagName("a");
         for (var i = 0; i < links.length; i++) {
-                var link = links[i];
-                link.addEventListener(function () {
-                        window.open(this.href);
-                });
+            var link = links[i];
+            link.addEventListener(function() {
+                window.open(this.href);
+            });
         }
     </script>
 </body>

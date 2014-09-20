@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Ladies Learning Code: CSS Fundamentals</title>
+
+    <!-- Don't alter slideshow.css, CSSS slide deck needs it to work -->
+    <link rel="stylesheet" href="css/slideshow.css">
+
+    <!-- Theme-specific styles -->
+    <link href='http://fonts.googleapis.com/css?family=Quicksand|Pacifico|Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/highlightjs-themes/monokai.css">
+    <link rel="stylesheet" href="css/theme-llc.css">
+    <link rel="shortcut icon" href="img/favicon.ico"> 
+
+    <!-- Workshop-specific styles -->
+    <link rel="stylesheet" href="css/workshop.css">
+
+    <!-- Takes care of CSS3 prefixes! -->
+    <script src="scripts/prefixfree.min.js"></script>
+</head>
+
+<!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
+<body>
+    
+    <!-- makes all links open in a new window -->
+    <base target="_blank">
+		<main>
+    	<section class="slide">
+        <h2>More about margin</h2>
+
+        <p><code>margin</code> also accepts negative values, padding does not. When using negative values, it will nudge the box outside of its natural spot within the page flow of the surrounding elements.</p>
+
+        <textarea class="snippet" data-subject="#neg-margin">background-color: lightblue;
+width: 100px;
+padding: 20px;
+margin: 0px; /* change to negative value */</textarea>
+        <div id="neg-margin">box</div>
+
+        <p>Extra resource: <a href="http://www.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/">The Definitive Guide to Using Negative Margins</a></p>
+      </section>
+    </main>
+
+     
+    <footer>
+        <p class="license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="img/cc-by-nc.svg" /></a> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
+        <p class="instructions">Use the left <i class="fa fa-arrow-left"></i> and right <i class="fa fa-arrow-right"></i> arrow keys to navigate</p>
+    </footer>
+
+
+    <script src="scripts/slideshow.js"></script>
+
+    <!-- Uncomment the plugins you need -->
+    <script src="scripts/plugins/css-edit.js"></script>
+    <script src="scripts/plugins/css-snippets.js"></script>
+    <script src="scripts/plugins/css-controls.js"></script>
+    <!-- <script src="plugins/code-highlight.js"></script>-->
+
+    <script src="scripts/plugins/markdown/marked.js"></script>
+    <script src="scripts/plugins/markdown/markdown.js"></script>
+    <script src="scripts/plugins/highlight/highlight.js"></script>    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- Prettify -->
+    <script src="scripts/plugins/prettify.js"></script>
+    <script src="scripts/plugins/lang-css.js"></script>
+    <script src="scripts/plugins/prism.js"></script>
+
+    <script>
+        var slideshow = new SlideShow();
+
+        // Grabs all the .snippet elements
+        var snippets = document.querySelectorAll('.snippet');
+        for(var i=0; i<snippets.length; i++) {
+            new CSSSnippet(snippets[i]);
+        }
+
+        var links = document.getElementByTagName("a");
+        for (var i = 0; i < links.length; i++) {
+                var link = links[i];
+                link.addEventListener(function () {
+                        window.open(this.href);
+                });
+        }
+    </script>
+</body>
+</html>
