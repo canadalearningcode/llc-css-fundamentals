@@ -47,8 +47,8 @@
             </ul>
         </div>
         <div class="presenter-notes">
-            <p>It's important to note at the beginning that a lot of material will be covered and their page will not be 100% complete by the end of the day but they will learn the tools to get the page structure together. "Homework" and additional resources are provided at the end to help them complete their project.</p>
-            <p>All code blocks in white is editable and changes will be reflected on the slide.  For exercises, all instructions listed under <strong>bonus</strong> are for those who complete the exercises early to make sure learners at all different levels have something to work on.</p>
+            <p>It's important to note at the beginning that a lot of material will be covered and their page will not be 100% complete by the end of the day. The goal of the day is to learn about the concepts but they will have most of the page done by the end of the day. "Homework" and additional resources are provided at the end to help them complete their project.</p>
+            <p>All code blocks in white are editable and CSS changes will be reflected in the slide.  For exercises, all instructions listed under <strong>bonus</strong> are for those who complete the exercises early to make sure learners at all different levels have something to work on.</p>
         </div>
     </header>
 
@@ -428,7 +428,7 @@
 
             **Bonus**: Add comments to organize your CSS into sections to group related CSS together.
 
-            Your page should look something like this: [background colour example](project/examples/2-bg-colours.html) and your CSS will look [similar to this](project/examples/2-bg-colours.css). 
+            Your page should look something like this: [background example](project/examples/2-bg-colours.html) and your CSS will look [similar to this](project/examples/2-bg-colours.css). 
 
             All example files can be found under **project > examples**.
         </section>
@@ -447,12 +447,12 @@
             <p>These various style sheets can be downloaded at <a href="http://www.cssreset.com/">cssreset.com</a> but for today, it’s already included in the <strong>project > css</strong> folder. Let's add it to today's project file (index.html).</p>
             
             <div class="presenter-notes">
-                <p>Add the normalize file and discuss the differences and explain why normalize has to come before custom css</p>
+                <p>Add the normalize file and discuss the differences and explain why normalize has to come before custom css.</p>
             </div>  
         </section>
         
         <section class="slide" data-markdown>
-            ##Cascading, Inheritance and Specificity
+            ##Cascading
 
             CSS executes from top to bottom (hence "cascading"), so be careful of the the order of your CSS declarations. The declaration that comes *after* will override the one that came before.
 
@@ -468,7 +468,7 @@
             ```
         </section>
         <section class="slide" data-markdown>
-            ##Cascading, Inheritance and Specificity
+            ##Inheritance and Specificity
 
             One of the strengths of CSS is styles can be inherited from parent to child elements using the family tree relationship between the elements.
 
@@ -509,25 +509,6 @@
             Here's a handy resource for referencing web safe fonts: [CSS Font Stack](http://cssfontstack.com/).
         </section>
 
-        <section class="slide" data-markdown>
-            ##Web fonts
-
-            For more options than web safe fonts, services like [Google Fonts](http://www.google.com/fonts/) and [Font Squirrel](http://www.fontsquirrel.com/) make it easier to use a variety of fonts without worrying about whether it's installed on the users' computer.
-
-            A service like **Font Squirrel** requires you to download the fonts and add it to your project files. The site features a handy [generator](http://www.fontsquirrel.com/tools/webfont-generator) to create different font files to support various browsers as well as include demo files and instructions on how to use it. 
-
-            **Google Fonts** allows you to link directly to their stylesheet and no file downloads are necessary. To use these fonts:
-
-            * Select the fonts you want to use and **Add to Collection**.  
-            * You can **Review** them to take a closer look, then choose *Use* when ready.
-            * Select font weights. The more you choose, the more it will slow down page load time.
-            * The default character set should contain what you need. Only select an option if you need to add additional language support.
-            * Grab the `&lt;link&gt;` code snippet and add it the `&lt;head&gt;` part of your page.
-            * Use the new fonts with the `font-family` property as listed in the example on the Google Fonts page.
-
-            That's it!
-        </section>
-
         <section class="slide">
             <h2>Font Styles & Typography</h2>
             <p>Let's experiment with a few CSS properties for styling text. Try changing some of the values below.</p>
@@ -542,6 +523,10 @@ color: #222222;</textarea>
             </div>
 
             <p>Resource: <a href="http://reference.sitepoint.com/css/typography">Sitepoint Typographical Properties</a></p>
+
+            <div class="presenter-notes">
+                <p>Explain what each property does while updating each example in the code editor.</p>
+            </div>
         </section>
 
         <section class="slide">
@@ -582,9 +567,8 @@ h3 {
             -->
             <div class="presenter-notes">
                 <ul>
-                    <li>reference 3-typography in example folder</li>
                     <li>Add main font family &amp; line-height to body - explain inheritance</li>
-                    <li>put h2, h3 styles into separate blocks to show combining selectors & refactoring after. Use this to also explain specificity. Tell learners they have to option to try to type along or just watch to keep from slowing down the demo. They can catch up in the exercise work session since the final code will be posted in the next couple slides.</li>
+                    <li>put h2, h3 styles into separate blocks to show how to combine selectors to demonstrate refactoring in the next slide. Use this to also explain specificity. Tell learners they have the option to type along or just watch to keep from slowing down the demo. They can catch up in the exercise work session since the final code will be posted in the next couple slides.</li>
                 </ul>
             </div>
         </section>
@@ -624,6 +608,26 @@ h3 {
             }
             ```
         </section>
+
+        <section class="slide" data-markdown>
+            ##Web fonts
+
+            For more options than web safe fonts, services like [Google Fonts](http://www.google.com/fonts/) and [Font Squirrel](http://www.fontsquirrel.com/) make it easier to use a variety of fonts without worrying about whether it's installed on the users' computer.
+
+            A service like **Font Squirrel** requires you to download the fonts and add it to your project files. The site features a handy [generator](http://www.fontsquirrel.com/tools/webfont-generator) to create different font files to support various browsers as well as include demo files and instructions on how to use it. 
+
+            **Google Fonts** allows you to link directly to their stylesheet and no file downloads are necessary. To use these fonts:
+
+            * Select the fonts you want to use and **Add to Collection**.  
+            * You can **Review** them to take a closer look, then choose *Use* when ready.
+            * Select font weights. The more you choose, the more it will slow down page load time.
+            * The default character set should contain what you need. Only select an option if you need to add additional language support.
+            * Grab the `&lt;link&gt;` code snippet and add it the `&lt;head&gt;` part of your page.
+            * Use the new fonts with the `font-family` property as listed in the example on the Google Fonts page.
+
+            That's it!
+        </section>
+
         <section class="slide">
             <h2>Exercise #3: Typography (10mins)</h2>
 
@@ -840,9 +844,9 @@ Then apply the styles to `.content-wrap` instead of `.profile`. Let's add some p
         <section class="slide" data-markdown>
             ##Exercise #4: Content wrappers! (15mins)
 
-            Add the `.content-wrap` to each section *except* the `header`. We'll discuss why we don't need to add it to the header soon.
+            Add the `.content-wrap` to each section *except* the `header`. We'll discuss why the header doesn't need it very soon.
 
-            Let's go over how to collapse code blocks and tab multiple lines at the same time in Sublime first, to help make the addition of this markup a little easier.
+            First, let's go over how to collapse code blocks and tab multiple lines at the same time in Sublime first, to help make the addition of this markup a little easier.
 
             Your page should look something like this: [example 4](project/examples/4a-content-wrap.html).
         </section>
@@ -910,7 +914,7 @@ max-width: 1000px;</textarea>
         <section class="slide" data-markdown>
             ##Update header & heading styles
         
-            In the case of the `header` section, we can apply `text-align: center` instead of adding the `.content-wrap` div. Since the content is short, we don't have to worry about containing it and can avoid "divitis". Also, adjust the padding to add some more space in the header. The final code for header should look like this:
+            In the case of the `header` section, we can apply `text-align: center` instead of adding the `.content-wrap` div. Since the content is short, we don't have to worry about containing it, therefore, avoiding "divitis". Also, adjust the padding to add space in the header. The final code for header should look like this:
             
             ```
             header {
@@ -1130,13 +1134,13 @@ max-width: 1000px;</textarea>
         <section class="slide" data-markdown>
             ##CSS Float Property
 
-            Remember, block-style HTML elements like `&lt;p>`, `&lt;div>` and `&lt;section>` automatically start on a new line and stack on top of each other. To get two block elements to align side-by-side, the `float` property can be used. 
+            Remember, block-style HTML elements like `&lt;p>`, `&lt;div>` and `&lt;section>` automatically start on a new line and stack on top of each other. To get two block elements to align side-by-side, `float` can be used. 
 
             CSS floats can float elements left or right.
 
-            **However**, we have to break the natural stacking flow when an element is floated. This will cause any element *after* the floated element to try to move up beside it or just not display properly because we've disrupted the natural stacking flow. The parent container will also collapse.
+            **However**, we have to break the *natural stacking flow* when an element is floated. This will cause any element *after* the floated element to try to move up beside it or just not display properly because we've disrupted the natural stacking flow. The parent container will also collapse.
 
-            **Also**, if there is no width set, the element will float but the width will automatically be the width of its content.
+            **Also**, if no width set, the element will float but the width will automatically be the width of its content.
         </section>
         <section class="slide centered">
             <img src="framework/img/workshop/shittier.gif">
@@ -1193,7 +1197,7 @@ max-width: 1000px;</textarea>
 
 1. Add the `clearfix` class to the parent element.
 
-1. Make the image a relative size to the page and add margin to create space between the image and text.
+1. Make the image a relative size and add margin to create space between the image and text.
 
     ```
     .profile img {
@@ -1301,7 +1305,7 @@ max-width: 1000px;</textarea>
             <p>Your page should look similar to this: <a href="project/examples/8-bg.html">Example 8</a>.</p>
 
             <div class="presenter-notes">
-                <p>Have a class discussion. Go over the steps as a class and ask people if they want to share any questions, comments or gotchas.</p>
+                <p>Have a class discussion after the exercise time is up. Go over the steps as a class and ask people if they want to share any questions, comments or gotchas.</p>
             </div>
         </section>
 
@@ -1359,7 +1363,7 @@ max-width: 1000px;</textarea>
 }</code></pre>
                 </li>
                 <li>
-                    <p>Headings are block level elements so they are going to want to span 100% width of it’s container.  We could set a width value on it but what if we change the greeting? Then we’d have to set the width again. Remember, inline elements are as wide as their content so let’s change the heading to which display option?</p>
+                    <p>Headings are block level elements so they are going to want to span 100% width of it’s container.  We could set a width value on it but what if we change the greeting? Then we’d have to set the width again. Remember, inline elements are as wide as their content so change the heading to which display value?</p>
                     <p class="delayed"><code>display: inline-block;</code> so we can access the block and inline behaviors. Add some padding too.</p>
 <pre class="delayed"><code>.profile h2 {
     border: none;
@@ -1529,12 +1533,12 @@ See below for final code but only if you get stuck!
         <section class="slide" data-markdown>
             ##Class Exercise: Download PDF resume
             
-            Some people may still be interested having a hard copy of your resume, so let's give them an option to download a copy. Go back to your HTML document and add a link to a copy of the resume.  In your projects folder, there is a **resume.pdf** that you can use for today or feel free to use yours if you have it handy.
+            Some people may still be interested having a hard copy of your resume, so let's add an option to download a copy. Go back to your HTML document and add a link to a copy of the resume.  In your projects folder, there is a **resume.pdf** that can be used as a placeholder or use yours if you have it handy.
 
             Use the anchor tag to link to your resume file. You can also add a new HTML5 `download` attribute to trigger a download right away! Also, give it a class to apply unique styles to it.
             
             ```xml
-            &lt;a class="download" href=&quot;resume.pdf&quot; download&gt;
+            &lt;a class="download" href=&quot;resume.pdf&quot; download&gt;Download resume (pdf)&lt;/a>
             ```
         </section>
         <section class="slide">
@@ -1553,7 +1557,7 @@ See below for final code but only if you get stuck!
             <p class="delayed">To style this download link to look more like a button, <a href="framework/extras-download-btn.html">follow these instructions here</a>.</p>
             </div>
             <div class="presenter-notes">
-                <p>The slides for styling the download link have been moved to extras/homework section because it doesn't cover any new concepts. This was moved to make time to introduce icon fonts.</p>
+                <p>The slides for further styling of the download link have been moved to extras/homework section because it doesn't cover any new concepts. This was moved to make time to introduce icon fonts.</p>
             </div>
         </section>
 
