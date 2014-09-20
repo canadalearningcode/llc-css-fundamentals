@@ -28,29 +28,31 @@
     <base target="_blank">
 
     <main>
-        <section class="slide">
-            <h2>Making circles</h2>
+        <section class="slide" data-markdown>
+            ##MAKING CIRCLES
 
-            <p>For the second option for the <strong>Skills</strong> section, let’s turn this lists into circles and center align them.</p>
+            For the second option for the Skills section, let’s turn this lists into circles and center align them.
 
-            <p>For this exercise, let’s use <code>display: inline-block</code> <em>instead</em> of <code>float: left</code> to get them to line up side-by-side and still be center aligned from the inherited style of <code>text-align: center</code>.</p>
+            For this exercise, use `display: inline-block` instead of `float: left` to get them to line up side-by-side.  This will allow the elements to be center aligned from the inherited style of text-align: center.
 
-            <p>Our selector will target only the list items contained within the circle option list to ensure that these styles will only be specific to this list. Since we want the individual list items itself to be lined up side-by-side, we have to target them specifically.</p>
-
-            <pre><code>.skills-circles ul li {}</code></pre>
+            Use a selector that will target *only* the list items contained within the circle option. Since the individual list items itself are to be lined up side-by-side,  target them specifically.
+            
+            ```css
+            .skills-circles ul li {}
+            ```
         </section>
 
         <section class="slide">
             <h2>Making circles (continued)</h2>
-            <p>We can give them an equal width &amp; height as well to create a perfect circle using which CSS property?</p>
+            <p>Give them an equal width &amp; height to create a perfect circle using which CSS property?</p>
             <p class="delayed">border-radius!</p>
-            <p class="delayed">Let’s add a border as well.</p>
+            <p class="delayed">Try adding a border too.</p>
 <pre class="delayed"><code>.skills-circles ul li {
     display: inline-block;
     height: 150px;
     width: 150px;
-    border: 2px solid yourAccentColour;
     border-radius: 50%;
+    border: 2px solid yourAccentColour;
 }
 </code></pre>
         </section>
@@ -59,7 +61,7 @@
 
             ![](img/workshop/circles.png)
 
-            If you see this, you didn't break it. It's just CSS.
+            If you see this, you didn't break it. It's just the way CSS is sometimes.
         </section>
 
         <section class="slide" data-markdown>
@@ -69,7 +71,7 @@
 
             Vertical align? Not so much. 
 
-            Today we are going to try out one way. Remember `line-height`? It's used to create spacing between lines of content but if we set it to be the same as the height of the box, it will make the content inside align vertically.
+            There are many different ways but for this this example, we'll be using `line-height`. It's used to create spacing between lines of content but if we set it to be the same as the height of the box, it will make the content inside align vertically.
 
             ... Unless you have text that is more than one line.
 

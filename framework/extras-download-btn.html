@@ -29,21 +29,19 @@
     <base target="_blank">
 	<main>
         <section class="slide">
-            <h2>Class Exercise: Position and style download link</h2>
+            <h2>Position and style download link</h2>
 
             <p>Use fixed positioning for the link to make it always available as the user is scrolling down the page. </p>
 
-            <p>What properties &amp; values are needed to position this element to the top right of the page?</p>
-
-<pre class="delayed"><code>.download {
+<pre><code>.download {
     position: fixed;
     top: 0;
     right: 0;
 }
 </code></pre>
             
-            <div class="delayed">
-                <p><code>a</code> tags are inline elements by default so to apply padding or other sizing styles to it, we need to change its display value to <code>inline-block</code>.</p>
+            <div>
+                <p><code>a</code> tags are inline elements by default so to apply padding or other sizing styles to it, change its display value to <code>inline-block</code>.</p>
 
 <pre><code>.download {
     position: fixed;
@@ -56,9 +54,9 @@
         </section>
 
         <section class="slide" data-markdown>
-            ##Exercise #11: Style download link
+            ##Style the download link
 
-            Now style the link as you wish! Try adding some padding, remove the default link underline and change the colour.
+            Try adding some padding, remove the default link underline and change the colour.
 
             Your page will look similar to [Example 11](project/examples/11-fixed.html) with the final code looking something like this:
 
@@ -70,11 +68,10 @@
                 display: inline-block;
                 background: #2980b9;
                 padding: 18px;
-                text-decoration: none;
+                text-decoration: none; /* removes underline */
                 color: #fff;
             }
             ```
-            
         </section>
     </main>
 
