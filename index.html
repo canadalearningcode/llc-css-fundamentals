@@ -967,13 +967,18 @@ max-width: 1000px;</textarea>
             ```
             Since our CSS file in *inside* a folder, use `../` to go *up and out* of the folder to get to the image files. 
 
-            Let's add a background image to the `body` of your page. There are a few images in your **project > images** folder to choose from or add one of your own.
+            Let's add a background image to the `body` of your page. There are a few images in your **project > images** folder to choose from or your own.
 
             ```
             background: url(../images/background-1.jpg);
             ```
             
-            Note how the images repeat. We can override that with another property, `background-repeat` or just add it to the shorthand `background` property.
+            See how the image repeats? Let's fix that.
+        </section>
+        <section class="slide" data-markdown>
+            ##Class Exercise: Background Images (continued)
+
+            To keep the image from repeating, use `background-repeat` or just add it to the shorthand `background` property.
             
             ```
             /* shorthand */
@@ -983,6 +988,19 @@ max-width: 1000px;</textarea>
             background-image: url(../images/background-1.jpg); 
             background-repeat: no-repeat;
             ```
+
+            Now the image doesn't stretch all the way across the page but before we update that, let's try adding one more style. Add "fixed" to your shorthand markup. Check your page and scroll. What happens to the image?
+            
+            ```
+            /* shorthand */
+            background: url(../images/background-1.jpg) no-repeat fixed; 
+
+            /* longhand */
+            background-image: url(../images/background-1.jpg); 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            ```
+
         </section>
         <section class="slide" data-markdown>
             ##Fluid background images
@@ -1003,35 +1021,34 @@ max-width: 1000px;</textarea>
             header {
                 background-image: url(../images/background-1.jpg);
                 background-repeat: no-repeat;
+                background-attachment: fixed;
                 background-position: 50%;
                 background-size: 100%;
             }
             ```
             ```
             header {
-                background: url(../images/background-1.jpg) no-repeat 50% / 100%;
+                background: url(../images/background-1.jpg) no-repeat fixed 50% / 100%;
             }
             ```
             If no background position value is being used, background-size won't work in the shorthand property so in this case, it may be less error prone to add it via the longhand property.
             
             ```
             header {
-                background: url(../images/background-1.jpg) no-repeat 50%;
+                background: url(../images/background-1.jpg) no-repeat fixed 50%;
                 background-size: 100%;
             }
             ```
         </section>
 
         <section class="slide" data-markdown>
-            ##Class Exercise: More About Background
-
-            `background-size` also accepts keyword values, `contain` and `cover`.
-
-            `contain` scales the image to fit its container. The image will grow or shrink proportionally but the width and height will not exceed the container's dimensions.
+            ##Class Exercise: Background-size
+            
+            This looks great... until you minimize the screen. This is where using the keyword, `cover` will work better.
 
             `cover` scales the image to fit the entire container but, if that has a different aspect ratio, the image will be cropped.
 
-            Let's add background-size and one more property, `background-attachment`.  Set the value to `fixed` and see what happens! (This can be added to the shorthand property) Your code should now look something like this:
+            Let's update the background-size to `cover`. Your code should now look something like this:
             ```
             background: url(../images/background-2.jpg) no-repeat fixed 50%;
             background-size: cover;
