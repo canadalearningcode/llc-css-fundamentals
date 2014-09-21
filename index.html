@@ -1647,7 +1647,7 @@ See below for final code but only if you get stuck!
 
             You will need to register a domain name (www.mysite.com) and get hosting. Here are a couple domain & hosting options:
             
-            * [hover.com](https://www.hover.com/?ircid=2799&irmpname=Ladies+Learning+Code)
+            * [hover.com](hover.com/ladiescode)
             * [dreamhost.com](http://www.dreamhost.com/r.cgi?205190)  
 
             To get your files online, you will need upload your files to your newly purchased hosting server. There are a few pieces of information you will need and are usually provided to you by your hosting service provider.
@@ -1689,6 +1689,7 @@ See below for final code but only if you get stuck!
         <p class="instructions">Use the left <i class="fa fa-arrow-left"></i> and right <i class="fa fa-arrow-right"></i> arrow keys to navigate</p>
     </footer>
 
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
     <script src="framework/scripts/slideshow.js"></script>
 
@@ -1725,6 +1726,10 @@ See below for final code but only if you get stuck!
                 window.open(this.href);
             });
         }
+
+        jQuery(document).ready(function(){
+            jQuery(".snippet").before("<span class=\"edit\">edit me</span>");
+        });
     </script>
 </body>
 </html>
