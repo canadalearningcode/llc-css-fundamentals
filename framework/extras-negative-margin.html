@@ -63,11 +63,6 @@ margin: 0px; /* change to negative value */</textarea>
     <script src="scripts/plugins/highlight/highlight.js"></script>    
     <script>hljs.initHighlightingOnLoad();</script>
 
-    <!-- Prettify -->
-    <script src="scripts/plugins/prettify.js"></script>
-    <script src="scripts/plugins/lang-css.js"></script>
-    <script src="scripts/plugins/prism.js"></script>
-
     <script>
         var slideshow = new SlideShow();
 
@@ -77,13 +72,6 @@ margin: 0px; /* change to negative value */</textarea>
             new CSSSnippet(snippets[i]);
         }
 
-        var links = document.getElementByTagName("a");
-        for (var i = 0; i < links.length; i++) {
-                var link = links[i];
-                link.addEventListener(function () {
-                        window.open(this.href);
-                });
-        }
     </script>
 </body>
 </html>

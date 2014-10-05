@@ -114,11 +114,6 @@ a:hover {
     <script src="scripts/plugins/highlight/highlight.js"></script>    
     <script>hljs.initHighlightingOnLoad();</script>
 
-    <!-- Prettify -->
-    <script src="scripts/plugins/prettify.js"></script>
-    <script src="scripts/plugins/lang-css.js"></script>
-    <script src="scripts/plugins/prism.js"></script>
-
     <script>
         var slideshow = new SlideShow();
 
@@ -126,14 +121,6 @@ a:hover {
         var snippets = document.querySelectorAll('.snippet');
         for(var i=0; i<snippets.length; i++) {
             new CSSSnippet(snippets[i]);
-        }
-
-        var links = document.getElementByTagName("a");
-        for (var i = 0; i < links.length; i++) {
-                var link = links[i];
-                link.addEventListener(function () {
-                        window.open(this.href);
-                });
         }
     </script>
 </body>
