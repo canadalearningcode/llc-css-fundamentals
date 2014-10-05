@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Ladies Learning Code: CSS Fundamentals</title>
+
+    <!-- Don't alter slideshow.css, CSSS slide deck needs it to work -->
+    <link rel="stylesheet" href="css/slideshow.css">
+
+    <!-- Theme-specific styles -->
+    <link href='http://fonts.googleapis.com/css?family=Quicksand|Pacifico|Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/highlightjs-themes/monokai.css">
+    <link rel="stylesheet" href="css/theme-llc.css">
+    <link rel="shortcut icon" href="img/favicon.ico"> 
+
+    <!-- Workshop-specific styles -->
+    <link rel="stylesheet" href="css/workshop.css">
+
+    <!-- Takes care of CSS3 prefixes! -->
+    <script src="scripts/prefixfree.min.js"></script>
+</head>
+
+<!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
+<body>
+    
+    <!-- makes all links open in a new window -->
+    <base target="_blank">
+        <main>
+            <section class="slide" data-markdown>
+            ##Inline vs Block Elements
+            By default, some HTML elements are displayed as block or inline elements.
+
+            ###Block Elements
+
+            * takes up 100% width of its container, no matter how long the actual content is
+            * will be the same height as its content
+            * always starts on a new line
+            * can wrap other block level elements or inline elements
+            * can apply sizing related CSS to it (margin, padding, height, width)
+
+            ###Inline Elements
+
+            * will be the height and width of its content
+            * always appears "in a line" with other inline level elements
+            * can wrap other inline elements but cannot wrap block level elements *except* `&lt;a&gt;` tags.  This is only valid with an HTML5 doctype.
+            * does not render CSS height and width at all, will apply margin and padding but with unexpected results
+
+            ###Inline-block
+
+            * best of both worlds
+            * floats left and is the size & height of its content, like inline elements
+            * accepts height and width values like block elements
+
+            **Extra Resource**: [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
+        </section>
+
+        <section class="slide">
+            <h2>Block & Inline Example</h2>
+            <p>Click <strong>Edit in JSFiddle</strong> to make edits. Let's see what happens when height, width, margin and padding is applied to inline and block elements.</p>
+
+            <iframe width="100%" height="60%" src="http://jsfiddle.net/WC5K4/4/embedded/html,css/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+        </section>
+
+        <section class="slide" data-markdown>
+        ##CSS Display property
+
+        These default display styles can be changed using the CSS `display` property.
+
+        `display: inline` can be used to get block level elements to line up side by side, in a line. The only problem is the block level element will not render sizing properties, just like default inline elements.
+
+        `display: block` can be used to make inline elements behave like a block level element (be able to apply size related properties) but they will no longer sit side by side, in a line.
+
+        `display: inline-block` is the best of both worlds. Elements will line up side by side and also render sizing properties.
+        
+        `display: none;` will hide the element.
+
+        Let's go back to our previous example and try using the `display` property.
+        </section>
+    </main>
+    
+    <footer>
+        <p class="license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="img/cc-by-nc.svg" /></a> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
+        <p class="instructions">Use the left <i class="fa fa-arrow-left"></i> and right <i class="fa fa-arrow-right"></i> arrow keys to navigate</p>
+    </footer>
+
+
+    <script src="scripts/slideshow.js"></script>
+
+    <!-- Uncomment the plugins you need -->
+    <script src="scripts/plugins/css-edit.js"></script>
+    <script src="scripts/plugins/css-snippets.js"></script>
+    <script src="scripts/plugins/css-controls.js"></script>
+    <!-- <script src="plugins/code-highlight.js"></script>-->
+
+    <script src="scripts/plugins/markdown/marked.js"></script>
+    <script src="scripts/plugins/markdown/markdown.js"></script>
+    <script src="scripts/plugins/highlight/highlight.js"></script>    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script>
+        var slideshow = new SlideShow();
+
+        // Grabs all the .snippet elements
+        var snippets = document.querySelectorAll('.snippet');
+        for(var i=0; i<snippets.length; i++) {
+            new CSSSnippet(snippets[i]);
+        }
+    </script>
+</body>
+</html>
