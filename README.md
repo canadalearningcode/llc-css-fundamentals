@@ -2,9 +2,11 @@
 
 ##CSS Fundamentals for Beginners Workshop Slides
 
-A full day introductory CSS workshop.
-
 ####[You can view the slides here](http://tiffanytse.github.io/llc-css-fundamentals/index.html)
+
+----------------
+
+A full day introductory CSS workshop.
 
 Created by [Christina Truong](http://twitter.com/christinatruong) for Ladies Learning Code.
 
