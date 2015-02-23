@@ -4,7 +4,7 @@
 
 A full day introductory CSS workshop.
 
-**You can view the slides [here](http://tiffanytse.github.io/llc-css-fundamentals/index.html)**
+####[You can view the slides here](http://tiffanytse.github.io/llc-css-fundamentals/index.html)
 
 Created by [Christina Truong](http://twitter.com/christinatruong) for Ladies Learning Code.
 
