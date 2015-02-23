@@ -4,6 +4,8 @@
 
 A full day introductory CSS workshop.
 
+**You can view the slides [here](http://tiffanytse.github.io/llc-css-fundamentals/index.html)**
+
 Created by [Christina Truong](http://twitter.com/christinatruong) for Ladies Learning Code.
 
 **Instructors:** Please refer to https://github.com/ladieslearningcode/llc-slidedeck-template for instructions for customization of the slide deck and features. If there are any issues or fixes required for this workshop slide presentation, please open an issue, submit a pull request or email [christina@ladieslearningcode.com](mailto:christina@ladieslearningcode.com).
