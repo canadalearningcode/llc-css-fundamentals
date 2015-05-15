@@ -153,7 +153,7 @@
             &lt;title&gt;Page Title&lt;/title&gt;
             ```
 
-            **Headings**: There are 6 heading tags available (`&lt;h1&gt;,&lt;h2&gt;,...,&lt;h6&gt;`) and follow a hierarchical structure. `&lt;h1&gt;` represents the most important title/heading on the page and it's best to stick to using it just once per page. Other headings can be used multiple times.  It's important to use the appropriate tag to describe the content, not for the default heading styles. That's what CSS is for!
+            **Headings**: There are 6 heading tags available (`&lt;h1&gt;,&lt;h2&gt;,...,&lt;h6&gt;`) and they follow a hierarchical structure. `&lt;h1&gt;` represents the most important title/heading on the page and it's best to stick to using it just once per page. Other headings can be used multiple times.  It's important to use the appropriate tag to describe the content, not for the default heading styles. That's what CSS is for!
 
             ```xml
             &lt;h1&gt;Most Important Heading&lt;/h1&gt;
@@ -171,7 +171,7 @@
             &lt;a href=&quot;http://website.com&quot;&gt;link&lt;/a&gt;
             ```
 
-            **Lists**: There are two kinds of lists: ordered (`ol`) for numbered lists & undordered (`ul`) for lists with bullets. Content must be included only within the list item (`li`).
+            **Lists**: There are two kinds of lists: ordered (`ol`) for numbered lists & unordered (`ul`) for lists with bullets. Content must be included only within the list item (`li`).
             
             ```xml
             &lt;ul&gt;
@@ -183,14 +183,14 @@
                 &lt;li&gt;Ordered list item&lt;/li&gt;
             &lt;/ol&gt;
             ```
-            **Images**: like links, also requires the an additional attribute, `src`, for linking to the image file.
+            **Images**: like links, also requires an additional attribute, `src`, which defines the path to an image file.
 
             ```
             &lt;img src=&quot;path/to/image.jpg&quot;&gt;
             ```
         </section>
         <section class="slide">
-            <h2>Exercise #1: Personalize the content (5-10 mins)</h2>
+            <h2>Exercise #1: Personalize the content (5-10mins)</h2>
 
             <ol>
                 <li>Update the page title in the <code>title</code> tag.</li>
@@ -224,7 +224,7 @@
 
             **Selectors:** used to determine which element(s) to apply the styles to. Can target an HTML tag, class or ID attribute (more on these later).  
             **Declaration block:** consists of a list of declarations (rules to follow) wrapped in curly braces `{}`.  
-            **Declarations** or rules to follow, are written using `property:value` pairs.
+            **Declarations**, or rules to follow, are written using `property:value` pairs.
 
             ```css
             selector {
@@ -357,12 +357,12 @@
 
             **Colour Resources:**
 
-            [http://www.colorpicker.com/](http://www.colorpicker.com/)  
-            [http://colours.neilorangepeel.com/](http://colours.neilorangepeel.com/)    
-            [http://www.colourlovers.com/](http://www.colourlovers.com/)  
-            [http://flatuicolors.com/](http://flatuicolors.com/)  
-            [http://color.hailpixel.com/](http://color.hailpixel.com/)  
-            [http://wesandersonpalettes.tumblr.com/](http://wesandersonpalettes.tumblr.com/)
+            * [http://www.colorpicker.com/](http://www.colorpicker.com/)  
+            * [http://colours.neilorangepeel.com/](http://colours.neilorangepeel.com/)    
+            * [http://www.colourlovers.com/](http://www.colourlovers.com/)  
+            * [http://flatuicolors.com/](http://flatuicolors.com/)  
+            * [http://color.hailpixel.com/](http://color.hailpixel.com/)  
+            * [http://wesandersonpalettes.tumblr.com/](http://wesandersonpalettes.tumblr.com/)
         </section>
 
         <section class="slide">
@@ -398,7 +398,7 @@
                 &lt;meta charset=&quot;utf-8&quot;&gt;
                 &lt;style&gt;
                     h1 {
-                     font-size: 16px;
+                      font-size: 16px;
                     }
                 &lt;/style&gt;
             &lt;/head&gt;
@@ -700,6 +700,8 @@ h3 {
             
             <p>Change some values to see the difference between margin and padding. Trying using 1 - 4 values. Let's also inspect the element using Chrome's Developer tool.</p>
 
+            <p>It may be handy to remember the "Tribble" mnemonic to remember these positions. For example, TRBL (Top, Right Bottom Left) sounds a lot like an <a href="https://en.wikipedia.org/wiki/Tribble">infamous Star Trek character(s)</a>.</p>
+
             <textarea class="snippet" data-subject="#padding">background: lightblue; 
 padding: 0 0 0 0;
 margin: 0 0 0 0;</textarea>
@@ -817,7 +819,7 @@ margin: 0 auto;</textarea>
         <section class="slide">
             <h2>Class exercise</h2>
             <ol>
-                <li>Add the box model fix to our CSS file. <a href="index.html#slide37">link</a></li>
+                <li>Add the box model fix to our CSS file. <a href="index.html#slide36">link</a></li>
                 <li>Go back to our HTML &amp; CSS project files, add <code>padding:1px</code> to the <code>header</code> section to see how it changes the spacing. Open up the Chrome Dev Tools and inspect the element.</li>
                 <li>The content is also too wide.  Let’s use the <code>margin: 0 auto</code> trick to center align the content. Try adding the styles to the <code>.profile</code> section in your CSS file.</li>
             </ol>
@@ -991,7 +993,7 @@ max-width: 1000px;</textarea>
             background: url(path/to/file.jpg); /* shorthand */
             ```
 
-            Let's add a background image to the `body` of your page. There are a few images in your **project > images** folder to choose from or your own. Since our CSS file in *inside* a folder, start with `../` in your file path to go *up and out* of the folder first, then the images folder. 
+            Let's add a background image to the `body` of your page. There are a few images in your **project > images** folder to choose from or you can use your own. Since our CSS file is located *inside* a folder, start with `../` in your file path to go *up and out* of the folder first, then into the images folder. 
 
             ```css
             background: url(../images/background-1.jpg);
@@ -1068,9 +1070,9 @@ max-width: 1000px;</textarea>
         <section class="slide" data-markdown>
             ##Class Exercise: Background-size
             
-            This looks great... until you minimize the screen. This is where using the keyword, `cover` will work better.
+            This looks great... until you minimize the screen. This is where using the keyword `cover` will work better.
 
-            `cover` scales the image to fit the entire container but, if that has a different aspect ratio, the image will be cropped.
+            `cover` scales the image to fit the entire container, but if that has a different aspect ratio, the image will be cropped.
 
             Let's update the background-size to `cover`. Your code should now look something like this:
             ```
@@ -1120,10 +1122,10 @@ max-width: 1000px;</textarea>
             
             ```css
             p a {
-                /* targets only a tags nested inside of p tags */
+                /* targets only anchor tags nested inside of paragraph tags */
             }
             .classname a {
-                /* targets only a tags nested inside any element with the matching classname */
+                /* targets only anchor tags nested inside any element with the matching classname */
             }
             ```
             **Protip:** Just like Inception, never go more than three levels deep!
@@ -1387,7 +1389,7 @@ a:hover {
         <section class="slide">
             <h2>Gradients and Background Images</h2>
 
-            <p>In our Skills section, the text is hard to read on top of the background image. We can use gradients and set multiple background images to achieve this effect. </p>
+            <p>In our <strong>Skills</strong> section, the text is hard to read on top of the background image. We can use gradients and set multiple background images to achieve this effect. </p>
 
             <p>Declare the gradient first so it can sit on top of the image. We also want to see the image through the gradient so use RGBA color values to set the alpha transparency.</p>
 
@@ -1398,7 +1400,7 @@ background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(project
         </section>
 
         <section class="slide" data-markdown>
-##Exercise #10: Gradient & more floats (15 mins)
+##Exercise #10: Gradient & more floats (15mins)
 
 1. Using the previous example, add a gradient effect to the **Skills** section to make the text on background image more legible.
 
