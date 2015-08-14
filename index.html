@@ -991,7 +991,7 @@ max-width: 1000px;</textarea>
             background: url(path/to/file.jpg); /* shorthand */
             ```
 
-            Let's add a background image to the `body` of your page. There are a few images in your **project > images** folder to choose from or your own. Since our CSS file in *inside* a folder, start with `../` in your file path to go *up and out* of the folder first, then the images folder. 
+            Let's add a background image to the `body` of your page. There are a few images in your **project > images** folder to choose from or you can use your own. Since our CSS file is *inside* a folder, start with `../` in your file path to go *up and out* of the folder first, then to the images folder. 
 
             ```css
             background: url(../images/background-1.jpg);
@@ -1102,7 +1102,7 @@ max-width: 1000px;</textarea>
             <h2>Float, Clear and Clearfix</h2>
             <p>First we have to break it, then put it back together.  One of the most confusing CSS concepts is when to use <code>clear:both</code> and the <code>.clearfix</code> class. Rule of thumb: if there's is an element that follows the floated element, apply <code>clear: both</code> to that element.  If all the elements need to be floated, apply the <code>.clearfix</code> class to the <em>parent</em> element.</p>
 
-            <p>Click on the <strong>Edit is JSFiddle</strong> to open the example. Let's go through the instructions.</p>
+            <p>Click on the <strong>Edit in JSFiddle</strong> to open the example. Let's go through the instructions.</p>
 
             <iframe width="100%" height="360" src="http://jsfiddle.net/ttt5ebhr/24/embedded/html,css/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
             
@@ -1120,10 +1120,10 @@ max-width: 1000px;</textarea>
             
             ```css
             p a {
-                /* targets only a tags nested inside of p tags */
+                /* targets only "a" tags nested inside of "p" tags */
             }
             .classname a {
-                /* targets only a tags nested inside any element with the matching classname */
+                /* targets only "a" tags nested inside any element with the matching classname */
             }
             ```
             **Protip:** Just like Inception, never go more than three levels deep!
@@ -1216,7 +1216,7 @@ max-width: 1000px;</textarea>
 
             For the **Profile** section, add opacity to the background colour. Since the HTML for this section is nested inside of the `body` tag, adding opacity to the Profile section will show the `body` tag's background image behind it.
 
-            Use the `background` property but with an `RGBa` value. The `a` represents the alpha transparency. (There is an `opacity` property too but it makes the text opaque too so we'll use `background` instead).
+            Use the `background` property but with an `RGBa` value. The `a` represents the alpha transparency. (There is an `opacity` property too but it makes the text transparent too, so we'll use `background` instead).
 
             ```
             .profile {
@@ -1301,7 +1301,7 @@ max-width: 1000px;</textarea>
     background: #2980b9;
 }</code></pre>
             
-            <p>Headings are <em>block level elements</em> so by default, they are going to want to span 100% width of its container.  We could set a width value on it but what if we change the greeting? Then we’d have to set the width again. <em>Inline elements</em> are as wide as their content.</p>
+            <p>Headings are <em>block level elements</em> so by default, they are going to want to span 100% width of their container.  We could set a width value on it but what if we change the greeting? Then we’d have to set the width again. <em>Inline elements</em> are as wide as their content.</p>
             <p>In CSS we can use <code>display: inline-block;</code> to access the block and inline behaviors and change how the h2 is displayed. Add some padding too.</p>
 <pre><code>.profile h2 {
     border: none;
