@@ -25,14 +25,14 @@
       
       <div class="instructions">
         <!-- ADD WIFI INFO HERE -->
-        <h2>Get Connected</h2>
+       <!--  <h2>Get Connected</h2>
         <p><strong>Wifi:</strong> wifi network</p>
         <p><strong>Password:</strong> wifi password</p>
-        <hr>
+        <hr> -->
         
         <h2>Download<br> & Install</h2>
         <ol class="downloads">
-          <li>Learner files (zip file): <a href="https://github.com/ladieslearningcode/workshop-repo-name/archive/master.zip">http://bit.ly/create-custom-url</a>
+          <li>Learner files (zip file): <a href="https://github.com/ladieslearningcode/llc-css-fundamentals/archive/master.zip">http://bit.ly/llc-css2</a>
             <ul>
               <li>unzip the learner file (<em>extract all</em> if you’re on a PC)</li>
               <li>open <em>slides.html</em> in the browser to view the slides</li>
@@ -48,24 +48,23 @@
         <p class="left">Content created by <a href="http://christinatruong.com">Christina Truong</a> for <a prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
         <p class="right">Use the left <span class="arrow">&#8592;</span> and right <span class="arrow">&#8594;</span> arrow keys to navigate</p>
       </footer>
-      </script>
     </section> 
     
     <section class="slide intro">
       <img class="logo" src="framework/img/llc-logo-white.png" alt="Ladies Learning Code logo">
       <h1 class="heading-bg">
-        <span>Workshop Title:<br>
-        Second Line if Needed</span>
+        <span>HTML & CSS Level 2:<br>
+        Build an Online Resume</span>
       </h1>
       
       <!-- FILL IN INSTRUCTOR DETAILS -->
-      <img class="instructor" src="http://placehold.it/225x225" alt="Instructor Name">
+      <!-- <img class="instructor" src="http://placehold.it/225x225" alt="Instructor Name">
       <h2><span class="cursive">with</span> Instructor name</h2>  
       <ul>
         <li><a href="mailto:">hello@email.com</a></li>
         <li><a href="http://website.com">website.com</a></li>
         <li><a href="http://twitter.com/">@twitter</a></li>
-      </ul>
+      </ul> -->
       
       <div class="sponsor">
         <p>In partnership with<br> <img src="framework/img/telus-logo-white.svg" alt="Telus"></p>
@@ -75,7 +74,6 @@
         <p class="left">Content created by <a href="http://christinatruong.com">Christina Truong</a> for <a prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
         <p class="right">Use the left <span class="arrow">&#8592;</span> and right <span class="arrow">&#8594;</span> arrow keys to navigate</p>
       </footer>
-      </script>
     </section> 
 
     <section class="slide centered" data-markdown>
@@ -95,147 +93,269 @@
       ![](framework/img/workshop/css-zen-garden.png)
 
       http://csszengarden.com/
-        </script>
-    </script>
+      </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-      #Setting Up Our Dev Tools
+      #The Development Environment
 
-      **[Sublime Text](http://www.sublimetext.com)** - a text editor with colour highlighting and other helpful features. If you are unable to install Sublime Text, try installing: [Notepad++](http://notepad-plus-plus.org/) (Windows) or [Atom](https://atom.io/) (Mac).
+      ##[Atom](https://atom.io/)
 
-      **[Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/)** - Choose a modern web browser that supports current web standards and has good development tools. To set Chrome as your default browser, follow [these instructions](https://support.google.com/chrome/answer/95417?hl=en). Another good option is Firefox. Visit [browsehappy.com](http://browsehappy.com) for more info about modern browsers.
+      Use a text editor with colour highlighting and other useful features. If you are unable to install Atom, try [Notepad++](http://notepad-plus-plus.org/) (Windows) or [Brackets](http://brackets.io/).
 
-      **Developer tools** allow us to *inspect* any web page to see how it's built. These tools also make it easier to test and debug code. The tools can be accessed in 3 ways:
+      ##[Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/)
+
+      Choose a modern web browser that supports current web standards and has good development tools. 
+
+      To set Chrome as your default browser, follow<!-- .element: class="note" --> [these instructions](https://support.google.com/chrome/answer/95417?hl=en). Visit [browsehappy.com](http://browsehappy.com) for more info about modern browsers.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+      #Browser Developer Tools
+
+      **Developer tools** allow us to *inspect* any web page to see how it's built and for testing and debugging code. In Chrome, the tool can be accessed in 3 ways:
       
-      * right-click / two-finger tap on a web page and select **Inspect Element**
-      * select the menu icon in the top right hand corner of the Chrome browser and select **Tools > Developer Tools**
+      * right-click / two-finger tap / cmd + click on any web page and select **Inspect Element**
+      * select the menu icon in the top right hand corner of the Chrome browser and select **More Tools > Developer Tools**
       * keyboard shortcut: **Ctrl + Shift + I** (PC) / **Cmnd + Option + I** (Mac)
       </script>
     </section>
+
     <section class="slide" data-markdown>
       <script type="text/template">
-      #Setting Up Our Work Flow
+        #Setting up your work flow
 
-      Inside of the folder you downloaded today, **llc-css-fundamentals-master**, there are many more folders and files that contain different content.
-      
-      ```
-      llc-css-fundamentals-master
-        |-- framework // Contains files needed for slide presentation. Do not edit!
-        |-- project // Contains files for today's workshop.
-          |-- css // Only CSS files here.
-          |-- examples // Example HTML & CSS files for each exercise.
-          |-- images // Images for your project. You can also add your images here.
-          |-- final.html // Finished example for reference. The CSS file is in the CSS folder.
-          |-- index.html // Your resume HTML page.
-        |-- slides.html // This is the file you're viewing right now!
-      ```
+        Inside of the folder you downloaded today, there are many folders that contain different files.
+        
+        ```javascript
+        llc-css-fundamentals-master
+          |-- framework // Contains files needed for slide presentation. Do not edit!
+          |-- project // Contains files for this workshop. (images, CSS, HTML)
+          |-- slides.html // This is the file you are viewing right now!
+        ```
+        
+        </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Setting up your work flow
+
+        Open the `project` folder in the text editor to edit your project.  
+        Go to **File** > ** Add Project Folder**. A popup will appear.
+        
+        ![](framework/img/workshop/editor-add-project-1.jpg)
+        
+        * navigate to the **llc-css-fundamentals-master** folder
+        * select the **project** folder & click **Open**
+        
+        The files will now appear in the sidebar.
       </script>
     </section>
+    
     <section class="slide" data-markdown>
       <script type="text/template">
-      #Setting Up Our Work Flow
+        #Setting up your project
+        
+        Your project folder structure will look like this:
+        
+        ```html
+        project
+          |-- css 
+          |-- examples
+          |-- images 
+          |-- final.html
+          |-- index.html
 
-      Open our project files in the browser and text editor.
+        ```
+        
+        The **images** folder contains a selection of images to use in your project (or add your own to this folder during the exercises).
+        
+        The **examples** folder and **final.html** contains the examples for each exercise and the final project.
 
-      1. Open Sublime Text and go to **File > Open**.
-
-        ![](framework/img/workshop/1-setup.png)
-      1. Navigate to the **Project** folder (in the folder you downloaded with today's slides). With the entire folder selected, select **Open**.
-        <!-- ![](framework/img/workshop/2-setup.png) -->
-      1. The folder will appear in Sublime's side bar. Double click on **index.html** in the sidebar to open it.
-        <!-- ![](framework/img/workshop/3-setup.png) -->
-      1. Right click or two finger tap and select **Open in Browser**. This will open the HTML file in your *default* browser.
-
-        ![](framework/img/workshop/4-setup.png)
-
-      No CSS has been applied yet so all you will see is the HTML content and the default styles like in [this example](project/examples/1-no-css.html).
       </script>
     </section>
 
     <section class="slide title" data-markdown>
-      #hypertext markup language
-      #The content layer
+      #Hypertext Markup Language
+      ##HTML: The content layer
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-      #HTML: Quick Review
+      #HTML: Overview
       
-      HTML is used to define *content* and HTML tags are used to describe the meaning of your content.
+      HTML is used to define and describe the meaning of the *content* to the browser using HTML *tags*. 
 
-      **Title**: Found in the `&lt;head>` section of the HTML document. Used for defining the page title. Displays in the browser's tab, search engine results and bookmarks.
-      
-      ```xml
-      &lt;title&gt;Page Title&lt;/title&gt;
-      ```
-
-      **Headings**: There are 6 heading tags available (`&lt;h1&gt;,&lt;h2&gt;,...,&lt;h6&gt;`) and they follow a hierarchical structure. `&lt;h1&gt;` represents the most important title/heading on the page and it's best to stick to using it just once per page. Other headings can be used multiple times.  It's important to use the appropriate tag to describe the content, not for the default heading styles. That's what CSS is for!
-
-      ```xml
-      &lt;h1&gt;Most Important Heading&lt;/h1&gt;
-      &lt;h2&gt;Important But Not As Much As h1&lt;/h2&gt;
-      ```
-
-      **Paragraphs**: Created with the `&lt;p&gt;&lt;/p&gt;` tags.
-      ```xml
-      &lt;p&gt;I'm a paragraph.&lt;/p&gt;
-      ```
-
-      **Link**: requires the addition of an `href` *attribute* to specify where to link to.
+      Tags usually come in pairs — an opening tag and a closing tag — to wrap the content and are written with angled brackets `< >` and a forward slash `/` for the closing tag. 
       
       ```
-      &lt;a href=&quot;http://website.com&quot;&gt;link&lt;/a&gt;
+      <tag> opening tag --- closing tag </tag>
       ```
-
-      **Lists**: There are two kinds of lists: ordered (`ol`) for numbered lists & unordered (`ul`) for lists with bullets. Content must be included only within the list item (`li`).
-      
-      ```xml
-      &lt;ul&gt;
-        &lt;li&gt;Unordered list item&lt;/li&gt;
-        &lt;li&gt;Unordered list item&lt;/li&gt;
-      &lt;/ul&gt;
-      &lt;ol&gt;
-        &lt;li&gt;Ordered list item&lt;/li&gt;
-        &lt;li&gt;Ordered list item&lt;/li&gt;
-      &lt;/ol&gt;
       ```
-      **Images**: like links, also requires an additional attribute, `src`, which defines the path to an image file.
-
-      ```
-      &lt;img src=&quot;path/to/image.jpg&quot;&gt;
+      <h1>This tag describes a heading</h1>
+      <p>This tag is for paragraphs.</p>
       ```
       </script>
     </section>
-    <section class="slide">
-      <h2>Exercise #1: Personalize the content (5-10 mins)</h2>
 
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Nested tags
+
+        Tags are often nested within other tags which then create a family tree-like relationship, often referred to as parent and child nodes.
+        
+        ```
+        <outertag>outer content <innertag>inner content</innertag> outer content</outertag>
+        ```
+
+        The inner tag is the child of the outer tag.  Also, using whitespace through indentation (one tab space) makes it easier to read. 
+        
+        ```
+        <parent>
+          <child></child>
+        </parent>
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Base HTML Tags
+
+        The tags below should be included in all HTML documents.
+        
+        ```
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <title></title>
+          </head>
+          <body>
+            <!-- page content here (this is an HTML comment by the way) -->
+          </body>
+        </html>
+        ```
+        To create an HTML page, just save it with the **.html** file extension.
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+      #Common HTML tags
+      
+      **Title**
+
+      * found in the `<head>` section of the HTML document
+      * used for defining the page title.
+      * displays in the browser's tab, search engine results and bookmarks
+      * keep it short and descriptive 
+
+      ```xml
+      <title>Page Title</title>
+      ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+      #Common HTML tags
+
+      **Headings**
+
+      * 6 heading tags  (`<h1>,<h2>,...,<h6>`)
+      * follows a hierarchical structure
+      
+      It's important to use the appropriate tag to describe the content, not for the default heading styles. That's what CSS is for!
+
+      ```xml
+      <h1>Heading</h1>
+      <h2>Subheading</h2>
+      ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+      #Common HTML tags
+
+      **Paragraphs**: Use `<p></p>` tags.
+      ```xml
+      <p>I'm a paragraph.</p>
+      ```
+
+      **Link**: requires an `href` *attribute* to specify where to link to.
+      
+      ```
+      <a href="http://website.com">link</a>
+      ```
+
+      **Images**: also requires an additional attribute, `src`, which defines the path to an image file.
+
+      ```
+      <img src="folder/image.jpg">
+      ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+      #Common HTML tags
+
+      **Lists**
+
+      There are two kinds of lists: ordered (`ol`) for numbered lists & unordered (`ul`) for lists with bullets. 
+
+      Content must be included only within the list item (`li`).
+      
+      ```xml
+      <ul>
+        <li>Unordered list item</li>
+        <li>Unordered list item</li>
+      </ul>
       <ol>
-        <li>Update the page title in the <code>title</code> tag.</li>
-        <li>Update your name and tagline in the <code>header</code> section.</li>
-        <li>Update your profile image.</li>
+        <li>Ordered list item</li>
+        <li>Ordered list item</li>
       </ol>
+      ```
+      </script>
+    </section>
 
-      <p><strong>Bonus:</strong> If you have some extra time, try updating the content for the rest of the page.</p>
+    <section class="slide" data-markdown>
+      <script type="text/template">
+      #Exercise #1: Personalize the content (~10 mins)
 
-      <p>Don’t forget to save your changes (<strong>File &gt; Save</strong>) and refresh the browser after each update! Don’t worry if you don’t finish. There’s placeholder content already included in the starter template.</p>
+      Here are some suggestions:
+      
+      1.  Open **index.html** in your editor and browser.
+      1.  Update the page title in the `<title>` tag.
+      2.  Update your name and tagline in the `<header>` tag.
+      3.  Update your profile image.
+      4.  Change any other content (just don't delete any HTML tags)!
 
-      <p><strong>Protip!</strong> Improve your work flow with keyboard shortcuts:  </p>
+      Don’t worry if you don’t finish. There’s placeholder content already included in the starter template.
+      
+      No CSS has been applied yet. You will only see HTML content and default styles. <!-- .element: class="note" --> ([example](project/examples/1-no-css.html)) 
 
-      <p><strong>CMD/CTRL + S</strong> to save <br>
-      <strong>CMD/CTRL + R</strong> to refresh the browser</p>
-
-      <div class="presenter-notes">
-        Give the class 5 mins and then check if they completed #1-3. If not give them 5 more minutes.
-      </div>
+      ---
+      ###Pro tip! 
+      Improve your work flow with keyboard shortcuts:  
+      **CMD/CTRL + S** to save  
+      **CMD/CTRL + R** to refresh the browser
       </script>
     </section>
 
     <section class="slide title" data-markdown>
+      <script type="text/template">
       #Cascading Style Sheets
-      #The presentation layer
+      ##The presentation layer
       </script>
     </section>
 
@@ -245,18 +365,26 @@
 
       HTML defines *content*, CSS defines the *presentation*.
 
-      **Selectors:** used to determine which element(s) to apply the styles to. Can target an HTML tag, class or ID attribute (more on these later).  
-      **Declaration block:** consists of a list of declarations (rules to follow) wrapped in curly braces `{}`.  
-      **Declarations** or rules to follow, are written using `property:value` pairs.
+      * **Selectors:** used to determine which element(s) to apply the styles to
+      * **Declaration block:** consists of a list of declarations (rules to follow) wrapped in curly braces `{}`  
+      * **Declarations** or rules to follow, written using `property:value` pair
 
       ```css
       selector {
         property: value;
       }
       ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+      #CSS Overview
+
       **Properties** determine the type of style to be applied to
-      the element (e.g. color).  
-      **Values** are specific to the property. Declarations must end with a semi-colon (`;`) to indicate that the instruction is complete.
+      the element (e.g. color). **Values** are specific to the property. 
+
+      Declarations must end with a semi-colon (`;`) to indicate that the instruction is complete.
       
       ![](framework/img/workshop/css.png)
       </script>
@@ -266,7 +394,9 @@
       <script type="text/template">
       #Comments
       
-      Comments in CSS are written between a slash & asterisk  and must close in the opposite order. Comments are great for ... well... leaving comments!  Leave notes for yourself (or others), organize your code blocks or for "commenting" out your code (hiding it for later).
+      Comments in CSS are written between a slash & asterisk and must close in the opposite order. 
+
+      Leave notes for yourself (or others), organize your code blocks or for "commenting" out your code (hiding it for later).
       
       ```
       p {
@@ -287,81 +417,78 @@
       ``` 
       </script>
     </section>
+      
+    <section class="slide title" data-markdown data-toc>
+      <script type="text/template">
+        #CSS Selectors
+        ##Applying CSS to HTML Elements
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Type Selectors
+        
+        Select elements in CSS based on the HTML tag name.
+        
+        ```
+        <p>Paragraph.</p>
+        ```
+        ```css
+        p {
+          /* selects all paragraphs */
+        }
+        ```
+        ```
+        <h1>Paragraph.</h1>
+        ```
+        ```css
+        h1 {
+          /* selects all h1 headings */
+        }
+        ```
+      </script>
+    </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
       #Class & ID attributes
       
-      When **type selectors** are too general (targeting the HTML element), HTML gives us two ways to attach extra identifying information to target specific elements with two **attributes**, `class` (can be used multiple times) and `id` (can only be used once per page).  
+      When **type selectors** are too general, there are two ways to attach extra identifying information by adding either of these attributes:
+
+      * `class` can be used multiple times
+      * `id` can  be used once per page  
 
       ``` 
-      /* targets ALL paragraphs */
+      /* selects ALL paragraphs */
       p {
         color: blue;
       }
-      /* only applies to the element that contains this class, defined by leading period */
-      .danger {
+      /* selects the element that contains this class, defined by leading period */
+      .alert {
         color: red;
       }
-      /* only applies to the element that contains this id, defined by number symbol  */
-      #danger {
+      /* selects the element that contains this id, defined by number symbol  */
+      #alert {
         border: 1px solid red;
       }
       ```
 
       ```xml   
-      &lt;p&gt;Regular text.&lt;/p&gt;
-&lt;p class=&quot;danger&quot;&gt;Red error message text or some other dangerous text.&lt;/p&gt;
-&lt;div id="danger"&gt;Will display a red border.&lt;/div&gt;
+      <p>Regular text.</p>
+      <p class="alert">Will display red text.</p>
+      <div id="alert">Will display a red border.</div>
       ```
       </script>
     </section>
-    <!-- <section class="slide" data-markdown>
-      <script type="text/template">
-      #Class Selectors
 
-      A `class` **attribute** can be added to any element but the value is defined by you.  The class can then be used as a selector to apply styles to *any* element that references the class attribute. In CSS, a `class` selector is defined by a leading period (`.`) followed by the class name with *no* spaces as your CSS selector. 
-      Classes can be used multiple times on the same page. 
-
-      ```xml
-      &lt;p&gt;Regular text&lt;/p&gt;
-&lt;p&gt;Regular text&lt;/p&gt;
-&lt;p class=&quot;fancy&quot;&gt;Fancy text here.&lt;/p&gt;
-      ```
-      ```
-      p {
-        color: red;
-        font-family: Georgia, "Times New Roman", serif;
-      }
-      .fancy {
-        text-transform: uppercase;
-      }
-      ```
-      </script>
-    </section>
-    <section class="slide" data-markdown>
-      <script type="text/template">
-      #id Selectors
-
-      `id` **attributes** are similar to `class` **attributes** because it can also be added to any element and given any value.
-
-      However, it can be used only *once* per page.  IDs should be used for significant style rules and is usually reserved for structural blocks. Some developers prefer not to use IDs at all for CSS styling because of specificity rules and classes can be used multiple times, making it more flexible.
-
-      In CSS, IDs are denoted by a leading number symbol (`#`).
-      ```
-      #header {
-        width: 800px;
-      }
-      ```
-      </script>
-    </section> -->
     <section class="slide" data-markdown>
       <script type="text/template">
       #class & id Naming Conventions
 
-      When choosing a `class` or `id` name, use a descriptive name and do **not** use spaces. Hyphens (-), underscores (_) and camel case are acceptable. 
+      When choosing a `class` or `id` name, use a descriptive name and **no** spaces. Instead, use hyphens (`-`), underscores (`_`) or camelCase. 
 
-      CSS is also case sensitive, so while these three examples look similar, CSS will read these as three different classes so it's important (for your own sanity) to pick one style and be consistent.
+      CSS is also case sensitive so it's important (for your own sanity) to pick one style and be consistent.
       
       ```
       class="content-wrapper"
@@ -373,13 +500,13 @@
       
     <section class="slide" data-markdown>
       <script type="text/template">
-      #CSS color Values
+      #CSS Color Values
 
-      **keywords** - use the actual name for most basic colours (red, green, blue, pink, etc) as well as a few fancy ones like "papayaWhip" and "paleGoldenrod".  
-      
-      **RGB (red-green-blue)** - Uses *three* numerical values from 0-255. 0 represents black, 255 represents white. See below for syntax.  
-      
-      **hex code** - Made up of the number sign (`#`) followed by six hexadecimal characters (0-9, A-F).
+      * **keywords** - use the actual name for most basic colours (red, green, blue, pink, etc) as well as fancy ones like "papayaWhip".  
+      * **RGB (red-green-blue)** - Uses three numerical values from 0-255. 0 represents black, 255 represents white. 
+      * **hex code** - Made up of the number sign (`#`) followed by six hexadecimal characters (0-9, A-F).
+
+      See below for syntax and colour resources.
       
       ```
       /* These are all the same colour */
@@ -389,21 +516,25 @@
         background: rgb(178,34,34);
       }
       ```
-
-      **Colour Resources:**
-
-      [http://www.colorpicker.com/](http://www.colorpicker.com/)  
-      [http://colours.neilorangepeel.com/](http://colours.neilorangepeel.com/)    
-      [http://www.colourlovers.com/](http://www.colourlovers.com/)  
-      [http://flatuicolors.com/](http://flatuicolors.com/)  
-      [http://color.hailpixel.com/](http://color.hailpixel.com/)  
-      [http://wesandersonpalettes.tumblr.com/](http://wesandersonpalettes.tumblr.com/)
+    
+      ---
+      ###Resources
+      * http://www.colorpicker.com
+      * http://colours.neilorangepeel.com    
+      * http://www.colourlovers.com  
+      * http://flatuicolors.com  
+      * http://color.hailpixel.com  
+      * http://wesandersonpalettes.tumblr.com
       </script>
     </section>
 
-    <section class="slide">
-      <h2>Adding Background Colours</h2>
-      <p>Using the <code>background</code> property to add colours to various page sections can be very useful when laying out the CSS for your HTML document. We will be going more in depth with the various background options  but for now, try changing the colours below and see what happens!</p>
+    <section class="slide" data-markdown>
+      <script type="text/template">
+      #Adding Background Colours
+
+      Using the `background` property to add colours to various page sections can be very useful when laying out your HTML document. 
+
+      We will be going more in depth with the various background options but for now, try changing the colours below and see what happens!
 
       <textarea class="snippet" data-subject="#bg-shorthand">background: lightblue;</textarea>
       <div id="bg-shorthand">
@@ -414,129 +545,91 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-      #Referencing CSS
-
-      There are three ways to include (otherwise known as *referencing*) CSS in an HTML page.
-
-      ##Inline
+      #Referencing CSS: Inline
       Can be used in any HTML element using the `style` *attribute*.
 
       ```
-      &lt;p style=&quot;color: blue;&quot;&gt;I'm writing CSS!&lt;/p&gt;
+      <p style="color: blue;">I'm writing CSS!</p>
       ```
 
-      This technique should be avoided but it's good to know how it works in case you encounter it.
-
-      ##Internal
-      Uses `&lt;style&gt;` and is included in the `&lt;head&gt;` element.
-
-      ```    
-      &lt;head&gt;
-        &lt;title&gt;Page Title&lt;/title&gt;
-        &lt;meta charset=&quot;utf-8&quot;&gt;
-        &lt;style&gt;
-          h1 {
-           font-size: 16px;
-          }
-        &lt;/style&gt;
-      &lt;/head&gt;
-      &lt;body&gt;
-        &lt;p&gt;I'm still writing CSS!&lt;/p&gt;
-      &lt;/body&gt;
-      ```
-
-      This method is preferred over *inline* css, however it is still inefficient because if you had multiple web pages, you would have to copy the style block to every single page to duplicate the styles.
-
-      ##External
-      Links to a separate style sheet file. This method is recommended because it separates the CSS from the HTML document. The link to the stylesheet is referenced in the `&lt;head&gt;` on any page where these styles need to be included. Only the CSS file needs to be updated rather than the CSS block on every single page.
-
-      Referenced in the head element with a `&lt;link&gt;` tag and two **attributes**, `rel` and `href`. Just like creating links, the value of the `href` points to the location of the stylesheet. 
-
-      Though it is not required, css files are often saved in a css folder for organization, so make sure the file path points to the appropriate directory.
-
-      The `rel` attribute describes the relationship.
+      This technique should be used sparingly but it's good to know how it works in case you encounter it.
       
-      ```
-      &lt;head&gt;
-        &lt;title&gt;Page Title&lt;/title&gt;
-        &lt;meta charset=&quot;utf-8&quot;&gt;
-        &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
-      &lt;/head&gt;
-      ```
-
-      **Protip!**  Sublime Text shortcut: type "link" + tab key. Ta da!
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-      #Exercise #2: add background colours (10mins)
+      #Referencing CSS: Internal
+      Uses `<style>` and is included in the `<head>` element.
+
+      ```    
+      <head>
+        <title>Page Title</title>
+        <meta charset="utf-8">
+        <style>
+          h1 {
+           font-size: 16px;
+          }
+        </style>
+      </head>
+      ```
+
+      This method is preferred over *inline* css, however if you had multiple web pages, you would have to copy the style block to every single page to apply the styles.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+      #Referencing CSS: External
+
+      CSS is written in a separate style sheet file. This method is recommended because it separates the CSS from the HTML document. 
+
+      Referenced in the head element with a `<link>` tag and two **attributes**, `rel` (relationship) and `href` which points to the location of the style sheet file. 
       
-      1. In Sublime, open **style.css** (it should be blank) located in **project > css **. Link it (reference it) in your HTML document.
-      1. Using `background`, add a different colour to each major section of the page.  Use an **element selector** for the header and **class selectors** for the sections. Since there are multiple `&lt;section&gt;` tags, we need to use a more specific selector.  Here are the selectors to get you started: 
+      ```
+      <head>
+        <title>Page Title</title>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="css/style.css">
+      </head>
+      ```
+
+      Though it is not required, css files are often saved in a css folder for organization, so make sure the file path points to the appropriate directory.<!-- .element: class="note" -->
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+      #Exercise #2: Background colours (~10mins)
+
+      Add a different colour to each major section of the page. This is just for testing and to help with page layouts so choose any colours for now!
+
+      Your page should look similar to this: [examples/2-bg-colours.html](project/examples/2-bg-colours.html)
       
+      1. In your editor, open **styles.css** located in the css folder. 
+      1. Link it to your HTML document. (The file is currently blank.)
+      1. Using `background`, add a different colour to each major section.  
+        * except for the `<header>`, use a **class selector** for each `<section>`
+        * using class will allow you to target each one independently 
+        * Here are the selectors to get you started: 
         ```
         header { }  
         .profile { }  
-        .work-experience { }  
+        .work { }  
         .skills { }  
         .education { }  
         .contact { }
         ```
+      1. **Bonus**: Add comments to organize your CSS into sections to group related CSS together.
 
-      **Bonus**: Add comments to organize your CSS into sections to group related CSS together.
+      The CSS solution file can be found here:<!-- .element: class="note" --> [2-bg-colours.css](project/examples/2-bg-colours.css). 
 
-      Your page should look something like this: [background example](project/examples/2-bg-colours.html) and your CSS will look [similar to this](project/examples/2-bg-colours.css). 
-
-      All example files can be found under **project > examples**.
       </script>
     </section>
-    
-    <section class="slide" data-markdown>
+
+    <section class="slide title" data-markdown> 
       <script type="text/template">
-      #Cascading
-
-      CSS executes from top to bottom (hence "cascading"), so be careful of the the order of your CSS declarations. The declaration that comes *after* will override the one that came before.
-
-      In this example, what colour will the `&lt;h1&gt;` be?
-
-      ```
-      h1 {
-        color: black;
-      }
-      h1 {
-        color: blue;
-      }
-      ```
-      </script>
-    </section>
-    <section class="slide" data-markdown>
-      <script type="text/template">
-      #Inheritance and Specificity
-
-      One of the strengths of CSS is styles can be inherited from parent to child elements using the family tree relationship between the elements.
-
-      ```
-      &lt;body&gt;
-        &lt;h1&gt;My Website&lt;/h1&gt;&lt;!-- child of body --&gt;
-        &lt;p&gt;This is a paragraph.&lt;/p&gt;&lt;!-- sibling of h1 --&gt;
-      &lt;/body&gt;
-      ```
-      ```
-      body {
-        color: blue;
-        font-family: Helvetica, Arial, sans-serif;
-      }
-      h1 {
-        color: black;
-      }
-      ```
-
-      In the above example, the CSS properties in the body selector is inherited by the children and descendants so all the text would be blue and display the Helvetica font. However, when a more specific selector is used (`h1`), it overrides the inherited values because it's more *specific*.
-      </script>
-    </section>
-
-    <section class="slide title" data-markdown>
       #Typography
       </script>
     </section>
@@ -573,10 +666,50 @@ color: #222222;</textarea>
       <p>Resources:<br>
       <a href="http://www.htmldog.com/guides/css/beginner/text/">Text CSS properties reference</a><br>
       <a href="http://csstypeset.com/">http://csstypeset.com</a>- CSS generator</p>
+      </script>
+    </section>
 
-      <div class="presenter-notes">
-        <p>Explain what each property does while updating each example in the code editor.</p>
-      </div>
+    <section class="slide" data-markdown>
+      <script type="text/template">
+      #Cascading
+
+      CSS executes from top to bottom (hence "cascading"), so be careful of the the order of your CSS declarations. The declaration that comes *after* will override the one that came before.
+
+      In this example, what colour will the `<h1>` be?
+
+      ```
+      h1 {
+        color: black;
+      }
+      h1 {
+        color: blue;
+      }
+      ```
+      </script>
+    </section>
+    <section class="slide" data-markdown>
+      <script type="text/template">
+      #Inheritance and Specificity
+
+      One of the strengths of CSS is styles can be inherited from parent to child elements using the family tree relationship between the elements.
+
+      ```
+      <body>
+        <h1>My Website</h1><!-- child of body -->
+        <p>This is a paragraph.</p><!-- sibling of h1 -->
+      </body>
+      ```
+      ```
+      body {
+        color: blue;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      h1 {
+        color: black;
+      }
+      ```
+
+      In the above example, the CSS properties in the body selector is inherited by the children and descendants so all the text would be blue and display the Helvetica font. However, when a more specific selector is used (`h1`), it overrides the inherited values because it's more *specific*.
       </script>
     </section>
 
@@ -679,7 +812,7 @@ h3 {
       * You can **Review** them to take a closer look, then choose *Use* when ready.
       * Select font weights. The more you choose, the more it will slow down page load time.
       * The default character set should contain what you need. Only select an option if you need to add additional language support.
-      * Grab the `&lt;link&gt;` code snippet and add it the `&lt;head&gt;` part of your page.
+      * Grab the `<link>` code snippet and add it the `<head>` part of your page.
       * Use the new fonts with the `font-family` property as listed in the example on the Google Fonts page.
 
       That's it!
@@ -895,16 +1028,16 @@ margin: 0 auto;</textarea>
 The content is centered but the background colour is restricted by the width dimension and doesn’t span the rest of the page anymore. To fix this, we’ll need to create a “container” just for center aligning the content by adding a new `div` with a class of `content-wrap` *around all of the profile content*.
 
 ```
-&lt;section class="profile"&gt;
-  &lt;div class="content-wrap"&gt;&lt;!-- new content wrap div --&gt;
+<section class="profile">
+  <div class="content-wrap"><!-- new content wrap div -->
 
-    &lt;img src="images/profile-generic.jpg" alt="Your Name"&gt;
-    &lt;div class="summary"&gt;
+    <img src="images/profile-generic.jpg" alt="Your Name">
+    <div class="summary">
       ...
-    &lt;/div&gt;
+    </div>
 
-  &lt;/div&gt;&lt;!-- close contact wrap div --&gt;
-&lt;/section&gt;
+  </div><!-- close contact wrap div -->
+</section>
   ```
 
 Then apply the styles to `.content-wrap` instead of `.profile`. Let's add some padding while we're at it too.
@@ -972,20 +1105,20 @@ max-width: 1000px;</textarea>
       <script type="text/template">
       # The Dangers of "div-itis"
       
-      Be careful of "divitis"! Use the `&lt;div&gt;` to *group* related elements to be styled *together* as one section.  If you need to style a single element, like an `&lt;h1&gt;` for example, just style that element directly. The browser sees every element as a "box" so there's no need to put a box around a box!
+      Be careful of "divitis"! Use the `<div>` to *group* related elements to be styled *together* as one section.  If you need to style a single element, like an `<h1>` for example, just style that element directly. The browser sees every element as a "box" so there's no need to put a box around a box!
 
       A good rule of thumb is to only add what you need.  It's much easier to add more than to remove extra markup.
       
       ```xml
-      &lt;div class=&quot;title&quot;&gt;
-        &lt;h1&gt;Heading&lt;/h1&gt;
-      &lt;/div&gt;
+      <div class="title">
+        <h1>Heading</h1>
+      </div>
       ```
 
       can just be
 
       ```xml
-      &lt;h1 class=&quot;title&quot;&gt;Heading&lt;/h1&gt;
+      <h1 class="title">Heading</h1>
       ```
       </script>
     </section>
@@ -1162,7 +1295,7 @@ max-width: 1000px;</textarea>
       <script type="text/template">
       #CSS Float Property
 
-      Remember, block-style HTML elements like `&lt;p>`, `&lt;div>` and `&lt;section>` automatically start on a new line and stack on top of each other. To get two block elements to align side-by-side, `float` can be used. 
+      Remember, block-style HTML elements like `<p>`, `<div>` and `<section>` automatically start on a new line and stack on top of each other. To get two block elements to align side-by-side, `float` can be used. 
 
       CSS floats can float elements left or right.
 
@@ -1265,14 +1398,14 @@ max-width: 1000px;</textarea>
       What happens when elements are floated? The **parent element** *collapses* so make sure to *fix* that as well!
 
       ```
-      &lt;div class=&quot;item&quot;&gt;
-        &lt;div class=&quot;details&quot;&gt;
+      <div class="item">
+        <div class="details">
           Company name, date, etc
-        &lt;/div&gt;
-        &lt;div class=&quot;description&quot;&gt;
+        </div>
+        <div class="description">
           Job description
-        &lt;/div&gt;
-      &lt;/div&gt;&lt;!-- close .item --&gt;
+        </div>
+      </div><!-- close .item -->
       ```
       **Bonus:** If you have some extra time, follow these instructions for adding a border or tweak some font styles!
 
@@ -1321,7 +1454,7 @@ max-width: 1000px;</textarea>
         <li>Update the <strong>Work Experience</strong> and <strong>Education</strong> section with the same background colour. The sample project is using a very light gray (#fefefc).</li>
         <li>Change the font colour of the Profile, Skills &amp; Contact section to white or #ffffff. (Try combining selectors for shared styles.)</li>
         <li>Add another background image to the <strong>Skills</strong> section. Don’t worry about the overlay effect right now.  Just add the image.</li>
-        <li>Add an underline to the <code>&lt;h2&gt;</code> headings, #cccccc or a colour of your choosing. </li>
+        <li>Add an underline to the <code><h2></code> headings, #cccccc or a colour of your choosing. </li>
         <li>Update the background colour for the Contact section. Use #111111 or a colour of your choosing.</li>
         <li>Pick an accent colour and apply it to all links (<code>a</code> element).</li>
       </ol>
@@ -1390,7 +1523,7 @@ max-width: 1000px;</textarea>
     <section class="slide">
       <h2>Profile Heading Update</h2>
 
-      <p>Let’s update the <code>&lt;h2&gt;</code> tag in the profile section and give it a style different from the other headings.  First, we’ll override the bottom border.  We need to use a selector that is specific to the profile section. Add a background color too. Try using your accent colour. </p>
+      <p>Let’s update the <code><h2></code> tag in the profile section and give it a style different from the other headings.  First, we’ll override the bottom border.  We need to use a selector that is specific to the profile section. Add a background color too. Try using your accent colour. </p>
 <pre><code>.profile h2 {
   border: none;
   background: #2980b9;
@@ -1526,16 +1659,16 @@ See below for final code but only if you get stuck!
 }
 ```
 ```xml
-&lt;div class=&quot;skills-list clearfix&quot;&gt;
-  &lt;h3&gt;List Option&lt;/h3&gt;
-  &lt;div class=&quot;columns&quot;&gt;&lt;!--float this class! --&gt;
-    &lt;h4&gt;Best at:&lt;/h4&gt;
-    &lt;ul&gt;
+<div class="skills-list clearfix">
+  <h3>List Option</h3>
+  <div class="columns"><!--float this class! -->
+    <h4>Best at:</h4>
+    <ul>
       ...
-    &lt;/ul&gt;
-  &lt;/div&gt;
+    </ul>
+  </div>
   ...
-&lt;/div&gt;
+</div>
 ```
       </script>
     </section>
@@ -1559,7 +1692,7 @@ See below for final code but only if you get stuck!
       <h2>Position: fixed</h2>
       
       <p>When positioning an element as <code>fixed</code>, it will <em>always</em> be positioned to the viewport and will always stay fixed on the page, even on page scroll. Try adding a <code>top</code> value (or any other directional offset property: <code>right</code>, <code>bottom</code>, <code>left</code>).</p>
-      <pre><code>&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+      <pre><code><div class="box"></div>
 </code></pre>
 
       <textarea class="snippet" data-subject="#fixed">.box { 
@@ -1585,7 +1718,7 @@ See below for final code but only if you get stuck!
       Use the anchor tag to link to your resume file. You can also add a new HTML5 `download` attribute to trigger a download right away! Also, give it a class to apply unique styles to it.
       
       ```xml
-      &lt;a class="download" href=&quot;resume.pdf&quot; download&gt;Download resume (pdf)&lt;/a>
+      <a class="download" href="resume.pdf" download>Download resume (pdf)</a>
       ```
       </script>
     </section>

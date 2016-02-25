@@ -4,17 +4,20 @@ header {
   background: #2c3e50;
 }
 
-/* ABOUT ME / PROFILE
+
+/* ABOUT ME 
 ----------------------*/
 .profile {
   background: #8e44ad;
 }
 
+
 /* WORK EXPERIENCE
 -------------------*/
-.work-experience {
+.work {
   background: #2980b9;
 }
+
 
 /* SKILLS
 ----------*/
@@ -22,11 +25,13 @@ header {
   background: #27ae60;
 }
 
+
 /* EDUCATION
 -------------*/
 .education {
   background: #16a085;
 }
+
 
 /* CONTACT & FOOTER 
 --------------------*/
