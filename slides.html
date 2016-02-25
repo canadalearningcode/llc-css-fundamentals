@@ -48,6 +48,7 @@
         <p class="left">Content created by <a href="http://christinatruong.com">Christina Truong</a> for <a prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
         <p class="right">Use the left <span class="arrow">&#8592;</span> and right <span class="arrow">&#8594;</span> arrow keys to navigate</p>
       </footer>
+      </script>
     </section> 
     
     <section class="slide intro">
@@ -74,27 +75,33 @@
         <p class="left">Content created by <a href="http://christinatruong.com">Christina Truong</a> for <a prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
         <p class="right">Use the left <span class="arrow">&#8592;</span> and right <span class="arrow">&#8594;</span> arrow keys to navigate</p>
       </footer>
+      </script>
     </section> 
 
     <section class="slide centered" data-markdown>
-      ##Today's Project
+      <script type="text/template">
+      #Today's Project
 
       Follow [this link](project/final.html) to see the whole project!
       
       ![final project](framework/img/workshop/final-project.jpg)  
+      </script>
     </section>
 
     <section class="slide centered" data-markdown>
-      ##A demonstration of what can be
-      ##accomplished through CSS-based design
+      <script type="text/template">
+      #A demonstration of what can be <br>accomplished through CSS-based design
 
       ![](framework/img/workshop/css-zen-garden.png)
 
       http://csszengarden.com/
+        </script>
+    </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Setting Up Our Dev Tools
+      <script type="text/template">
+      #Setting Up Our Dev Tools
 
       **[Sublime Text](http://www.sublimetext.com)** - a text editor with colour highlighting and other helpful features. If you are unable to install Sublime Text, try installing: [Notepad++](http://notepad-plus-plus.org/) (Windows) or [Atom](https://atom.io/) (Mac).
 
@@ -105,9 +112,11 @@
       * right-click / two-finger tap on a web page and select **Inspect Element**
       * select the menu icon in the top right hand corner of the Chrome browser and select **Tools > Developer Tools**
       * keyboard shortcut: **Ctrl + Shift + I** (PC) / **Cmnd + Option + I** (Mac)
+      </script>
     </section>
     <section class="slide" data-markdown>
-      ##Setting Up Our Work Flow
+      <script type="text/template">
+      #Setting Up Our Work Flow
 
       Inside of the folder you downloaded today, **llc-css-fundamentals-master**, there are many more folders and files that contain different content.
       
@@ -122,9 +131,11 @@
           |-- index.html // Your resume HTML page.
         |-- slides.html // This is the file you're viewing right now!
       ```
+      </script>
     </section>
     <section class="slide" data-markdown>
-      ##Setting Up Our Work Flow
+      <script type="text/template">
+      #Setting Up Our Work Flow
 
       Open our project files in the browser and text editor.
 
@@ -140,15 +151,18 @@
         ![](framework/img/workshop/4-setup.png)
 
       No CSS has been applied yet so all you will see is the HTML content and the default styles like in [this example](project/examples/1-no-css.html).
+      </script>
     </section>
 
     <section class="slide title" data-markdown>
       #hypertext markup language
-      ##The content layer
+      #The content layer
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##HTML: Quick Review
+      <script type="text/template">
+      #HTML: Quick Review
       
       HTML is used to define *content* and HTML tags are used to describe the meaning of your content.
 
@@ -193,6 +207,7 @@
       ```
       &lt;img src=&quot;path/to/image.jpg&quot;&gt;
       ```
+      </script>
     </section>
     <section class="slide">
       <h2>Exercise #1: Personalize the content (5-10 mins)</h2>
@@ -215,15 +230,18 @@
       <div class="presenter-notes">
         Give the class 5 mins and then check if they completed #1-3. If not give them 5 more minutes.
       </div>
+      </script>
     </section>
 
     <section class="slide title" data-markdown>
       #Cascading Style Sheets
-      ##The presentation layer
+      #The presentation layer
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##CSS Overview
+      <script type="text/template">
+      #CSS Overview
 
       HTML defines *content*, CSS defines the *presentation*.
 
@@ -241,10 +259,12 @@
       **Values** are specific to the property. Declarations must end with a semi-colon (`;`) to indicate that the instruction is complete.
       
       ![](framework/img/workshop/css.png)
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Comments
+      <script type="text/template">
+      #Comments
       
       Comments in CSS are written between a slash & asterisk  and must close in the opposite order. Comments are great for ... well... leaving comments!  Leave notes for yourself (or others), organize your code blocks or for "commenting" out your code (hiding it for later).
       
@@ -265,10 +285,12 @@
       }
       */ 
       ``` 
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Class & ID attributes
+      <script type="text/template">
+      #Class & ID attributes
       
       When **type selectors** are too general (targeting the HTML element), HTML gives us two ways to attach extra identifying information to target specific elements with two **attributes**, `class` (can be used multiple times) and `id` (can only be used once per page).  
 
@@ -292,9 +314,11 @@
 &lt;p class=&quot;danger&quot;&gt;Red error message text or some other dangerous text.&lt;/p&gt;
 &lt;div id="danger"&gt;Will display a red border.&lt;/div&gt;
       ```
+      </script>
     </section>
     <!-- <section class="slide" data-markdown>
-      ##Class Selectors
+      <script type="text/template">
+      #Class Selectors
 
       A `class` **attribute** can be added to any element but the value is defined by you.  The class can then be used as a selector to apply styles to *any* element that references the class attribute. In CSS, a `class` selector is defined by a leading period (`.`) followed by the class name with *no* spaces as your CSS selector. 
       Classes can be used multiple times on the same page. 
@@ -313,9 +337,11 @@
         text-transform: uppercase;
       }
       ```
+      </script>
     </section>
     <section class="slide" data-markdown>
-      ##id Selectors
+      <script type="text/template">
+      #id Selectors
 
       `id` **attributes** are similar to `class` **attributes** because it can also be added to any element and given any value.
 
@@ -327,9 +353,11 @@
         width: 800px;
       }
       ```
+      </script>
     </section> -->
     <section class="slide" data-markdown>
-      ##class & id Naming Conventions
+      <script type="text/template">
+      #class & id Naming Conventions
 
       When choosing a `class` or `id` name, use a descriptive name and do **not** use spaces. Hyphens (-), underscores (_) and camel case are acceptable. 
 
@@ -340,10 +368,12 @@
       class="content_wrapper"
       class="contentWrapper"
       ```
+      </script>
     </section>
       
     <section class="slide" data-markdown>
-      ##CSS color Values
+      <script type="text/template">
+      #CSS color Values
 
       **keywords** - use the actual name for most basic colours (red, green, blue, pink, etc) as well as a few fancy ones like "papayaWhip" and "paleGoldenrod".  
       
@@ -368,6 +398,7 @@
       [http://flatuicolors.com/](http://flatuicolors.com/)  
       [http://color.hailpixel.com/](http://color.hailpixel.com/)  
       [http://wesandersonpalettes.tumblr.com/](http://wesandersonpalettes.tumblr.com/)
+      </script>
     </section>
 
     <section class="slide">
@@ -378,14 +409,16 @@
       <div id="bg-shorthand">
         <p>Change my background colour!</p>
       </div>
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Referencing CSS
+      <script type="text/template">
+      #Referencing CSS
 
       There are three ways to include (otherwise known as *referencing*) CSS in an HTML page.
 
-      ###Inline
+      ##Inline
       Can be used in any HTML element using the `style` *attribute*.
 
       ```
@@ -394,7 +427,7 @@
 
       This technique should be avoided but it's good to know how it works in case you encounter it.
 
-      ###Internal
+      ##Internal
       Uses `&lt;style&gt;` and is included in the `&lt;head&gt;` element.
 
       ```    
@@ -414,7 +447,7 @@
 
       This method is preferred over *inline* css, however it is still inefficient because if you had multiple web pages, you would have to copy the style block to every single page to duplicate the styles.
 
-      ###External
+      ##External
       Links to a separate style sheet file. This method is recommended because it separates the CSS from the HTML document. The link to the stylesheet is referenced in the `&lt;head&gt;` on any page where these styles need to be included. Only the CSS file needs to be updated rather than the CSS block on every single page.
 
       Referenced in the head element with a `&lt;link&gt;` tag and two **attributes**, `rel` and `href`. Just like creating links, the value of the `href` points to the location of the stylesheet. 
@@ -432,10 +465,12 @@
       ```
 
       **Protip!**  Sublime Text shortcut: type "link" + tab key. Ta da!
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Exercise #2: add background colours (10mins)
+      <script type="text/template">
+      #Exercise #2: add background colours (10mins)
       
       1. In Sublime, open **style.css** (it should be blank) located in **project > css **. Link it (reference it) in your HTML document.
       1. Using `background`, add a different colour to each major section of the page.  Use an **element selector** for the header and **class selectors** for the sections. Since there are multiple `&lt;section&gt;` tags, we need to use a more specific selector.  Here are the selectors to get you started: 
@@ -454,28 +489,12 @@
       Your page should look something like this: [background example](project/examples/2-bg-colours.html) and your CSS will look [similar to this](project/examples/2-bg-colours.css). 
 
       All example files can be found under **project > examples**.
-    </section>
-
-    <section class="slide">
-      <h2>Default styles: Reset vs Normalize</h2>
-      <p>You may notice that the colours don't span all the way to the edge of the page. That's because browsers have their own <em>user agent</em> style sheet to add default styles to the html elements. Here's an example of Chrome's user agent style sheet, which can be seen using dev tools:</p>
-      <img src="framework/img/workshop/chrome-user-agent.png">
-
-      <p>A <strong>CSS Reset</strong> is a set of CSS rules that resets the user agent styles of the HTML elements to a consistent, <em>unstyled</em> baseline to avoid cross-browser differences as much as possible.</p>
-
-      <p><strong>Normalize</strong> is slightly different because it "normalizes" the consistencies to a default style rather than <em>removing</em> the styles. Another option is to choose a reset and customize it yourself to create your own.</p>
-
-      <p>Note that if you add it as a separate style sheet, it should be included <em>before</em> your custom style sheet.</p>
-
-      <p>These various style sheets can be downloaded at <a href="http://www.cssreset.com/">cssreset.com</a> but for today, it’s already included in the <strong>project > css</strong> folder. Let's add it to today's project file (index.html).</p>
-      
-      <div class="presenter-notes">
-        <p>Add the normalize file and discuss the differences and explain why normalize has to come before custom css.</p>
-      </div>  
+      </script>
     </section>
     
     <section class="slide" data-markdown>
-      ##Cascading
+      <script type="text/template">
+      #Cascading
 
       CSS executes from top to bottom (hence "cascading"), so be careful of the the order of your CSS declarations. The declaration that comes *after* will override the one that came before.
 
@@ -489,9 +508,11 @@
         color: blue;
       }
       ```
+      </script>
     </section>
     <section class="slide" data-markdown>
-      ##Inheritance and Specificity
+      <script type="text/template">
+      #Inheritance and Specificity
 
       One of the strengths of CSS is styles can be inherited from parent to child elements using the family tree relationship between the elements.
 
@@ -512,14 +533,17 @@
       ```
 
       In the above example, the CSS properties in the body selector is inherited by the children and descendants so all the text would be blue and display the Helvetica font. However, when a more specific selector is used (`h1`), it overrides the inherited values because it's more *specific*.
+      </script>
     </section>
 
     <section class="slide title" data-markdown>
       #Typography
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Web safe fonts
+      <script type="text/template">
+      #Web safe fonts
 
       The default font can be changed with the `font-family` **property**. However, not all fonts are installed on all computers so it's recommended to use fonts that are considered *web safe* &mdash; fonts that are commonly included on most computers.
 
@@ -530,6 +554,7 @@
       ```
 
       Here's a handy resource for referencing web safe fonts: [CSS Font Stack](http://cssfontstack.com/).
+      </script>
     </section>
 
     <section class="slide">
@@ -552,6 +577,7 @@ color: #222222;</textarea>
       <div class="presenter-notes">
         <p>Explain what each property does while updating each example in the code editor.</p>
       </div>
+      </script>
     </section>
 
     <section class="slide">
@@ -596,10 +622,12 @@ h3 {
           <li>put h2, h3 styles into separate blocks to show how to combine selectors to demonstrate refactoring in the next slide. Use this to also explain specificity. Tell learners they have the option to type along or just watch to keep from slowing down the demo. They can catch up in the exercise work session since the final code will be posted in the next couple slides.</li>
         </ul>
       </div>
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Refactor!
+      <script type="text/template">
+      #Refactor!
 
       What is refactoring? Code refactoring is the process of restructuring existing code to make it more efficient. Writing clean, organized and efficient code will not only make your pages run faster but will make it easier to maintain and can potentially reduce browser bugs. It's tempting to say "I'll fix it later" but later doesn't always come. It's important to refactor your code as you go along.
 
@@ -610,9 +638,11 @@ h3 {
         /* will apply any styles here to both headings */
       }
       ```
+      </script>
     </section>
     <section class="slide" data-markdown>
-      ##Class Exercise: Typography (continued)
+      <script type="text/template">
+      #Class Exercise: Typography (continued)
 
       The previous example can be refactored to look like this:
       
@@ -632,10 +662,12 @@ h3 {
         font-size: 32px;
       }
       ```
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Web fonts
+      <script type="text/template">
+      #Web fonts
 
       For more options than web safe fonts, services like [Google Fonts](http://www.google.com/fonts/) and [Font Squirrel](http://www.fontsquirrel.com/) make it easier to use a variety of fonts without worrying about whether it's installed on the users' computer.
 
@@ -651,6 +683,7 @@ h3 {
       * Use the new fonts with the `font-family` property as listed in the example on the Google Fonts page.
 
       That's it!
+      </script>
     </section>
 
     <section class="slide">
@@ -671,14 +704,17 @@ h3 {
       <div class="presenter-notes">
         <p>Tell learners to take 5 mins to pick fonts. If they can't decide, just use the suggestions provided. Picking fonts is often a long process and this will keep from slowing down the day.</p>
       </div>
+      </script>
     </section>
 
     <section class="slide title" data-markdown>
       #The Box Model
+      </script>
     </section>
     
     <section class="slide" data-markdown>
-      ##What is The Box Model?
+      <script type="text/template">
+      #What is The Box Model?
 
       The browser looks at every HTML element on the page as a rectangular box. The CSS Box Model describes the way CSS styles the size and spacing of HTML elements. Understanding the box model is crucial for understanding how to position elements with CSS to create the desired page layout. This is one of the trickiest part of CSS, so don't worry if it seems confusing!
 
@@ -689,6 +725,7 @@ h3 {
       * `border` - adds a border outside of the element
       * `width` - can be set to a specific size via CSS
       * `height` - can be set to a specific size via CSS
+      </script>
     </section>
 
     <section class="slide">
@@ -709,9 +746,11 @@ h3 {
 padding: 0 0 0 0;
 margin: 0 0 0 0;</textarea>
       <p id="padding">padding and margin test</p>
+      </script>
     </section>
     <section class="slide" data-markdown>
-      ##Padding and Margin (continued)
+      <script type="text/template">
+      #Padding and Margin (continued)
       The previous slide uses the shorthand properties. Both can also be declared by specifying a particular side.
 
       ```
@@ -726,10 +765,12 @@ margin: 0 0 0 0;</textarea>
       margin-bottom: 10px;
       margin-left: 10px;
       ```
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Border
+      <script type="text/template">
+      #Border
 
       The `border` property resides between the `margin` and `padding` and creates an outline around the element. It, too, has longhand and shorthand syntax.
       
@@ -753,10 +794,12 @@ margin: 0 0 0 0;</textarea>
       /* shorthand */
       border-top: 2px solid red;
       ```
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Box Model Review
+      <script type="text/template">
+      #Box Model Review
 
       Let’s look at a diagram to see how all these different properties work together to change the size of an element.
 
@@ -766,15 +809,17 @@ margin: 0 0 0 0;</textarea>
       The original element started with a width and height of **400 x 100**. After including the padding, border &amp; margin, the size of the box is actually **452 x 152**!
 
       Margin doesn't add to the actual size of the element but should be considered as part of the total size of the element because it adds space *around* it.
+      </script>
     </section>
       
     <section class="slide centered" data-markdown>
-      ##I Can't... even...
+      #I Can't... even...
       ![](framework/img/workshop/cant-even.gif)
+      </script>
     </section>
 
     <section id="box-model-fix" class="slide" data-markdown>
-      ##Box Model Fix!
+      #Box Model Fix!
         
       Luckily, there’s a fix for this. Enter the [box-sizing: border-box](http://www.paulirish.com/2012/box-sizing-border-box-ftw/) fix ftw!  
 
@@ -790,6 +835,7 @@ margin: 0 0 0 0;</textarea>
       }
       ```
       ![box model diagram](framework/img/workshop/box-model-fix.gif)
+      </script>
     </section>
 
     <!-- <section class="slide">
@@ -804,6 +850,7 @@ margin: 0px; /* change to negative value */</textarea>
       <div id="neg-margin">box</div>
 
       <p>Extra resource: <a href="http://www.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/">The Definitive Guide to Using Negative Margins</a></p>
+      </script>
     </section> -->
 
     <section class="slide">
@@ -817,6 +864,7 @@ margin: 0 auto;</textarea>
       <div id="margin-auto">box</div>
 
       <p>Margin also accepts negative values. See more <a href="framework/extras-negative-margin.html">here</a>.</p>
+      </script>
     </section>
 
     <section class="slide">
@@ -837,10 +885,12 @@ margin: 0 auto;</textarea>
       <div class="presenter-notes">
         <p>This exercise is to demonstrate why we need to add a wrapper around the content which is covered in the next step.</p>
       </div>
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-##Class exercise (continued)
+      <script type="text/template">
+#Class exercise (continued)
 
 The content is centered but the background colour is restricted by the width dimension and doesn’t span the rest of the page anymore. To fix this, we’ll need to create a “container” just for center aligning the content by adding a new `div` with a class of `content-wrap` *around all of the profile content*.
 
@@ -865,16 +915,19 @@ Then apply the styles to `.content-wrap` instead of `.profile`. Let's add some p
   padding: 60px 0;
 }
 ```
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Exercise #4: Content wrappers! (15mins)
+      <script type="text/template">
+      #Exercise #4: Content wrappers! (15mins)
 
       Add the `.content-wrap` to each section *except* the `header`. We'll discuss why the header doesn't need it very soon.
 
       First, let's go over how to collapse code blocks and tab multiple lines at the same time in Sublime first, to help make the addition of this markup a little easier.
 
       Your page should look something like this: [example 4](project/examples/4a-content-wrap.html).
+      </script>
     </section>
 
     <section class="slide">
@@ -891,10 +944,12 @@ max-width: 1000px;</textarea>
       <div id="widths">
         <p>Lorem ipsum dolor sit amet.</p>
       </div>
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Class exercise
+      <script type="text/template">
+      #Class exercise
 
       Update the `.content-wrap` styles to include `max-width` and update `width`.
       
@@ -910,10 +965,12 @@ max-width: 1000px;</textarea>
       Your page will now look like this [example](project/examples/4b-content-wrap.html). Minimize the screen to test the updates.
 
       Now we've created a reusable style that will help to keep our CSS nice and neat because we can apply this class where ever this style is required.
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ## The Dangers of "div-itis"
+      <script type="text/template">
+      # The Dangers of "div-itis"
       
       Be careful of "divitis"! Use the `&lt;div&gt;` to *group* related elements to be styled *together* as one section.  If you need to style a single element, like an `&lt;h1&gt;` for example, just style that element directly. The browser sees every element as a "box" so there's no need to put a box around a box!
 
@@ -930,15 +987,18 @@ max-width: 1000px;</textarea>
       ```xml
       &lt;h1 class=&quot;title&quot;&gt;Heading&lt;/h1&gt;
       ```
+      </script>
     </section>
     <section class="slide centered" data-markdown>
-      ##Avoid code bloat
+      #Avoid code bloat
 
       ![](framework/img/workshop/bloat.jpg)
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Update header & heading styles
+      <script type="text/template">
+      #Update header & heading styles
     
       In the case of the `header` section, we can apply `text-align: center` instead of adding the `.content-wrap` div. Since the content is short, we don't have to worry about containing it, therefore, avoiding "divitis". Also, adjust the padding to add space in the header. The final code for header should look like this:
       
@@ -961,6 +1021,7 @@ max-width: 1000px;</textarea>
       Your header should look similar to [example 5](project/examples/5-header.html): 
 
       ![header](framework/img/workshop/header.jpg)
+      </script>
     </section>
       
     <section class="slide">
@@ -980,14 +1041,17 @@ max-width: 1000px;</textarea>
       <div class="presenter-notes">
         <p>This lunchtime exercise will give learners a chance to catch up if needed and a chance to find images to personalize their site without taking up class time. The afternoon covers a lot of material and this will help speed it along.  You should aim to hit lunchtime between 12:15 - 12:30pm. A 45 min lunch is recommended.</p>
       </div>
+      </script>
     </section>
 
     <section class="slide title" data-markdown>
       #Background images
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Class Exercise: Background images
+      <script type="text/template">
+      #Class Exercise: Background images
       
       So far we've used `background` for colours but it can also be used for setting background *images*.
       
@@ -1003,9 +1067,11 @@ max-width: 1000px;</textarea>
       ```
       
       If the image is smaller than the element you applied the background image to, it will automatically repeat. Let's fix that. (If you have a background colour declared in the header, you need to remove that first to see the image in the body.)
+      </script>
     </section>
     <section class="slide" data-markdown>
-      ##Class Exercise: Background Images (continued)
+      <script type="text/template">
+      #Class Exercise: Background Images (continued)
 
       To keep the image from repeating, use the `background-repeat` property **or** add it to the shorthand `background` property.
       
@@ -1030,9 +1096,11 @@ max-width: 1000px;</textarea>
       background-attachment: fixed;
       ```
 
+      </script>
     </section>
     <section class="slide" data-markdown>
-      ##Background-size
+      <script type="text/template">
+      #Background-size
 
       CSS3 introduced the `background-size` property which not only allows us to change the size of the image but also makes the background images fluid and flexible . The syntax is:
 
@@ -1068,10 +1136,12 @@ max-width: 1000px;</textarea>
         background-size: 100%;
       }
       ```
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Class Exercise: Background-size
+      <script type="text/template">
+      #Class Exercise: Background-size
       
       This looks great... until you minimize the screen. This is where using the keyword, `cover` will work better.
 
@@ -1085,10 +1155,12 @@ max-width: 1000px;</textarea>
       And your page should look similar to [Example 6](project/examples/6-background.html).
 
       **Extra resource**: https://developer.mozilla.org/en/docs/Web/CSS/background
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##CSS Float Property
+      <script type="text/template">
+      #CSS Float Property
 
       Remember, block-style HTML elements like `&lt;p>`, `&lt;div>` and `&lt;section>` automatically start on a new line and stack on top of each other. To get two block elements to align side-by-side, `float` can be used. 
 
@@ -1097,10 +1169,12 @@ max-width: 1000px;</textarea>
       **However**, we have to break the *natural stacking flow* when an element is floated. This will cause any element *after* the floated element to try to move up beside it or just not display properly because we've disrupted the natural stacking flow. The parent container will also collapse.
 
       **Also**, if no width set, the element will float but the width will automatically be the width of its content.
+      </script>
     </section>
     <section class="slide centered">
       <img src="framework/img/workshop/shittier.gif">
       <h2 class="delayed">Just kidding! We can fix it.</h2>
+      </script>
     </section>
 
     <section class="slide">
@@ -1117,10 +1191,12 @@ max-width: 1000px;</textarea>
       <a href="http://css-tricks.com/snippets/css/clear-fix/">http://css-tricks.com/snippets/css/clear-fix/</a><br>
       <a href="http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/">http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/</a>
       </p>
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Descendant selectors
+      <script type="text/template">
+      #Descendant selectors
       
       **Descendant selectors** - Matches any element that is a *descendant* of the element declared before it.
       
@@ -1141,10 +1217,12 @@ max-width: 1000px;</textarea>
       ```
 
       Feel free to skip a level but be mindful of specificity rules. For example, `nav ul li a` would override `nav a`. It’s generally easier to start with less specific selectors and make them more specific, as needed, rather than starting with very specific selectors and adding extra markup or classes to try to override the styles.
+      </script>
     </section>
   
     <section class="slide" data-markdown>
-##Class Exercise: Floats
+      <script type="text/template">
+#Class Exercise: Floats
 
 1. Add a float to your profile image so the text can wrap around it. What happens to the parent element when a child element is floated?
     
@@ -1173,10 +1251,12 @@ max-width: 1000px;</textarea>
     float: right;
   }
   ```
+      </script>
     </section>
     
     <section class="slide" data-markdown>
-      ##Exercise #7: Add More Floats and borders (20mins)
+      <script type="text/template">
+      #Exercise #7: Add More Floats and borders (20mins)
 
       Add floats to the **Work Experience** section.  Here's a link to the [final project](project/final.html) for reference and some hints to get you started:
 
@@ -1212,11 +1292,13 @@ max-width: 1000px;</textarea>
       ```
 
       Your page should look something like this: [Example 7](project/examples/7-floats.html).
+      </script>
     </section>
 
 
     <section class="slide" data-markdown>
-      ##More Background Styles
+      <script type="text/template">
+      #More Background Styles
 
       It's time to get rid of these test background colours and put in some nicer looking styles.
 
@@ -1229,6 +1311,7 @@ max-width: 1000px;</textarea>
         background: rgba(0,0,0,0.8);
       }
       ```
+      </script>
     </section>
 
     <section class="slide">
@@ -1254,14 +1337,17 @@ max-width: 1000px;</textarea>
       <div class="presenter-notes">
         <p>Have a class discussion after the exercise time is up. Go over the steps as a class and ask people if they want to share any questions, comments or gotchas.</p>
       </div>
+      </script>
     </section>
 
     <section class="slide title" data-markdown>
       #CSS3!
+      </script>
     </section>
         
     <section class="slide" data-markdown>
-      ##CSS3 Properties: border-radius
+      <script type="text/template">
+      #CSS3 Properties: border-radius
 
       The introduction of CSS3 brought in new ways to do things that previously had to be done in Flash, JavaScript or complicated hacks.
 
@@ -1280,9 +1366,11 @@ max-width: 1000px;</textarea>
         padding: 4px;
       }
       ```
+      </script>
     </section>
     <section class="slide" data-markdown>
-      ##CSS3 Vendor prefixes
+      <script type="text/template">
+      #CSS3 Vendor prefixes
 
       In some cases, a standard CSS property may require an addition of a browser specific prefix. For example, the various prefixes for different browsers are as follows:
 
@@ -1296,6 +1384,7 @@ max-width: 1000px;</textarea>
       * [css3please.com](http://css3please.com/)  
       * [-prefix-free](http://leaverou.github.io/prefixfree/) - note, doesn't work **locally** in Chrome.   
       * [css-tricks.com/how-to-deal-with-vendor-prefixes](http://css-tricks.com/how-to-deal-with-vendor-prefixes/)
+      </script>
     </section>
 
     <section class="slide">
@@ -1316,10 +1405,12 @@ max-width: 1000px;</textarea>
   padding: 10px 20px;
 }</code></pre>
       <p><a href="framework/extras-inline-block.html">Read more about inline & block elements and the display property here.</a></p>
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##:hover Pseudo Selector
+      <script type="text/template">
+      #:hover Pseudo Selector
 
       Let's try adding some changes on hover using the `:hover` [psuedo-class selector](http://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:hover).
 
@@ -1330,6 +1421,7 @@ max-width: 1000px;</textarea>
         color: #ffffff;
       }
       ```
+      </script>
     </section>
     <section class="slide">
       <h2>CSS Transition</h2>
@@ -1347,10 +1439,12 @@ p:hover {
   color: white;
 }</textarea>
       <p>More about transition: <a href="http://css-tricks.com/almanac/properties/t/transition/">http://css-tricks.com/almanac/properties/t/transition</a></p>
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Class exercise: hover & transition
+      <script type="text/template">
+      #Class exercise: hover & transition
 
       Add the transition property to the hover effects then try hovering over your links.
 
@@ -1365,11 +1459,13 @@ a:hover {
   color: #ffffff;
 }
 ```
+      </script>
     </section>
 
     <section class="slide centered" data-markdown>
-      ##GIF Break
+      #GIF Break
       ![](framework/img/workshop/css.gif)
+      </script>
     </section>
 
     <section class="slide">
@@ -1388,6 +1484,7 @@ a:hover {
       <textarea class="snippet">background: linear-gradient();</textarea>
 
       <p>Learn all about gradients here: <a href="http://css-tricks.com/css3-gradients/">http://css-tricks.com/css3-gradients/</a></p>
+      </script>
     </section>
 
     <section class="slide">
@@ -1401,10 +1498,12 @@ a:hover {
 background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(project/images/background-4.jpg);
       </textarea>
       <div id="bg-image-gradient"></div>
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-##Exercise #10: Gradient & more floats (15 mins)
+      <script type="text/template">
+#Exercise #10: Gradient & more floats (15 mins)
 
 1. Using the previous example, add a gradient effect to the **Skills** section to make the text on background image more legible.
 
@@ -1438,10 +1537,12 @@ See below for final code but only if you get stuck!
   ...
 &lt;/div&gt;
 ```
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Positioning in CSS
+      <script type="text/template">
+      #Positioning in CSS
       
       Sometimes floats and display just doesn't cut it. 
 
@@ -1451,6 +1552,7 @@ See below for final code but only if you get stuck!
 
       Today we'll be using a fixed position. To learn more about position, [go here](framework/extras-positioning.html).
 
+      </script>
     </section>
 
     <section class="slide">
@@ -1471,10 +1573,12 @@ See below for final code but only if you get stuck!
       <div id="fixed">
         <div class="box"></div>
       </div>  
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Class Exercise: Download PDF resume
+      <script type="text/template">
+      #Class Exercise: Download PDF resume
       
       Some people may still be interested having a hard copy of your resume, so let's add an option to download a copy. Go back to your HTML document and add a link to a copy of the resume.  In your projects folder, there is a **resume.pdf** that can be used as a placeholder or use yours if you have it handy.
 
@@ -1483,6 +1587,7 @@ See below for final code but only if you get stuck!
       ```xml
       &lt;a class="download" href=&quot;resume.pdf&quot; download&gt;Download resume (pdf)&lt;/a>
       ```
+      </script>
     </section>
     <section class="slide">
       <h2>Class Exercise: Position and style download link</h2>
@@ -1502,10 +1607,12 @@ See below for final code but only if you get stuck!
       <div class="presenter-notes">
         <p>The slides for further styling of the download link have been moved to extras/homework section because it doesn't cover any new concepts. This was moved to make time to introduce icon fonts.</p>
       </div>
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-    ##Icon fonts
+      <script type="text/template">
+    #Icon fonts
     
     Icon fonts are an easy way to add imagery to your web page but still have the flexibility of styling properties like size and colour using CSS since they *are* fonts!
 
@@ -1515,10 +1622,12 @@ See below for final code but only if you get stuck!
     Under **[Get Started](http://fortawesome.github.io/Font-Awesome/get-started/)**, there are different options for adding the font files.  If using the CDN, remember to add the "http" to make it work when you run your page "locally" (on your computer).
     
     To use, [pick an icon](http://fortawesome.github.io/Font-Awesome/icons/) and copy the supplied markup and class and that's it! All of the social icons in the footer of your project's index.html file are included with an icon font.
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-    ##Class Exercise - Resetting List Styles
+      <script type="text/template">
+    #Class Exercise - Resetting List Styles
 
     Add some flair to the skills list by replacing the default bullets with an icon.  
 
@@ -1532,10 +1641,12 @@ See below for final code but only if you get stuck!
   padding: 0;
 }
 ```
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Exercise #11: Adding Icon Fonts (15mins)
+      <script type="text/template">
+      #Exercise #11: Adding Icon Fonts (15mins)
 
       Now that the bullets have been removed, let's add a checkmark. Visit [Font Awesome](http://fortawesome.github.io/Font-Awesome/) and go to **Icons** to get the code.
 
@@ -1548,14 +1659,17 @@ See below for final code but only if you get stuck!
       **Extra Bonus:** Try changing the color or the `h4` subheadings.
 
       Your page should look similar to [Example 11](project/examples/11-icon-fonts.html).
+      </script>
     </section>
     
     <section class="slide centered" data-markdown>
       ![](framework/img/workshop/now-what.gif)
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Next Steps
+      <script type="text/template">
+      #Next Steps
       
       Though we've covered a lot of material today, there are more ways to give your HTML resume that extra personalization and polish.  Here are some extra features you can try out:
 
@@ -1568,10 +1682,12 @@ See below for final code but only if you get stuck!
       4. Style your download link to look more like a button. [See instructions here](framework/extras-download-btn.html).
       
       Also, there are many many ways to select elements that go beyond descendant selectors, classes and ids.  See a few examples [here](framework/extras-advanced-selectors.html).
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Resources
+      <script type="text/template">
+      #Resources
 
       Here are some resources to help dive deeper into HTML & CSS:
 
@@ -1583,10 +1699,12 @@ See below for final code but only if you get stuck!
       * [CodePen](http://codepen.io/)
       * [CSSDeck](http://cssdeck.com)
       * Try a few more Ladies Learning Code workshops. Check our roadmap for suggestions at http://ladieslearningcode.com/roadmap
+      </script>
     </section>
 
     <section class="slide" data-markdown>
-      ##Getting your site online
+      <script type="text/template">
+      #Getting your site online
 
       You will need to register a domain name (www.mysite.com) and get hosting. Here are a couple domain & hosting suggestions:
       
@@ -1604,6 +1722,7 @@ See below for final code but only if you get stuck!
       Here's a nice tutorial getting your files online using FileZilla: [FileZilla Client Tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29)  
       Feeling adventurous? Try [Hosting Static Sites on Github for Beginners](http://thephuse.com/development/hosting-static-sites-on-github-for-beginners/).
 
+      </script>
     </section>
 
     <section class="slide small-type" data-markdown>
@@ -1614,7 +1733,7 @@ See below for final code but only if you get stuck!
         
         Explore more Ladies Learning Code workshops by following our [Roadmap](http://ladieslearningcode.com/roadmap/).
         
-        ##Getting your site online
+        #Getting your site online
         
         You will need to register a domain name and purchase hosting. Here are some suggestions:
         
@@ -1626,6 +1745,7 @@ See below for final code but only if you get stuck!
         You will also need to upload your files to your hosting server. You will need some info usually provided by your hosting service provider: FTP Address, Username, Password.
 
         Here's a tutorial getting your files online using FileZilla: [FileZilla Client Tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29)
+      </script>
       </script>
     </section>
     
@@ -1645,6 +1765,7 @@ See below for final code but only if you get stuck!
       </ul>
 
       <p class="attribution">Slide presentation created by <a href="http://christinatruong.com">Christina Truong</a> based on <a href="https://github.com/LeaVerou/csss">Lea Verou's SlideShow</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
+      </script>
     </section>
 
   </main><!-- cls main section -->
