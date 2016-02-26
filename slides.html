@@ -1212,7 +1212,7 @@ max-width: 800px;</textarea>
 
     <section class="slide title background" data-markdown>
       <script type="text/template">
-      #Background images
+      #Working with Background images
       </script>
     </section>
 
@@ -1228,14 +1228,45 @@ max-width: 800px;</textarea>
       ```css
       background: url(folder/file.jpg); /* shorthand */
       ```
+    </script>
+  </section>
+
+  <section class="slide" data-markdown>
+    <script type="text/template">
+      #Background images
+
+      Important: Note the location of the CSS file.
       
-      ##Folder structure
+      ```css
+      project/
+        |-- css/
+          |--styles.css
+        |-- images/ 
+        |-- index.html
+      ```
       
-      Since the current project's CSS file is *inside* the **css** folder, use `../` in your folder path to go *up and out* of the folder first, then into the images folder. 
+      Since **styles.css** is inside of the **css** folder, the file path needs to reflect that.
+      Use `../` to indicate that the directory needs to move up and out of the containing folder.
 
       ```css
       background: url(../images/background-3.jpg);
       ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Background styles & the x-axis
+        
+        Every time an HTML element is nested, the elements are stacked in layers, kind of like a sandwich!
+
+        ![](framework/img/workshop/graphical-z-index.gif)<!-- .element: class="left" -->
+        </div>
+
+        If a background image/colour is added to `body`, it will appear *behind* the nested elements (header, sections and footer).
+        
+        Image source and further reading <!-- .element: class="note" --> [here](http://www.smashingmagazine.com/2009/09/15/the-z-index-css-property-a-comprehensive-look/).
+        </div>  
       </script>
     </section>
 
@@ -1300,9 +1331,9 @@ max-width: 800px;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-      # Fixed background
+      # Class Exercise: Fixed background
       
-      Before we update the background image sizing, let's add the "fixed" value.
+      Before we update the background image sizing, let's look at `fixed`.
       
       ```css
       /* shorthand */
@@ -1319,40 +1350,75 @@ max-width: 800px;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
+        #background-position
+        
+        `background-position` is used to move a background image within its container. 
+        The default values place the image at the top left.
+        
+        There are three types of values: pixels (e.g. 100px 5px), percentages (e.g. 100% 5%) or keywords (e.g. top right). If only one value is declared, it is applied to the horizontal and vertical placement of the image.
+        
+        ```css
+        /* shorthand */
+        background: url(../images/background-1.jpg) no-repeat fixed 50%; 
+
+        /* longhand */
+        background-image: url(../images/background-1.jpg); 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: 50%;
+        ```
+        
+        ---
+        ###Resource
+        https://css-tricks.com/almanac/properties/b/background-position/
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #background-position
+        
+        But that doesn't really solve the issue of the image not covering the area it's applied to.
+        
+        ![](framework/img/workshop/bg-img-position.jpg)
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
       #Background-size
 
-      CSS3 introduced the `background-size` property which not only allows us to change the size of the image but also makes the background images fluid and flexible . The syntax is:
+      `background-size` can be used to change the size of the background image and also makes it fluid and flexible . The syntax is:
 
       ```
       background-size: width height;
       ```
 
-      The default values for width and height are `auto` and retains the original image dimensions. If only one value is defined, it is assumed to be the `width`. The height will be set to `auto` and the image will keep its aspect ratio.
+      The default values are `auto` which retains the original image dimensions. If only one value is defined, it is assumed to be the `width` and the image will keep its aspect ratio.
 
-      There are several ways to define sizing dimensions using px, percentages, keywords, etc.
+      Though there are various sizing dimensions (pixels, percentages or keywords), today, our best option is keyword `cover`.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+      #Background-size shorthand
 
-      `background-size` is the longhand property.  To include it in the shorthand `background` property, it *must* be included after `background-position`, separated with the `/` character.  
+      `background-size` is the longhand property name.  
       
-      ```
-      header {
-        background-image: url(../images/background-1.jpg);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: 50%;
-        background-size: 100%;
-      }
-      ```
+      To include it in the shorthand `background` property, it **must** be included after `background-position`, separated with the `/` character.
+      
       ```
       header {
         background: url(../images/background-1.jpg) no-repeat fixed 50% / 100%;
       }
       ```
-      If no background position value is being used, background-size won't work in the shorthand property so in this case, it may be less error prone to add it via the longhand property.
+      **Important**: if no background position value is being used, background-size won't work! So in this case, it may be less error prone to add it via the longhand property.
       
       ```
       header {
         background: url(../images/background-1.jpg) no-repeat fixed 50%;
-        background-size: 100%;
+        background-size: cover;
       }
       ```
       </script>
@@ -1360,22 +1426,45 @@ max-width: 800px;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-      #Class Exercise: Background-size
+      # Background-size
       
-      This looks great... until you minimize the screen. This is where using the keyword, `cover` will work better.
-
-      `cover` scales the image to fit the entire container but, if that has a different aspect ratio, the image will be cropped.
-
-      Let's update the background-size to `cover`. Your code should now look something like this:
-      ```
-      background: url(../images/background-2.jpg) no-repeat fixed 50%;
-      background-size: cover;
-      ```
-      And your page should look similar to [Example 6](project/examples/6-background.html).
-
-      **Extra resource**: https://developer.mozilla.org/en/docs/Web/CSS/background
+      Of the different `background-size` options, `cover` tends to work best because it scales the image to fit the entire container, 
+      
+      But, if that has a different aspect ratio, the image will be cropped. This is where setting a `background-position` comes in handy.
+      
+      See below resource for more about the `background` property.
+      
+      ---
+      ###Resource
+      * https://developer.mozilla.org/en/docs/Web/CSS/background
       </script>
     </section>
+  
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class Exercise: Background-size & position
+
+        Let's update the background-size to `cover` and set the position to wherever you want your image to be placed.<br>
+        <span class="note">(50% = middle or keywords: top, right, bottom, left) </span>
+        
+        Your code should now look something like this:
+        
+        ```
+        background: url(../images/background-2.jpg) no-repeat fixed 50%;
+        background-size: cover;
+        ```
+        
+        Your page should look similar to [6-background.html](project/examples/6-background.html).
+      </script>
+    </section>
+    
+    <section class="slide title background-2" data-markdown>
+      <script type="text/template">
+        #More Background Styles!
+        ##Gradients and Alpha Transparency
+      </script>
+    </section>
+    
     
     <section class="slide" data-markdown>
       <script type="text/template">

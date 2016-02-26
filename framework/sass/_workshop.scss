@@ -6,3 +6,24 @@
               url(../img/banner-home1.jpg) no-repeat;
   background-size: cover;
 }
+
+.slide.background {
+  background: url(../img/workshop/background-2.jpg);
+  background-size: cover;
+  
+  h1 {
+    color: black;
+    font-weight: 700;
+  }
+}
+.slide.background-2 {
+  background: linear-gradient(rgba($llc-pink, 0.6),
+              rgba($black, 0.8)), 
+              url(../img/workshop/background-4.jpg);
+  background-size: cover;
+  
+  h1, h2 {
+    color: white;
+    background: rgba(0,0,0,.5);
+  }
+}
