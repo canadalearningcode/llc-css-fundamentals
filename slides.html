@@ -330,7 +330,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-      #Exercise #1: Personalize the content (~10 mins)
+      #Exercise #1: Personalize the content (10 mins)
 
       Here are some suggestions:
       
@@ -730,28 +730,7 @@ color: blue;</textarea>
 
         ---
         ###Resources:  
-        * [Text CSS properties reference](http://www.htmldog.com/guides/css/beginner/text/)  
-        * [http://csstypeset.com](http://csstypeset.com/)- CSS generator
-      </script>
-    </section>
-    
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-      #Cascading
-
-      CSS executes from top to bottom (hence "cascading"), so be careful of the the order of your CSS declarations. The declaration that comes *after* will override the one that came before.
-
-      In this example, what colour will the `<h1>` be?
-
-      ```
-      h1 {
-        color: black;
-      }
-      h1 {
-        color: blue;
-      }
-      ```
+        * [Text CSS properties reference](http://www.htmldog.com/guides/css/beginner/text/)
       </script>
     </section>
     
@@ -934,8 +913,10 @@ color: blue;</textarea>
       </script>
     </section>
 
-    <section class="slide title" data-markdown>
+    <section class="slide title" data-markdown data-toc>
+      <script type="text/template">
       #The Box Model
+      ##Spacing and Sizing
       </script>
     </section>
     
@@ -943,38 +924,63 @@ color: blue;</textarea>
       <script type="text/template">
       #What is The Box Model?
 
-      The browser looks at every HTML element on the page as a rectangular box. The CSS Box Model describes the way CSS styles the size and spacing of HTML elements. Understanding the box model is crucial for understanding how to position elements with CSS to create the desired page layout. This is one of the trickiest part of CSS, so don't worry if it seems confusing!
-
-      CSS uses 5 properties to determine the size and spacing of these boxes:
-
-      * `margin` - adds/removes space *outside* of the element
-      * `padding` - adds/removes space *inside* of the element
-      * `border` - adds a border outside of the element
-      * `width` - can be set to a specific size via CSS
-      * `height` - can be set to a specific size via CSS
-      </script>
-    </section>
-
-    <section class="slide">
-      <h2>Padding and Margin</h2>
-
-      <p>The <code>padding</code> and <code>margin</code> can both be declared using similar syntax of 1 to 4 values. Values can be declared using different measurement units but pixels or percentages are most commonly used. Setting the value to "0" will <strong>remove</strong> any default space on an HTML element. Any positive value will <strong>add</strong> space.</p>
-
-      <ul>
-        <li>4 values means top, right, bottom, left</li>
-        <li>3 values means top, right & left, bottom</li>
-        <li>2 values means top & bottom, right & left</li>
-        <li>1 value means the same amount of padding on all sides</li>
-      </ul>
+      The browser looks at every HTML element on the page as a rectangular or square box. The CSS Box Model describes the way CSS styles the size and spacing of HTML elements. 
       
-      <p>Change some values to see the difference between margin and padding. Trying using 1 - 4 values. Let's also inspect the element using Chrome's Developer tool.</p>
-
-      <textarea class="snippet" data-subject="#padding">background: lightblue; 
-padding: 0 0 0 0;
-margin: 0 0 0 0;</textarea>
-      <p id="padding">padding and margin test</p>
+      There are 5 CSS properties used to determine the size and spacing of these boxes: `margin`, `padding`, `border`, `width`, `height`.
       </script>
     </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Padding
+        
+        Padding adds space *inside* of an element. The values can be declared using 1 to 4 values, to target different sides of the element. A variety of measurement units (px, %, ems, rems, etc) can be used.
+
+        Setting the value to "0" will remove any default space and any positive value will add space.
+
+        ```css
+        padding: 2px 10px 2px 10px; /* top, right, bottom, left */
+        padding: 2px 10px 2px; /* top, right & left, bottom */
+        padding: 2px 10px; /* top & bottom, right & left */
+        padding: 2px /* all sides have the same value */
+        ```
+      </script>
+    </section>
+    
+    <section class="slide">
+      <h1>Margin</h1>
+      
+      <p>Margin adds space <em>outside</em> and around an element and also uses 4 values just like padding.</p>
+      
+      <p>Using the example below, let's change some values to see the difference between margin and padding. Try using 1 - 4 values.</p>
+    
+      <textarea class="snippet" data-subject="#padding">background: lightblue; 
+padding: 0;
+margin: 0;</textarea>
+
+      <p id="padding">padding and margin test</p>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #More about margin
+
+        `margin` also accepts negative values, padding does not. When using negative values, it will nudge the box outside of its natural spot within the page flow of the surrounding elements.
+
+<textarea class="snippet" data-subject="#neg-margin">background-color: lightblue; 
+width: 100px; 
+padding: 20px; 
+margin: 0px;</textarea>
+
+        <div id="neg-margin">box</div>
+        
+        ---
+        ###Resource
+        
+        * [The Definitive Guide to Using Negative Margins](http://www.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/)
+      </script>
+    </section>
+  
     <section class="slide" data-markdown>
       <script type="text/template">
       #Padding and Margin (continued)
@@ -1024,139 +1030,116 @@ margin: 0 0 0 0;</textarea>
       </script>
     </section>
 
-    <section class="slide" data-markdown>
-      <script type="text/template">
-      #Box Model Review
-
-      Let’s look at a diagram to see how all these different properties work together to change the size of an element.
-
-      ![box model](framework/img/workshop/box-model.gif)
-
-
-      The original element started with a width and height of **400 x 100**. After including the padding, border &amp; margin, the size of the box is actually **452 x 152**!
-
-      Margin doesn't add to the actual size of the element but should be considered as part of the total size of the element because it adds space *around* it.
-      </script>
-    </section>
-      
-    <section class="slide centered" data-markdown>
-      #I Can't... even...
-      ![](framework/img/workshop/cant-even.gif)
-      </script>
-    </section>
-
-    <section id="box-model-fix" class="slide" data-markdown>
-      #Box Model Fix!
-        
-      Luckily, there’s a fix for this. Enter the [box-sizing: border-box](http://www.paulirish.com/2012/box-sizing-border-box-ftw/) fix ftw!  
-
-      It is recommended to add this snippet to all your projects.
-
-      ```
-      /* apply a natural box layout model to all elements, but allowing components to change */
-      html {
-        box-sizing: border-box;
-      }
-      *, *:before, *:after {
-        box-sizing: inherit;
-      }
-      ```
-      ![box model diagram](framework/img/workshop/box-model-fix.gif)
-      </script>
-    </section>
-
-    <!-- <section class="slide">
-      <h2>More about margin</h2>
-
-      <p><code>margin</code> also accepts negative values, padding does not. When using negative values, it will nudge the box outside of its natural spot within the page flow of the surrounding elements.</p>
-
-      <textarea class="snippet" data-subject="#neg-margin">background-color: lightblue;
-width: 100px;
-padding: 20px;
-margin: 0px; /* change to negative value */</textarea>
-      <div id="neg-margin">box</div>
-
-      <p>Extra resource: <a href="http://www.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/">The Definitive Guide to Using Negative Margins</a></p>
-      </script>
-    </section> -->
-
     <section class="slide">
-      <h2>Center aligning with margin</h2>
-      <p>The margin property can also be used to center align block level elements. (More about block level elements later). First, a width needs to be set. Then, setting the left &amp; right values to <code>auto</code> will find the center of the page. The <code>0</code> just refers to the top and bottom value.</p>
+      <h1>Center aligning with margin</h1>
+      <p>The margin property can also be used to auto center align block level elements. (More about block level elements later).</p>
+      <p>First, a width needs to be set. Then, setting the left &amp; right values to <code>auto</code> will find the center of the page. The <code>0</code> just refers to the top and bottom value.</p>
 
       <textarea class="snippet" data-subject="#margin-auto">background-color: lightblue;
 height: 100px;
 width: 600px;
 margin: 0 auto;</textarea>
       <div id="margin-auto">box</div>
-
-      <p>Margin also accepts negative values. See more <a href="framework/extras-negative-margin.html">here</a>.</p>
-      </script>
     </section>
 
-    <section class="slide">
-      <h2>Class exercise</h2>
-      <ol>
-        <li>Add the box model fix to our CSS file. <a href="index.html#box-model-fix">link</a></li>
-        <li>Go back to our HTML &amp; CSS project files, add <code>padding:1px</code> to the <code>header</code> section to see how it changes the spacing. Open up the Chrome Dev Tools and inspect the element.</li>
-        <li>The content is also too wide.  Let’s use the <code>margin: 0 auto</code> trick to center align the content. Try adding the styles to the <code>.profile</code> section in your CSS file.</li>
-      </ol>
+    <section class="slide" data-markdown>
+      <script type="text/template">
+      # Class Exercise: Padding & Margin
 
-<pre class="prettyprint"><code>.profile {
-  width: 1000px;
-  margin: 0 auto;
-}</code></pre>
-
-      <p>Your page will look something like this:</p>
-      <p><img src="framework/img/workshop/margin-auto.png" alt="" title=""></p>
-      <div class="presenter-notes">
-        <p>This exercise is to demonstrate why we need to add a wrapper around the content which is covered in the next step.</p>
-      </div>
+      <!-- 1.  Add the box model fix to the top of your CSS file. [link](#box-model-fix) -->
+      In the `body` selector, set the margin & padding to 0 to remove the space around the edge of the whole browser window.
+      
+      ![](framework/img/workshop/spacing-1.jpg)
+      ![](framework/img/workshop/spacing-2.jpg)
+      
+      There will still be some space between the sections. That's coming from the default margin in the heading tags! Let's inspect the element using the browser dev tools to see the space.
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-#Class exercise (continued)
-
-The content is centered but the background colour is restricted by the width dimension and doesn’t span the rest of the page anymore. To fix this, we’ll need to create a “container” just for center aligning the content by adding a new `div` with a class of `content-wrap` *around all of the profile content*.
-
-```
-<section class="profile">
-  <div class="content-wrap"><!-- new content wrap div -->
-
-    <img src="images/profile-generic.jpg" alt="Your Name">
-    <div class="summary">
-      ...
-    </div>
-
-  </div><!-- close contact wrap div -->
-</section>
-  ```
-
-Then apply the styles to `.content-wrap` instead of `.profile`. Let's add some padding while we're at it too.
-```
-.content-wrap {
-  width: 1000px;
-  margin: 0 auto;
-  padding: 60px 0;
-}
-```
+      # Class Exercise: Padding & Margin
+      
+      Let's add some padding to the various page sections so the content doesn't run right to the edge its containing element.  
+      
+      Just add padding to the top and bottom in this step.
+      
+      ```
+      section,
+      footer {
+        padding: 50px 0;
+      }
+      header {
+        padding: 100px 0;
+      }
+      ```
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-      #Exercise #4: Content wrappers! (15mins)
+      # Class Exercise: Content Wrapper
 
-      Add the `.content-wrap` to each section *except* the `header`. We'll discuss why the header doesn't need it very soon.
+      The content runs too wide. Let’s use the `margin:0 auto;` technique to set a width to the content and auto center align it. Try adding the styles to the `.profile` section in your CSS file.
+      
+      ```
+      .profile {
+        width: 1000px;
+        margin: 0 auto;
+      }
+      ```
 
-      First, let's go over how to collapse code blocks and tab multiple lines at the same time in Sublime first, to help make the addition of this markup a little easier.
+      Your page will look something like this:
 
-      Your page should look something like this: [example 4](project/examples/4a-content-wrap.html).
+      ![](framework/img/workshop/margin-auto.png)
       </script>
     </section>
 
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Class Exercise: Content Wrapper
+
+        The background colour is now restricted because it's only stretching 1000px (the set width).
+        
+        To fix this, create a “container” just for aligning the content. Add a new `div` with a class *around just the content*. Let's name it `content-wrap`.
+
+        ```
+        <section class="profile">
+          <div class="content-wrap"><!-- new content wrap div -->
+            <img src="images/profile-generic.jpg" alt="Your Name">
+            <div class="summary">
+              ...
+            </div>
+          </div><!-- close contact wrap div -->
+        </section>
+        ```
+
+        Then apply the styles to `.content-wrap` instead of `.profile`. Let's add some padding while we're at it too.
+        ```
+        .content-wrap {
+          width: 1000px;
+          margin: 0 auto;
+        }
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+      #Exercise #4: Content wrappers! (~15mins)
+
+      Add the `.content-wrap` HTML to each page block (header, about, work, etc).
+
+      For reference, your page should look similar to [4-content-wrap.html](project/examples/4-content-wrap.html).
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## part two
+      </script>
+    </section>
+    
     <section class="slide">
       <h2>width &amp; max-width, px vs %</h2>
       
@@ -1265,13 +1248,11 @@ max-width: 1000px;</textarea>
         <li><a href="http://nos.twnsnd.co/">http://nos.twnsnd.co/</a></li>
         <li><a href="http://unsplash.com/">http://unsplash.com/</a> </li>
       </ul>
-      <div class="presenter-notes">
-        <p>This lunchtime exercise will give learners a chance to catch up if needed and a chance to find images to personalize their site without taking up class time. The afternoon covers a lot of material and this will help speed it along.  You should aim to hit lunchtime between 12:15 - 12:30pm. A 45 min lunch is recommended.</p>
-      </div>
       </script>
     </section>
 
     <section class="slide title" data-markdown>
+      <script type="text/template">
       #Background images
       </script>
     </section>
