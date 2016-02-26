@@ -509,7 +509,7 @@
         * see following slide for colour resources
 
         ```
-        /* These are all the same colour - this is also a CSS comment by the way! */
+        /* These are all the same colour. */
         p {
           background: firebrick;
           background: rgb(178,34,34);
@@ -522,8 +522,6 @@
     <section id="colours" class="slide" data-markdown>
       <script type="text/template">
         #CSS colour resources
-               
-        Let's take a look at some of these colour resources.
         
         * http://colours.neilorangepeel.com
         * http://coolors.co
@@ -783,14 +781,19 @@ color: blue;</textarea>
       <script type="text/template">
         # Class Exercise: Typography CSS
         
-        Setting the main `font-family` & `line-height` using `body` as the selector will ensure that all the descendant elements will inherit the styles (paragraphs, lists, headings, etc).
+        Let's add some styles to `body` and `header` so descendant & child elements will inherit the styles.
         
-        Let's add this to **styles.css**.  
+        Add the sample code below to **styles.css** and check the changes in the browser.  
         
         ```
+        /* All the descendant elements on the *page* will inherit the styles. */
         body {
           font-family: 'Merriweather', serif;
           line-height: 1.5;
+        }
+        /* All elements within *<header>* will inherit this style. */
+        header  {
+          text-align: center;
         }
         ```
         
@@ -802,8 +805,7 @@ color: blue;</textarea>
       <script type="text/template">
         # Typography CSS
         
-        Set specific font styles for `h1`, `h2` and `h3`. (Don't add this yet!)
-        
+        Set specific font styles for `h1`, `h2` and `h3`. (Don't add this yet!)  
         Notice how some of the styles are the same in each block?
           
         ```
@@ -834,10 +836,7 @@ color: blue;</textarea>
       
       Writing clean, organized and efficient code will not only make your pages run faster but will make it easier to maintain and potentially reduce browser bugs. 
       
-      It's tempting to say "I'll fix it later" but later doesn't always come. 
-      
-      It's important to refactor your code as you go along.
-      
+      It's tempting to say "I'll fix it later" but later doesn't always come so it's important to refactor your code as you go along.
       </script>
     </section>
 
@@ -901,7 +900,7 @@ color: blue;</textarea>
       <script type="text/template">
       # Exercise #3: Typography (~15mins)
 
-      1.  (Optional) Find 2-3 fonts from [Google Fonts](http://www.google.com/fonts/).
+      1.  (Optional) Choose your own [Google Fonts](http://www.google.com/fonts/) or stick with the sample project selections.
       2.  Using the code sample in the previous slide, update the font & typography styles to your liking! 
       
       (You can also add and revise it later as the page starts to come together.)
@@ -1005,7 +1004,7 @@ margin: 0px;</textarea>
       <script type="text/template">
       #Border
 
-      The `border` property resides between the `margin` and `padding` and creates an outline around the element. It, too, has longhand and shorthand syntax.
+      The `border` property resides between the `margin` and `padding` and creates an outline around the element.
       
       ```
       /* longhand */
@@ -1017,14 +1016,7 @@ margin: 0px;</textarea>
       border: 2px solid red;
       ```
       Like padding and margin, a specific side of the element can be specified.
-      
       ```
-      /* longhand */
-      border-top-width: 2px;
-      border-top-style: solid;
-      border-top-color: red;
-
-      /* shorthand */
       border-top: 2px solid red;
       ```
       </script>
@@ -1060,7 +1052,7 @@ margin: 0 auto;</textarea>
       <script type="text/template">
       # Class Exercise: Padding & Margin
       
-      Let's add some padding to the various page sections so the content doesn't run right to the edge its containing element.  
+      Next, add some padding to the various page sections so the content doesn't run right to the edge its containing element.  
       
       Just add padding to the top and bottom in this step.
       
@@ -1114,7 +1106,7 @@ margin: 0 auto;</textarea>
         </section>
         ```
 
-        Then apply the styles to `.content-wrap` instead of `.profile`. Let's add some padding while we're at it too.
+        Then apply the styles to `.content-wrap` instead of `.profile`.
         ```
         .content-wrap {
           width: 1000px;
@@ -1126,130 +1118,100 @@ margin: 0 auto;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-      #Exercise #4: Content wrappers! (~15mins)
+        #Exercise #4: Content wrappers! (~15mins)
 
-      Add the `.content-wrap` HTML to each page block (header, about, work, etc).
+        Add the `.content-wrap` HTML to each page block (header, about, work, etc). Remember, it has to wrap *only* the content. 
+        
+        Education example section below.
+        ```
+        <section class="education">
+          <div class="content-wrap"><!-- open content-wrap-->
+            <h1>Education</h1>
+            <div class="item">
+              ...
+            </div>
+            <div class="item">
+              ...
+            </div>
+          </div><!-- close content-wrap -->
+        </section>
+        ```
 
-      For reference, your page should look similar to [4-content-wrap.html](project/examples/4-content-wrap.html).
+        For reference, your page should look similar to <!-- .element: class="note" --> [4-content-wrap.html](project/examples/4-content-wrap.html) and [4-content-wrap.css](project/examples/4-content-wrap.css).
       </script>
     </section>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## part two
+        # Break time!
+        
+        Here are some (optional) suggestions: 
+        
+        Want to check your work? Take a look in the **examples** folder. We are now up to **4-content-wrap.html** & **4-content-wrap.css**.
+
+        Prepare for the part 2 exercises by finding two images to use as background images or choose from the images included in **project > images**. Here’s the link to the [final project for reference](project/final.html).
+        
+        See below for resources for royalty free images.
+        
+        ---
+        ###Resources
+        *   [http://superfamous.com/](http://superfamous.com/)
+        *   [http://www.gratisography.com/](http://www.gratisography.com/)
+        *   [http://littlevisuals.co/](http://littlevisuals.co/)
+        *   [http://nos.twnsnd.co/](http://nos.twnsnd.co/)
+        *   [http://unsplash.com/](http://unsplash.com/)
       </script>
     </section>
     
-    <section class="slide">
-      <h2>width &amp; max-width, px vs %</h2>
-      
-      <p>The content is all nice and centered now but what happens when the browser window is smaller than the set width? Let’s look at the difference between the <code>max-width</code> and <code>width</code> property and using percentages and pixels.</p>
+    <section class="slide title" data-markdown>
+      <script type="text/template">
+        #Part Two
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # width & max-width, px vs %
 
-      <p>Minimize the screen and see how the box responds. Then change the width to a percentage value less than 100% and try it again.</p>
+        Let's revisit the centered content from Exercise #4. What happens when the browser window is smaller than the set width? 
+        
+        Let’s look at the difference between `max-width` and `width` using percentages and pixels. Resize the browser to see how the example box responds. 
+        
+        Try changing the `width` percentage value and test it again.
 
-      <textarea class="snippet" data-subject="#widths">border: 1px solid black;
-margin: 0 auto;
+        <textarea class="snippet" data-subject="#widths">border: 1px solid black;
+margin: 20px auto;
 width: 100%;
-max-width: 1000px;</textarea>
-      <div id="widths">
-        <p>Lorem ipsum dolor sit amet.</p>
-      </div>
+max-width: 800px;</textarea>
+
+        <div id="widths">
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-      #Class exercise
+      #Class Exercise: Fluid Content Wrap
 
-      Update the `.content-wrap` styles to include `max-width` and update `width`.
+      Update `.content-wrap` to include `max-width` and a % `width` value.
       
       ```
       .content-wrap {
         max-width: 1000px;
         width: 90%;
         margin: 0 auto;
-        padding: 60px 0;
       }
       ```
       
-      Your page will now look like this [example](project/examples/4b-content-wrap.html). Minimize the screen to test the updates.
+      Your page will now look like [5-fluid-content-wrap.html](project/examples/5-fluid-content-wrap.html). Minimize the screen to test the updates.
 
-      Now we've created a reusable style that will help to keep our CSS nice and neat because we can apply this class where ever this style is required.
+      Now we've created a reusable style (`.content-wrap`) that will help to keep our CSS nice and neat because this style can be applied where ever it is required.
       </script>
     </section>
 
-    <section class="slide" data-markdown>
-      <script type="text/template">
-      # The Dangers of "div-itis"
-      
-      Be careful of "divitis"! Use the `<div>` to *group* related elements to be styled *together* as one section.  If you need to style a single element, like an `<h1>` for example, just style that element directly. The browser sees every element as a "box" so there's no need to put a box around a box!
-
-      A good rule of thumb is to only add what you need.  It's much easier to add more than to remove extra markup.
-      
-      ```xml
-      <div class="title">
-        <h1>Heading</h1>
-      </div>
-      ```
-
-      can just be
-
-      ```xml
-      <h1 class="title">Heading</h1>
-      ```
-      </script>
-    </section>
-    <section class="slide centered" data-markdown>
-      #Avoid code bloat
-
-      ![](framework/img/workshop/bloat.jpg)
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-      #Update header & heading styles
     
-      In the case of the `header` section, we can apply `text-align: center` instead of adding the `.content-wrap` div. Since the content is short, we don't have to worry about containing it, therefore, avoiding "divitis". Also, adjust the padding to add space in the header. The final code for header should look like this:
       
-      ```
-      header {
-        background: #2c3e50;
-        text-align: center;
-        padding: 150px 0;
-      }
-      ```
-
-      While we're here, let's remove all of the default margins for the headings to get more control over how the spacing later on. Add `margin: 0` to the existing code block for the headers.
-      ```
-      h1, h2, h3 {
-        font-weight: 400;
-        margin: 0;
-      }
-      ```
-
-      Your header should look similar to [example 5](project/examples/5-header.html): 
-
-      ![header](framework/img/workshop/header.jpg)
-      </script>
-    </section>
-      
-    <section class="slide">
-      <h2>Lunchtime!</h2>
-
-      <p>Need some time to check your work? </p>
-      <p>Take a look in the <strong>examples</strong> folder. We are now up to <strong>5-header.html</strong> &amp; <strong>5-header.css</strong>.</p>
-      <p>Also, you can prepare for the next exercise by picking two images to use as the background images for your page or just choose from the images included in your <strong>project > images</strong>. Here’s the link to the <a href="project/final.html">final project for reference</a>.</p>
-      <p>Resources for free images:</p>
-      <ul>
-        <li><a href="http://superfamous.com/">http://superfamous.com/</a></li>
-        <li><a href="http://www.gratisography.com/">http://www.gratisography.com/</a></li>
-        <li><a href="http://littlevisuals.co/">http://littlevisuals.co/</a>  </li>
-        <li><a href="http://nos.twnsnd.co/">http://nos.twnsnd.co/</a></li>
-        <li><a href="http://unsplash.com/">http://unsplash.com/</a> </li>
-      </ul>
-      </script>
-    </section>
 
     <section class="slide title" data-markdown>
       <script type="text/template">

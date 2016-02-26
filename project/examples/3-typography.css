@@ -24,6 +24,7 @@ h2 {
 ----------*/
 header {
   background: #2c3e50;
+  text-align: center;
 }
 header h1 {
   font-family: "Pacifico", cursive;
