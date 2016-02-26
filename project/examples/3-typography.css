@@ -1,45 +1,55 @@
 /* GLOBAL STYLES
 -----------------*/
 body {
-  font-family: "Merriweather", serif;
+  font-family: 'Merriweather', serif;
   line-height: 1.5;
 }
 
 h1, h2, h3 {
   font-weight: 400;
 }
-
-h2, h3 {
+h1, h3 {
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
 }
-
 h1 {
-  font-family: "Pacifico", cursive;
-  font-size: 80px;
-}
-
-h2 {
   font-size: 32px;
 }
+h2 {
+  font-family: "Pacifico", cursive;
+}
+
 
 /* HEADER
 ----------*/
 header {
   background: #2c3e50;
 }
+header h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 80px;
+  text-transform: none;
+}
+header h2 {
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 32px;
+}
 
-/* ABOUT ME / PROFILE
+
+/* ABOUT ME 
 ----------------------*/
 .profile {
   background: #8e44ad;
 }
 
+
 /* WORK EXPERIENCE
 -------------------*/
-.work-experience {
+.work {
   background: #2980b9;
 }
+
 
 /* SKILLS
 ----------*/
@@ -47,11 +57,13 @@ header {
   background: #27ae60;
 }
 
+
 /* EDUCATION
 -------------*/
 .education {
   background: #16a085;
 }
+
 
 /* CONTACT & FOOTER 
 --------------------*/

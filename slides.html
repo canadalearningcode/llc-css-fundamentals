@@ -500,31 +500,38 @@
       
     <section class="slide" data-markdown>
       <script type="text/template">
-      #CSS Color Values
+        #CSS Colour Values
+        
+        * **keywords** - use the actual name  
+        (e.g. `red`, `green`, `blue`, `pink`, `papayaWhip`, `paleGoldenrod`, etc)
+        * **RGB** - uses 3 numerical values between `0` (black) and `255` (white)
+        * **hex code** - number sign (`#`) followed by six characters (0-9, A-F)
+        * see following slide for colour resources
 
-      * **keywords** - use the actual name for most basic colours (red, green, blue, pink, etc) as well as fancy ones like "papayaWhip".  
-      * **RGB (red-green-blue)** - Uses three numerical values from 0-255. 0 represents black, 255 represents white. 
-      * **hex code** - Made up of the number sign (`#`) followed by six hexadecimal characters (0-9, A-F).
+        ```
+        /* These are all the same colour - this is also a CSS comment by the way! */
+        p {
+          background: firebrick;
+          background: rgb(178,34,34);
+          background: #B22222;
+        }
+        ``` 
+      </script>
+    </section>
 
-      See below for syntax and colour resources.
-      
-      ```
-      /* These are all the same colour */
-      p {
-        background: firebrick;
-        background: #B22222;
-        background: rgb(178,34,34);
-      }
-      ```
-    
-      ---
-      ###Resources
-      * http://www.colorpicker.com
-      * http://colours.neilorangepeel.com    
-      * http://www.colourlovers.com  
-      * http://flatuicolors.com  
-      * http://color.hailpixel.com  
-      * http://wesandersonpalettes.tumblr.com
+    <section id="colours" class="slide" data-markdown>
+      <script type="text/template">
+        #CSS colour resources
+               
+        Let's take a look at some of these colour resources.
+        
+        * http://colours.neilorangepeel.com
+        * http://coolors.co
+        * http://wesandersonpalettes.tumblr.com
+        * http://www.colorpicker.com
+        * http://www.colourlovers.com
+        * http://flatuicolors.com
+        * http://color.hailpixel.com
       </script>
     </section>
 
@@ -605,7 +612,8 @@
 
       Add a different colour to each major section of the page. This is just for testing and to help with page layouts so choose any colours for now!
 
-      Your page should look similar to this: [examples/2-bg-colours.html](project/examples/2-bg-colours.html)
+      Your page should look similar to this:<!-- .element: class="note" --> [examples/2-bg-colours.html](project/examples/2-bg-colours.html)<br>
+      Color resources [here](#colours).<!-- .element: class="note" -->
       
       1. In your editor, open **styles.css** located in the css folder. 
       1. Link it to your HTML document. (The file is currently blank.)
@@ -638,36 +646,95 @@
       <script type="text/template">
       #Web safe fonts
 
-      The default font can be changed with the `font-family` **property**. However, not all fonts are installed on all computers so it's recommended to use fonts that are considered *web safe* &mdash; fonts that are commonly included on most computers.
-
-      It's best practice to list at least two or three font options to provide a fall-back if the user doesn't have the preferred fonts installed.
+      The default typeface can be changed with the `font-family` **property**. 
+      
+      But not all operating systems have the same fonts pre-installed. It's recommended to list two or three fonts to provide fall-back options.
 
       ```
       font-family: Helvetica, Arial, sans-serif;
       ```
-
-      Here's a handy resource for referencing web safe fonts: [CSS Font Stack](http://cssfontstack.com/).
+      
+      Some common "web safe" fonts are:
+      
+      * <span style="font-family:Arial;">Arial</span>
+      * <span style="font-family:Verdana;">Verdana</span>
+      * <span style="font-family:Times New Roman;">Times New Roman</span>
+      * <span style="font-family:Georgia;">Georgia</span>
+      * <span style="font-family:Courier;">Courier</span>
+      
+      To see a complete list, check out <http://www.cssfontstack.com>.
+      </script>
+    </section>
+    
+    <section class="slide no-bullet-list" data-markdown>
+      <script type="text/template">
+        #Web Fonts
+        
+        With the introduction of CSS3, you can  now use fonts other than the pre-installed web safe fonts.
+        
+        There are some free options like [Google Fonts](https://www.google.com/fonts) or [Font Squirrel](http://www.fontsquirrel.com/fonts/list/hot_web).
+        
+        Google fonts provides a more straightforward option since you can link directly to their css files.  Let's take a look at how it works.
       </script>
     </section>
 
-    <section class="slide">
-      <h2>Font Styles & Typography</h2>
-      <p>Let's experiment with a few CSS properties for styling text. Try changing some of the values below.</p>
-      <textarea class="snippet" data-subject="#typography-example">line-height: 1.25;
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class Exercise: Using Google Fonts
+        
+        1. Go to [Google Fonts](http://www.google.com/fonts).
+        1. **Add to Collection** to select a font. 
+        ![](framework/img/workshop/google-fonts-1.jpg)
+        1. **Review** to compare. <span class="note">These are the fonts used in the sample project.</span>
+          ![](framework/img/workshop/google-fonts-2.jpg)
+        1. Select **Use** to select additional options.
+        1. Select font weights. <span class="note">The more you choose, the more it will slow page load time.</span>
+          * The LLC project uses regular 400 for all fonts.
+          * The default character set should contain what you need.
+        1. Copy the `<link>` code snippet and add it the `<head>` of your page, before your **styles.css**, to reference the Google Font CSS.
+          ```
+          <head>
+            <meta charset="UTF-8">
+            <title>Your Name | Job Title or Tagline</title>
+            <link href='https://fonts.googleapis.com/css?family=Merriweather|Pacifico|Open+Sans' rel='stylesheet' type='text/css'>
+            <link rel="stylesheet" href="css/styles.css">
+          </head>
+          ```
+        
+        When you're ready to use the new fonts, use the font-family name listed in the Google Fonts page.
+        
+        ```
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Pacifico', cursive;
+        font-family: 'Merriweather', serif;
+        ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Font Styles & Typography
+
+        Let's experiment with a few CSS properties for styling text. Try changing some of the values below.
+
+        <textarea class="snippet" data-subject="#typography-example">font-weight: bold;
+font-size: 16px;
+line-height: 1.25;
 font-family: Helvetica, Arial, serif;
-font-size: inherit;
-font-weight: normal;
-text-transform: inherit;
-color: #222222;</textarea>
-      <div id="typography-example" class="example">
-        <p>Just some text to test out the above styles. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni repellat sunt quae fugit illum in aut sed, quis nesciunt totam veritatis, dolores alias modi fuga commodi dicta facilis, consequatur temporibus.</p>
-      </div>
+text-transform: lowercase;
+color: blue;</textarea>
 
-      <p>Resources:<br>
-      <a href="http://www.htmldog.com/guides/css/beginner/text/">Text CSS properties reference</a><br>
-      <a href="http://csstypeset.com/">http://csstypeset.com</a>- CSS generator</p>
+        <div id="typography-example" class="example">
+          <p>Just some text to test out the above styles. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni repellat sunt quae fugit illum in aut sed, quis nesciunt totam veritatis, dolores alias modi fuga commodi dicta facilis, consequatur temporibus.</p>
+        </div>
+
+        ---
+        ###Resources:  
+        * [Text CSS properties reference](http://www.htmldog.com/guides/css/beginner/text/)  
+        * [http://csstypeset.com](http://csstypeset.com/)- CSS generator
       </script>
     </section>
+    
 
     <section class="slide" data-markdown>
       <script type="text/template">
@@ -687,16 +754,17 @@ color: #222222;</textarea>
       ```
       </script>
     </section>
+    
     <section class="slide" data-markdown>
       <script type="text/template">
       #Inheritance and Specificity
 
-      One of the strengths of CSS is styles can be inherited from parent to child elements using the family tree relationship between the elements.
+      A strength of CSS is styles can be inherited from parent to child elements. Let's review the family tree structure between the elements.
 
       ```
-      <body>
-        <h1>My Website</h1><!-- child of body -->
-        <p>This is a paragraph.</p><!-- sibling of h1 -->
+      <body><!-- parent of h1 and p -->
+        <h1>My Website</h1><!-- child of body, sibling of p -->
+        <p>This is a paragraph.</p><!-- child of body, sibling of h1 -->
       </body>
       ```
       ```
@@ -709,52 +777,73 @@ color: #222222;</textarea>
       }
       ```
 
-      In the above example, the CSS properties in the body selector is inherited by the children and descendants so all the text would be blue and display the Helvetica font. However, when a more specific selector is used (`h1`), it overrides the inherited values because it's more *specific*.
+      In the above example, the CSS in the body selector is inherited by the descendants elements. However, when a more *specific* selector is used (`h1`), it overrides the inherited values.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Descendant selectors
+        
+        When you need to be more specific, try using a descendant selector.
+        
+        For example, you'll probably want to make the main heading (your name) bigger than the rest of the headings on the page.  But you can't use `h1` as the selector because that will select all of them. 
+        
+        Instead, try something like this (note the space between selectors):
+        
+        ```
+        header h1 {
+          font-size: 60px;
+        }
+        ```
+        This will only apply to `<h1>` tags *nested* within a `<header>` tag.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Class Exercise: Typography CSS
+        
+        Setting the main `font-family` & `line-height` using `body` as the selector will ensure that all the descendant elements will inherit the styles (paragraphs, lists, headings, etc).
+        
+        Let's add this to **styles.css**.  
+        
+        ```
+        body {
+          font-family: 'Merriweather', serif;
+          line-height: 1.5;
+        }
+        ```
+        
+        <!-- .element: class="note" --> **Note!** The code samples are listed for reference. Try not to copy and paste. Instead practice writing it out to get used to the syntax and finding errors!
       </script>
     </section>
 
-    <section class="slide">
-      
-      <h2>Class Exercise: Typography</h2>
-      
-      <p>Let's add some styles together using a few web safe fonts, <a href="http://cssfontstack.com/">cssfontstack.com</a>.</p>
-
-      <p>1. Set the main font-family &amp; line-height using <code>body</code> as the selector.</p>
-
-      <pre><code>body {
-  font-family: Georgia, Times, "Times New Roman", serif;
-  line-height: 1.5;
-}</code></pre>
-
-      <p>2. Set font styles for h1, h2 and h3</p>
-
-      <pre><code>h1 {
-  font-family: "Brush Script MT", cursive;
-  font-weight: 400;
-  font-size: 80px;
-}
-h2 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  font-size: 32px;
-}
-h3 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-}</code></pre>
-
-      <!-- 
-      PRESENTER NOTES:
-      Reference 3-typography 
-      -->
-      <div class="presenter-notes">
-        <ul>
-          <li>Add main font family &amp; line-height to body - explain inheritance</li>
-          <li>put h2, h3 styles into separate blocks to show how to combine selectors to demonstrate refactoring in the next slide. Use this to also explain specificity. Tell learners they have the option to type along or just watch to keep from slowing down the demo. They can catch up in the exercise work session since the final code will be posted in the next couple slides.</li>
-        </ul>
-      </div>
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Typography CSS
+        
+        Set specific font styles for `h1`, `h2` and `h3`. (Don't add this yet!)
+        
+        Notice how some of the styles are the same in each block?
+          
+        ```
+        h1 {
+          font-weight: 400;
+          font-family: "Open Sans", sans-serif;
+          text-transform: uppercase;
+          font-size: 32px;
+        }
+        h2 {
+          font-weight: 400;
+          font-family: "Pacifico", cursive;
+        }
+        h3 {
+          font-weight: 400;
+          font-family: "Open Sans", sans-serif;
+          text-transform: uppercase;
+        }
+        ```
       </script>
     </section>
 
@@ -762,10 +851,26 @@ h3 {
       <script type="text/template">
       #Refactor!
 
-      What is refactoring? Code refactoring is the process of restructuring existing code to make it more efficient. Writing clean, organized and efficient code will not only make your pages run faster but will make it easier to maintain and can potentially reduce browser bugs. It's tempting to say "I'll fix it later" but later doesn't always come. It's important to refactor your code as you go along.
+      Code refactoring is the process of restructuring existing code to make it more efficient.
+      
+      Writing clean, organized and efficient code will not only make your pages run faster but will make it easier to maintain and potentially reduce browser bugs. 
+      
+      It's tempting to say "I'll fix it later" but later doesn't always come. 
+      
+      It's important to refactor your code as you go along.
+      
+      </script>
+    </section>
 
-      If you find you are declaring the same styles over and over again, try applying the style to a parent selector so the styles can be inherited. You can also *combine* selectors to apply the same styles to multiple selectors at the same time.  Make sure to separate selectors with a comma.
+    <section class="slide" data-markdown>
+      <script type="text/template">
+      #Refactor!
 
+      If you find you are declaring the same styles over and over again, try applying the style to a parent selector so the styles can be inherited. 
+      
+      You can also *combine* selectors to apply the same styles to multiple selectors at the same time.  
+      
+      **Make sure to separate combined selectors with a comma.**
       ```
       h1, h2 {
         /* will apply any styles here to both headings */
@@ -773,9 +878,10 @@ h3 {
       ```
       </script>
     </section>
+    
     <section class="slide" data-markdown>
       <script type="text/template">
-      #Class Exercise: Typography (continued)
+      #Typography CSS
 
       The previous example can be refactored to look like this:
       
@@ -783,15 +889,29 @@ h3 {
       h1, h2, h3 {
         font-weight: 400;
       }
-      h2, h3 {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      h1, h3 {
+        font-family: "Open Sans", sans-serif;
         text-transform: uppercase;
       }
       h1 {
-        font-family: "Brush Script MT", cursive;
-        font-size: 80px;
+        font-size: 32px;
       }
       h2 {
+        font-family: "Pacifico", cursive;
+      }
+      ```
+      
+      Also, if you want to add specific font styles to the header, remember you can use descendant selectors!
+      
+      ```
+      header h1 {
+        font-family: "Pacifico", cursive;
+        font-size: 80px;
+        text-transform: none;
+      }
+      header h2 {
+        font-family: "Open Sans", sans-serif;
+        text-transform: uppercase;
         font-size: 32px;
       }
       ```
@@ -800,43 +920,17 @@ h3 {
 
     <section class="slide" data-markdown>
       <script type="text/template">
-      #Web fonts
+      # Exercise #3: Typography (~15mins)
 
-      For more options than web safe fonts, services like [Google Fonts](http://www.google.com/fonts/) and [Font Squirrel](http://www.fontsquirrel.com/) make it easier to use a variety of fonts without worrying about whether it's installed on the users' computer.
-
-      A service like **Font Squirrel** requires you to download the fonts and add it to your project files. The site features a handy [generator](http://www.fontsquirrel.com/tools/webfont-generator) to create different font files to support various browsers as well as include demo files and instructions on how to use it. 
-
-      **Google Fonts** allows you to link directly to their stylesheet and no file downloads are necessary. To use these fonts:
-
-      * Select the fonts you want to use and **Add to Collection**.  
-      * You can **Review** them to take a closer look, then choose *Use* when ready.
-      * Select font weights. The more you choose, the more it will slow down page load time.
-      * The default character set should contain what you need. Only select an option if you need to add additional language support.
-      * Grab the `<link>` code snippet and add it the `<head>` part of your page.
-      * Use the new fonts with the `font-family` property as listed in the example on the Google Fonts page.
-
-      That's it!
-      </script>
-    </section>
-
-    <section class="slide">
-      <h2>Exercise #3: Typography (10mins)</h2>
-
-      <ol>
-        <li>Find and add 2-3 font families from <a href="http://www.google.com/fonts/">Google Fonts</a></li>
-        <li>Update the font &amp; typography styles to your liking! You can add some more later as the page starts to come together.</li>
-      </ol>
+      1.  (Optional) Find 2-3 fonts from [Google Fonts](http://www.google.com/fonts/).
+      2.  Using the code sample in the previous slide, update the font & typography styles to your liking! 
       
-      <p><a href="http://www.htmldog.com/guides/css/beginner/text/">Text CSS properties reference</a><br>
-      <a href="http://csstypeset.com/">http://csstypeset.com</a> - CSS generator</p>
-
-      <p>Need help deciding on fonts?  The example project uses Open Sans (sans-serif), Merriweather (serif), Pacifico (cursive).</p>
-
-      <p>Your page should look something like this: <a href="project/examples/3-typography.html">Example 3</a>.</p>
-
-      <div class="presenter-notes">
-        <p>Tell learners to take 5 mins to pick fonts. If they can't decide, just use the suggestions provided. Picking fonts is often a long process and this will keep from slowing down the day.</p>
-      </div>
+      (You can also add and revise it later as the page starts to come together.)
+      
+      ---
+      ###Resources
+      * Example: [3-typography.html](project/examples/3-typography.html) and [3-typography.css](project/examples/3-typography.css)
+      * [Text CSS properties reference](http://www.htmldog.com/guides/css/beginner/text/)  
       </script>
     </section>
 
