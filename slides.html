@@ -1583,188 +1583,169 @@ Here is some sample code for reference or view <!-- .element: class="note" -->[8
       </script>
     </section>
     
-    <section class="slide" data-markdown>
+    <section class="slide title" data-markdown data-toc>
       <script type="text/template">
         #Intro to Floats!
       </script>
     </section>
     
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Float
+      
+        ![](framework/img/workshop/profile-float.png)<!-- .element: class="left" width="60%" -->
+        
+        HTML elements usually stack on top of each other by default. To get elements to line up side by side, use CSS `float`.
+      </script>
+    </section>
+    
+    <section class="slide">
+      <h1>CSS Float</h1>
+
+      <p>Use the <code>float</code> property with a value of <code>left</code> or <code>right</code> to align the element. Any element after the floated element will move up beside it.</p>
+      
+      <p>Try it in the example below. Watch what happens to the blue background when the float is applied.</p>
+      
+      <textarea class="snippet" data-subject="#float">img { 
+  float: ;
+}</textarea>
+      <div id="float" style="background:lightblue;">
+        <img src="http://placehold.it/150x150" alt="placeholder image">
+        <p style="margin-top:0;">Paragraph tag - Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+    </section>
     
     <section class="slide" data-markdown>
       <script type="text/template">
       #CSS Float Property
-
-      Remember, block-style HTML elements like `<p>`, `<div>` and `<section>` automatically start on a new line and stack on top of each other. To get two block elements to align side-by-side, `float` can be used. 
-
-      CSS floats can float elements left or right.
-
-      **However**, we have to break the *natural stacking flow* when an element is floated. This will cause any element *after* the floated element to try to move up beside it or just not display properly because we've disrupted the natural stacking flow. The parent container will also collapse.
-
-      **Also**, if no width set, the element will float but the width will automatically be the width of its content.
-      </script>
-    </section>
-    
-    
-    <section class="slide">
-      <h2>Float, Clear and Clearfix</h2>
-      <p>First we have to break it, then put it back together.  One of the most confusing CSS concepts is when to use <code>clear:both</code> and the <code>.clearfix</code> class. Rule of thumb: if there's is an element that follows the floated element, apply <code>clear: both</code> to that element.  If all the elements need to be floated, apply the <code>.clearfix</code> class to the <em>parent</em> element.</p>
-
-      <p>Click on the <strong>Edit in JSFiddle</strong> to open the example. Let's go through the instructions.</p>
-
-      <iframe width="100%" height="360"
-       src="http://jsfiddle.net/ttt5ebhr/69/embedded/html,css/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
       
-      <p>Let's add this clearfix snippet to our CSS file to use it later.</p>
-      <p>Want to know more about the clearfix trick and clearing floats? Here you go:<br>
-      <a href="http://css-tricks.com/snippets/css/clear-fix/">http://css-tricks.com/snippets/css/clear-fix/</a><br>
-      <a href="http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/">http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/</a>
-      </p>
+      To get block level elements to line up side by side, the stacking flow has to be *broken* first, then put back together.
+      
+      The parent container usually wraps the content but it does not recognize or "see" floated elements. That's why the blue no longers wraps around the (floated) image.
+      
+      <textarea class="snippet" data-subject="#float">img { 
+  float: left;
+}</textarea>
+      <div id="float" style="background:lightblue;margin-top:20px;">
+        <img src="http://placehold.it/150x150" alt="placeholder image">
+        <p style="margin-top:0;">Paragraph tag - Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+
       </script>
     </section>
-
+    
     <section class="slide" data-markdown>
       <script type="text/template">
-#Class Exercise: Floats
-
-1. Add a float to your profile image so the text can wrap around it. What happens to the parent element when a child element is floated?
-    
-  ```
-  .profile img {
-    float: left;
-  }
-  ```
-
-1. Add the `clearfix` class to the parent element.
-
-1. Make the image a relative size and add margin to create space between the image and text.
-
-  ```
-  .profile img {
-    float: left;
-    width: 27%;
-    margin-right: 3%;
-  }
-  ```
-
-1. If the text is longer than the image, it will wrap around it. Put a width on the profile summary and float it too. (If you want the text to wrap around the profile image, skip this step.)
-  ```
-  .summary {
-    width: 70%;
-    float: right;
-  }
-  ```
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-      #Exercise #7: Add More Floats and borders (20mins)
-
-      Add floats to the **Work Experience** section.  Here's a link to the [final project](project/final.html) for reference and some hints to get you started:
-
-      In the HTML, the `.details` element contains the info that should be displayed on the left and the `.description` element contains the content to be displayed on the right. Floats can be applied to achieve this. Remember, when floating elements, declare a width as well.
-      
-      What happens when elements are floated? The **parent element** *collapses* so make sure to *fix* that as well!
-
-      ```
-      <div class="item">
-        <div class="details">
-          Company name, date, etc
-        </div>
-        <div class="description">
-          Job description
-        </div>
-      </div><!-- close .item -->
-      ```
-      **Bonus:** If you have some extra time, follow these instructions for adding a border or tweak some font styles!
-
-      * Each Work Experience item is contain in an element with the `.item` class.  Create a new declaration block for `.item` and add the `border-bottom` property to it.  The syntax is: `border-bottom: size style color;`
-      
-      ```
-      .item {
-        border-bottom: 1px solid #ccc;
-      }
-      ```
-      **Extra Bonus:** To make sure that all the **Work Experience** items have a border *except* the last item, use a **[pseudo-class selector](http://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:last-child)**, `:last-child`. Note the syntax below. 
-
-      ```
-      .item:last-child {
-        border-bottom: none;
-      }
-      ```
-
-      Your page should look something like this: [Example 7](project/examples/7-floats.html).
-      </script>
-    </section>
-
-
-    
-
-    <section class="slide title" data-markdown>
-      #CSS3!
-      </script>
-    </section>
+        #Clearing floats
         
-    <section class="slide" data-markdown>
-      <script type="text/template">
-      #CSS3 Properties: border-radius
+        First we have to break it, then put it back together. To restore the regular stacking flow after the floated element, it needs to be reset. There are a few ways to do it. Today, let's use `overflow`. (See below for extra resources.)
 
-      The introduction of CSS3 brought in new ways to do things that previously had to be done in Flash, JavaScript or complicated hacks.
-
-      Let's start with `border-radius`.  Once upon a time, rounded corners required cutting images with transparent backgrounds and blah blah blah...  Now we can do it with one line of CSS! Add this style to the existing declaration block for the profile image. Percentages or pixel values can be used. The bigger the number, the more rounded the corners will be. To get a perfect circle, set the `border-radius` to 50% and the original image must also be a square (or else it will look oval).
-      ```
-      .profile img {
-        border-radius: 50%;
-      }
-      ```
-
-      Let's add a border and some padding. Remember, padding adds space *inside* of an element.
-      ```
-      .profile img {
-        border-radius: 50%;
-        border: 1px solid #ddd;
-        padding: 4px;
-      }
-      ```
+        Adding `overflow: hidden;` to the *parent* of the floated element forces it to 'contain' any floated child elements.
+        
+        Let's try it out.
+        
+        ---
+        ###Resources
+        * [CSS Fundamentals: Containing Children](http://code.tutsplus.com/tutorials/css-fudamentals-containing-children--net-5664)
+        * [Clearing Floats: An Overview of Different clearfix Methods](http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/)
+        * [Force Element To Self-Clear its Children](http://css-tricks.com/snippets/css/clear-fix/)
       </script>
     </section>
+    
     <section class="slide" data-markdown>
       <script type="text/template">
-      #CSS3 Vendor prefixes
+        #Class Exercise: float
+        
+        Select the image inside of the profile section.  
+        
+        ```
+        <section class="profile">
+          <div class="content-wrap">
+            <img src="images/profile.jpg" alt="Your Name">
 
-      In some cases, a standard CSS property may require an addition of a browser specific prefix. For example, the various prefixes for different browsers are as follows:
+            <div class="summary">
+              ...
+            </div>
+          </div>
+        </section>
+        ```
 
-      * Chrome & Safari: `-webkit-` 
-      * Firefox: `-moz- ` 
-      * Internet Explorer: `-ms-`
-      
-      Not all properties require these prefixes and as newer browser versions are released, support for many of these prefixes are no longer required.  Here are some handy resources. 
-      
-      * [caniuse.com](http://caniuse.com)
-      * [css3please.com](http://css3please.com/)  
-      * [-prefix-free](http://leaverou.github.io/prefixfree/) - note, doesn't work **locally** in Chrome.   
-      * [css-tricks.com/how-to-deal-with-vendor-prefixes](http://css-tricks.com/how-to-deal-with-vendor-prefixes/)
+        What can be used as the selector?
+        
+        <pre class="delayed"><code>.profile img</code></pre>
       </script>
     </section>
 
-    <section class="slide">
-      <h2>Profile Heading Update</h2>
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class Exercise: Float
 
-      <p>Let’s update the <code><h2></code> tag in the profile section and give it a style different from the other headings.  First, we’ll override the bottom border.  We need to use a selector that is specific to the profile section. Add a background color too. Try using your accent colour. </p>
-<pre><code>.profile h2 {
-  border: none;
-  background: #2980b9;
-}</code></pre>
-      
-      <p>Headings are <em>block level elements</em> so by default, they are going to want to span 100% width of their container.  We could set a width value on it but what if we change the greeting? Then we’d have to set the width again. <em>Inline elements</em> are as wide as their content.</p>
-      <p>In CSS we can use <code>display: inline-block;</code> to access the block and inline behaviors and change how the h2 is displayed. Add some padding too.</p>
-<pre><code>.profile h2 {
-  border: none;
-  background: #2980b9;
-  display: inline-block;
-  padding: 10px 20px;
-}</code></pre>
-      <p><a href="framework/extras-inline-block.html">Read more about inline & block elements and the display property here.</a></p>
+        Add a float to your profile image so the text can wrap around it. Also, add margin to the right to create some space between the text and image.
+            
+        ```
+        .profile img {
+          float: left;
+          margin-right: 30px;
+        }
+        ```
+
+        Reset the float.  How do we do this?<!-- .element: class="delayed" -->
+        
+        <pre class="delayed"><code>.profile {
+          overflow: hidden;
+        }</code></pre>
+        
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Float & text wrapping
+        
+        If the length of the text is longer than the image height, it'll look like this:
+        
+        ![](framework/img/workshop/float-text-wrap.png)
+        
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Float & text wrapping
+        
+        To keep the text from wrapping, each component needs to be floated and set to a specific width.  Using percentages will keep the page flexible.
+        
+        Think of the components as two boxes that need to fit in the same space. That means the total width needs to equal 100%, including margin.
+        
+        ```
+        <section class="profile">
+          <div class="content-wrap">
+            <img src="images/profile.jpg" alt="Your Name"><!-- floated image -->
+
+            <div class="summary"><!-- to be floated text box -->
+              <h1>Hello!</h1>
+              ...
+            </div>
+          </div>
+        </section>
+        ```
+
+        ```
+        .profile img {
+          border-radius: 50%;
+          float: left;
+          margin-right: 3%;
+          width: 30%;
+        }
+        ```
+        ```
+        .summary {
+          width: 67%;
+          float: right;
+        }
+        ```
+        
+        See [9-floats.html](project/examples/9-floats.html) and [9-floats.css](project/examples/9-floats.css) for reference.
       </script>
     </section>
 
@@ -1783,6 +1764,7 @@ Here is some sample code for reference or view <!-- .element: class="note" -->[8
       ```
       </script>
     </section>
+    
     <section class="slide">
       <h2>CSS Transition</h2>
       
@@ -1822,52 +1804,7 @@ a:hover {
       </script>
     </section>
 
-    <section class="slide centered" data-markdown>
-      #GIF Break
-      ![](framework/img/workshop/css.gif)
-      </script>
-    </section>
-
-    
-    <section class="slide" data-markdown>
-      <script type="text/template">
-#Exercise #10: Gradient & more floats (15 mins)
-
-1. Using the previous example, add a gradient effect to the **Skills** section to make the text on background image more legible.
-
-1. In the **Skills** section, there are two options, a `.skills-list` option and a `.skills-circle` option. Hold off on the circle option for now but for the list option, add floats to the `.column` class to get the **three** lists to line up side by side. We'll need to set the `width`, `float` and use the `clearfix` class.
-
-Here's what your page should look like: [example 10](project/examples/10-skills-section.html).
-
-See below for final code but only if you get stuck!
-
-```
-.skills {
-  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url(../images/background-4.jpg) no-repeat fixed;
-  background-size: cover;
-}
-```  
-```
-.skills .columns {
-  width: 33.33%;
-  float: left;
-}
-```
-```xml
-<div class="skills-list clearfix">
-  <h3>List Option</h3>
-  <div class="columns"><!--float this class! -->
-    <h4>Best at:</h4>
-    <ul>
-      ...
-    </ul>
-  </div>
-  ...
-</div>
-```
-      </script>
-    </section>
-
+  
     <section class="slide" data-markdown>
       <script type="text/template">
       #Positioning in CSS
