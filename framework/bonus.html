@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Ladies Learning Code</title>
+  <link rel="stylesheet" href="css/slideshow.css" data-noprefix>
+  <link rel="stylesheet" href="css/fonts.css" data-noprefix>
+  <link rel="stylesheet" href="css/highlightjs/github.css" data-noprefix>
+  <link rel="stylesheet" href="css/styles.css" data-noprefix>
+  <link rel="shortcut icon" href="img/favicon.ico">
+
+  <!-- Takes care of CSS3 prefixes -->
+  <script src="scripts/prefixfree.min.js"></script>
+  
+  <!-- opens all links in a new window -->
+  <base target="_blank">
+</head>
+
+<!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
+<body class="en" data-duration="360">
+  <main>
+    <section class="slide title" data-markdown>
+      <script type="text/template">
+        #Bonus Exercise!
+        ##Icon fonts & lists
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Icon fonts & lists
+        
+        This bonus lesson will go over how to add icon fonts and style lists.
+        
+        ![](img/workshop/icon-fonts-skills.jpg)
+      </script>
+    </section>
+  
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Icon fonts
+        
+        Icon fonts are an easy way to add imagery to your web page but still have the flexibility of using typography based CSS since they *are* fonts!
+
+        Font Awesome
+        [http://fortawesome.github.io/Font-Awesome/](http://fortawesome.github.io/Font-Awesome/) is a great free resource. Go to **[Get Started](http://fortawesome.github.io/Font-Awesome/get-started/)**, to view details for including the font files (though this step has already been included in your starter file).
+        
+        To use, [pick an icon](http://fortawesome.github.io/Font-Awesome/icons/) and copy the supplied markup and class and that's it! 
+        
+        All of the social icons in the footer of your project's **index.html** file are included with an icon font.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Resetting List Styles
+
+        Add some flair to the skills list by replacing the default bullets with an icon.  
+
+        To remove the default bullet points, use the CSS property and value, `list-style-type: none;`. 
+        
+        The `ul` is the selected element since it is used to create the list.  Lists also have default padding to create the indent, so reset that by using a value of 0.
+
+        ```css
+        .skills ul {
+          list-style-type: none;
+          padding: 0;
+        }
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+      # Adding Icon Fonts
+
+      Now that the bullets have been removed, add a checkmark icon (or whatever other icon you want). Visit [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/) to get the code.
+
+      Copy the icon markup and add it to your HTML file, where ever you want the icon to appear.  In this case, we want it in each *list item* (`li`).
+
+      ```
+      <ul>
+        <li><i class="fa fa-check"></i> HTML / HTML5</li>
+        <li><i class="fa fa-check"></i> CSS / CSS3</li>
+        <li><i class="fa fa-check"></i> Less / Sass</li>
+        <li><i class="fa fa-check"></i> JavaScript / jQuery</li>
+      </ul>
+      ```
+      
+      Since icon fonts *are* fonts, they can be treated like text.  Use the `color` property to change the color.
+      ```
+      .fa-check {
+        color: #2980b9;
+      }
+      ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Floats!
+        
+        Want to get extra fancy? Float the lists.  Don't forget to reset the floats!
+        
+        ```
+        .skills-list {
+          overflow: hidden;
+        }
+        .columns {
+          float: left;
+          width: 33%;
+        }
+        ```
+        
+        Take a look at the [final example](../project/final.html) for more ideas.
+        
+        Return to the main [presentation](../slides.html).
+      </script>
+    </section>
+    
+  </main><!-- cls main section -->
+  
+  <script src="scripts/jquery-1.11.0.min.js"></script>
+  <script src="scripts/slideshow.js"></script>
+
+  <!-- Uncomment the plugins you need -->
+  <script src="scripts/plugins/css-edit.js"></script>
+  <script src="scripts/plugins/css-snippets.js"></script>
+  <script src="scripts/plugins/css-controls.js"></script>
+  <!-- <script src="plugins/code-highlight.js"></script>-->
+
+  <script src="scripts/plugins/markdown/marked.js"></script>
+  <script src="scripts/plugins/markdown/markdown.js"></script>
+  <script src="scripts/plugins/highlight/highlight-8.4.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="scripts/llc.js"></script>
+  <script>
+    var slideshow = new SlideShow();
+
+    // Grabs all the .snippet elements
+    var snippets = document.querySelectorAll('.snippet');
+    for(var i=0; i<snippets.length; i++) {
+      new CSSSnippet(snippets[i]);
+    }
+  </script>
+</body>
+</html>

@@ -106,23 +106,8 @@ header h2 {
               url(../images/background-3.jpg);
   background-size: cover;
   color: #fefefe;
-  padding-bottom: 300px;
-  font-size: 20px;
 }
-.skills ul {
-  list-style-type: none;
-  padding: 0;
-}
-.skills-list {
-  overflow: hidden;
-}
-.fa-check {
-  color: #2980b9;
-}
-.columns {
-  float: left;
-  width: 33%;
-}
+
 
 /* EDUCATION
 -------------*/

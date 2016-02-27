@@ -1748,84 +1748,42 @@ Here is some sample code for reference or view <!-- .element: class="note" -->[8
         See [9-floats.html](project/examples/9-floats.html) and [9-floats.css](project/examples/9-floats.css) for reference.
       </script>
     </section>
-
-    <section class="slide" data-markdown>
+    
+    <section class="slide" data-markdown data-toc>
       <script type="text/template">
-      #:hover Pseudo Selector
-
-      Let's try adding some changes on hover using the `:hover` [psuedo-class selector](http://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:hover).
-
-      Psuedo selectors need to be attached to an element with a colon (`:`) with *no* space. A common use for this selector is for links.  Let's add a colour change on hover.
-
-      ```
-      a:hover {
-        color: #ffffff;
-      }
-      ```
+        #CSS Fixed Position
+        
+        Some people may want to download a copy of your resume.  Use fixed positioning to make sure that download button is always avaialble.
+        
+        ![](framework/img/workshop/download-position.gif)
       </script>
     </section>
     
-    <section class="slide">
-      <h2>CSS Transition</h2>
-      
-      <p>The transition property can be used to change values over a specified duration making the transition appear less abrupt. Hover over this paragraph to see the transition.  Experiment and change some of the values below.</p> 
-
-<pre><code>transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay];</code></pre>
-      
-      <textarea class="snippet">p {
-  transition: all 0.5s ease;
-  color: black;
-}
-p:hover {
-  background-color: #cccccc;
-  color: white;
-}</textarea>
-      <p>More about transition: <a href="http://css-tricks.com/almanac/properties/t/transition/">http://css-tricks.com/almanac/properties/t/transition</a></p>
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-      #Class exercise: hover & transition
-
-      Add the transition property to the hover effects then try hovering over your links.
-
-      Your page should look similar to [example 9](project/examples/9-css3.html).
-
-```css
-a {
-  color: #2980b9;
-  transition: all 0.5s ease;
-}
-a:hover {
-  color: #ffffff;
-}
-```
-      </script>
-    </section>
-
-  
     <section class="slide" data-markdown>
       <script type="text/template">
       #Positioning in CSS
       
-      Sometimes floats and display just doesn't cut it. 
+      The `position` property can be used to place elements in a specific spot on the page without affecting the elements around it.  
+      
+      There are three options: `relative`, `absolute` and `fixed`.
 
-      The `position` property can be used to place elements in specific spots on the page without affecting the elements around it the way floats do.  There are three options: `relative`, `absolute` and `fixed`. Elements are all `static` by default.
+      `position` is also used in conjunction with offset properties: `top`, `right`, `bottom`, and `left`. These are use to identify *where* an element will be positioned.
 
-      `position` is used in conjunction with offset properties: `top`, `right`, `bottom`, and `left`. These are use to identify where an element will be positioned.
-
-      Today we'll be using a fixed position. To learn more about position, [go here](framework/extras-positioning.html).
+      Today we'll be using a fixed position. 
+      
+      ---
+      ###Resource
+      To learn more about position, [go here](http://learnlayout.com/position.html).
 
       </script>
     </section>
 
     <section class="slide">
-      <h2>Position: fixed</h2>
+      <h1>Position: fixed</h1>
       
-      <p>When positioning an element as <code>fixed</code>, it will <em>always</em> be positioned to the viewport and will always stay fixed on the page, even on page scroll. Try adding a <code>top</code> value (or any other directional offset property: <code>right</code>, <code>bottom</code>, <code>left</code>).</p>
-      <pre><code><div class="box"></div>
-</code></pre>
+      <p>When positioning an element as <code>fixed</code>, it will <em>always</em> be positioned to the viewport (browser window) and stay fixed, even on page scroll.</p>   
+      
+      <p>In the example below, try adding a <code>top</code> value (or any other directional offset property: <code>right</code>, <code>bottom</code>, <code>left</code>).</p>
 
       <textarea class="snippet" data-subject="#fixed">.box { 
   width: 100px;
@@ -1843,19 +1801,22 @@ a:hover {
 
     <section class="slide" data-markdown>
       <script type="text/template">
-      #Class Exercise: Download PDF resume
+      #Class Exercise: Position & Download Resume
       
-      Some people may still be interested having a hard copy of your resume, so let's add an option to download a copy. Go back to your HTML document and add a link to a copy of the resume.  In your projects folder, there is a **resume.pdf** that can be used as a placeholder or use yours if you have it handy.
+      Back in your HTML document, add a link (`<a>` tag) to download a copy of the resume.  
+      
+      In your projects folder, there is a **resume.pdf** that can be used as a placeholder if you don't have one handy.
 
-      Use the anchor tag to link to your resume file. You can also add a new HTML5 `download` attribute to trigger a download right away! Also, give it a class to apply unique styles to it.
+      You can also add an HTML5 `download` attribute to trigger a download right away! Also, give it a class to apply unique styles to it.
       
       ```xml
       <a class="download" href="resume.pdf" download>Download resume (pdf)</a>
       ```
       </script>
     </section>
+    
     <section class="slide">
-      <h2>Class Exercise: Position and style download link</h2>
+      <h1>Class Exercise: Position & Download Resume</h1>
 
       <p>Use fixed positioning for the link to make it always available as the user is scrolling down the page. </p>
 
@@ -1867,86 +1828,31 @@ a:hover {
   right: 0;
 }
 </code></pre>
-      <p class="delayed">To style this download link to look more like a button, <a href="framework/extras-download-btn.html">follow these instructions here</a>.</p>
-      </div>
-      <div class="presenter-notes">
-        <p>The slides for further styling of the download link have been moved to extras/homework section because it doesn't cover any new concepts. This was moved to make time to introduce icon fonts.</p>
-      </div>
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-    #Icon fonts
-    
-    Icon fonts are an easy way to add imagery to your web page but still have the flexibility of styling properties like size and colour using CSS since they *are* fonts!
-
-    There's many to choose from but today we'll use Font Awesome: 
-    [http://fortawesome.github.io/Font-Awesome/](http://fortawesome.github.io/Font-Awesome/)
-
-    Under **[Get Started](http://fortawesome.github.io/Font-Awesome/get-started/)**, there are different options for adding the font files.  If using the CDN, remember to add the "http" to make it work when you run your page "locally" (on your computer).
-    
-    To use, [pick an icon](http://fortawesome.github.io/Font-Awesome/icons/) and copy the supplied markup and class and that's it! All of the social icons in the footer of your project's index.html file are included with an icon font.
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-    #Class Exercise - Resetting List Styles
-
-    Add some flair to the skills list by replacing the default bullets with an icon.  
-
-    To remove the default bullet points, use the CSS property and value, `list-style-type: none;`. The `ul` is the selected element since it is used to create the list.  Lists also have default padding to create the indent, so reset that by using a value of 0.
-
-    Since we want to remove the bullets from all the lists in this section, we can target them all at once using a **descendant selector**. We can use `.skill`, since that's the class for the entire section, and `ul` to target all the lists.
-
-```css
-.skills ul {
-  list-style-type: none;
-  padding: 0;
+      <p class="delayed">You can also add some additional styling to the link to make it standout more.</p>
+      
+      <div class="delayed">
+<pre><code>.download {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #2980b9;
+  color: white;
+  padding: 20px;
 }
-```
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-      #Exercise #11: Adding Icon Fonts (15mins)
-
-      Now that the bullets have been removed, let's add a checkmark. Visit [Font Awesome](http://fortawesome.github.io/Font-Awesome/) and go to **Icons** to get the code.
-
-      Copy the markup and add it to your HTML file, where ever you want the icon to appear.  In this case, we want it in each *list item* (`li`).
-
-      For this exercise, add the check marks (or whichever icon you'd like to use) to each list item and use the CSS `color` property to change the color of *only* the icons.  
-
-      **Bonus:** Try center aligning the headings and lists like in the [final project](project/final.html).
-
-      **Extra Bonus:** Try changing the color or the `h4` subheadings.
-
-      Your page should look similar to [Example 11](project/examples/11-icon-fonts.html).
-      </script>
+</code></pre>
+      <p>See <a href="project/examples/10-position.html">10-position.html</a> and <a href="project/examples/10-position.css">10-position.css</a> for reference.</p>
+      </div>
     </section>
     
-    <section class="slide centered" data-markdown>
-      ![](framework/img/workshop/now-what.gif)
-      </script>
-    </section>
-
     <section class="slide" data-markdown>
       <script type="text/template">
-      #Next Steps
-      
-      Though we've covered a lot of material today, there are more ways to give your HTML resume that extra personalization and polish.  Here are some extra features you can try out:
-
-      1. The final example has a circle option for displaying your skills.  See instructions [here](framework/extras-circles.html).
-
-      2. Try out some more [animation effects](framework/extras-animations.html).
-      
-      3. Add a [favicon](http://blog.teamtreehouse.com/how-to-make-a-favicon).
-
-      4. Style your download link to look more like a button. [See instructions here](framework/extras-download-btn.html).
-      
-      Also, there are many many ways to select elements that go beyond descendant selectors, classes and ids.  See a few examples [here](framework/extras-advanced-selectors.html).
+        #Next Steps
+        
+        ![](framework/img/workshop/now-what.gif)
+        
+        * try out the [bonus exercise](framework/bonus.html) - using icon fonts
+        * check out the extra resources in the next slide
+        * take a look at the [final example](project/final.html) for more ideas
       </script>
     </section>
 
