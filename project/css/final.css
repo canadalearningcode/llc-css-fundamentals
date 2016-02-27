@@ -32,6 +32,7 @@ h1 {
 }
 h2 {
   font-family: "Pacifico", cursive;
+  color: #2980b9;
 }
 a {
   color: #2980b9;
@@ -53,23 +54,30 @@ footer {
   background: #2980b9;
   color: white;
   padding: 20px;
+  text-decoration: none;
+}
+.download:hover {
+  color: #111;
 }
 
 /* HEADER
 ----------*/
 header {
   text-align: center;
-  padding: 100px 0;
+  padding: 200px 0;
 }
 header h1 {
   font-family: "Pacifico", cursive;
-  font-size: 80px;
+  font-size: 90px;
   text-transform: none;
+  margin: 0;
 }
 header h2 {
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
-  font-size: 32px;
+  font-size: 42px;
+  margin: 0;
+  color: #111;
 }
 
 
@@ -97,7 +105,13 @@ header h2 {
 .work {
   background: #fefefe;
 }
-
+.item {
+  margin-bottom: 50px;
+}
+.item:first-of-type {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
 
 /* SKILLS
 ----------*/
@@ -136,4 +150,14 @@ header h2 {
 .contact {
   background: #111111;
   color: #fefefe;
+  text-align: center;
+}
+.social a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  background: #fefefe;
+  border-radius: 50%;
+  margin: 0 10px;
 }
