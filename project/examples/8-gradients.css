@@ -22,17 +22,20 @@ h1 {
 h2 {
   font-family: "Pacifico", cursive;
 }
+a {
+  color: #2980b9;
+}
 
 section,
 footer {
   padding: 50px 0;
 }
-
 .content-wrap {
   max-width: 1000px;
   width: 90%;
   margin: 0 auto;
 }
+
 
 
 /* HEADER
@@ -56,33 +59,41 @@ header h2 {
 /* ABOUT ME 
 ----------------------*/
 .profile {
-  background: #8e44ad;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fefefe;
+}
+.profile img {
+  border-radius: 50%;
 }
 
 
 /* WORK EXPERIENCE
 -------------------*/
 .work {
-  background: #2980b9;
+  background: #fefefe;
 }
 
 
 /* SKILLS
 ----------*/
 .skills {
-  background: #27ae60;
+  background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ),
+              url(../images/background-3.jpg);
+  background-size: cover;
+  color: #fefefe;
 }
 
 
 /* EDUCATION
 -------------*/
 .education {
-  background: #16a085;
+  background: #fefefe;
 }
 
 
 /* CONTACT & FOOTER 
 --------------------*/
 .contact {
-  background: #c0392b;
+  background: #111111;
+  color: #fefefe;
 }

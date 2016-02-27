@@ -1249,12 +1249,12 @@ max-width: 800px;</textarea>
       Use `../` to indicate that the directory needs to move up and out of the containing folder.
 
       ```css
-      background: url(../images/background-3.jpg);
+      background: url(../images/background-1.jpg);
       ```
       </script>
     </section>
     
-    <section class="slide" data-markdown>
+    <section id="x-axis" class="slide" data-markdown>
       <script type="text/template">
         # Background styles & the x-axis
         
@@ -1282,7 +1282,7 @@ max-width: 800px;</textarea>
       
       ```
       body {
-        background: url(../images/background-3.jpg);
+        background: url(../images/background-1.jpg);
       }
       header {
         background: #2c3e50; /* remove this colour! */
@@ -1344,7 +1344,7 @@ max-width: 800px;</textarea>
       background-repeat: no-repeat;
       background-attachment: fixed;
       ```
-      Check your page and scroll. What happens to the image?
+      Add it to your CSS and check your page and scroll. What happens to the image?
       </script>
     </section>
     
@@ -1447,7 +1447,7 @@ max-width: 800px;</textarea>
         Let's update the background-size to `cover` and set the position to wherever you want your image to be placed.<br>
         <span class="note">(50% = middle or keywords: top, right, bottom, left) </span>
         
-        Your code should now look something like this:
+        Your CSS should now look something like this:
         
         ```
         background: url(../images/background-2.jpg) no-repeat fixed 50%;
@@ -1465,85 +1465,131 @@ max-width: 800px;</textarea>
       </script>
     </section>
     
-    
     <section class="slide" data-markdown>
       <script type="text/template">
       #More Background Styles
 
-      It's time to get rid of these test background colours and put in some nicer looking styles.
+      It's time to get rid of these test background colours and put in some nicer looking styles!
+      
+      ![](framework/img/workshop/rgba.png)<!-- .element: class="left" -->
 
-      For the **Profile** section, add opacity to the background colour. Since the HTML for this section is nested inside of the `body` tag, adding opacity to the Profile section will show the `body` tag's background image behind it.
+      For the **Profile** section, let's add some alpha transparency to the background. 
 
-      Use the `background` property but with an `RGBa` value. The `a` represents the alpha transparency. (There is an `opacity` property too but it makes the text transparent too, so we'll use `background` instead).
-
+      Use the `background` property but with an `RGBa` value. The `a` represents the alpha transparency and is set to a percentage value.
       ```
+      background: rgba(red, green, blue, alpha);
+      ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Using RGBA values
+        
+        The example below is using a percentage of the colour black.
+        Here's a tool to convert hex values into RGB: http://hex.colorrrs.com/
+          
+        ```
+        .profile {
+          background: rgba(0, 0, 0, 0.8);
+        }
+        ```
+        
+        If using a dark background colour, you will likely need to update the text colour, to something lighter than the default black, to be visible.
+        
+        ```
+        .profile {
+          background: rgba(0, 0, 0, 0.8);
+          color: white;
+        }
+        ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+      #Exercise: RGBA & Backgrounds (~15mins)
+      
+      Update the background colours for the Profile, Work, Education and Contact section. (Leave the Header and Skills section for now.)
+      
+      Try using a combination of rgba and solid colours.
+      
+      Also, you may want to change the font colours.  Note that to change the colour of links, use `a` as the selector, to override the default blue.
+      
+      View <!-- .element: class="note" --> [7-more-background.css](project/examples/7-more-background.css),  [7-more-background.html](project/examples/7-more-background.html) or below for reference.
+      ```
+      a {
+        color: #2980b9; /* update link color */
+      }
       .profile {
-        background: rgba(0,0,0,0.8);
+        background: rgba(0, 0, 0, 0.8); /* black, 80% alpha transparency */
+        color: #fefefe; /* almost white text color */
+      }
+      .profile img {
+        border-radius: 50%; /* makes profile image a perfect circle */
       }
       ```
       </script>
     </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Background Gradients
+
+        Gradients are usually one color that fades into another. Gradients are set using the either the longhand `background-image` property or the shorthand `background` property.
+
+        To set the values, use this syntax for the value, `linear-gradient(color, color)`, to set the start and stop colour. 
+        
+        In the example below, try putting a start and stop colour. Use keywords, hex or rgb values.
+
+        <textarea class="snippet">background-image: linear-gradient();</textarea>
+        
+        With CSS gradients, you can also control the direction of the fade, the colors, as well as where the color changes happen. [Learn all about gradients here](http://css-tricks.com/css3-gradients/). 
+      </script>
+    </section>
 
     <section class="slide">
-      <h2>Exercise #8: Background, colours, border (20mins)</h2>
+      <h1>Gradients and Background Images</h1>
+      
+      <p>In the <strong>Skills</strong> section, the text may be hard to read depending on the background image. We can actually use multiple background images to set a gradient on top of the image!</p>
+      <p>Declare the gradient <em>first</em> so it can sit on top of the image. We also want to see the image through the gradient so use <code>rgba</code> color values to set the alpha transparency. Separate multiple backgrounds with a comma.</p>
+      
+<textarea class="snippet" data-subject="#bg-image-gradient">height: 300px; 
+background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ),
+            url(project/images/background-4.jpg);
+</textarea>
+      <div id="bg-image-gradient"></div>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+#Exercise 8: Gradients (~10mins)
 
-      <ol>
-        <li>Update the <strong>Work Experience</strong> and <strong>Education</strong> section with the same background colour. The sample project is using a very light gray (#fefefc).</li>
-        <li>Change the font colour of the Profile, Skills &amp; Contact section to white or #ffffff. (Try combining selectors for shared styles.)</li>
-        <li>Add another background image to the <strong>Skills</strong> section. Don’t worry about the overlay effect right now.  Just add the image.</li>
-        <li>Add an underline to the <code><h2></code> headings, #cccccc or a colour of your choosing. </li>
-        <li>Update the background colour for the Contact section. Use #111111 or a colour of your choosing.</li>
-        <li>Pick an accent colour and apply it to all links (<code>a</code> element).</li>
-      </ol>
+Using the technique from the previous slide, add a different background image to the `.skills` section, with a gradient.
 
-      <p><strong>Colour inspiration:</strong> <br>
-      <a href="http://colours.neilorangepeel.com/">http://colours.neilorangepeel.com/</a> <br>
-      <a href="http://flatuicolors.com/">http://flatuicolors.com/</a>  </p>
+Reminder, the current background image is set in the `body` selector. If you add a background image to the `.skills` section, it will sit "on top".  Remember the [x-axis](#x-axis)?
 
-      <p>If you get stuck, ask a mentor! Don’t worry if you don’t finish, we’ll go through it together as a class.</p>
 
-      <p>Your page should look similar to this: <a href="project/examples/8-bg.html">Example 8</a>.</p>
+Here is some sample code for reference or view <!-- .element: class="note" -->[8-gradients.html](project/examples/8-gradients.html) or [8-gradients.css](project/examples/8-gradients.css).
 
-      <div class="presenter-notes">
-        <p>Have a class discussion after the exercise time is up. Go over the steps as a class and ask people if they want to share any questions, comments or gotchas.</p>
-      </div>
+```
+.skills {
+  background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ),
+              url(../images/background-3.jpg);
+  background-size: cover;
+  color: #fefefe;
+}
+```
       </script>
     </section>
     
-    <section class="slide">
-      <h2>Gradients</h2>
-
-      <p><code>background</code> can also be used to create a gradient. Using CSS gradients instead of an image file, is better for flexibility and performance. Gradients are usually one color that fades into another. With CSS you can control the direction of the fade, the colors, as well as where the color changes happen.</p>
-
-      <p>Gradients are set using the <code>background-image</code> property. The shorthand <code>background</code> property will also work.</p>
-
-      <p>To set the values, use <code>linear-gradient(color, color)</code> to set the start and stop colour. The axis defaults at a top-to-bottom angle, though it is also possible to change the direction of the axis. To change the direction to left-to-right, pass an additional parameter at the beginning of <code>linear-gradient()</code>starting with the word "to" and the direction. (ex. "to right")</p>
-
-      <pre><code>background-image: linear-gradient(to right, red, blue);</code></pre>
-
-      <p>In the example below, try putting a start and stop colour. Then try changing the direction.</p>
-
-      <textarea class="snippet">background: linear-gradient();</textarea>
-
-      <p>Learn all about gradients here: <a href="http://css-tricks.com/css3-gradients/">http://css-tricks.com/css3-gradients/</a></p>
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Intro to Floats!
       </script>
     </section>
-
-    <section class="slide">
-      <h2>Gradients and Background Images</h2>
-
-      <p>In our <strong>Skills</strong> section, the text is hard to read on top of the background image. We can use gradients and set multiple background images to achieve this effect. </p>
-
-      <p>Declare the gradient first so it can sit on top of the image. We also want to see the image through the gradient so use RGBA color values to set the alpha transparency.</p>
-
-      <textarea class="snippet" data-subject="#bg-image-gradient">height: 300px; 
-background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(project/images/background-4.jpg);
-      </textarea>
-      <div id="bg-image-gradient"></div>
-      </script>
-    </section>
-
-
+    
+    
     <section class="slide" data-markdown>
       <script type="text/template">
       #CSS Float Property
@@ -1557,12 +1603,8 @@ background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(project
       **Also**, if no width set, the element will float but the width will automatically be the width of its content.
       </script>
     </section>
-    <section class="slide centered">
-      <img src="framework/img/workshop/shittier.gif">
-      <h2 class="delayed">Just kidding! We can fix it.</h2>
-      </script>
-    </section>
-
+    
+    
     <section class="slide">
       <h2>Float, Clear and Clearfix</h2>
       <p>First we have to break it, then put it back together.  One of the most confusing CSS concepts is when to use <code>clear:both</code> and the <code>.clearfix</code> class. Rule of thumb: if there's is an element that follows the floated element, apply <code>clear: both</code> to that element.  If all the elements need to be floated, apply the <code>.clearfix</code> class to the <em>parent</em> element.</p>
@@ -1580,32 +1622,6 @@ background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(project
       </script>
     </section>
 
-    <section class="slide" data-markdown>
-      <script type="text/template">
-      #Descendant selectors
-      
-      **Descendant selectors** - Matches any element that is a *descendant* of the element declared before it.
-      
-      ```css
-      p a {
-        /* targets only "a" tags nested inside of "p" tags */
-      }
-      .classname a {
-        /* targets only "a" tags nested inside any element with the matching classname */
-      }
-      ```
-      **Protip:** Just like Inception, never go more than three levels deep!
-
-      ```
-      nav ul li a span {
-        /* NOOOOOOOOOOO */
-      }
-      ```
-
-      Feel free to skip a level but be mindful of specificity rules. For example, `nav ul li a` would override `nav a`. It’s generally easier to start with less specific selectors and make them more specific, as needed, rather than starting with very specific selectors and adding extra markup or classes to try to override the styles.
-      </script>
-    </section>
-  
     <section class="slide" data-markdown>
       <script type="text/template">
 #Class Exercise: Floats
@@ -1639,7 +1655,7 @@ background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(project
   ```
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
       #Exercise #7: Add More Floats and borders (20mins)
