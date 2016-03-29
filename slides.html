@@ -95,8 +95,17 @@
       http://csszengarden.com/
       </script>
     </section>
-
+    
     <section class="slide" data-markdown>
+      <script type="text/template">
+        #Course Outline
+        
+        <div class="table-of-contents"></div>
+      </script>
+    </section>
+    
+
+    <section class="slide" data-markdown data-toc>
       <script type="text/template">
       #The Development Environment
 
@@ -182,9 +191,10 @@
       </script>
     </section>
 
-    <section class="slide title" data-markdown>
-      #Hypertext Markup Language
-      ##HTML: The content layer
+    <section class="slide title" data-markdown data-toc>
+      <script type="text/template">
+      #HTML: The content layer
+      ##Hypertext Markup Language
       </script>
     </section>
 
@@ -332,7 +342,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-      #Exercise #1: Personalize the content (10 mins)
+      #Exercise #1: Personalize the content (~10 mins)
       
       Open **index.html** in your editor and browser.
       
@@ -355,10 +365,10 @@
       </script>
     </section>
 
-    <section class="slide title" data-markdown>
+    <section class="slide title" data-markdown data-toc>
       <script type="text/template">
-      #Cascading Style Sheets
-      ##The presentation layer
+      #CSS: Presentation layer
+      ##Cascading Style Sheets
       </script>
     </section>
 
@@ -501,9 +511,9 @@
       </script>
     </section>
       
-    <section class="slide" data-markdown>
+    <section class="slide" data-markdown data-toc>
       <script type="text/template">
-        #CSS Colour Values
+        #CSS Colours
         
         * **keywords** - use the actual name  
         (e.g. `red`, `green`, `blue`, `pink`, `papayaWhip`, `paleGoldenrod`, etc)
@@ -549,7 +559,7 @@
         <p>Change my background colour!</p>
       </div>
       </script>
-    </section>
+    </section>    
 
     <section class="slide" data-markdown>
       <script type="text/template">
@@ -602,8 +612,8 @@
         <link rel="stylesheet" href="css/style.css">
       </head>
       ```
-
-      Though it is not required, css files are often saved in a css folder for organization, so make sure the file path points to the appropriate directory.<!-- .element: class="note" -->
+      
+      <!-- .element: class="note" -->**Note**: Though not required, css files are often saved in a css folder for organization, so make sure the file path points to the appropriate directory.
       </script>
     </section>
 
@@ -637,7 +647,7 @@
       </script>
     </section>
 
-    <section class="slide title" data-markdown> 
+    <section class="slide title" data-markdown data-toc> 
       <script type="text/template">
       #Typography
       </script>
@@ -667,7 +677,7 @@
       </script>
     </section>
     
-    <section class="slide no-bullet-list" data-markdown>
+    <section class="slide" data-markdown>
       <script type="text/template">
         #Web Fonts
         
@@ -735,7 +745,7 @@ color: blue;</textarea>
       </script>
     </section>
     
-    <section class="slide" data-markdown>
+    <section class="slide" data-markdown data-toc>
       <script type="text/template">
       #Inheritance and Specificity
 
@@ -1148,7 +1158,7 @@ margin: 0 auto;</textarea>
       <script type="text/template">
         # Break time!
         
-        Here are some (optional) suggestions: 
+        Here are some (optional) exercises: 
         
         Want to check your work? Take a look in the **examples** folder. We are now up to **4-content-wrap.html** & **4-content-wrap.css**.
 
@@ -1172,9 +1182,9 @@ margin: 0 auto;</textarea>
       </script>
     </section>
     
-    <section class="slide" data-markdown>
+    <section class="slide" data-markdown data-toc>
       <script type="text/template">
-        # width & max-width, px vs %
+        # Fluid page layouts - width & max-width, px vs %
 
         Let's revisit the centered content from Exercise #4. What happens when the browser window is smaller than the set width? 
         
@@ -1213,7 +1223,7 @@ max-width: 800px;</textarea>
       </script>
     </section>
 
-    <section class="slide title background" data-markdown>
+    <section class="slide title background" data-markdown data-toc>
       <script type="text/template">
       #Working with Background images
       </script>
@@ -1257,9 +1267,9 @@ max-width: 800px;</textarea>
       </script>
     </section>
     
-    <section id="x-axis" class="slide" data-markdown>
+    <section id="z-axis" class="slide" data-markdown>
       <script type="text/template">
-        # Background styles & the x-axis
+        # Background styles & the z-axis
         
         Every time an HTML element is nested, the elements are stacked in layers, kind of like a sandwich!
 
@@ -1571,7 +1581,7 @@ background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ),
 
 Using the technique from the previous slide, add a different background image to the `.skills` section, with a gradient.
 
-Reminder, the current background image is set in the `body` selector. If you add a background image to the `.skills` section, it will sit "on top".  Remember the [x-axis](#x-axis)?
+Reminder, the current background image is set in the `body` selector. If you add a background image to the `.skills` section, it will sit "on top".  Remember the [z-axis](#z-axis)?
 
 
 Here is some sample code for reference or view <!-- .element: class="note" -->[8-gradients.html](project/examples/8-gradients.html) or [8-gradients.css](project/examples/8-gradients.css).
@@ -1855,7 +1865,7 @@ Here is some sample code for reference or view <!-- .element: class="note" -->[8
       </script>
     </section>
     
-    <section class="slide" data-markdown>
+    <section class="slide" data-markdown data-toc>
       <script type="text/template">
         #Next Steps!
         
