@@ -1,6 +1,6 @@
 #Ladies Learning Code
 
-##CSS Fundamentals for Beginners Workshop Slides
+##HTML & CSS Level 2: Learn to Build an Online Resume
 
 A full day introductory CSS workshop. Students should have basic understanding of HTML.
 
