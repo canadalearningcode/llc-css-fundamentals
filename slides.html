@@ -1599,79 +1599,101 @@ Here is some sample code for reference or view <!-- .element: class="note" -->[8
     
     <section class="slide title" data-markdown data-toc>
       <script type="text/template">
-        #Intro to Floats!
+        #Intro to Flexbox!
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Block Elements
+
+        By default, `block` elements will take up as much horizontal space as possible, which causes them to stack on top of each other.
+
+        There are several different ways we can use CSS to force `block` elements to appear *beside* each other. Today we'll be using `flexbox`
+
+        <!-- // TODO: New pic(s). -->
+        ![](framework/img/workshop/profile-float.png)<!-- .element: class="left" width="50%" -->
       </script>
     </section>
     
     <section class="slide" data-markdown>
-      <script type="text/template">
-        #Float
-      
-        ![](framework/img/workshop/profile-float.png)<!-- .element: class="left" width="60%" -->
-        
-        HTML elements usually stack on top of each other by default. To get elements to line up side by side, use CSS `float`.
-      </script>
+      #Flexbox
+
+      When using flexbox, we first mark a container as a **flex parent** by adding a `display: flex;` declaration in our CSS file.
+
+      Once we have a flex parent, we can easily change the orientation, alignment, and position of any child elements.
+
+      We'll be using this approach to style the profile and skills sections of our resume.
     </section>
-    
+
     <section class="slide">
-      <h1>CSS Float</h1>
+      <h1>Flexbox</h1>
 
-      <p>Use the <code>float</code> property with a value of <code>left</code> or <code>right</code> to align the element. Any element after the floated element will move up beside it.</p>
-      
-      <p>Try it in the example below. Watch what happens to the blue background when the float is applied.</p>
-      
-      <textarea class="snippet" data-subject="#float">img {
-  float: ;
+      <p>In this example, we have a flex parent with two children: an image; and a paragraph.</p>
+
+      <p>Lets see if we can get them to line up side-by-side.</p>
+
+      <textarea class="snippet" data-subject="#flexbox">
+#flexbox {
+  display: ;
+  justify-content: ;
+  align-items: ;
+}
+
+#flexbox img {
+
+}
+
+#flexbox p {
+
 }</textarea>
-      <div id="float" style="background:lightblue;">
-        <img src="http://placehold.it/150x150" alt="placeholder image">
-        <p style="margin-top:0;">Paragraph tag - Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <div id="flexbox" style="min-height: 330px; background: rgba( 0, 0, 0, 0.05 ); border: solid 1px #999; padding: 15px;">
+        <img src="http://placehold.it/300x300" alt="placeholder image">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h1>Flexbox</h1>
+
+      <p>Here we have a flex parent with three child elements.</p>
+
+      <p>Lets see if we can:</p>
+
+      <ul>
+          <li>increase their width;</li>
+          <li>space them evenly;</li>
+          <li>prevent them from being stretched vertically.</li>
+      </ul>
+
+      <textarea class="snippet" data-subject="#flexbox_multi">
+#flexbox_multi {
+  display: ;
+  justify-content: ;
+  align-items: ;
+}
+
+#flexbox_multi div {
+    padding: 30px;
+    border: solid 1px #bbb;
+    background: #ddd;
+    flex-basis: ;
+}</textarea>
+      <div id="flexbox_multi" style="min-height: 330px; background: rgba( 0, 0, 0, 0.05 ); border: solid 1px #999; padding: 15px;">
+        <div>Element 1</div>
+        <div>Element 2</div>
+        <div>Element 3</div>
       </div>
     </section>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-      #CSS Float Property
-      
-      To get block level elements to line up side by side, the stacking flow has to be *broken* first, then put back together.
-      
-      The parent container usually wraps the content but it does not recognize or "see" floated elements. That's why the blue no longers wraps around the (floated) image.
-      
-      <textarea class="snippet" data-subject="#float">img {
-  float: left;
-}</textarea>
-      <div id="float" style="background:lightblue;margin-top:20px;">
-        <img src="http://placehold.it/150x150" alt="placeholder image">
-        <p style="margin-top:0;">Paragraph tag - Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      </div>
+        #Class Exercise: Flexbox
 
-      </script>
-    </section>
-    
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Clearing floats
-        
-        First we have to break it, then put it back together. To restore the regular stacking flow after the floated element, it needs to be reset. There are a few ways to do it. Today, let's use `overflow`. (See below for extra resources.)
+        Select the element that will become the flex parent.
 
-        Adding `overflow: hidden;` to the *parent* of the floated element forces it to 'contain' any floated child elements.
-        
-        Let's try it out.
-        
-        ---
-        ###Resources
-        * [CSS Fundamentals: Containing Children](http://code.tutsplus.com/tutorials/css-fudamentals-containing-children--net-5664)
-        * [Clearing Floats: An Overview of Different clearfix Methods](http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/)
-        * [Force Element To Self-Clear its Children](http://css-tricks.com/snippets/css/clear-fix/)
-      </script>
-    </section>
-    
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Class Exercise: float
-        
-        Select the image inside of the profile section.
-        
+        Remember, the flex parent is the element that *contains* the content we want to align.
+
         ```
         <section class="profile">
           <div class="content-wrap">
@@ -1684,82 +1706,35 @@ Here is some sample code for reference or view <!-- .element: class="note" -->[8
         </section>
         ```
 
-        What can be used as the selector?
+        What will our selector be?
         
-        <pre class="delayed"><code>.profile img</code></pre>
+        <pre class="delayed">
+            <code>.profile .content-wrap</code>
+        </pre>
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Class Exercise: Float
-
-        Add a float to your profile image so the text can wrap around it. Also, add margin to the right to create some space between the text and image.
+        #Class Exercise: Flexbox
+        
+        Add the declarations that will cause the profile image and text to appear side-by-side.
             
         ```
-        .profile img {
-          float: left;
-          margin-right: 30px;
+        .profile .content-wrap {
+          display: flex;
+          justify-content: space-between;
         }
         ```
 
-        Reset the float.  How do we do this?<!-- .element: class="delayed" -->
+        Don't forget to prevent the image from stretching vertically.<!-- .element: class="delayed" -->
         
-        <pre class="delayed"><code>.profile {
-          overflow: hidden;
+        <pre class="delayed"><code>.profile .content-wrap {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
         }</code></pre>
         
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Float & text wrapping
-        
-        If the text is longer than the image height, it'll look like this:
-        
-        ![](framework/img/workshop/float-text-wrap.png)
-        
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Float & text wrapping
-        
-        To keep the text from wrapping, each component needs to be floated and set to a specific width.  Using percentages will keep the page flexible.
-        
-        Think of the components as two boxes that need to fit in the same space. That means the total width needs to equal 100%, including margin.
-        
-        ```
-        <section class="profile">
-          <div class="content-wrap">
-            <img src="images/profile.jpg" alt="Your Name"><!-- floated image -->
-
-            <div class="summary"><!-- to be floated text box -->
-              <h1>Hello!</h1>
-              ...
-            </div>
-          </div>
-        </section>
-        ```
-
-        ```
-        .profile img {
-          border-radius: 50%;
-          float: left;
-          margin-right: 3%;
-          width: 30%;
-        }
-        ```
-        ```
-        .summary {
-          width: 67%;
-          float: right;
-        }
-        ```
-        
-        See [9-floats.html](project/examples/9-floats.html) and [9-floats.css](project/examples/9-floats.css) for reference.
       </script>
     </section>
     
