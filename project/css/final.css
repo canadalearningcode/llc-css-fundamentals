@@ -86,17 +86,16 @@ header h2 {
 .profile {
   background: rgba(0, 0, 0, 0.8);
   color: #fefefe;
-  overflow: hidden;
+}
+.profile .content-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 .profile img {
   border-radius: 50%;
-  float: left;
   margin-right: 3%;
   width: 30%;
-}
-.summary {
-  width: 67%;
-  float: right;
 }
 
 
@@ -128,13 +127,12 @@ header h2 {
   padding: 0;
 }
 .skills-list {
-  overflow: hidden;
+  display: flex;
 }
 .fa-check {
   color: #2980b9;
 }
 .columns {
-  float: left;
   width: 33%;
 }
 
