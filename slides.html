@@ -12,7 +12,7 @@
 
   <!-- Takes care of CSS3 prefixes -->
   <script src="framework/scripts/prefixfree.min.js"></script>
-  
+
   <!-- opens all links in a new window -->
   <base target="_blank">
 </head>
@@ -22,14 +22,14 @@
   <main>
     <section class="slide welcome highlight">
       <h1><img class="logo-stacked" src="framework/img/llc-logo-stacked-white.png" alt="Ladies Learning Code logo">Welcome!</h1>
-      
+
       <div class="instructions">
         <!-- ADD WIFI INFO HERE -->
        <!--  <h2>Get Connected</h2>
         <p><strong>Wifi:</strong> wifi network</p>
         <p><strong>Password:</strong> wifi password</p>
         <hr> -->
-        
+
         <h2>Download<br> & Install</h2>
         <ol class="downloads">
           <li>Learner files (zip file): <a href="https://github.com/ladieslearningcode/llc-css-fundamentals/archive/master.zip">http://bit.ly/llc-css2</a>
@@ -49,14 +49,14 @@
         <p class="right">Use the left <span class="arrow">&#8592;</span> and right <span class="arrow">&#8594;</span> arrow keys to navigate</p>
       </footer>
     </section>
-    
+
     <section class="slide intro">
       <img class="logo" src="framework/img/llc-logo-white.png" alt="Ladies Learning Code logo">
       <h1 class="heading-bg">
         <span>HTML & CSS Level 2:<br>
         Build an Online Resume</span>
       </h1>
-      
+
       <!-- FILL IN INSTRUCTOR DETAILS -->
       <!-- <img class="instructor" src="http://placehold.it/225x225" alt="Instructor Name">
       <h2><span class="cursive">with</span> Instructor name</h2>
@@ -65,10 +65,10 @@
         <li><a href="http://website.com">website.com</a></li>
         <li><a href="http://twitter.com/">@twitter</a></li>
       </ul> -->
-      
-      <div class="sponsor">
+
+      <!--div class="sponsor">
         <p>In partnership with<br> <img src="framework/img/telus-logo-white.svg" alt="Telus"></p>
-      </div>
+      </div-->
       <footer>
         <a class="left" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="framework/img/cc-by-nc.png" /></a>
         <p class="left">Content created by <a href="http://christinatruong.com">Christina Truong</a> for <a prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
@@ -76,13 +76,34 @@
       </footer>
     </section>
 
+    <section class="slide" data-markdown data-toc>
+      <script type="text/template">
+        #Coders' code
+
+        1. Be friendly and welcoming
+        1. Be respectful of others by choosing words and actions with care
+        1. Be mindful of how much space you take up in conversations
+        1. Ask questions
+        1. Try your best (and have fun!)
+
+      </script>
+    </section>
+
     <section class="slide project" data-markdown>
       <script type="text/template">
       #Today's Project
 
       Follow [this link](project/final.html) to see the whole project!
-      
+
       ![final project](framework/img/workshop/final-project.jpg)<!-- .element: width="390" -->
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Course Outline
+
+        <div class="table-of-contents"></div>
       </script>
     </section>
 
@@ -95,15 +116,7 @@
       http://csszengarden.com/
       </script>
     </section>
-    
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Course Outline
-        
-        <div class="table-of-contents"></div>
-      </script>
-    </section>
-    
+
 
     <section class="slide" data-markdown data-toc>
       <script type="text/template">
@@ -116,7 +129,7 @@
       ##[Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/)
 
       Choose a modern web browser that supports current web standards and has good development tools.
-      
+
       ---
       To set Chrome as your default browser, follow<!-- .element: class="note" --> [these instructions](https://support.google.com/chrome/answer/95417?hl=en).
       Visit [browsehappy.com](http://browsehappy.com) for more info about modern browsers.
@@ -129,7 +142,7 @@
       #Browser Developer Tools
 
       **Developer tools** allow us to *inspect* any web page to see how it's built and for testing and debugging code. In Chrome, the tool can be accessed in 3 ways:
-      
+
       * right-click / two-finger tap / cmd + click on any web page and select **Inspect Element**
       * select the menu icon in the top right hand corner of the Chrome browser and select **More Tools > Developer Tools**
       * keyboard shortcut: **Ctrl + Shift + I** (PC) / **Cmnd + Option + I** (Mac)
@@ -141,14 +154,14 @@
         #Setting up your work flow
 
         Inside of the folder you downloaded today, there are many folders that contain different files.
-        
+
         ```javascript
         llc-css-fundamentals-master
           |-- framework // Contains files needed for slide presentation. Do not edit!
           |-- project // Contains files for this workshop. (images, CSS, HTML)
           |-- slides.html // This is the file you are viewing right now!
         ```
-        
+
         </script>
     </section>
 
@@ -158,22 +171,22 @@
 
         Open the `project` folder in the text editor to edit your project.
         Go to **File** > ** Add Project Folder**. A popup will appear.
-        
+
         ![](framework/img/workshop/editor-add-project-1.jpg)
-        
+
         * navigate to the **llc-css-fundamentals-master** folder
         * select the **project** folder & click **Open**
-        
+
         The files will now appear in the sidebar.
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
         #Setting up your project
-        
+
         Your project folder structure will look like this:
-        
+
         ```html
         project
           |-- css
@@ -183,9 +196,9 @@
           |-- index.html
 
         ```
-        
+
         The **images** folder contains a selection of images to use in your project (or add your own to this folder during the exercises).
-        
+
         The **examples** folder and **final.html** contains the examples for each exercise and the final project.
 
       </script>
@@ -201,11 +214,11 @@
     <section class="slide" data-markdown>
       <script type="text/template">
       #HTML: Overview
-      
+
       HTML is used to define and describe the meaning of the *content* to the browser using HTML *tags*.
 
       Tags usually come in pairs — an opening tag and a closing tag — to wrap the content and are written with angled brackets `< >` and a forward slash `/` for the closing tag.
-      
+
       ```
       <tag> opening tag --- closing tag </tag>
       ```
@@ -221,13 +234,13 @@
         #Nested tags
 
         Tags are often nested within other tags which then create a family tree-like relationship, often referred to as parent and child nodes.
-        
+
         ```
         <outertag>outer content <innertag>inner content</innertag> outer content</outertag>
         ```
 
         The inner tag is the child of the outer tag.  Also, using whitespace through indentation (one tab space) makes it easier to read.
-        
+
         ```
         <parent>
           <child></child>
@@ -241,7 +254,7 @@
         #Base HTML Tags
 
         The tags below should be included in all HTML documents.
-        
+
         ```
         <!DOCTYPE html>
         <html lang="en">
@@ -262,7 +275,7 @@
     <section class="slide" data-markdown>
       <script type="text/template">
       #Common HTML tags
-      
+
       **Title**
 
       * found in the `<head>` section of the HTML document
@@ -284,7 +297,7 @@
 
       * 6 heading tags  (`<h1>,<h2>,...,<h6>`)
       * follows a hierarchical structure
-      
+
       It's important to use the appropriate tag to describe the content, not for the default heading styles. That's what CSS is for!
 
       ```xml
@@ -304,7 +317,7 @@
       ```
 
       **Link**: requires an `href` *attribute* to specify where to link to.
-      
+
       ```
       <a href="http://website.com">link</a>
       ```
@@ -326,7 +339,7 @@
       There are two kinds of lists: ordered (`ol`) for numbered lists & unordered (`ul`) for lists with bullets.
 
       Content must be included only within the list item (`li`).
-      
+
       ```xml
       <ul>
         <li>Unordered list item</li>
@@ -343,18 +356,18 @@
     <section class="slide" data-markdown>
       <script type="text/template">
       #Exercise #1: Personalize the content (~10 mins)
-      
+
       Open **index.html** in your editor and browser.
-      
+
       Here are some suggestions:
-      
+
       1.  Update the page title in the `<title>` tag.
       2.  Update your name and tagline in the `<header>` tag.
       3.  Update your profile image.
       4.  Change any other content (just don't delete any HTML tags)!
 
       Don’t worry if you don’t finish. There’s placeholder content already included in the starter template.
-      
+
       No CSS has been applied yet. You will only see HTML content and default styles. <!-- .element: class="note" --> ([example](project/examples/1-no-css.html))
 
       ---
@@ -398,7 +411,7 @@
       the element (e.g. color). **Values** are specific to the property.
 
       Declarations must end with a semi-colon (`;`) to indicate that the instruction is complete.
-      
+
       ![](framework/img/workshop/css.png)
       </script>
     </section>
@@ -406,11 +419,11 @@
     <section class="slide" data-markdown>
       <script type="text/template">
       #Comments
-      
+
       Comments in CSS are written between a slash & asterisk and must close in the opposite order.
 
       Leave notes for yourself (or others), organize your code blocks or for "commenting" out your code (hiding it for later).
-      
+
       ```
       p {
         color: #cc0066; /* magenta */
@@ -430,7 +443,7 @@
       ```
       </script>
     </section>
-      
+
     <section class="slide title" data-markdown data-toc>
       <script type="text/template">
         #CSS Selectors
@@ -441,9 +454,9 @@
     <section class="slide" data-markdown>
       <script type="text/template">
         #Type Selectors
-        
+
         Select elements in CSS based on the HTML tag name.
-        
+
         ```
         <p>Paragraph.</p>
         ```
@@ -466,7 +479,7 @@
     <section class="slide" data-markdown>
       <script type="text/template">
       #Class & ID attributes
-      
+
       When **type selectors** are too general, there are two ways to attach extra identifying information by adding either of these attributes:
 
       * `class` can be used multiple times
@@ -502,7 +515,7 @@
       When choosing a `class` or `id` name, use a descriptive name and **no** spaces. Instead, use hyphens (`-`), underscores (`_`) or camelCase.
 
       CSS is also case sensitive so it's important (for your own sanity) to pick one style and be consistent.
-      
+
       ```
       class="content-wrapper"
       class="content_wrapper"
@@ -510,11 +523,11 @@
       ```
       </script>
     </section>
-      
+
     <section class="slide" data-markdown data-toc>
       <script type="text/template">
         #CSS Colours
-        
+
         * **keywords** - use the actual name
         (e.g. `red`, `green`, `blue`, `pink`, `papayaWhip`, `paleGoldenrod`, etc)
         * **RGB** - uses 3 numerical values between `0` (black) and `255` (white)
@@ -535,7 +548,7 @@
     <section id="colours" class="slide" data-markdown>
       <script type="text/template">
         #CSS colour resources
-        
+
         * http://colours.neilorangepeel.com
         * http://coolors.co
         * http://wesandersonpalettes.tumblr.com
@@ -571,7 +584,7 @@
       ```
 
       This technique should be used sparingly but it's good to know how it works in case you encounter it.
-      
+
       </script>
     </section>
 
@@ -603,7 +616,7 @@
       CSS is written in a separate style sheet file. This method is recommended because it separates the CSS from the HTML document.
 
       Referenced in the head element with a `<link>` tag and two **attributes**, `rel` (relationship) and `href` which points to the location of the style sheet file.
-      
+
       ```
       <head>
         <title>Page Title</title>
@@ -612,7 +625,7 @@
         <link rel="stylesheet" href="css/styles.css">
       </head>
       ```
-      
+
       <!-- .element: class="note" -->**Note**: Though not required, css files are often saved in a css folder for organization, so make sure the file path points to the appropriate directory.
       </script>
     </section>
@@ -625,7 +638,7 @@
 
       Your page should look similar to this:<!-- .element: class="note" --> [examples/2-bg-colours.html](project/examples/2-bg-colours.html)<br>
       Color resources [here](#colours).<!-- .element: class="note" -->
-      
+
       1. In your editor, open **styles.css** located in the css folder.
       1. Link it to your HTML document. (The file is currently blank.)
       1. Using `background`, add a different colour to each major section.
@@ -658,33 +671,33 @@
       #Web safe fonts
 
       The default typeface can be changed with the `font-family` **property**.
-      
+
       But not all operating systems have the same fonts pre-installed. It's recommended to list two or three fonts to provide fall-back options.
 
       ```
       font-family: Helvetica, Arial, sans-serif;
       ```
-      
+
       Some common "web safe" fonts are:
-      
+
       * <span style="font-family:Arial;">Arial</span>
       * <span style="font-family:Verdana;">Verdana</span>
       * <span style="font-family:Times New Roman;">Times New Roman</span>
       * <span style="font-family:Georgia;">Georgia</span>
       * <span style="font-family:Courier;">Courier</span>
-      
+
       To see a complete list, check out <http://www.cssfontstack.com>.
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
         #Web Fonts
-        
+
         With the introduction of CSS3, you can  now use fonts other than the pre-installed web safe fonts.
-        
+
         There are some free options like [Google Fonts](https://www.google.com/fonts) or [Font Squirrel](http://www.fontsquirrel.com/fonts/list/hot_web).
-        
+
         Google fonts provides a more straightforward option since you can link directly to their css files.  Let's take a look at how it works.
       </script>
     </section>
@@ -744,7 +757,7 @@ color: blue;</textarea>
         * [Text CSS properties reference](http://www.htmldog.com/guides/css/beginner/text/)
       </script>
     </section>
-    
+
     <section class="slide" data-markdown data-toc>
       <script type="text/template">
       #Inheritance and Specificity
@@ -770,17 +783,17 @@ color: blue;</textarea>
       In the above example, the CSS in the body selector is inherited by the descendants elements. However, when a more *specific* selector is used (`h1`), it overrides the inherited values.
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
         # Descendant selectors
-        
+
         When you need to be more specific, try using a descendant selector.
-        
+
         For example, you'll probably want to make the main heading (your name) bigger than the rest of the headings on the page.  But you can't use `h1` as the selector because that will select all of them.
-        
+
         Instead, try something like this (note the space between selectors):
-        
+
         ```
         header h1 {
           font-size: 60px;
@@ -789,15 +802,15 @@ color: blue;</textarea>
         This will only apply to `<h1>` tags *nested* within a `<header>` tag.
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
         # Class Exercise: Typography CSS
-        
+
         Let's add some styles to `body` and `header` so descendant & child elements will inherit the styles.
-        
+
         Add the sample code below to **styles.css** and check the changes in the browser.
-        
+
         ```
         /* All the descendant elements on the *page* will inherit the styles. */
         body {
@@ -809,7 +822,7 @@ color: blue;</textarea>
           text-align: center;
         }
         ```
-        
+
         <!-- .element: class="note" --> **Note!** The code samples are listed for reference. Try not to copy and paste. Instead practice writing it out to get used to the syntax and finding errors!
       </script>
     </section>
@@ -817,10 +830,10 @@ color: blue;</textarea>
     <section class="slide" data-markdown>
       <script type="text/template">
         # Typography CSS
-        
+
         Set specific font styles for `h1`, `h2` and `h3`. (Don't add this yet!)
         Notice how some of the styles are the same in each block?
-          
+
         ```
         h1 {
           font-weight: 400;
@@ -846,10 +859,10 @@ color: blue;</textarea>
       #Refactor!
 
       Code refactoring is the process of restructuring existing code to make it more efficient.
-      
+
       Writing clean, organized and efficient code will not only make your pages run faster but will make it easier to maintain and potentially reduce browser bugs.
-      
-      It's tempting to say "I'll fix it later" but later doesn't always come so it's important to refactor your code as you go along.
+
+      It's tempting to say "I'll fix it later", but later doesn't always come, so it's important to refactor your code as you go along.
       </script>
     </section>
 
@@ -858,9 +871,9 @@ color: blue;</textarea>
       #Refactor!
 
       If you find you are declaring the same styles over and over again, try applying the style to a parent selector so the styles can be inherited.
-      
+
       You can also *combine* selectors to apply the same styles to multiple selectors at the same time.
-      
+
       **Make sure to separate combined selectors with a comma.**
       ```
       h1, h2 {
@@ -869,13 +882,13 @@ color: blue;</textarea>
       ```
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
       #Typography CSS
 
       The previous example can be refactored to look like this:
-      
+
       ```
       h1, h2, h3 {
         font-weight: 400;
@@ -891,9 +904,9 @@ color: blue;</textarea>
         font-family: "Pacifico", cursive;
       }
       ```
-      
+
       Also, if you want to add specific font styles to the header, remember you can use descendant selectors!
-      
+
       ```
       header h1 {
         font-family: "Pacifico", cursive;
@@ -915,9 +928,9 @@ color: blue;</textarea>
 
       1.  (Optional) Choose your own [Google Fonts](http://www.google.com/fonts/) or stick with the sample project selections.
       2.  Using the code sample in the previous slide, update the font & typography styles to your liking!
-      
+
       (You can also add and revise it later as the page starts to come together.)
-      
+
       ---
       ###Resources
       * Example: [3-typography.html](project/examples/3-typography.html) and [3-typography.css](project/examples/3-typography.css)
@@ -931,21 +944,21 @@ color: blue;</textarea>
       ##Spacing and Sizing
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
       #What is The Box Model?
 
       The browser looks at every HTML element on the page as a rectangular or square box. The CSS Box Model describes the way CSS styles the size and spacing of HTML elements.
-      
+
       There are 5 CSS properties used to determine the size and spacing of these boxes: `margin`, `padding`, `border`, `width`, `height`.
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
         #Padding
-        
+
         Padding adds space *inside* of an element. The values can be declared using 1 to 4 values, to target different sides of the element. A variety of measurement units (px, %, ems, rems, etc) can be used.
 
         Setting the value to "0" will remove any default space and any positive value will add space.
@@ -958,21 +971,21 @@ color: blue;</textarea>
         ```
       </script>
     </section>
-    
+
     <section class="slide">
       <h1>Margin</h1>
-      
+
       <p>Margin adds space <em>outside</em> and around an element and also uses 4 values just like padding.</p>
-      
+
       <p>Using the example below, let's change some values to see the difference between margin and padding. Try using 1 - 4 values.</p>
-    
+
       <textarea class="snippet" data-subject="#padding">background: lightblue;
 padding: 0;
 margin: 0;</textarea>
 
       <p id="padding">padding and margin test</p>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
         #More about margin
@@ -985,14 +998,14 @@ padding: 20px;
 margin: 0px;</textarea>
 
         <div id="neg-margin">box</div>
-        
+
         ---
         ###Resource
-        
+
         * [The Definitive Guide to Using Negative Margins](http://www.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/)
       </script>
     </section>
-  
+
     <section class="slide" data-markdown>
       <script type="text/template">
       #Padding and Margin (continued)
@@ -1018,7 +1031,7 @@ margin: 0px;</textarea>
       #Border
 
       The `border` property resides between the `margin` and `padding` and creates an outline around the element.
-      
+
       ```
       /* longhand */
       border-width: 2px;
@@ -1053,10 +1066,10 @@ margin: 0 auto;</textarea>
 
       <!-- 1.  Add the box model fix to the top of your CSS file. [link](#box-model-fix) -->
       In the `body` selector, set the margin & padding to 0 to remove the space around the edge of the whole browser window.
-      
+
       ![](framework/img/workshop/spacing-1.jpg)
       ![](framework/img/workshop/spacing-2.jpg)
-      
+
       There will still be some space between the sections. That's coming from the default margin in the heading tags! Let's inspect the element using the browser dev tools to see the space.
       </script>
     </section>
@@ -1064,11 +1077,11 @@ margin: 0 auto;</textarea>
     <section class="slide" data-markdown>
       <script type="text/template">
       # Class Exercise: Padding & Margin
-      
+
       Next, add some padding to the various page sections so the content doesn't run right to the edge of its containing element.
-      
+
       Just add padding to the top and bottom in this step.
-      
+
       ```
       section,
       footer {
@@ -1086,7 +1099,7 @@ margin: 0 auto;</textarea>
       # Class Exercise: Content Wrapper
 
       The content runs too wide. Let’s use the `margin:0 auto;` technique to set a width to the content and auto center align it. Try adding the styles to the `.profile` section in your CSS file.
-      
+
       ```
       .profile {
         width: 1000px;
@@ -1105,7 +1118,7 @@ margin: 0 auto;</textarea>
         # Class Exercise: Content Wrapper
 
         The background colour is now restricted because it's only stretching 1000px (the set width).
-        
+
         To fix this, create a “container” just for aligning the content. Add a new `div` with a class *around just the content*. Let's name it `content-wrap`.
 
         ```
@@ -1134,7 +1147,7 @@ margin: 0 auto;</textarea>
         #Exercise #4: Content wrappers! (~15mins)
 
         Add the `.content-wrap` HTML to each page block (header, about, work, etc). Remember, it has to wrap *only* the content.
-        
+
         Education example section below.
         ```
         <section class="education">
@@ -1153,19 +1166,19 @@ margin: 0 auto;</textarea>
         For reference, your page should look similar to <!-- .element: class="note" --> [4-content-wrap.html](project/examples/4-content-wrap.html) and [4-content-wrap.css](project/examples/4-content-wrap.css).
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
-        # Break time!
-        
+        #Exercise #4: Content wrappers! (~15mins)
+
         Here are some (optional) exercises:
-        
+
         Want to check your work? Take a look in the **examples** folder. We are now up to **4-content-wrap.html** & **4-content-wrap.css**.
 
-        Prepare for the part 2 exercises by finding two images to use as background images or choose from the images included in **project > images**. Here’s the link to the [final project for reference](project/final.html).
-        
+        Prepare for the upcoming exercises by finding two images to use as background images or choose from the images included in **project > images**. Here’s the link to the [final project for reference](project/final.html).
+
         See below for royalty-free image resources.
-        
+
         ---
         ###Resources
         *   [http://superfamous.com/](http://superfamous.com/)
@@ -1175,21 +1188,21 @@ margin: 0 auto;</textarea>
         *   [http://unsplash.com/](http://unsplash.com/)
       </script>
     </section>
-    
+
     <section class="slide title" data-markdown>
       <script type="text/template">
-        #Part Two
+        #Spacing and Background Images
       </script>
     </section>
-    
+
     <section class="slide" data-markdown data-toc>
       <script type="text/template">
         # Fluid page layouts - width & max-width, px vs %
 
         Let's revisit the centered content from Exercise #4. What happens when the browser window is smaller than the set width?
-        
+
         Let’s look at the difference between `max-width` and `width` using percentages and pixels. Resize the browser to see how the example box responds.
-        
+
         Try changing the `width` percentage value and test it again.
 
         <textarea class="snippet" data-subject="#widths">border: 1px solid black;
@@ -1208,7 +1221,7 @@ max-width: 800px;</textarea>
       #Class Exercise: Fluid Content Wrap
 
       Update `.content-wrap` to include `max-width` and a % `width` value.
-      
+
       ```
       .content-wrap {
         max-width: 1000px;
@@ -1216,10 +1229,10 @@ max-width: 800px;</textarea>
         margin: 0 auto;
       }
       ```
-      
+
       Your page will now look like [5-fluid-content-wrap.html](project/examples/5-fluid-content-wrap.html). Minimize the screen to test the updates.
 
-      Now we've created a reusable style (`.content-wrap`) that will help to keep our CSS nice and neat because this style can be applied where ever it is required.
+      Now we've created a reusable style (`.content-wrap`) that will help to keep our CSS nice and neat, because this style can be applied wherever it is required.
       </script>
     </section>
 
@@ -1232,9 +1245,9 @@ max-width: 800px;</textarea>
     <section class="slide" data-markdown>
       <script type="text/template">
       #Background images
-      
-      So far we've used `background` for colours but it can also be used for setting an image as the background style.
-      
+
+      So far we've used `background` for colours, but it can also be used for setting an image as the background style.
+
       ```css
       background-image: url(folder/file.jpg); /* longhand */
       ```
@@ -1249,7 +1262,7 @@ max-width: 800px;</textarea>
       #Background images
 
       Important: Note the location of the CSS file.
-      
+
       ```css
       project/
         |-- css/
@@ -1257,7 +1270,7 @@ max-width: 800px;</textarea>
         |-- images/
         |-- index.html
       ```
-      
+
       Since **styles.css** is inside of the **css** folder, the file path needs to reflect that.
       Use `../` to indicate that the directory needs to move up and out of the containing folder.
 
@@ -1266,18 +1279,18 @@ max-width: 800px;</textarea>
       ```
       </script>
     </section>
-    
+
     <section id="z-axis" class="slide" data-markdown>
       <script type="text/template">
         # Background styles & the z-axis
-        
+
         Every time an HTML element is nested, the elements are stacked in layers, kind of like a sandwich!
 
         ![](framework/img/workshop/graphical-z-index.gif)<!-- .element: class="left" -->
         </div>
 
         If a background image/colour is added to `body`, it will appear *behind* the nested elements (header, sections and footer).
-        
+
         Image source and further reading <!-- .element: class="note" --> [here](http://www.smashingmagazine.com/2009/09/15/the-z-index-css-property-a-comprehensive-look/).
         </div>
       </script>
@@ -1286,13 +1299,13 @@ max-width: 800px;</textarea>
     <section class="slide" data-markdown>
       <script type="text/template">
       # Class Exercise: Background images
-        
+
       Let's add a background image to the existing `body` selector so it can appear *behind* all of the content on the page.
-      
+
       Also, remove the background color from the sections you want the background image to appear.
-      
+
       Choose an image from <!-- .element: class="note" -->**project > images** folder (or add your own to this folder).
-      
+
       ```
       body {
         background: url(../images/background-1.jpg);
@@ -1307,19 +1320,19 @@ max-width: 800px;</textarea>
     <section class="slide" data-markdown>
       <script type="text/template">
       #Background image repeat
-      
+
       If the image is smaller than the element you applied the background image to, it will automatically repeat.
-      
+
       ![](framework/img/workshop/bg-img-repeat.jpg)
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
       #Class Exercise: `background-repeat`
 
       Use the `background-repeat` **or** add the value to the shorthand `background` property.
-      
+
       ```
       /* shorthand */
       background: url(../images/background-1.jpg) no-repeat;
@@ -1330,24 +1343,24 @@ max-width: 800px;</textarea>
       ```
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
       # no-repeat
-      
+
       Now the image doesn't stretch all the way across the page (if your image is smaller than the size of the containing element).
-      
+
       ![](framework/img/workshop/bg-img-norepeat.jpg)
-      
+
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
       # Class Exercise: Fixed background
-      
+
       Before we update the background image sizing, let's look at `fixed`.
-      
+
       ```css
       /* shorthand */
       background: url(../images/background-1.jpg) no-repeat fixed;
@@ -1360,16 +1373,16 @@ max-width: 800px;</textarea>
       Add it to your CSS and check your page and scroll. What happens to the image?
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
         #background-position
-        
+
         `background-position` is used to move a background image within its container.
         The default values place the image at the top left.
-        
+
         There are three types of values: pixels (e.g. 100px 5px), percentages (e.g. 100% 5%) or keywords (e.g. top right). If only one value is declared, it is applied to the horizontal and vertical placement of the image.
-        
+
         ```css
         /* shorthand */
         background: url(../images/background-1.jpg) no-repeat fixed 50%;
@@ -1380,23 +1393,23 @@ max-width: 800px;</textarea>
         background-attachment: fixed;
         background-position: 50%;
         ```
-        
+
         ---
         ###Resource
         https://css-tricks.com/almanac/properties/b/background-position/
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
         #background-position
-        
+
         But that doesn't really solve the issue of the image not covering the area it's applied to.
-        
+
         ![](framework/img/workshop/bg-img-position.jpg)
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
       #Background-size
@@ -1412,15 +1425,15 @@ max-width: 800px;</textarea>
       Though there are various sizing dimensions (pixels, percentages or keywords), today, our best option is keyword `cover`.
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
       #Background-size shorthand
 
       `background-size` is the longhand property name.
-      
+
       To include it in the shorthand `background` property, it **must** be included after `background-position`, separated with the `/` character.
-      
+
       ```
       header {
         background: url(../images/background-1.jpg) no-repeat fixed 50% / cover;
@@ -1428,7 +1441,7 @@ max-width: 800px;</textarea>
       ```
       **Important**: if no background position value is being used, this shortcut will not work!
       So in this case, it may be less error prone to add it via the longhand property.
-      
+
       ```
       header {
         background: url(../images/background-1.jpg) no-repeat fixed 50%;
@@ -1441,48 +1454,48 @@ max-width: 800px;</textarea>
     <section class="slide" data-markdown>
       <script type="text/template">
       # Background-size
-      
+
       Of the different `background-size` options, `cover` tends to work best because it scales the image to fit the entire container.
-      
+
       See below resource for more about the `background` property.
-      
+
       ---
       ###Resource
       * https://developer.mozilla.org/en/docs/Web/CSS/background
       </script>
     </section>
-  
+
     <section class="slide" data-markdown>
       <script type="text/template">
         #Class Exercise: Background-size & position
 
         Let's update the background-size to `cover` and set the position to wherever you want your image to be placed.<br>
         <span class="note">(50% = middle or keywords: top, right, bottom, left) </span>
-        
+
         Your CSS should now look something like this:
-        
+
         ```
         background: url(../images/background-2.jpg) no-repeat fixed 50%;
         background-size: cover;
         ```
-        
+
         Your page should look similar to [6-background.html](project/examples/6-background.html).
       </script>
     </section>
-    
+
     <section class="slide title background-2" data-markdown>
       <script type="text/template">
         #More Background Styles!
         ##Gradients and Alpha Transparency
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
       #More Background Styles
 
       It's time to get rid of these test background colours and put in some nicer looking styles!
-      
+
       ![](framework/img/workshop/rgba.png)<!-- .element: class="left" -->
 
       For the **Profile** section, let's add some alpha transparency to the background.
@@ -1493,22 +1506,22 @@ max-width: 800px;</textarea>
       ```
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
         # Using RGBA values
-        
+
         The example below is using a percentage of the colour black.
         Here's a tool to convert hex values into RGB: http://hex.colorrrs.com/
-          
+
         ```
         .profile {
           background: rgba(0, 0, 0, 0.8);
         }
         ```
-        
+
         If using a dark background colour, you will likely need to update the text colour, to something lighter than the default black, to be visible.
-        
+
         ```
         .profile {
           background: rgba(0, 0, 0, 0.8);
@@ -1517,17 +1530,17 @@ max-width: 800px;</textarea>
         ```
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
       #Exercise: RGBA & Backgrounds (~15mins)
-      
+
       Update the background colours for the Profile, Work, Education and Contact section. (Leave the Header and Skills section for now.)
-      
+
       Try using a combination of rgba and solid colours.
-      
-      Also, you may want to change the font colours.  Note that to change the colour of links, use `a` as the selector, to override the default blue.
-      
+
+      You may want to change the font colours now to contrast with your new background images and colours. Note that to change the colour of links you must use `a` as the selector to override the default blue.
+
       View <!-- .element: class="note" --> [7-more-background.css](project/examples/7-more-background.css),  [7-more-background.html](project/examples/7-more-background.html) or below for reference.
       ```
       a {
@@ -1537,7 +1550,7 @@ max-width: 800px;</textarea>
         background: rgba(0, 0, 0, 0.8); /* black, 80% alpha transparency */
         color: #fefefe; /* almost white text color */
       }
-      
+
       /* BONUS! */
       .profile img {
         border-radius: 50%; /* makes profile image a perfect circle */
@@ -1545,36 +1558,37 @@ max-width: 800px;</textarea>
       ```
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
         #Background Gradients
 
         Gradients are usually one color that fades into another. Gradients are set using the either the longhand `background-image` property or the shorthand `background` property.
 
-        To set the values, use this syntax for the value, `linear-gradient(color, color)`, to set the start and stop colour.
-        
+        To set the values, use this syntax for the value to set the start and stop colour:
+        `linear-gradient(color, color)`
+
         In the example below, try putting a start and stop colour. Use keywords, hex or rgb values.
 
         <textarea class="snippet">background-image: linear-gradient();</textarea>
-        
-        With CSS gradients, you can also control the direction of the fade, the colors, as well as where the color changes happen. [Learn all about gradients here](http://css-tricks.com/css3-gradients/).
+
+        With CSS gradients, you can also control the direction of the fade, the colors, as well as where the color changes happen. [Learn all about gradients here](http://css-tricks.com/css3-gradients/).<br>You can also use a [gradient generator](http://www.colorzilla.com/gradient-editor/) that allows you to more easily create the gradient visually using an interface. The code will be created for you to copy and paste into your stylesheet.
       </script>
     </section>
 
     <section class="slide">
       <h1>Gradients and Background Images</h1>
-      
+
       <p>In the <strong>Skills</strong> section, the text may be hard to read depending on the background image. We can actually use multiple background images to set a gradient on top of the image!</p>
       <p>Declare the gradient <em>first</em> so it can sit on top of the image. We also want to see the image through the gradient so use <code>rgba</code> color values to set the alpha transparency. Separate multiple backgrounds with a comma.</p>
-      
+
 <textarea class="snippet" data-subject="#bg-image-gradient">height: 300px;
 background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ),
             url(project/images/background-4.jpg);
 </textarea>
       <div id="bg-image-gradient"></div>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
 #Exercise 8: Gradients (~10mins)
@@ -1596,7 +1610,7 @@ Here is some sample code for reference or view <!-- .element: class="note" -->[8
 ```
       </script>
     </section>
-    
+
     <section class="slide title" data-markdown data-toc>
       <script type="text/template">
         #Intro to Flexbox!
@@ -1607,7 +1621,7 @@ Here is some sample code for reference or view <!-- .element: class="note" -->[8
       <script type="text/template">
         #Block Elements
 
-        By default, `block` elements will take up as much horizontal space as possible, which causes them to stack on top of each other.
+        By default, `block` elements will take up 100% of the width of the screen, which causes them to stack on top of each other.
 
         There are several different ways we can use CSS to force `block` elements to appear *beside* each other. Today we'll be using `flexbox`
 
@@ -1615,11 +1629,11 @@ Here is some sample code for reference or view <!-- .element: class="note" -->[8
         ![](framework/img/workshop/profile-flexbox-2.png)<!-- .element: class="right" width="47%" -->
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       #Flexbox
 
-      When using flexbox, we first mark a container as a **flex parent** by adding a `display: flex;` declaration in our CSS file.
+      When using flexbox, we first mark the parent container as a **flex parent** by adding a `display: flex;` declaration in our CSS file.
 
       Once we have a flex parent, we can easily change the orientation, alignment, and position of any child elements.
 
@@ -1685,7 +1699,7 @@ Here is some sample code for reference or view <!-- .element: class="note" -->[8
         <div>Element 3</div>
       </div>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
         #Class Exercise: Flexbox
@@ -1707,7 +1721,7 @@ Here is some sample code for reference or view <!-- .element: class="note" -->[8
         ```
 
         What will our selector be?
-        
+
         <pre class="delayed">
             <code>.profile .content-wrap</code>
         </pre>
@@ -1717,9 +1731,9 @@ Here is some sample code for reference or view <!-- .element: class="note" -->[8
     <section class="slide" data-markdown>
       <script type="text/template">
         #Class Exercise: Flexbox
-        
+
         Add the declarations that will cause the profile image and text to appear side-by-side.
-            
+
         ```
         .profile .content-wrap {
           display: flex;
@@ -1728,50 +1742,50 @@ Here is some sample code for reference or view <!-- .element: class="note" -->[8
         ```
 
         Don't forget to prevent the image from stretching vertically.<!-- .element: class="delayed" -->
-        
+
         <pre class="delayed"><code>.profile .content-wrap {
           display: flex;
           justify-content: space-between;
           align-items: flex-start;
         }</code></pre>
-        
+
       </script>
     </section>
-    
+
     <section class="slide" data-markdown data-toc>
       <script type="text/template">
         #CSS Fixed Position
-        
-        Some people may want to download a copy of your resume.  Use fixed positioning to make sure that download button is always available.
-        
+
+        Some people may want to download a copy of your resume.  Use `fixed positioning` to make that download button stick to the top right.
+
         ![](framework/img/workshop/download-position.gif)
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
       #Positioning in CSS
-      
+
       The `position` property can be used to place elements in a specific spot on the page without affecting the elements around it.
-      
+
       There are three options: `relative`, `absolute` and `fixed`.
 
       `position` is also used in conjunction with offset properties: `top`, `right`, `bottom`, and `left`. These are use to identify *where* an element will be positioned.
 
       Today we'll be using a fixed position.
-      
+
       ---
       ###Resource
-      To learn more about position, [go here](http://learnlayout.com/position.html).
+      To learn more about the `position` property, [go here](http://learnlayout.com/position.html).
 
       </script>
     </section>
 
     <section class="slide">
       <h1>Position: fixed</h1>
-      
+
       <p>When positioning an element as <code>fixed</code>, it will <em>always</em> be positioned to the viewport (browser window) and stay fixed, even on page scroll.</p>
-      
+
       <p>In the example below, try adding a <code>top</code> value (or any other directional offset property: <code>right</code>, <code>bottom</code>, <code>left</code>).</p>
 
       <textarea class="snippet" data-subject="#fixed">.box {
@@ -1791,23 +1805,21 @@ Here is some sample code for reference or view <!-- .element: class="note" -->[8
     <section class="slide" data-markdown>
       <script type="text/template">
       #Class Exercise: Position & Download Resume
-      
+
       Back in your HTML document, add a link (`<a>` tag) to download a copy of the resume.
-      
+
       In your projects folder, there is a **resume.pdf** that can be used as a placeholder if you don't have one handy.
 
-      You can also add an HTML5 `download` attribute to trigger a download right away! Also, give it a class to apply unique styles to it.
-      
+      Then give it a class so we can apply unique styles to it.<br> You can also add an HTML5 `download` attribute to trigger a download right away!
+
       ```xml
       <a class="download" href="resume.pdf" download>Download resume (pdf)</a>
       ```
       </script>
     </section>
-    
+
     <section class="slide">
       <h1>Class Exercise: Position & Download Resume</h1>
-
-      <p>Use fixed positioning for the link to make it always available as the user is scrolling down the page. </p>
 
       <p>What properties &amp; values are needed to position this element to the top right of the page?</p>
 
@@ -1822,9 +1834,9 @@ Here is some sample code for reference or view <!-- .element: class="note" -->[8
     <section class="slide" data-markdown>
       <script type="text/template">
         #Class Exercise: Position & Download Resume
-        
+
         You can also add some additional styling to the link to make it standout more.
-        
+
         ```
         .download {
           position: fixed;
@@ -1839,18 +1851,43 @@ Here is some sample code for reference or view <!-- .element: class="note" -->[8
         <p>See <a href="project/examples/10-position.html">10-position.html</a> and <a href="project/examples/10-position.css">10-position.css</a> for reference.</p>
       </script>
     </section>
-    
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Today...
+
+        We learned a whole pile of things:
+
+        * Intro to HTML
+        * CSS selectors
+        * Colour and Typography
+        * Spacing with The Box Model
+        * CSS Background images and Gradients
+        * Layout with flexbox
+        * Fixed Positioning
+
+      </script>
+    </section>
+
+    <section class="slide centered" data-markdown>
+      <script type="text/template">
+        # Now we're stylin'
+
+        <img src="framework/img/workshop/style.gif" alt="I got style" style="width: 45%;" />
+      </script>
+    </section>
+
     <section class="slide" data-markdown data-toc>
       <script type="text/template">
         #Next Steps!
-        
-        ![](framework/img/workshop/now-what.gif)
-        
+
+        ![Now what?](framework/img/workshop/now-what.gif)
+
         * try out the [bonus exercise](framework/bonus.html) - using icon fonts
         * check out the extra resources in the next slide
         * take a look at the [final example](project/final.html) for more ideas
         * look out for more [upcoming events](https://www.canadalearningcode.ca/experiences/) organized by Canada Learning Code
-        
+
       </script>
     </section>
 
@@ -1869,14 +1906,14 @@ Here is some sample code for reference or view <!-- .element: class="note" -->[8
       * [CSSDeck](http://cssdeck.com)
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
         #Getting your site online
 
         To get a site online, you will need to register a domain name and purchase hosting. Here are some suggestions:
 
-        * [dreamhost.com](http://www.dreamhost.com/r.cgi?2085384) - domains and hosting - use promo code **LLC40** to get $40 off your registration!
+        * [dreamhost.com](http://www.dreamhost.com/)
         * [hover.com](http://hover.com/) - domains
 
         You will also need to upload your files to your hosting server. You will need some info usually provided by your hosting service provider: FTP Address, Username, Password.
@@ -1884,7 +1921,7 @@ Here is some sample code for reference or view <!-- .element: class="note" -->[8
         Here's a tutorial getting your files online using FileZilla: [FileZilla Client Tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29)
       </script>
     </section>
-    
+
     <!-- Last slide -->
     <section class="slide last">
       <h1>Thank you!</h1>
@@ -1906,7 +1943,7 @@ Here is some sample code for reference or view <!-- .element: class="note" -->[8
     </section>
 
   </main><!-- cls main section -->
-  
+
   <script src="framework/scripts/jquery-1.11.0.min.js"></script>
   <script src="framework/scripts/slideshow.js"></script>
 
