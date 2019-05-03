@@ -4,6 +4,10 @@
 
 A full day introductory CSS workshop. Students should have basic understanding of HTML.
 
+## Quick links
+
+Preview slides: http://ladieslearningcode.github.io/llc-css-fundamentals/slides.html
+
 ### Attributions
 
 Created by Jesse R Mykolyn for [Canada Learning Code](https://www.canadalearningcode.ca/).
