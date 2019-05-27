@@ -1,6 +1,6 @@
-#Ladies Learning Code
+# Ladies Learning Code
 
-##HTML & CSS Level 2: Learn to Build an Online Resume
+## HTML & CSS Level 2: Learn to Build an Online Resume
 
 A full day introductory CSS workshop. Students should have basic understanding of HTML.
 
