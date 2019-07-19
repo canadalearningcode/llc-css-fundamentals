@@ -111,28 +111,17 @@
       </script>
     </section>
 
-    <section class="slide centered" data-markdown>
-      <script type="text/template">
-      #A demonstration of what can be <br>accomplished through CSS-based design
-
-      ![](framework/img/workshop/css-zen-garden.png)
-
-      http://csszengarden.com/
-      </script>
-    </section>
-
-
     <section class="slide" data-markdown data-toc>
       <script type="text/template">
       #The Development Environment
 
       ##[Atom](https://atom.io/)
 
-      Use a text editor with colour highlighting and other useful features. If you are unable to install Atom, try [Notepad++](http://notepad-plus-plus.org/) (Windows) or [Brackets](http://brackets.io/).
+      Use a **text editor** with colour highlighting and other useful features. If you are unable to install Atom, try [Notepad++](http://notepad-plus-plus.org/) (Windows) or [Brackets](http://brackets.io/).
 
       ##[Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/)
 
-      Choose a modern web browser that supports current web standards and has good development tools.
+      Choose a modern **web browser** that supports current web standards and has good development tools.
 
       ---
       To set Chrome as your default browser, follow<!-- .element: class="note" --> [these instructions](https://support.google.com/chrome/answer/95417?hl=en).
@@ -179,6 +168,7 @@
         For Windows Users, go to the **File** menu and choose Settings.
 
         ![](framework/img/workshop/atom-preferences.jpg)<!-- .element: width="70%" -->
+        ![](framework/img/workshop/atom-settings-pc.jpg)<!-- .element: width="20%" -->
 
         Select the **Editor** tab in the left menu
 
@@ -313,7 +303,7 @@
       **Title**
 
       * found in the `<head>` section of the HTML document
-      * used for defining the page title.
+      * used for defining the page title
       * displays in the browser's tab, search engine results and bookmarks
       * keep it short and descriptive
 
@@ -359,7 +349,7 @@
       **Images**: also requires an additional attribute, `src`, which defines the path to an image file.
 
       ```
-      <img src="folder/image.jpg">
+      <img src="folder/image.jpg" alt="description of image">
       ```
       </script>
     </section>
@@ -732,7 +722,7 @@
 
         There are some free options like [Google Fonts](https://www.google.com/fonts) or [Font Squirrel](http://www.fontsquirrel.com/fonts/list/hot_web).
 
-        Google fonts provides a more straightforward option since you can link directly to their css files.  Let's take a look at how it works.
+        Google fonts provides a more straightforward option since you can link directly to their CSS files.  Let's take a look at how it works.
       </script>
     </section>
 
@@ -778,7 +768,7 @@
         <textarea class="snippet" data-subject="#typography-example">font-weight: bold;
 font-size: 16px;
 line-height: 1.25;
-font-family: Helvetica, Arial, serif;
+font-family: Helvetica, Arial, sans-serif;
 text-transform: lowercase;
 color: blue;</textarea>
 
@@ -986,6 +976,8 @@ color: blue;</textarea>
       The browser looks at every HTML element on the page as a rectangular or square box. The CSS Box Model describes the way CSS styles the size and spacing of HTML elements.
 
       There are 5 CSS properties used to determine the size and spacing of these boxes: `margin`, `padding`, `border`, `width`, `height`.
+
+      ![](framework/img/workshop/box-model-layout.jpg)
       </script>
     </section>
 
@@ -1288,6 +1280,11 @@ max-width: 800px;</textarea>
       ```css
       background: url(folder/file.jpg); /* shorthand */
       ```
+
+      ---
+        ###Resources
+        * W3C: [CSS Background properties](https://www.w3schools.com/css/css_background.asp)
+        * Moz: [CSS Shorthand properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties)
     </script>
   </section>
 
@@ -1671,7 +1668,7 @@ Here is some sample code for reference or view <!-- .element: class="note" -->[8
 
       Once we have a flex parent, we can easily change the orientation, alignment, and position of any child elements.
 
-      We'll be using this approach to style the profile and skills sections of our resume.
+      We'll be using this approach to style the Profile and Skills sections of our resume.
     </section>
 
     <section class="slide">
@@ -1684,7 +1681,6 @@ Here is some sample code for reference or view <!-- .element: class="note" -->[8
       <textarea class="snippet" data-subject="#flexbox">
 #flexbox {
   display: ;
-  justify-content: ;
   align-items: ;
 }
 
@@ -1697,8 +1693,16 @@ Here is some sample code for reference or view <!-- .element: class="note" -->[8
 }</textarea>
       <div id="flexbox" style="min-height: 330px; background: rgba( 0, 0, 0, 0.05 ); border: solid 1px #999; padding: 15px;">
         <img src="http://placehold.it/300x300" alt="placeholder image">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali.</p>
       </div>
+
+
+      <hr>
+      <h3 class="resources">Resource</h3>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items">align-items values</a></li>
+      </ul>
+
     </section>
 
     <section class="slide">
@@ -1709,9 +1713,9 @@ Here is some sample code for reference or view <!-- .element: class="note" -->[8
       <p>Lets see if we can:</p>
 
       <ul>
-          <li>increase their width;</li>
-          <li>space them evenly;</li>
-          <li>prevent them from being stretched vertically.</li>
+          <li>space them evenly</li>
+          <li>prevent them from being stretched vertically</li>
+          <li>increase their width</li>
       </ul>
 
       <textarea class="snippet" data-subject="#flexbox_multi">
@@ -1732,6 +1736,15 @@ Here is some sample code for reference or view <!-- .element: class="note" -->[8
         <div>Element 2</div>
         <div>Element 3</div>
       </div>
+
+      <hr>
+      <h3 class="resources">Resource</h3>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content">justify-content values</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items">align-items values</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis">flex-basis values</a></li>
+      </ul>
+
     </section>
 
     <section class="slide" data-markdown>
