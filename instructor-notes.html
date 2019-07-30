@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Ladies Learning Code</title>
+  <link rel="stylesheet" href="framework/css/slideshow.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/fonts.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/highlightjs/github.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/styles.css" data-noprefix>
+  <link rel="shortcut icon" href="framework/img/favicon.ico">
+
+  <!-- Takes care of CSS3 prefixes -->
+  <script src="framework/scripts/prefixfree.min.js"></script>
+
+  <!-- opens all links in a new window -->
+  <base target="_blank">
+</head>
+
+<!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
+<body class="en" data-duration="360">
+
+
+  <main>
+
+  <section class="slide" data-toc data-markdown>
+    <script type="text/template">
+      ###Instructor Notes
+
+      ###Ladies Learning Code: HTML & CSS LEVEL 2: BUILD AN ONLINE RESUME
+
+      <br>
+      ##Schedule
+
+      <strong> Important note:</strong>
+      This is a guideline, not a rule! It is more important that the learners are following along then it is to get to the end of the slides!
+
+      <em>Please note</em>: this schedule is for a single day workshop.
+      If you are leading two weekday evenings, you can split this schedule up accordingly. Please remember to take a 15-30 minute break on both days. The first 15-20 minutes of the second day should be allocated for review and questions from the prior session.
+
+      * <strong>Intro (10:00 am - 11:00 am)</strong>: Today's Project, HTML content layer
+      * <strong>Intro to HTML (11:00 am - 12:30 am)</strong>: CSS: Presentation layer, Selectors, Typography
+      * <strong>Lunch Break! (12:30 pm - 1:00 pm)</strong>
+      * <strong>CSS (1:00 pm - 3:30 pm)</strong>: The Box Model, spacing and background images, flexbox, positioning
+      * <strong>Wrapping it up (3:30 pm - 4:00 pm)</strong>
+
+
+      <br>
+      ##General Notes
+
+      * <strong>Important!</strong> Please give learners enough time to download learner files. Check in as people are entering the room to make sure they have learner files.
+      * A common issue with leaner files - make sure Windows users extract the folder. If a learner sees the slides without any styles, that is probably why.
+      
+      Before the class starts, update the WiFi credentials on slide 1.
+
+      This class is designed for people who have some familiarity with HTML & CSS, have possibly taken a workshop with us before or have otherwise learned themselves online. That being said, there will always be exceptions as there is no formal prerequisite vetting process.
+
+      Before the workshop begins, you can ask how many learners have used HTML before, and CSS respectively. This can help you gauge how much time you should allocate for review, particularly around the HTML content slides.
+
+      
+      
+      <br>
+      ##Specific Examples
+
+
+      **Slide 7: DEVELOPER TOOLS**
+
+      Using the Developer Tools can be really intimidating for beginners, however this class is intended for intermediate level, so allocate a suitable amount of time to explore the developer tools based on the experience level of the group. Show how you can select an HTML element to see which styles are applied, hide some of the styles, or change some of the values. Show them at least twice how to open and then close the developer tools.
+
+
+      **Slide 10: SETTING UP YOUR WORK FLOW**
+
+      Walk through this together - many people out of habit just click File > Open instead of Add Project Folder. Take the time to make sure the environment is set up properly before continuing. Ask the mentors to confirm with you that everyone has done it properly, and/or walk around yourself to confirm.
+
+
+      **Slide 14: Nested Tags**
+
+      Compare this to layering two sweaters - the order in which they close matters! You have to zip up your inner sweater before you can zip up the outer sweater - if you try to cross the zippers up, it won't work!
+
+
+      **Slide 15: BASE HTML TAGS**
+
+      People can SEE your body, but they cannot see what is going on inside your head. What's going on inside your head is integral to making your body function, but you have to take a peak "under the hood" (viewsource) in order to see what elements are in the `head`. Make sure it's clear that no tags should ever go before the `head`, between the `head` and the `body`, or after the `body`.
+
+
+      **Slide 17: COMMON HTML TAGS - Headings**
+
+      It is not uncommon to find websites that skip heading order (`h1` immediately followed by an `h4`), just because the designer wants a smaller font size. This is particularly bad for accessibility and people using screen readers. You can always change the font size later with CSS!
+
+
+      **Slide 18: COMMON HTML TAGS**
+
+      To explain attributes in general, you can show them a fake tag to represent your coffee order:
+
+      ```
+      <coffee order="latte" milk="almond" sweetener="honey">Laura</coffee>
+      ```
+
+      An image doesn't need a closing `img` tag because it has all the information it needs by way of attributes.
+
+
+      **Slide 19: COMMON HTML TAGS**
+
+      `ol` appears to be numbered by default, but with CSS you can change the `list-style` to display letters from a-z, roman numerals, and more!
+
+
+      **Slide 22: CSS OVERVIEW**
+
+      You can use the coffee order analogy again to explain how properties are applied to a selector. The barista is looking for YOU, as the selector. Then they gather the properties that you want in your beverage order:
+
+      ```
+      laura {
+         order: cold-brew;
+         milk: soy;
+         flavour: vanilla;
+      }
+      ```
+
+      **Slide 23: CSS OVERVIEW**
+
+      Note that the example on this slide has the entire declaration block all on one line. This is valid as far as the browser is concerned, but it is harder for us humans to read a stylesheet this way. Encourage them to hit the return key after the selector and opening curly brace, and to indent the declarations within the curly brackets.
+
+
+      **Slide 27: CLASS & ID ATTRIBUTES**
+
+      Most developers only use classes for styling. IDs are typically used for JavaScript. The general rule is to only use IDs if you absolutely have to. When in doubt, use a class.
+
+
+      **Slide 32: REFERENCING CSS: INLINE**
+
+      We are only showing this to them in case they see it "in the wild" and need to overwrite inline styles when they can't change the HTML for whatever reason. We highly recommend against using inline styles!
+
+
+      **Slide 34: REFERENCING CSS: EXTERNAL**
+
+      Best practice, easiest for maintenance and organization.
+
+
+      **Slide 35: EXERCISE #2: BACKGROUND COLOURS (~10MINS)**
+
+      Instead of selecting the `.contact`, they could also just use `footer`. There is only one `footer` element on the page, so that selector would be specific enough.
+
+      **Slide 37: WEB SAFE FONTS**
+
+      Helvetica comes by default on Mac computers, but not on Windows computers. If you're using Windows and haven't purchased the Helvetica font, your browser will read through this font stack and use Arial.
+
+
+      **Slide 39: CLASS EXERCISE: HOW TO USE GOOGLE FONTS**
+
+      Show them what happens when you select many fonts and the effect it has on the loading time. Think of each font as a rock you're adding to your backpack when going on a hike. The heavier the backpack, the slower you're going to be walking. A website works the same way! Keeping things lightweight and only including the resources you need makes the site perform faster.
+
+
+      **Slide 42: DESCENDANT SELECTORS**
+
+      It can help to read this from right to left, or where you see a space, imagine saying "and then...". Each space looks one level deeper. 
+      A common mistake is to use the syntax for descendant selectors when you meant to combine selectors, or vice versa. Commas are used when you are listing items in a sentence: "I need to buy bread, apples, bananas etc."
+
+
+      **Slide 50: THE BOX MODEL**
+
+      Imagine you're packaging a fragile object for shipping. The `padding` is like the bubble wrap or packing peanuts that go inside the box to protect the object. The border is like the edge of the box. The margin is the distance between the box and whatever is around it.
+
+
+      **Slide 55: BORDER**
+
+      You can show them different styles of border, like `dotted`, `dashed`, `groove`, etc.
+
+
+      **Slide 57: CLASS EXERCISE: PADDING & MARGIN**
+
+      Walk through this exercise together using the developer tools. You can show them at this time how to change the position of the developer tools from one side to the bottom. The grey section that says "user agent stylesheet" will show the styles applied by default.
+
+      
+      **Slide 59: CLASS EXERCISE: CONTENT WRAPPER**
+
+      When the content area is very wide, the user's eyes have to move very far to the right and back to the left to read paragraphs text. Narrowing the content area will make text easier to read. A few slides from now we will be using % width and a `max-width`, so for now use the suggested method even if it's not best practice.
+
+
+      **Slide 62: EXERCISE #4: CONTENT WRAPPERS! (~15MINS)**
+
+      This could also serve as a time to take a quick washroom/smoke break if the timing works out. Feel free to take breaks wherever it makes sense with the flow of the day.
+
+
+      **Slide 64: FLUID PAGE LAYOUTS - WIDTH & MAX-WIDTH, PX VS %**
+
+      You can also show them how to use the Developer Tools to toggle the Device Toolbar to resize the viewport.
+
+
+      **Slide 68: BACKGROUND IMAGES**
+
+      This is a very difficult concept for beginners to wrap their heads around, so don't rush while explaining this one. Show them using your Finder or File Explorer how when you open one folder, you can't see the rest of the files until you move into that folder.
+      Have them apply this to their project before carrying on to the next slide.
+
+
+      **Slide 71: BACKGROUND IMAGE REPEAT**
+
+      If their laptop is small enough, or if the background image is large enough, they may not see this happen. Show them how to zoom out using ctrl/cmd + the '-' key. ctrl/cmd + 0 to return to 100% zoom.
+
+
+      **Slide 84: EXERCISE: RGBA & BACKGROUNDS (~15MINS)**
+
+      Mention that 50% `border-radius` will only make the image a circle if it starts out as a square. A rectangular image will turn into an oval with this style applied. They can use a free image editor like [pixlr](http://pixlr.com) to crop an image into a square.
+
+
+      **Slide 90: FLEXBOX**
+
+      Setting a flex parent is like setting the rules that all the children of this element will follow.
+
+
+      **Slide 91: FLEXBOX**
+
+      Start by setting the `display: flex` property on the parent. See what happens immediately. There are some problems right?
+
+      There is a reference link at the bottom of this page. Ask for a volunteer in the class to click and open that link, and tell you aloud what the possible values are for this property. Type each one at a time and allow the class to observe what happens.
+
+      At this point you should have something like this: `#flexbox { display: flex; align-items: center;}`. But now the image and the text are right up against each other, which is unappealing and makes the text difficult to read. See if any of the learners can find a solution to this by adding a declaration in the `img` or `p` selector. They can add `padding` or `margin` to one or both elements. Recap the difference between `margin` and `padding`, even though they will appear to have the same effect in this context. Adding a border to the element can help demonstrate this difference.
+
+
+      **Slide 92: FLEXBOX**
+
+      Start by setting the `display: flex` property on the parent.
+      Ask for 3 new volunteers in the class to click and open the reference links and tell you aloud what the possible values are for each property. Go through each point in the list and address them with each of the properties respectively.
+
+
+      **Slide 93: CLASS EXERCISE: FLEXBOX**
+
+      Recall with descendant selectors, a space means "and then...."
+
+
+      **Slide 98: CLASS EXERCISE: POSITION & DOWNLOAD RESUME**
+
+      The download attribute doesn't need any value - that's why it's not followed by an equal sign or quotation marks. PDFs can be viewed directly within the browser (with most modern browsers). If you click on a link to a Word document for instance, it will instead download that file because your browser can't preview it. That file type needs to be opened in a Microsoft application. Take some time to note the difference between the download **attribute** and the **class** of download we've applied to the `a` tag.
+
+
+      **Slide 99: CLASS EXERCISE: POSITION & DOWNLOAD RESUME**
+
+      They can also set the `right` and `top` values to slightly offset, like 10px on both, if they prefer the way that looks. Coder's choice!
+
+
+      **Slide 100: CLASS EXERCISE: POSITION & DOWNLOAD RESUME**
+
+      They can also use `text-decoration: none;` to remove the underline on the link.
+
+
+      **Slide 101: Today...**
+
+      Now is the time to acknowledge and congratulate the learners - they should feel proud for taking the time to learn something new, push themselves out of their comfort zone and challenge themselves. This workshop covered a lot, so feeling overwhelmed is totally expected and normal. Don't forget to acknowledge and thank the mentors at this time too!
+
+
+      **Slide 103: NEXT STEPS!**
+
+      Get them excited about where they can go from here, whether that be through more workshops with us, independent learning, or where they can find local meet-up groups or events, online or in person. 
+
+      **Slide 105: GETTING YOUR SITE ONLINE**
+
+      If you have the time, talk about the difference between a domain name and a hosting provider - a lot of people think that you only have to purchase a domain name to get your site online and aren't aware of the hosting part. You can describe this as paying rent for a physical space (computer) where your files will live.
+
+    </script>
+  </section>
+
+  </main><!-- cls main section -->
+
+  <script src="framework/scripts/jquery-1.11.0.min.js"></script>
+  <script src="framework/scripts/slideshow.js"></script>
+
+  <!-- Uncomment the plugins you need -->
+  <script src="framework/scripts/plugins/css-edit.js"></script>
+  <script src="framework/scripts/plugins/css-snippets.js"></script>
+  <script src="framework/scripts/plugins/css-controls.js"></script>
+  <!-- <script src="plugins/code-highlight.js"></script>-->
+
+  <script src="framework/scripts/plugins/markdown/marked.js"></script>
+  <script src="framework/scripts/plugins/markdown/markdown.js"></script>
+  <script src="framework/scripts/plugins/highlight/highlight-8.4.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="framework/scripts/llc.js"></script>
+  <script>
+    var slideshow = new SlideShow();
+
+    // Grabs all the .snippet elements
+    var snippets = document.querySelectorAll('.snippet');
+    for(var i=0; i<snippets.length; i++) {
+      new CSSSnippet(snippets[i]);
+    }
+  </script>
+</body>
+</html>
